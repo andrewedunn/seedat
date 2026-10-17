@@ -7,6 +7,16 @@
 
 - **2026-10-17** — Project slug `seedat`, per `~/dev/stack.md` naming table. Local repo at `~/dev/seedat` (git initialized locally; GitHub repo `andrewdunn/seedat` not yet created — outward-facing, waiting on Andrew).
 - **2026-10-17** — Crawler identity for all source pulls: `User-Agent: seedat-research/0.1 (+https://seedat.dunn.us; seedat@dunn.us)`. Uses the project address rather than a personal one. **Open:** `seedat@dunn.us` needs Cloudflare Email Routing set up so the contact actually reaches someone.
+- **2026-10-17** — Permits spine = BLDS `72f9-bi28`, unioned with `rcm3-fn58` and `aib5-en5t` on permit number. Validator showed rcm3 holds only about half of recent permits (no PLMB/HDLC).
+- **2026-10-17** — Canonical address table = maps.nola.gov `Site_Address_Point_LAMA` (275k points, 98.2% carry GEOPIN). Canonical parcel key = GEOPIN. Assessor tax-bill number (`pin` on permits) is a secondary key we learn by matching. No public crosswalk exists.
+- **2026-10-17** — Incremental loads = daily full pull + per-row hash diff, because city datasets are replaced wholesale each night (`:updated_at` is useless except for 311).
+- **2026-10-17** — **Database: stay on D1. No Railway Postgres.** Benchmark (`bench/`): 151k parcels, 275k addresses, 466k permits, 183k code cases, 39k STR and 2.1M block-activity rows (340 MB) in D1. Address page = 5 indexed queries in one `batch()`. Measured from Andrew's machine over 200 random parcels:
+  - **Worker time (incl. D1):** p50 25 ms, p95 38 ms, p99 57 ms.
+  - **Address lookup + page:** p50 50 ms, p95 64 ms.
+  - **End-to-end on a fresh TLS connection:** p50 125 ms, p95 158 ms, of which 88 ms is network + TLS baseline (a static response).
+  - **Heaviest parcels** (100 permits): D1 30 ms.
+  
+  PostGIS would only help at ingest (spatial joins). Those run as a batch step that precomputes zoning, historic district and so on onto each parcel row, so the serving path never needs spatial SQL. Cache API on top will make repeat views faster still.
 - **2026-10-17** — Phase 0 runs before any build code, per the brief. Research outputs live in `research/`, final deliverables (`PRIOR_ART.md`, `SOURCES.md`) at repo root.
 
 ## Subagent task log (model tier → task)
@@ -20,6 +30,9 @@
 | 2026-10-17 | Source: data.nola.gov full catalog + relevant datasets | sonnet (mid) | scripted catalog pull |
 | 2026-10-17 | Source: maps.nola.gov ArcGIS service crawl | sonnet (mid) | scripted crawl |
 | 2026-10-17 | Source: assessor, GEOPIN, canonical address options, normalizers | sonnet (mid) | |
+| 2026-10-17 | Prior art national, second pass | sonnet (mid), same agent resumed | First pass was ~8 searches and too thin; sent back with a specific list. Lesson: give research briefs a minimum search budget. |
+| 2026-10-17 | Independent validation of 9 key claims | sonnet (mid), fresh agent | Refuted 1 major claim (Parcels To Join is not a tax-bill crosswalk), corrected 9 others. Worth the cost. |
+| 2026-10-17 | Pull real data and build benchmark SQLite | sonnet (mid) | Mechanical but multi-source; haiku likely fine next time. |
 
 Tier rationale for this first fan-out: the research tasks need judgment about what is relevant and when to stop, which haiku tends to under-do. Mechanical follow-ups (field inventories, spot checks) will go to haiku.
 
@@ -31,7 +44,20 @@ Tier rationale for this first fan-out: the research tasks need judgment about wh
 
 ## Data quality problems
 
+- **2026-10-17** — Two parcel keyspaces: permits use the assessor tax-bill number, everything else uses GEOPIN, and the city publishes no crosswalk. `pzqp-4ri7.parid` looks like a crosswalk but is an address slug (`3655-FLORENCEAV`); 0/500 permit pins matched.
+- **2026-10-17** — rcm3 vs BLDS vs aib5 permit sets differ substantially (Sep 2026 filings: 1,152 / 2,484 / 2,117).
+- **2026-10-17** — BLDS `location` column is empty for every row.
+- **2026-10-17** — Junk dates in code enforcement and adjudication: years 1905, 2915, 5015, 7201, and placeholder 1753/1900.
+- **2026-10-17** — Address point `LAT`/`LONG` fields are state-plane feet, not degrees.
+- **2026-10-17** — `pin` null on about 10% of permits since 2024; GEOPIN null on about 5–7% of code cases (new cases before geocoding).
+- **2026-10-17** — HDLC solar review area ArcGIS service is broken (no layers). Rebuild it from its published definition.
+- **2026-10-17** — Socrata JSON **omits null fields per row**. Never infer a dataset's schema from row 1; read `/api/views/{id}.json` columns. (A subagent concluded code cases had no geopin this way.)
+- **2026-10-17** — Naive permit-address match against LAMA: 0.5%; with suffix and unit normalization: about 93%. The remaining 7% is multi-address strings, notes in the address field, and renamed streets.
+
 ## Open questions
 
 - Cost: Railway Postgres is a recurring cost. Decide only after the D1 latency test (see brief).
+- Ask the city (onestopapp@nola.gov / data@nola.gov) for a bulk feed of One Stop detail data before a ~26-day polite crawl? Contacting them is Andrew's call.
+- Ask the Assessor's Office for a bulk roll/sales extract? Same.
+- D1 size: free tier caps a database at 500 MB, paid at 10 GB. NOPD calls for service 2011–2026 is about 6M rows. Store them as block-month aggregates in D1 and keep raw rows in R2 only.
 - Domain: `seedat.dunn.us` DNS on Cloudflare — confirm `dunn.us` zone is on this Cloudflare account before deploying.

@@ -1,0 +1,11 @@
+// ABOUTME: Wrangler config for the throwaway D1 latency benchmark Worker.
+// ABOUTME: Deployed as seedat-bench on workers.dev; delete with the seedat-bench-db database after the test.
+{
+  "name": "seedat-bench",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-01",
+  "workers_dev": true,
+  "d1_databases": [
+    { "binding": "DB", "database_name": "seedat-bench-db", "database_id": "e40427e2-d1b9-45d8-9ea6-fff41329f09a" }
+  ]
+}
