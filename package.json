@@ -1,0 +1,16 @@
+{
+  "name": "seedat",
+  "private": true,
+  "description": "See Dat: one continuously updated database of New Orleans property and permit activity",
+  "workspaces": ["packages/*", "workers/*"],
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc -b"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "5.20261006.1",
+    "typescript": "5.9.3",
+    "vitest": "3.2.4",
+    "wrangler": "4.151.1"
+  }
+}

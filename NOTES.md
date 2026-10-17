@@ -18,6 +18,7 @@
   - **Heaviest parcels** (100 permits): D1 30 ms.
   
   PostGIS would only help at ingest (spatial joins). Those run as a batch step that precomputes zoning, historic district and so on onto each parcel row, so the serving path never needs spatial SQL. Cache API on top will make repeat views faster still.
+- **2026-10-17** — Publish our learned tax-bill ↔ GEOPIN crosswalk as an open dataset (CSV + API, with evidence counts). Andrew's idea; nobody publishes one.
 - **2026-10-17** — Phase 0 runs before any build code, per the brief. Research outputs live in `research/`, final deliverables (`PRIOR_ART.md`, `SOURCES.md`) at repo root.
 
 ## Subagent task log (model tier → task)
@@ -39,11 +40,16 @@ Tier rationale for this first fan-out: the research tasks need judgment about wh
 
 ## Dead ends
 
+- **2026-10-17** — One Stop's "Download permit CSV" link on every detail page is a **honeypot** (`class="hp-link"`, `aria-hidden`, `rel="nofollow"`, `?__hpClick=1`, plus a hidden `website` input). The crawler must never follow `hp-link` anchors or fill hidden inputs.
+- **2026-10-17** — One Stop rate-limits: after about 11 detail requests spaced roughly 4–6 s apart (3 s sleep plus slow responses), it returned HTTP 429 "Too many requests in a short time. Please slow down and try again in a minute." Response times climbed from 1.0 to 3.8 s just before. The crawl pace must be set from a measured safe rate, not the 1 request / 2 s assumed in onestop.md.
+
 - **2026-10-17** — nolaassessor.com sits behind a Cloudflare bot challenge (even robots.txt). Not bypassing it (guardrail: no CAPTCHA/bot-detection bypass). Canonical parcels come from the city's own published layers instead. Possible follow-up: ask the Assessor's Office for a bulk extract — a human email, Andrew's call.
 - **2026-10-17** — BlightStatus (Code for America): repo 404, site TLS error. Borrow the concept, not the code.
 - **2026-10-17** — OpenAddresses Orleans sources just re-ingest the city's Site Address Points; no added coverage.
 
 ## Data quality problems
+
+- **2026-10-17** — Good news: `aib5-en5t` already publishes permit milestones for 2018+ construction permits: application_submitted, application_review, zoning_review, plan_review, permit_approved, issue_date, date_of_first_inspection, plus `days_to_*`. Much of the permit timeline needs no crawling. Detail pages are still the only source for inspection *results*, review comments and fee lines.
 
 - **2026-10-17** — Two parcel keyspaces: permits use the assessor tax-bill number, everything else uses GEOPIN, and the city publishes no crosswalk. `pzqp-4ri7.parid` looks like a crosswalk but is an address slug (`3655-FLORENCEAV`); 0/500 permit pins matched.
 - **2026-10-17** — rcm3 vs BLDS vs aib5 permit sets differ substantially (Sep 2026 filings: 1,152 / 2,484 / 2,117).
