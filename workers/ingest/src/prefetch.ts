@@ -38,6 +38,7 @@ function loadDictionary(db: D1Database): Promise<Dictionary> {
     const aliases = rows.filter((r) => r.origin !== "canonical").map((r) => ({ alias: r.alias_key, street: r.street_key, origin: r.origin }));
     return { index: new MemoryIndex({ addresses: [], parcels: [], streets, aliases }), streets, aliases };
   })();
+  dictionary.catch(() => { dictionary = null; });   // never cache a failed load for the life of the isolate
   return dictionary;
 }
 

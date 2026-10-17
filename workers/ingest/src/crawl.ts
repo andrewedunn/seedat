@@ -72,16 +72,26 @@ export async function crawlTick(env: Env, scheduled: Date): Promise<string> {
     headers: { "User-Agent": UA, Accept: "text/html" }, redirect: "manual",
   });
   const update = (sql: string, ...binds: unknown[]) => env.DB.prepare(`UPDATE crawl_state SET ${sql}, updated_at = ? WHERE id = 1`).bind(...binds, now).run();
-
-  if (res.status === 429) {
-    await update("resume_after = ?, throttled = throttled + 1", new Date(scheduled.getTime() + COOLDOWN_MS).toISOString());
-    return `429 on ${pick.id}; cooling down`;
-  }
   const html = await res.text();
+
+  // Throttled, server trouble, or not the detail template at all: back off and retry this id later.
+  if (res.status === 429 || res.status >= 500 || (res.status === 200 && !html.includes("Application Summary"))) {
+    await update("resume_after = ?, throttled = throttled + 1", new Date(scheduled.getTime() + COOLDOWN_MS).toISOString());
+    return `${res.status} on ${pick.id}; cooling down`;
+  }
+  // Only a 200 with the blank template is a genuinely unused id. Redirects and other codes are skipped as unusable.
   const empty = res.status !== 200 || parseOneStopDetail(html, pick.id).isEmpty;
   if (!empty) {
     await env.RAW.put(`onestop/${pick.id}/${now.slice(0, 10)}.html`, html, { httpMetadata: { contentType: "text/html" } });
-    await saveRecord(env, pick.id, html, now);
+    try {
+      await saveRecord(env, pick.id, html, now);
+    } catch (err) {
+      // The raw page is safe in R2; log and move on rather than retrying this id forever.
+      console.error(`onestop ${pick.id}: save failed: ${String(err)}`);
+    }
+  }
+  if (pick.mode === "recheck" && empty) {
+    await env.DB.prepare("UPDATE onestop_record SET fetched_at = ? WHERE onestop_id = ?").bind(now, pick.id).run();
   }
 
   if (pick.mode === "forward") {

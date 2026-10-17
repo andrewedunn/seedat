@@ -7,7 +7,7 @@ export type MatchType =
   | "source_geopin" | "exact" | "base_address" | "range_member" | "alias"
   | "parcel_situs" | "fuzzy_street" | "tax_bill" | "nearest_point" | "unmatched";
 
-export type UnmatchedReason = "unparseable" | "unknown_street" | "number_not_found" | "ambiguous" | "no_address";
+export type UnmatchedReason = "unparseable" | "unknown_street" | "number_not_found" | "ambiguous" | "no_address" | "block_level";
 
 export interface MatchInput {
   address: string | null;
@@ -68,10 +68,16 @@ function matchOnStreet(p: ParsedAddress, street: string, index: AddressIndex): M
   return { geopin: first.geopin, addressId: first.addressId, matchType: exact ? "exact" : "base_address", score: exact ? 1 : 0.97 };
 }
 
-function matchSitus(p: ParsedAddress, street: string, index: AddressIndex): MatchResult | null {
-  const geopins = [...new Set(p.numbers.flatMap((n) => index.parcelsAtSitus(street, n)))];
+/** Rung 5. One number on several parcels is ambiguous; a range across parcels keeps the first and lists the rest. */
+function matchSitus(p: ParsedAddress, street: string, index: AddressIndex): MatchResult | "ambiguous" | null {
+  if (p.numbers.length === 1) {
+    const geopins = [...new Set(index.parcelsAtSitus(street, p.numbers[0]!))];
+    if (geopins.length > 1) return "ambiguous";
+    return geopins.length === 1 ? { geopin: geopins[0]!, addressId: null, matchType: "parcel_situs", score: 0.9 } : null;
+  }
+  const geopins = [...new Set(p.numbers.flatMap((n) => index.parcelsAtSitus(street, n)))].sort((a, b) => a - b);
   return geopins.length >= 1
-    ? { geopin: geopins[0]!, addressId: null, matchType: "parcel_situs", score: 0.9, ...(geopins.length > 1 ? { otherGeopins: geopins.slice(1) } : {}) }
+    ? { geopin: geopins[0]!, addressId: null, matchType: "parcel_situs", score: 0.85, ...(geopins.length > 1 ? { otherGeopins: geopins.slice(1) } : {}) }
     : null;
 }
 
@@ -82,6 +88,8 @@ export function matchRecord(input: MatchInput, index: AddressIndex): MatchResult
   }
 
   const parsed = input.address ? parseAddress(input.address) : null;
+  // "032XX GRAVIER ST" names a hundred-block, never a property.
+  if (parsed?.notes.includes("block")) return unmatched("block_level");
   let failure: UnmatchedReason = input.address ? "unparseable" : "no_address";
   let knownStreet: string | null = null;
 
@@ -94,8 +102,9 @@ export function matchRecord(input: MatchInput, index: AddressIndex): MatchResult
       else if (onStreet) return resolved.via === "alias" ? { ...onStreet, matchType: "alias", score: Math.min(onStreet.score, 0.95) } : onStreet;
       else {
         const situs = matchSitus(parsed, resolved.street, index);
-        if (situs) return situs;
-        failure = "number_not_found";
+        if (situs === "ambiguous") failure = "ambiguous";
+        else if (situs) return situs;
+        else failure = "number_not_found";
       }
     } else {
       // Rung 6: a near-miss spelling of a street that has this house number.
@@ -105,7 +114,7 @@ export function matchRecord(input: MatchInput, index: AddressIndex): MatchResult
       if (best && (similar.length === 1 || similar[1]!.distance > best.distance)) {
         const viaFuzzy = matchOnStreet(parsed, best.street, index);
         const hit = viaFuzzy && viaFuzzy !== "ambiguous" ? viaFuzzy : matchSitus(parsed, best.street, index);
-        if (hit) return { ...hit, matchType: "fuzzy_street", score: best.distance === 1 ? 0.85 : 0.75 };
+        if (hit && hit !== "ambiguous") return { ...hit, matchType: "fuzzy_street", score: best.distance === 1 ? 0.85 : 0.75 };
       }
       failure = "unknown_street";
     }

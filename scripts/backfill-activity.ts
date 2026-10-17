@@ -1,6 +1,8 @@
 // ABOUTME: Backfills every activity table in seedat-db from data/raw/src/<id>/: permits, events, code cases, STR,
 // ABOUTME: 311, business licences and NOPD block-month counts; also writes per-source hash manifests for nightly diffs.
 // Usage: npx tsx scripts/backfill-activity.ts [--load] [--tables=permit,code_case,...] [--police]
+// Re-running replaces whole tables (DELETE then INSERT), which also wipes crawler-written permit.onestop_id and
+// onestop:detail events; after a re-run, reload those with scripts/load-onestop.ts. Intended for the initial load.
 //   (run scripts/download-all.sh first; with no --tables/--police flags, everything is backfilled)
 import { execFileSync } from "node:child_process";
 import { mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
@@ -69,7 +71,9 @@ for (const [table, sources] of byTable) {
   const events: Record<string, unknown>[] = [];
   const srcRows: Record<string, unknown>[] = [];
   for (const src of sources) {
-    const hashes = new Map<string, string>();
+    // Duplicate keys within one source (e.g. 245 BLDS permit numbers): the greater hash wins, the same
+    // deterministic rule the nightly Worker uses (workers/ingest/src/apply.ts mapRows).
+    const best = new Map<string, { row: Record<string, unknown>; match: ReturnType<NonNullable<typeof src.matchInput>> | undefined; h: string; raw: Record<string, unknown> }>();
     let mapped = 0, dropped = 0;
     for (const raw of rawRows(src.sourceId)) {
       const row = src.map(raw) as Record<string, unknown> | null;
@@ -78,12 +82,17 @@ for (const [table, sources] of byTable) {
       const key = src.key(row as never);
       const match = src.matchInput?.(raw);
       const h = rowHash({ ...row, __match: match ?? null });
+      const seen = best.get(key);
+      if (!seen || h > seen.h) best.set(key, { row, match, h, raw });
+    }
+    const multi = MULTI_SOURCE.has(table);
+    const hashes = new Map<string, string>();
+    for (const [key, { row, match, h, raw }] of best) {
       hashes.set(key, h);
       const list = pieces.get(key) ?? [];
       list.push({ sourceId: src.sourceId, priority: src.priority, row, ...(match ? { match } : {}) });
       pieces.set(key, list);
       // Every source keeps its per-row hash (the nightly diff baseline); only multi-source tables keep the row itself.
-      const multi = MULTI_SOURCE.has(table);
       srcRows.push({ source_id: src.sourceId, key, row_json: multi ? JSON.stringify(row) : "", match_json: multi && match ? JSON.stringify(match) : null, row_hash: h, first_seen_at: now, last_seen_at: now });
       for (const e of src.events?.(raw) ?? []) events.push(e as Record<string, unknown>);
     }
@@ -94,9 +103,7 @@ for (const [table, sources] of byTable) {
   const rows: Record<string, unknown>[] = [];
   const matchCounts: Record<string, number> = {};
   for (const [, list] of pieces) {
-    // Duplicate keys within one source (e.g. 245 BLDS permit numbers): last piece per source wins.
-    const perSource = [...new Map(list.map((p) => [p.sourceId, p])).values()];
-    const { row } = assemble(table, perSource, MATCHED.has(table) ? index : null);
+    const { row } = assemble(table, list, MATCHED.has(table) ? index : null);
     if (MATCHED.has(table)) matchCounts[row.match_type as string] = (matchCounts[row.match_type as string] ?? 0) + 1;
     rows.push(row);
   }
@@ -111,10 +118,8 @@ for (const [table, sources] of byTable) {
     stats.permit_event = ev.length;
   }
   if (srcRows.length) {
-    // Keys can repeat within one source (e.g. 245 BLDS permit numbers); the last row wins, as in the merge above.
-    const unique = [...new Map(srcRows.map((r) => [`${r.source_id}|${r.key}`, r])).values()];
     statements.push(`DELETE FROM src_row WHERE source_id IN (${sources.map((s) => `'${s.sourceId}'`).join(", ")});`,
-      ...insertSql("src_row", Object.keys(unique[0]!), unique));
+      ...insertSql("src_row", Object.keys(srcRows[0]!), srcRows));
   }
   const matched = Object.entries(matchCounts).filter(([k]) => k !== "unmatched").reduce((s, [, n]) => s + n, 0);
   stats[table] = { rows: rows.length, ...(MATCHED.has(table) ? { matchRate: `${(100 * matched / rows.length).toFixed(2)}%`, byType: matchCounts } : {}) };

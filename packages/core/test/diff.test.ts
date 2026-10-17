@@ -23,6 +23,10 @@ describe("fieldChanges", () => {
     expect(fieldChanges(before, after)).toEqual([{ field: "status", old: "Plan Review", new: "Issued" }]);
   });
 
+  it("only compares the columns the new row has (stored rows carry columns other writers own)", () => {
+    expect(fieldChanges({ status: "Issued", onestop_id: 1122300 }, { status: "Issued" })).toEqual([]);
+  });
+
   it("treats null, undefined and empty string as the same", () => {
     expect(fieldChanges({ a: null, b: "" }, { a: undefined, b: null })).toEqual([]);
   });

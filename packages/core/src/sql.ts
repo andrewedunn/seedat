@@ -12,6 +12,19 @@ export function sqlValue(v: unknown): string {
   return `'${s.replace(CONTROL, "").replace(/'/g, "''")}'`;
 }
 
+/** UTF-8 byte length without TextEncoder (core builds without DOM or Node typings). */
+export function utf8Length(s: string): number {
+  let n = 0;
+  for (let i = 0; i < s.length; i++) {
+    const c = s.charCodeAt(i);
+    if (c < 0x80) n += 1;
+    else if (c < 0x800) n += 2;
+    else if (c >= 0xd800 && c <= 0xdbff) { n += 4; i++; }   // surrogate pair = one 4-byte code point
+    else n += 3;
+  }
+  return n;
+}
+
 export function insertSql(
   table: string, columns: string[], rows: Record<string, unknown>[],
   opts: { chunk?: number; upsertKey?: string[]; maxBytes?: number } = {},
@@ -23,13 +36,16 @@ export function insertSql(
     ? ` ON CONFLICT (${opts.upsertKey.join(", ")}) DO UPDATE SET ${columns.filter((c) => !opts.upsertKey!.includes(c)).map((c) => `${c} = excluded.${c}`).join(", ")}`
     : "";
   const out: string[] = [];
-  let values: string[] = [], size = head.length + tail.length + 1;
-  const flush = () => { if (values.length) out.push(`${head}${values.join(", ")}${tail};`); values = []; size = head.length + tail.length + 1; };
+  const base = utf8Length(head) + utf8Length(tail) + 1;
+  let values: string[] = [], size = base;
+  const flush = () => { if (values.length) out.push(`${head}${values.join(", ")}${tail};`); values = []; size = base; };
   for (const r of rows) {
     const v = `(${columns.map((c) => sqlValue(r[c])).join(", ")})`;
-    if (values.length && (values.length >= chunk || size + v.length + 2 > maxBytes)) flush();
+    const bytes = utf8Length(v);
+    if (base + bytes > maxBytes) throw new Error(`one ${table} row is ${bytes} bytes, over the ${maxBytes}-byte statement limit`);
+    if (values.length && (values.length >= chunk || size + bytes + 2 > maxBytes)) flush();
     values.push(v);
-    size += v.length + 2;
+    size += bytes + 2;
   }
   flush();
   return out;

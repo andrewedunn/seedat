@@ -93,6 +93,16 @@ describe("matchRecord", () => {
     expect(matchRecord({ address: "100 2nd St" }, index)).toMatchObject({ geopin: 41700001, matchType: "parcel_situs" });
   });
 
+  it("rung 5: two parcels sharing a situs is ambiguous, not a guess", () => {
+    const shared = new MemoryIndex({ addresses: [], parcels: [{ geopin: 41800001, situs: "10 ELM ST" }, { geopin: 41800002, situs: "10 ELM ST" }] });
+    expect(matchRecord({ address: "10 Elm St" }, shared)).toMatchObject({ geopin: null, matchType: "unmatched", reason: "ambiguous" });
+  });
+
+  it("block-level addresses are never matched to a single parcel", () => {
+    expect(matchRecord({ address: "032XX Gravier St" }, index)).toMatchObject({ geopin: null, matchType: "unmatched", reason: "block_level" });
+    expect(matchRecord({ address: "3200 Blk Gravier St" }, index)).toMatchObject({ geopin: null, matchType: "unmatched", reason: "block_level" });
+  });
+
   it("rung 6: a one-letter typo in the street name", () => {
     const m = matchRecord({ address: "2000 Tchoupitulas St" }, index);
     expect(m).toMatchObject({ geopin: 41500001, matchType: "fuzzy_street" });

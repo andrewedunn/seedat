@@ -1,7 +1,7 @@
 // ABOUTME: Tests for the SQL batch writer used to load D1: quoting, NULLs, JSON values, and upsert form.
 // ABOUTME: Values come from city data, so escaping must be airtight.
 import { describe, expect, it } from "vitest";
-import { insertSql, sqlValue } from "../src/sql";
+import { insertSql, sqlValue, utf8Length } from "../src/sql";
 
 describe("sqlValue", () => {
   it("quotes strings and doubles embedded quotes", () => {
@@ -38,6 +38,13 @@ describe("insertSql", () => {
     expect(out.length).toBeGreaterThan(1);
     for (const s of out) expect(s.length).toBeLessThanOrEqual(300);
     expect(out.join(" ").match(/\(\d+, 'x+'\)/g)).toHaveLength(10);
+  });
+
+  it("measures the limit in UTF-8 bytes, not characters", () => {
+    const rows = Array.from({ length: 4 }, (_, i) => ({ a: i, b: "é".repeat(40) }));   // 80 bytes of text per row
+    const out = insertSql("t", ["a", "b"], rows, { maxBytes: 200 });
+    for (const s of out) expect(utf8Length(s)).toBeLessThanOrEqual(200);
+    expect(utf8Length("é")).toBe(2);
   });
 
   it("supports upsert on a key", () => {

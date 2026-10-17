@@ -31,10 +31,13 @@ function canon(v: unknown): string | null {
 
 export interface FieldChange { field: string; old: string | null; new: string | null }
 
+/**
+ * Fields whose value differs. Only the new row's columns are compared: a stored row also carries columns that
+ * other writers own (e.g. permit.onestop_id from the crawler), and those are not changes from this source.
+ */
 export function fieldChanges(before: Record<string, unknown>, after: Record<string, unknown>): FieldChange[] {
-  const fields = new Set([...Object.keys(before), ...Object.keys(after)]);
   const out: FieldChange[] = [];
-  for (const field of fields) {
+  for (const field of Object.keys(after)) {
     if (BOOKKEEPING.has(field)) continue;
     const o = canon(before[field]), n = canon(after[field]);
     if (o !== n) out.push({ field, old: o, new: n });

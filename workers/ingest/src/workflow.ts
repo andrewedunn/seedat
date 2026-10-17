@@ -4,7 +4,7 @@ import { WorkflowEntrypoint, type WorkflowEvent, type WorkflowStep } from "cloud
 import { policeSources, recordSources } from "@seedat/core/src/sources";
 import { insertSql } from "@seedat/core/src/sql";
 import { parcelSummarySql } from "@seedat/core/src/summary-sql";
-import { applyPage } from "./apply";
+import { applyPage, applyRemovals, mapRows } from "./apply";
 import { jsonChunks } from "./prefetch";
 import { PAGE_SIZE, catalogUpdatedAt, fetchPage } from "./socrata";
 import { NIGHTLY_WINDOW_DAYS, WINDOWS } from "./windows";
@@ -14,6 +14,23 @@ export interface NightlyParams { full?: boolean; only?: string[] }
 
 const datasetId = (sourceId: string) => sourceId.replace("socrata:", "");
 const MAX_PAGES = 200;   // 2M rows: a guard against a runaway loop, far above any dataset we pull
+const REMOVAL_SWEEP_MAX_ROWS = 60_000;   // full pulls of datasets this small also detect rows removed upstream
+
+async function readSnapshotKeys(bucket: R2Bucket, prefix: string, src: Parameters<typeof mapRows>[0]): Promise<Set<string>> {
+  const keys = new Set<string>();
+  let cursor: string | undefined;
+  do {
+    const list = await bucket.list({ prefix, ...(cursor ? { cursor } : {}) });
+    for (const obj of list.objects) {
+      const body = await bucket.get(obj.key);
+      if (!body) continue;
+      const raws = await new Response(body.body.pipeThrough(new DecompressionStream("gzip"))).json<Record<string, unknown>[]>();
+      for (const k of mapRows(src, raws).keys()) keys.add(k);
+    }
+    cursor = list.truncated ? list.cursor : undefined;
+  } while (cursor);
+  return keys;
+}
 
 async function gzipJson(value: unknown): Promise<ReadableStream> {
   return new Blob([JSON.stringify(value)]).stream().pipeThrough(new CompressionStream("gzip"));
@@ -62,6 +79,14 @@ export class NightlyIngest extends WorkflowEntrypoint<Env, NightlyParams> {
         totals = { rows: totals.rows + res.rows, changed: totals.changed + res.changed, inserted: totals.inserted + res.inserted, updated: totals.updated + res.updated };
         for (const g of res.geopins) touched.add(g);
         if (res.fetched < PAGE_SIZE) break;
+      }
+      if (!where && totals.rows <= REMOVAL_SWEEP_MAX_ROWS) {
+        const swept = await step.do(`${id}: removals`, { timeout: "10 minutes" }, async () => {
+          const seen = await readSnapshotKeys(this.env.RAW, `snapshots/${id}/${runDay}/`, src);
+          return applyRemovals(this.env.DB, src, seen, runAt, snapshotId);
+        });
+        for (const g of swept.geopins) touched.add(g);
+        if (swept.refused) console.warn(`${id}: removal sweep refused: ${swept.refused}`);
       }
       await step.do(`${id}: close snapshot`, async () => {
         await this.env.DB.batch([

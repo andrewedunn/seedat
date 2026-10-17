@@ -5,6 +5,19 @@
 
 ## Decisions
 
+- **2026-10-17** — Independent code review of the ingest path (feature-dev:code-reviewer) found 10 issues. Fixed:
+  - A retried step could silently drop target writes. `src_row` is now written last.
+  - The crawler could wedge or skip ids. Only a 200 with the blank template counts as empty; 5xx and throttle pages back off; save errors no longer block; rechecks always advance.
+  - Spurious diffs from columns that other writers own. `fieldChanges` now compares only the new row's columns.
+  - Duplicate keys flapped between pages. A deterministic greater-hash rule now applies everywhere.
+  - A shared situs or a block address could return a guessed parcel. These are now ambiguous or `block_level`.
+  - FTS went stale nightly. Fixed with triggers (migration 0007, applied after the backfill load).
+  - Statement size counted characters instead of bytes.
+  - Nothing detected removals. Fixed with a removal sweep on weekly full pulls of datasets under 60k rows; it refuses when more than 20% would vanish.
+  - A failed dictionary load stayed cached.
+  
+  Documented, not changed: backfill re-runs wipe crawler data.
+
 - **2026-10-17** — Project slug `seedat`, per `~/dev/stack.md` naming table. Repo is **`andrewedunn/seedat`** (Andrew's actual GitHub account; the stack doc's `andrewdunn/` is a typo for this). Created private; flip to public at launch.
 - **2026-10-17** — Cloudflare account is on Workers Paid (Andrew confirmed), so cron/Workflows CPU limits and D1's 10 GB cap apply. Benchmark Worker and `seedat-bench-db` deleted after the test.
 - **2026-10-17** — Crawler identity for all source pulls: `User-Agent: seedat-research/0.1 (+https://seedat.dunn.us; seedat@dunn.us)`. Uses the project address rather than a personal one. **Open:** `seedat@dunn.us` needs Cloudflare Email Routing set up so the contact actually reaches someone.
@@ -90,8 +103,13 @@ Tier rationale for this first fan-out: the research tasks need judgment about wh
 
 ## Open questions
 
+- **Expected one-time noise 2026-10-18:** the initial backfill kept the *last* row for duplicate keys (245 BLDS permit numbers). The Worker and the regenerated backfill now keep the row with the *greater hash*. The first full nightly run may rewrite those ~245 permits once and log matching `change_log` rows. Not a data error; filter by date if analyzing change history.
+
 - Cost: Railway Postgres is a recurring cost. Decide only after the D1 latency test (see brief).
 - Ask the city (onestopapp@nola.gov / data@nola.gov) for a bulk feed of One Stop detail data before a ~26-day polite crawl? Contacting them is Andrew's call.
 - Ask the Assessor's Office for a bulk roll/sales extract? Same.
+- NOPD calls at intersections ("Terpsichore St & Baronne St") are about 35% of calls and are currently skipped. Counting them on the block of the first-named street would stay block-level (within the terms). Decide before the address page ships.
+- One Stop crawl runs from Cloudflare's network since 2026-10-17 ~19:05 UTC. Watch for 429s or a block; the local crawler is the fallback.
+- One Stop record types beyond permits (HDLC COA, VCC, special events, film, dumpster, curb cut) live in `onestop_record`. Decide which ones the address page shows.
 - D1 size: free tier caps a database at 500 MB, paid at 10 GB. NOPD calls for service 2011–2026 is about 6M rows. Store them as block-month aggregates in D1 and keep raw rows in R2 only.
 - Domain: `seedat.dunn.us` DNS on Cloudflare — confirm `dunn.us` zone is on this Cloudflare account before deploying.
