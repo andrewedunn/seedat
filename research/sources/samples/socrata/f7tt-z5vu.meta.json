@@ -1,0 +1,134 @@
+{
+ "id": "f7tt-z5vu",
+ "name": "Historical Permit Data",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Housing, Land Use, and Blight",
+ "attribution": "City of New Orleans \u2013 Office of Information Technology & Innovation, Enterprise Information Team",
+ "attributionLink": null,
+ "licenseId": null,
+ "license": null,
+ "rowsUpdatedAt": "2015-04-24 21:01",
+ "createdAt": 1429820996,
+ "viewLastModified": 1440541375,
+ "publicationDate": 1429909370,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "permits",
+  "building",
+  "electrical",
+  "sign"
+ ],
+ "metadata": {
+  "rdfSubject": "0",
+  "rdfClass": "",
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "data@nola.gov"
+   },
+   "Source Information": {
+    "Source Department": "Safety & Permits"
+   }
+  },
+  "rowIdentifier": "0",
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ],
+  "rowLabel": "Row",
+  "renderTypeConfig": {
+   "visible": {
+    "table": true
+   }
+  }
+ },
+ "description": "This dataset includes Building, Electrical, and Sign permits filed from December 1995 to January 2005.",
+ "columns": [
+  {
+   "f": "permitnumber",
+   "n": "PermitNumber",
+   "t": "text"
+  },
+  {
+   "f": "applicationdate",
+   "n": "ApplicationDate",
+   "t": "calendar_date"
+  },
+  {
+   "f": "issuedate",
+   "n": "IssueDate",
+   "t": "calendar_date"
+  },
+  {
+   "f": "housenum",
+   "n": "HouseNum",
+   "t": "text"
+  },
+  {
+   "f": "streetdir",
+   "n": "StreetDir",
+   "t": "text"
+  },
+  {
+   "f": "streetname",
+   "n": "StreetName",
+   "t": "text"
+  },
+  {
+   "f": "streetsuffix",
+   "n": "StreetSuffix",
+   "t": "text"
+  },
+  {
+   "f": "unitnumber",
+   "n": "UnitNumber",
+   "t": "text"
+  },
+  {
+   "f": "matchaddress",
+   "n": "MatchAddress",
+   "t": "text"
+  },
+  {
+   "f": "applicantname",
+   "n": "ApplicantName",
+   "t": "text"
+  },
+  {
+   "f": "parcelowner",
+   "n": "ParcelOwner",
+   "t": "text"
+  },
+  {
+   "f": "planningdist",
+   "n": "PlanningDist",
+   "t": "text"
+  },
+  {
+   "f": "zoning",
+   "n": "Zoning",
+   "t": "text"
+  },
+  {
+   "f": "description",
+   "n": "Description",
+   "t": "text"
+  },
+  {
+   "f": "propertykey",
+   "n": "PropertyKey",
+   "t": "text"
+  },
+  {
+   "f": "x",
+   "n": "X",
+   "t": "number"
+  },
+  {
+   "f": "y",
+   "n": "Y",
+   "t": "number"
+  }
+ ]
+}

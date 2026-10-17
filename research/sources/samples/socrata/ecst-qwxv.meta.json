@@ -1,0 +1,95 @@
+{
+ "id": "ecst-qwxv",
+ "name": "Conditional Use",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Planning, Zoning",
+ "attribution": "City Planning Commission",
+ "attributionLink": null,
+ "licenseId": "CC0_10",
+ "license": {
+  "name": "Creative Commons 1.0 Universal (Public Domain Dedication)",
+  "logoUrl": "images/licenses/ccZero.png",
+  "termsLink": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+ },
+ "rowsUpdatedAt": "2026-08-08 20:10",
+ "createdAt": 1639429378,
+ "viewLastModified": 1725903762,
+ "publicationDate": 1639429379,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "zoning",
+  "planning",
+  "cpc"
+ ],
+ "metadata": {
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "gis@nola.gov",
+    "Public Access Level": "public"
+   },
+   "Source Information": {
+    "Source Department": "City Planning Commission",
+    "Frequency of Data Change": "Updated frequently"
+   }
+  },
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ]
+ },
+ "description": "Conditional Use based on zoning classification for the City of New Orleans.",
+ "columns": [
+  {
+   "f": "the_geom",
+   "n": "the_geom",
+   "t": "multipolygon"
+  },
+  {
+   "f": "objectid",
+   "n": "OBJECTID",
+   "t": "number"
+  },
+  {
+   "f": "zoneclass",
+   "n": "Zoning Classification",
+   "t": "text"
+  },
+  {
+   "f": "recnum",
+   "n": "Record Number",
+   "t": "text"
+  },
+  {
+   "f": "zonenum",
+   "n": "Zoning Docket Number",
+   "t": "text"
+  },
+  {
+   "f": "zoneyear",
+   "n": "Zoning Year",
+   "t": "text"
+  },
+  {
+   "f": "ordnum",
+   "n": "Ordinance Number",
+   "t": "text"
+  },
+  {
+   "f": "hyperlink",
+   "n": "HYPERLINK",
+   "t": "text"
+  },
+  {
+   "f": "shape_starea",
+   "n": "Shape.STArea()",
+   "t": "number"
+  },
+  {
+   "f": "shape_stlength",
+   "n": "Shape.STLength()",
+   "t": "number"
+  }
+ ]
+}

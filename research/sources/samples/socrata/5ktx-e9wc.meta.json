@@ -1,0 +1,104 @@
+{
+ "id": "5ktx-e9wc",
+ "name": "NORA Uncommitted Property Inventory",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Housing, Land Use, and Blight",
+ "attribution": "New Orleans Redevelopment Authority (NORA)",
+ "attributionLink": null,
+ "licenseId": "CC0_10",
+ "license": {
+  "name": "Creative Commons 1.0 Universal (Public Domain Dedication)",
+  "logoUrl": "images/licenses/ccZero.png",
+  "termsLink": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+ },
+ "rowsUpdatedAt": "2026-10-09 15:48",
+ "createdAt": 1363105177,
+ "viewLastModified": 1791560932,
+ "publicationDate": 1722530956,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "redevelopment",
+  "property",
+  "inventory"
+ ],
+ "metadata": {
+  "rdfSubject": "0",
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "data@nola.gov"
+   },
+   "Source Information": {
+    "Source Department": "New Orleans Redevelopment Authority (NORA)"
+   }
+  },
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ],
+  "renderTypeConfig": {
+   "visible": {
+    "table": true
+   }
+  }
+ },
+ "description": "This is a listing of all properties in NORA's inventory that are not under contract.",
+ "columns": [
+  {
+   "f": "identifier",
+   "n": "NORA Identifier",
+   "t": "text"
+  },
+  {
+   "f": "property_address",
+   "n": "Full Property Address",
+   "t": "text"
+  },
+  {
+   "f": "address_number",
+   "n": "Property Address Number",
+   "t": "text"
+  },
+  {
+   "f": "street_name",
+   "n": "Property Street Name",
+   "t": "text"
+  },
+  {
+   "f": "zip_code",
+   "n": "Zip Code",
+   "t": "text"
+  },
+  {
+   "f": "city_planning_neighborhood",
+   "n": "City Planning Neighborhood",
+   "t": "text"
+  },
+  {
+   "f": "council_district",
+   "n": "Council District",
+   "t": "text"
+  },
+  {
+   "f": "geopin_2",
+   "n": "GEOPIN",
+   "t": "text"
+  },
+  {
+   "f": "property_type",
+   "n": "Property Type",
+   "t": "text"
+  },
+  {
+   "f": "zoning",
+   "n": "Zoning",
+   "t": "text"
+  },
+  {
+   "f": "square_footage",
+   "n": "Square Footage",
+   "t": "number"
+  }
+ ]
+}

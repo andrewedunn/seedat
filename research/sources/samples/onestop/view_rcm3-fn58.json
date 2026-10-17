@@ -1,0 +1,3281 @@
+{
+  "id" : "rcm3-fn58",
+  "name" : "Permits",
+  "assetType" : "dataset",
+  "attribution" : "Safety and Permits",
+  "averageRating" : 0,
+  "category" : "Housing, Land Use, and Blight",
+  "createdAt" : 1361295642,
+  "description" : "City of New Orleans permit data starting from 1/01/2012; Updated nightly.Note: For download of entire dataset, export as .csv",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 30894,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "indexUpdatedAt" : 1568955788,
+  "licenseId" : "CC0_10",
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 5,
+  "oid" : 9365408,
+  "provenance" : "community",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1415829346,
+  "publicationGroup" : 687079,
+  "publicationStage" : "published",
+  "rowClass" : "",
+  "rowIdentifierColumnId" : 175326067,
+  "rowsUpdatedAt" : 1792212794,
+  "rowsUpdatedBy" : "guap-8ddq",
+  "tableId" : 1878002,
+  "totalTimesRated" : 0,
+  "viewCount" : 60286,
+  "viewLastModified" : 1499350740,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1415829346,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 701529,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1415829346,
+    "targetAudience" : "public",
+    "workflowId" : 2032,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "failureCount" : 0,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "y6db-ky2f",
+      "displayName" : "Becky Houtman"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 175326064,
+    "name" : "Address",
+    "dataTypeName" : "text",
+    "description" : "The permit's street address",
+    "fieldName" : "address",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 7988342,
+    "width" : 184,
+    "cachedContents" : {
+      "largest" : " Walnut St @ RIVER #A",
+      "non_null" : "349033",
+      "null" : "45",
+      "top" : [ {
+        "item" : "1432 Esplanade Ave",
+        "count" : "538"
+      }, {
+        "item" : "7603 Chef Menteur Hwy",
+        "count" : "448"
+      }, {
+        "item" : "5270 Canal Blvd",
+        "count" : "325"
+      }, {
+        "item" : "3300 S Claiborne Ave",
+        "count" : "235"
+      }, {
+        "item" : "6201 S Claiborne Ave",
+        "count" : "211"
+      }, {
+        "item" : "1801 Newton St",
+        "count" : "200"
+      }, {
+        "item" : "5101 General De Gaulle Dr",
+        "count" : "193"
+      }, {
+        "item" : "13311 Chef Menteur Hwy",
+        "count" : "192"
+      }, {
+        "item" : "1300 Perdido St",
+        "count" : "143"
+      }, {
+        "item" : "2728 Conti St",
+        "count" : "123"
+      }, {
+        "item" : "5313 Lafaye St",
+        "count" : "117"
+      }, {
+        "item" : "5000 Old Gentilly Rd",
+        "count" : "97"
+      }, {
+        "item" : "8 Canal St",
+        "count" : "87"
+      }, {
+        "item" : "200 Henry Clay Ave",
+        "count" : "80"
+      }, {
+        "item" : "6823 St Charles Ave",
+        "count" : "72"
+      }, {
+        "item" : "1401 Foucher St",
+        "count" : "67"
+      }, {
+        "item" : "2700 Napoleon Ave",
+        "count" : "66"
+      }, {
+        "item" : "2927 Conti St",
+        "count" : "64"
+      }, {
+        "item" : "1 Canal St",
+        "count" : "64"
+      }, {
+        "item" : "2 Poydras St",
+        "count" : "61"
+      } ],
+      "smallest" : " ",
+      "not_null" : "217175",
+      "count" : "349078",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 175326065,
+    "name" : "Owner",
+    "dataTypeName" : "text",
+    "description" : "Property owner",
+    "fieldName" : "owner",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 7988326,
+    "width" : 160,
+    "cachedContents" : {
+      "largest" : "Zydeco Ownings, LLC",
+      "non_null" : "256988",
+      "null" : "92090",
+      "top" : [ {
+        "item" : "The Finance Authority of New Orleans",
+        "count" : "874"
+      }, {
+        "item" : "6700 Maple Leaf LLC",
+        "count" : "823"
+      }, {
+        "item" : "Housing Authority of New Orleans",
+        "count" : "676"
+      }, {
+        "item" : "The City Of New Orleans",
+        "count" : "662"
+      }, {
+        "item" : "Nolaming Properties, LLC",
+        "count" : "540"
+      }, {
+        "item" : "Orleans Parish School Board",
+        "count" : "532"
+      }, {
+        "item" : "New Orleans Redevelopment Authority",
+        "count" : "505"
+      }, {
+        "item" : "Orleans Area Habitat For Humanity New",
+        "count" : "488"
+      }, {
+        "item" : "Industrial Development Board of The",
+        "count" : "466"
+      }, {
+        "item" : "6400 Chef Menteur LLC",
+        "count" : "448"
+      }, {
+        "item" : "Annunciation Development Co LLC",
+        "count" : "434"
+      }, {
+        "item" : "Wells One Investments LLC",
+        "count" : "417"
+      }, {
+        "item" : "AG 2018 LLC, Och Commercial LLC, The Finance Authority of New Orleans, The Finance Authority of New Orlea",
+        "count" : "411"
+      }, {
+        "item" : "Authority Of New Orleans Housing",
+        "count" : "403"
+      }, {
+        "item" : "Mirus New Orleans LLC",
+        "count" : "342"
+      }, {
+        "item" : "Ducar Real Estate Investments LLC",
+        "count" : "307"
+      }, {
+        "item" : "City Of New Orleans",
+        "count" : "307"
+      }, {
+        "item" : "Aga Development Partners LLC, Reveal New Orleans LLC",
+        "count" : "303"
+      }, {
+        "item" : "Alex P Jr Duplessis",
+        "count" : "303"
+      }, {
+        "item" : "New Orleans Terminal Company, Industrial Development Board of The",
+        "count" : "300"
+      } ],
+      "smallest" : "",
+      "not_null" : "153075",
+      "count" : "349078",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 175326066,
+    "name" : "Description",
+    "dataTypeName" : "text",
+    "description" : "Detailed description of work permitted",
+    "fieldName" : "description",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 7988339,
+    "width" : 232,
+    "cachedContents" : {
+      "largest" : " NEW CONSTRUCTION OF A 3,171.48 SF, WO-STORY, SINGLE FAMILY RESIDENCE WITH 4 BEDS AND 3.5  BATHS. TO BE BUILT AS PER PLANS. NO NEW DRIVEWAY\n\nNew pool to be built under a seperate permit.",
+      "non_null" : "345137",
+      "null" : "3941",
+      "top" : [ {
+        "item" : "VACANCY",
+        "count" : "4148"
+      }, {
+        "item" : "Solar - check meter.",
+        "count" : "2104"
+      }, {
+        "item" : "Vacancy",
+        "count" : "1377"
+      }, {
+        "item" : "Solar - check meter",
+        "count" : "1354"
+      }, {
+        "item" : "vacancy",
+        "count" : "928"
+      }, {
+        "item" : "6 month vacancy",
+        "count" : "786"
+      }, {
+        "item" : "Install solar panels.",
+        "count" : "784"
+      }, {
+        "item" : "REPAIRS",
+        "count" : "776"
+      }, {
+        "item" : "REPLACE SERVICE",
+        "count" : "709"
+      }, {
+        "item" : "6 month gas test",
+        "count" : "664"
+      }, {
+        "item" : "Temp pole",
+        "count" : "629"
+      }, {
+        "item" : "Solar-check meter and wiring",
+        "count" : "628"
+      }, {
+        "item" : "Emergency IDC Demolition issued by City of New Orleans",
+        "count" : "596"
+      }, {
+        "item" : "INSTALL SOLAR PANELS.",
+        "count" : "587"
+      }, {
+        "item" : "Interior renovations to existing 4 plex ( Units 1,2,3,4) - electrical for 4 units, repair plumbing pipes and split water meters to each of the 4 units, kitchen tiles, carpet, refinish hardwood floors, No exterior work under this permit.",
+        "count" : "535"
+      }, {
+        "item" : "Construction Loop",
+        "count" : "512"
+      }, {
+        "item" : "Construction loop",
+        "count" : "451"
+      }, {
+        "item" : "Rewire",
+        "count" : "416"
+      }, {
+        "item" : "temp pole",
+        "count" : "409"
+      }, {
+        "item" : "Temp Pole",
+        "count" : "397"
+      } ],
+      "smallest" : "",
+      "not_null" : "215329",
+      "count" : "349078",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 175326067,
+    "name" : "NumString",
+    "dataTypeName" : "text",
+    "description" : "Permit number",
+    "fieldName" : "numstring",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 7988301,
+    "width" : 208,
+    "cachedContents" : {
+      "largest" : "missing_key_value_212639",
+      "non_null" : "349078",
+      "null" : "0",
+      "top" : [ {
+        "item" : "=",
+        "count" : "1"
+      }, {
+        "item" : "05BLD-05127",
+        "count" : "1"
+      }, {
+        "item" : "05BLD-06907",
+        "count" : "1"
+      }, {
+        "item" : "06BLD-05598",
+        "count" : "1"
+      }, {
+        "item" : "06CNO-34780",
+        "count" : "1"
+      }, {
+        "item" : "07BLD-03925",
+        "count" : "1"
+      }, {
+        "item" : "07BLD-08087",
+        "count" : "1"
+      }, {
+        "item" : "07BLD-11651",
+        "count" : "1"
+      }, {
+        "item" : "07ELC-11986",
+        "count" : "1"
+      }, {
+        "item" : "08BLD-02867",
+        "count" : "1"
+      }, {
+        "item" : "08BLD-03876",
+        "count" : "1"
+      }, {
+        "item" : "08MCH-00389",
+        "count" : "1"
+      }, {
+        "item" : "09BLD-04001",
+        "count" : "1"
+      }, {
+        "item" : "09BLD-04304",
+        "count" : "1"
+      }, {
+        "item" : "09BLD-04944",
+        "count" : "1"
+      }, {
+        "item" : "09BLD-05237",
+        "count" : "1"
+      }, {
+        "item" : "09BLD-06426",
+        "count" : "1"
+      }, {
+        "item" : "09BLD-06935",
+        "count" : "1"
+      }, {
+        "item" : "09BLD-07133",
+        "count" : "1"
+      }, {
+        "item" : "",
+        "count" : "1"
+      } ],
+      "smallest" : "",
+      "not_null" : "217181",
+      "count" : "349078",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 175326068,
+    "name" : "IsClosed",
+    "dataTypeName" : "text",
+    "description" : "Whether the permit has been closed",
+    "fieldName" : "isclosed",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 7988302,
+    "width" : 196,
+    "cachedContents" : {
+      "largest" : "True",
+      "non_null" : "349078",
+      "null" : "0",
+      "top" : [ {
+        "item" : "True",
+        "count" : "306528"
+      }, {
+        "item" : "False",
+        "count" : "41390"
+      }, {
+        "item" : "false",
+        "count" : "1131"
+      }, {
+        "item" : "true",
+        "count" : "29"
+      } ],
+      "smallest" : "false",
+      "not_null" : "217181",
+      "count" : "349078",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "right"
+    }
+  }, {
+    "id" : 175326069,
+    "name" : "Type",
+    "dataTypeName" : "text",
+    "description" : "Permit type description",
+    "fieldName" : "type",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 7988303,
+    "width" : 148,
+    "cachedContents" : {
+      "largest" : "Temporary Generator",
+      "non_null" : "349078",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Electrical Service / Circuit / Feeder",
+        "count" : "56503"
+      }, {
+        "item" : "Renovation (Non-Structural)",
+        "count" : "46658"
+      }, {
+        "item" : "Mechanical Fuel Gas",
+        "count" : "40041"
+      }, {
+        "item" : "Mechanical HVAC",
+        "count" : "31594"
+      }, {
+        "item" : "Electrical Repair / Replacement / Addition",
+        "count" : "30609"
+      }, {
+        "item" : "General Mechanical",
+        "count" : "25195"
+      }, {
+        "item" : "Construction Loop",
+        "count" : "16389"
+      }, {
+        "item" : "Electrical Vacancy",
+        "count" : "15779"
+      }, {
+        "item" : "Renovation (Structural)",
+        "count" : "14805"
+      }, {
+        "item" : "Solar",
+        "count" : "11225"
+      }, {
+        "item" : "New Construction",
+        "count" : "10397"
+      }, {
+        "item" : "Change of Address",
+        "count" : "10205"
+      }, {
+        "item" : "Demolition",
+        "count" : "6418"
+      }, {
+        "item" : "Accessory Structure",
+        "count" : "5784"
+      }, {
+        "item" : "Permanent Generator",
+        "count" : "3706"
+      }, {
+        "item" : "Attached Sign",
+        "count" : "2996"
+      }, {
+        "item" : "Swimming Pool",
+        "count" : "2779"
+      }, {
+        "item" : "Brake Tag Order",
+        "count" : "2437"
+      }, {
+        "item" : "Interior Demolition",
+        "count" : "2228"
+      }, {
+        "item" : "Lead-Based Paint Form",
+        "count" : "1608"
+      } ],
+      "smallest" : "Accessory Structure",
+      "not_null" : "217181",
+      "count" : "349078",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 175326070,
+    "name" : "Code",
+    "dataTypeName" : "text",
+    "description" : "Permit type code",
+    "fieldName" : "code",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 7988304,
+    "width" : 148,
+    "cachedContents" : {
+      "largest" : "TRLR",
+      "non_null" : "349078",
+      "null" : "0",
+      "top" : [ {
+        "item" : "SERV",
+        "count" : "56503"
+      }, {
+        "item" : "RNVN",
+        "count" : "46658"
+      }, {
+        "item" : "FGAS",
+        "count" : "40041"
+      }, {
+        "item" : "HVAC",
+        "count" : "31594"
+      }, {
+        "item" : "ERPR",
+        "count" : "30609"
+      }, {
+        "item" : "MECH",
+        "count" : "25195"
+      }, {
+        "item" : "LOOP",
+        "count" : "16389"
+      }, {
+        "item" : "EVAC",
+        "count" : "15779"
+      }, {
+        "item" : "RNVS",
+        "count" : "14805"
+      }, {
+        "item" : "SOLR",
+        "count" : "11281"
+      }, {
+        "item" : "NEWC",
+        "count" : "10397"
+      }, {
+        "item" : "ECOA",
+        "count" : "10205"
+      }, {
+        "item" : "DEMO",
+        "count" : "6977"
+      }, {
+        "item" : "ACCS",
+        "count" : "5784"
+      }, {
+        "item" : "EGEN",
+        "count" : "3706"
+      }, {
+        "item" : "SATT",
+        "count" : "2996"
+      }, {
+        "item" : "POOL",
+        "count" : "2779"
+      }, {
+        "item" : "BTO",
+        "count" : "2437"
+      }, {
+        "item" : "DEMI",
+        "count" : "2228"
+      }, {
+        "item" : "LEAD",
+        "count" : "1608"
+      } ],
+      "smallest" : "ACCS",
+      "not_null" : "217181",
+      "count" : "349078",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 175326071,
+    "name" : "Division",
+    "dataTypeName" : "text",
+    "description" : "City department/division - always SP(Safety & Permits) for building permit dataset",
+    "fieldName" : "division",
+    "position" : 8,
+    "renderTypeName" : "text",
+    "tableColumnId" : 7988305,
+    "width" : 196,
+    "cachedContents" : {
+      "largest" : "SP",
+      "non_null" : "349078",
+      "null" : "0",
+      "top" : [ {
+        "item" : "SP",
+        "count" : "349078"
+      } ],
+      "smallest" : "SP",
+      "not_null" : "217181",
+      "count" : "349078",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 175326072,
+    "name" : "M_S",
+    "dataTypeName" : "text",
+    "description" : "Master or sub-permit",
+    "fieldName" : "m_s",
+    "position" : 9,
+    "renderTypeName" : "text",
+    "tableColumnId" : 7988306,
+    "width" : 136,
+    "cachedContents" : {
+      "largest" : "S",
+      "non_null" : "349078",
+      "null" : "0",
+      "top" : [ {
+        "item" : "M",
+        "count" : "346514"
+      }, {
+        "item" : "S",
+        "count" : "2564"
+      } ],
+      "smallest" : "M",
+      "not_null" : "217181",
+      "count" : "349078",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 175326073,
+    "name" : "FilingDate",
+    "dataTypeName" : "calendar_date",
+    "description" : "Date that the application was submitted to Safety & Permits",
+    "fieldName" : "filingdate",
+    "position" : 10,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 7988307,
+    "width" : 220,
+    "cachedContents" : {
+      "largest" : "2026-10-16T14:47:11.000",
+      "non_null" : "348256",
+      "null" : "822",
+      "top" : [ {
+        "item" : "2015-01-14T11:05:17.000",
+        "count" : "535"
+      }, {
+        "item" : "2013-12-05T00:00:00.000",
+        "count" : "249"
+      }, {
+        "item" : "2013-06-18T00:00:00.000",
+        "count" : "234"
+      }, {
+        "item" : "2013-04-08T00:00:00.000",
+        "count" : "221"
+      }, {
+        "item" : "2012-06-22T00:00:00.000",
+        "count" : "218"
+      }, {
+        "item" : "2014-03-13T00:00:00.000",
+        "count" : "217"
+      }, {
+        "item" : "2013-06-25T00:00:00.000",
+        "count" : "213"
+      }, {
+        "item" : "2013-12-30T00:00:00.000",
+        "count" : "208"
+      }, {
+        "item" : "2013-12-16T00:00:00.000",
+        "count" : "204"
+      }, {
+        "item" : "2012-11-20T00:00:00.000",
+        "count" : "203"
+      }, {
+        "item" : "2013-12-04T00:00:00.000",
+        "count" : "199"
+      }, {
+        "item" : "2014-01-13T00:00:00.000",
+        "count" : "197"
+      }, {
+        "item" : "2013-04-30T00:00:00.000",
+        "count" : "195"
+      }, {
+        "item" : "2014-01-06T00:00:00.000",
+        "count" : "194"
+      }, {
+        "item" : "2012-01-18T00:00:00.000",
+        "count" : "193"
+      }, {
+        "item" : "2014-05-28T00:00:00.000",
+        "count" : "192"
+      }, {
+        "item" : "2012-09-19T00:00:00.000",
+        "count" : "188"
+      }, {
+        "item" : "2014-05-01T00:00:00.000",
+        "count" : "188"
+      }, {
+        "item" : "2013-04-03T00:00:00.000",
+        "count" : "186"
+      }, {
+        "item" : "2014-06-18T00:00:00.000",
+        "count" : "186"
+      } ],
+      "smallest" : "2002-02-03T14:12:56.000",
+      "not_null" : "216380",
+      "count" : "349078",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "view" : "date_time",
+      "align" : "left"
+    }
+  }, {
+    "id" : 175326074,
+    "name" : "IssueDate",
+    "dataTypeName" : "calendar_date",
+    "description" : "Date permit was issued",
+    "fieldName" : "issuedate",
+    "position" : 11,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 7988308,
+    "width" : 208,
+    "cachedContents" : {
+      "largest" : "2026-10-16T20:01:54.000",
+      "non_null" : "349078",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2015-01-14T11:26:33.000",
+        "count" : "535"
+      }, {
+        "item" : "2014-07-01T00:00:00.000",
+        "count" : "284"
+      }, {
+        "item" : "2012-01-18T00:00:00.000",
+        "count" : "260"
+      }, {
+        "item" : "2015-04-07T00:00:00.000",
+        "count" : "257"
+      }, {
+        "item" : "2013-12-05T00:00:00.000",
+        "count" : "245"
+      }, {
+        "item" : "2013-09-19T00:00:00.000",
+        "count" : "229"
+      }, {
+        "item" : "2013-04-08T00:00:00.000",
+        "count" : "224"
+      }, {
+        "item" : "2013-07-22T00:00:00.000",
+        "count" : "222"
+      }, {
+        "item" : "2013-07-19T00:00:00.000",
+        "count" : "220"
+      }, {
+        "item" : "2014-01-14T00:00:00.000",
+        "count" : "217"
+      }, {
+        "item" : "2013-12-16T00:00:00.000",
+        "count" : "216"
+      }, {
+        "item" : "2014-03-14T00:00:00.000",
+        "count" : "215"
+      }, {
+        "item" : "2014-01-13T00:00:00.000",
+        "count" : "211"
+      }, {
+        "item" : "2014-10-22T00:00:00.000",
+        "count" : "208"
+      }, {
+        "item" : "2014-05-01T00:00:00.000",
+        "count" : "203"
+      }, {
+        "item" : "2012-01-31T00:00:00.000",
+        "count" : "201"
+      }, {
+        "item" : "2013-03-01T00:00:00.000",
+        "count" : "198"
+      }, {
+        "item" : "2013-12-03T00:00:00.000",
+        "count" : "198"
+      }, {
+        "item" : "2014-07-08T00:00:00.000",
+        "count" : "194"
+      }, {
+        "item" : "2014-01-21T00:00:00.000",
+        "count" : "194"
+      } ],
+      "smallest" : "2012-01-01T00:00:00.000",
+      "not_null" : "217181",
+      "count" : "349078",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "view" : "date_time",
+      "align" : "left"
+    }
+  }, {
+    "id" : 175326075,
+    "name" : "CurrentStatus",
+    "dataTypeName" : "text",
+    "description" : "The most recently completed event in the permit's workflow (e.g. \"Application Submitted\", \"Zoning Review\", etc.)",
+    "fieldName" : "currentstatus",
+    "position" : 12,
+    "renderTypeName" : "text",
+    "tableColumnId" : 7988309,
+    "width" : 256,
+    "cachedContents" : {
+      "largest" : "Zoning Review",
+      "non_null" : "349072",
+      "null" : "6",
+      "top" : [ {
+        "item" : "Permit Issued",
+        "count" : "124899"
+      }, {
+        "item" : "Certificate of Completion",
+        "count" : "88951"
+      }, {
+        "item" : "Meter Release",
+        "count" : "42234"
+      }, {
+        "item" : "Certificate of Occupancy",
+        "count" : "33652"
+      }, {
+        "item" : "Finaled",
+        "count" : "23502"
+      }, {
+        "item" : "Closed",
+        "count" : "10977"
+      }, {
+        "item" : "Permit Issuance - Active",
+        "count" : "9153"
+      }, {
+        "item" : "Inspection - Completed",
+        "count" : "3330"
+      }, {
+        "item" : "Permit Expired",
+        "count" : "2017"
+      }, {
+        "item" : "Inspections Finaled",
+        "count" : "1691"
+      }, {
+        "item" : "Permit Expired Due to Inactivity",
+        "count" : "1584"
+      }, {
+        "item" : "Permit Finaled",
+        "count" : "861"
+      }, {
+        "item" : "VOIDED - Owner Changed Contractor",
+        "count" : "769"
+      }, {
+        "item" : "VOIDED - Applicant Withdrew Permit",
+        "count" : "749"
+      }, {
+        "item" : "Inspection - Pending",
+        "count" : "542"
+      }, {
+        "item" : "Permit Approved",
+        "count" : "405"
+      }, {
+        "item" : "Temporary Certificate of Occupancy",
+        "count" : "348"
+      }, {
+        "item" : "VOIDED - Duplicate Permit",
+        "count" : "345"
+      }, {
+        "item" : "Application Acceptance - Approved",
+        "count" : "325"
+      }, {
+        "item" : "Permit Application Expired",
+        "count" : "282"
+      } ],
+      "smallest" : "30 DAY TEMP. LTS.",
+      "not_null" : "217177",
+      "count" : "349078",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 175326076,
+    "name" : "NextStatus",
+    "dataTypeName" : "text",
+    "description" : "The next event in the permit's workflow after the most recently completed event",
+    "fieldName" : "nextstatus",
+    "position" : 13,
+    "renderTypeName" : "text",
+    "tableColumnId" : 7988310,
+    "width" : 220,
+    "cachedContents" : {
+      "largest" : "Zoning Review",
+      "non_null" : "46087",
+      "null" : "302991",
+      "top" : [ {
+        "item" : "Inspections Finaled",
+        "count" : "32467"
+      }, {
+        "item" : "Certificate of Completion",
+        "count" : "10225"
+      }, {
+        "item" : "Permit Finaled",
+        "count" : "1969"
+      }, {
+        "item" : "Sub-Permits Finaled",
+        "count" : "409"
+      }, {
+        "item" : "Permit Approval Letter",
+        "count" : "249"
+      }, {
+        "item" : "Certificate of Occupancy",
+        "count" : "149"
+      }, {
+        "item" : "Plan Review",
+        "count" : "137"
+      }, {
+        "item" : "Meter Release",
+        "count" : "133"
+      }, {
+        "item" : "Certificate Issued",
+        "count" : "99"
+      }, {
+        "item" : "Sub-Permits Issued",
+        "count" : "84"
+      }, {
+        "item" : "",
+        "count" : "59"
+      }, {
+        "item" : "Permit Approved",
+        "count" : "26"
+      }, {
+        "item" : "Permit Closed",
+        "count" : "23"
+      }, {
+        "item" : "Application Review",
+        "count" : "12"
+      }, {
+        "item" : "Meter Release - Gas ",
+        "count" : "9"
+      }, {
+        "item" : "Application Submitted",
+        "count" : "9"
+      }, {
+        "item" : "Zoning Review",
+        "count" : "3"
+      }, {
+        "item" : "Permit Issued",
+        "count" : "3"
+      }, {
+        "item" : "Temporary Certificate of Occupancy",
+        "count" : "3"
+      }, {
+        "item" : "Check Sanborn Map",
+        "count" : "2"
+      } ],
+      "smallest" : "",
+      "not_null" : "43991",
+      "count" : "349078",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 175326077,
+    "name" : "CurrentStatusDate",
+    "dataTypeName" : "calendar_date",
+    "description" : "The date on which the most recent event was completed",
+    "fieldName" : "currentstatusdate",
+    "position" : 14,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 7988311,
+    "width" : 304,
+    "cachedContents" : {
+      "largest" : "2026-11-14T00:00:00.000",
+      "non_null" : "349078",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2015-01-14T11:26:33.000",
+        "count" : "535"
+      }, {
+        "item" : "2013-03-26T00:00:00.000",
+        "count" : "265"
+      }, {
+        "item" : "2014-07-01T00:00:00.000",
+        "count" : "255"
+      }, {
+        "item" : "2015-04-07T00:00:00.000",
+        "count" : "237"
+      }, {
+        "item" : "2012-07-16T00:00:00.000",
+        "count" : "219"
+      }, {
+        "item" : "2013-12-05T00:00:00.000",
+        "count" : "218"
+      }, {
+        "item" : "2013-12-16T00:00:00.000",
+        "count" : "212"
+      }, {
+        "item" : "2014-03-14T00:00:00.000",
+        "count" : "209"
+      }, {
+        "item" : "2014-01-13T00:00:00.000",
+        "count" : "209"
+      }, {
+        "item" : "2013-04-09T00:00:00.000",
+        "count" : "209"
+      }, {
+        "item" : "2013-03-25T00:00:00.000",
+        "count" : "205"
+      }, {
+        "item" : "2014-01-21T00:00:00.000",
+        "count" : "205"
+      }, {
+        "item" : "2012-09-05T00:00:00.000",
+        "count" : "204"
+      }, {
+        "item" : "2013-08-12T00:00:00.000",
+        "count" : "202"
+      }, {
+        "item" : "2014-01-14T00:00:00.000",
+        "count" : "202"
+      }, {
+        "item" : "2014-06-06T00:00:00.000",
+        "count" : "200"
+      }, {
+        "item" : "2012-07-09T00:00:00.000",
+        "count" : "197"
+      }, {
+        "item" : "2014-05-30T00:00:00.000",
+        "count" : "196"
+      }, {
+        "item" : "2013-07-03T00:00:00.000",
+        "count" : "195"
+      }, {
+        "item" : "2013-08-07T00:00:00.000",
+        "count" : "194"
+      } ],
+      "smallest" : "2012-01-01T00:00:00.000",
+      "not_null" : "217181",
+      "count" : "349078",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "view" : "date_time",
+      "align" : "left"
+    }
+  }, {
+    "id" : 175326078,
+    "name" : "NextStatusDate",
+    "dataTypeName" : "calendar_date",
+    "description" : "The date on which the next incomplete event is projected to be completed",
+    "fieldName" : "nextstatusdate",
+    "position" : 15,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 7988312,
+    "width" : 268,
+    "cachedContents" : {
+      "largest" : "2027-06-28T17:42:39.000",
+      "non_null" : "46029",
+      "null" : "303049",
+      "top" : [ {
+        "item" : "2015-04-14T11:26:33.000",
+        "count" : "533"
+      }, {
+        "item" : "2014-11-24T00:00:00.000",
+        "count" : "112"
+      }, {
+        "item" : "2013-12-30T00:00:00.000",
+        "count" : "72"
+      }, {
+        "item" : "2013-12-23T00:00:00.000",
+        "count" : "69"
+      }, {
+        "item" : "2013-12-16T00:00:00.000",
+        "count" : "68"
+      }, {
+        "item" : "2014-05-26T00:00:00.000",
+        "count" : "64"
+      }, {
+        "item" : "2013-11-11T00:00:00.000",
+        "count" : "57"
+      }, {
+        "item" : "2014-04-07T00:00:00.000",
+        "count" : "53"
+      }, {
+        "item" : "2014-03-31T00:00:00.000",
+        "count" : "49"
+      }, {
+        "item" : "2014-02-10T00:00:00.000",
+        "count" : "47"
+      }, {
+        "item" : "2014-06-23T00:00:00.000",
+        "count" : "44"
+      }, {
+        "item" : "2014-06-11T00:00:00.000",
+        "count" : "41"
+      }, {
+        "item" : "2014-01-13T00:00:00.000",
+        "count" : "39"
+      }, {
+        "item" : "2013-11-25T00:00:00.000",
+        "count" : "39"
+      }, {
+        "item" : "2013-12-02T00:00:00.000",
+        "count" : "37"
+      }, {
+        "item" : "2023-12-25T00:00:00.000",
+        "count" : "36"
+      }, {
+        "item" : "2014-07-14T00:00:00.000",
+        "count" : "35"
+      }, {
+        "item" : "2014-03-03T00:00:00.000",
+        "count" : "34"
+      }, {
+        "item" : "2013-11-04T00:00:00.000",
+        "count" : "33"
+      }, {
+        "item" : "2014-04-14T00:00:00.000",
+        "count" : "32"
+      } ],
+      "smallest" : "2012-07-03T00:00:00.000",
+      "not_null" : "38181",
+      "count" : "349078",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "view" : "date_time",
+      "align" : "left"
+    }
+  }, {
+    "id" : 175326079,
+    "name" : "LandUse",
+    "dataTypeName" : "text",
+    "description" : "Property type (e.g. \"Single Family\", \"Business Use\", \"Multi-Family\")",
+    "fieldName" : "landuse",
+    "position" : 16,
+    "renderTypeName" : "text",
+    "tableColumnId" : 7988313,
+    "width" : 184,
+    "cachedContents" : {
+      "largest" : "Unknown",
+      "non_null" : "349078",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Single Family",
+        "count" : "176825"
+      }, {
+        "item" : "Business Use",
+        "count" : "66570"
+      }, {
+        "item" : "Two-Family",
+        "count" : "45307"
+      }, {
+        "item" : "Unknown",
+        "count" : "14924"
+      }, {
+        "item" : "Multi-Family",
+        "count" : "12833"
+      }, {
+        "item" : "Multi-Family (More than Four Units)",
+        "count" : "9207"
+      }, {
+        "item" : "Single Unit in Multi-Family Dwelling",
+        "count" : "8476"
+      }, {
+        "item" : "Mixed Use",
+        "count" : "6098"
+      }, {
+        "item" : "Three to Four Family",
+        "count" : "2572"
+      }, {
+        "item" : "Half of a Party Wall Double",
+        "count" : "2117"
+      }, {
+        "item" : "Accessory Use",
+        "count" : "1461"
+      }, {
+        "item" : "Not Applicable",
+        "count" : "1117"
+      }, {
+        "item" : "Event - N/A",
+        "count" : "1012"
+      }, {
+        "item" : "Multi-Family (More than Five Units)",
+        "count" : "558"
+      }, {
+        "item" : "Single Family Attached",
+        "count" : "1"
+      } ],
+      "smallest" : "Accessory Use",
+      "not_null" : "217181",
+      "count" : "349078",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 175326080,
+    "name" : "LandUseShort",
+    "dataTypeName" : "text",
+    "description" : "Property type code",
+    "fieldName" : "landuseshort",
+    "position" : 17,
+    "renderTypeName" : "text",
+    "tableColumnId" : 7988314,
+    "width" : 244,
+    "cachedContents" : {
+      "largest" : "UNK",
+      "non_null" : "349078",
+      "null" : "0",
+      "top" : [ {
+        "item" : "RSFD",
+        "count" : "176825"
+      }, {
+        "item" : "COMM",
+        "count" : "66570"
+      }, {
+        "item" : "RSF2",
+        "count" : "45307"
+      }, {
+        "item" : "RMF",
+        "count" : "22598"
+      }, {
+        "item" : "UNK",
+        "count" : "14924"
+      }, {
+        "item" : "SUMF",
+        "count" : "8476"
+      }, {
+        "item" : "MIXD",
+        "count" : "6098"
+      }, {
+        "item" : "PLEX",
+        "count" : "2572"
+      }, {
+        "item" : "N/A",
+        "count" : "2129"
+      }, {
+        "item" : "HALF",
+        "count" : "2117"
+      }, {
+        "item" : "ACC",
+        "count" : "1461"
+      }, {
+        "item" : "RSFA",
+        "count" : "1"
+      } ],
+      "smallest" : "ACC",
+      "not_null" : "217181",
+      "count" : "349078",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 175326081,
+    "name" : "ProjectName",
+    "dataTypeName" : "text",
+    "description" : "If this permit is associated with a City Planning project, that project's title",
+    "fieldName" : "projectname",
+    "position" : 18,
+    "renderTypeName" : "text",
+    "tableColumnId" : 7988315,
+    "width" : 232,
+    "cachedContents" : {
+      "largest" : "Wal-Mart",
+      "non_null" : "1095",
+      "null" : "347983",
+      "top" : [ {
+        "item" : "",
+        "count" : "966"
+      }, {
+        "item" : "Grove Place",
+        "count" : "12"
+      }, {
+        "item" : "1746-1754 Prytania St",
+        "count" : "6"
+      }, {
+        "item" : "Harrah's 2021",
+        "count" : "6"
+      }, {
+        "item" : "Tulane Business School Revisions",
+        "count" : "4"
+      }, {
+        "item" : "4557 N Rampart St, 4600 St Claude Ave",
+        "count" : "4"
+      }, {
+        "item" : "400-444 N Villere St, 1504-1530 St Louis St",
+        "count" : "3"
+      }, {
+        "item" : "10200-10250 Almonaster Ave",
+        "count" : "3"
+      }, {
+        "item" : "14600 Dwyer Blvd, 14600 Peltier Dr, 14601 Peltier Dr, 14602 Peltier Dr",
+        "count" : "3"
+      }, {
+        "item" : "Edwards NOLA Midcity",
+        "count" : "3"
+      }, {
+        "item" : "Newman School",
+        "count" : "2"
+      }, {
+        "item" : "627/633 Esplanade",
+        "count" : "2"
+      }, {
+        "item" : "3801 St Bernard Ave, 3815 St Bernard Ave, 3943 St Bernard Ave, 1401 Mi",
+        "count" : "2"
+      }, {
+        "item" : "6975 MAGAZINE",
+        "count" : "2"
+      }, {
+        "item" : "Holy Cross Dormitory",
+        "count" : "2"
+      }, {
+        "item" : "1712 Egania St",
+        "count" : "1"
+      }, {
+        "item" : "1535 Canal St, 1537 Canal St, 101 N Villere St",
+        "count" : "1"
+      }, {
+        "item" : "1215 St Bernard Ave",
+        "count" : "1"
+      }, {
+        "item" : "1535-1537 Canal St (SW)",
+        "count" : "1"
+      }, {
+        "item" : "1495 Athis St",
+        "count" : "1"
+      } ],
+      "smallest" : "",
+      "not_null" : "42700",
+      "count" : "349078",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 175326082,
+    "name" : "UnpaidFees",
+    "dataTypeName" : "number",
+    "description" : "Permit fees that have not been paid yet",
+    "fieldName" : "unpaidfees",
+    "position" : 19,
+    "renderTypeName" : "number",
+    "tableColumnId" : 7988316,
+    "width" : 220,
+    "cachedContents" : {
+      "largest" : "137826.0",
+      "non_null" : "349078",
+      "average" : "4.611656612768999",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "341557"
+      }, {
+        "item" : "50.0",
+        "count" : "2123"
+      }, {
+        "item" : "190.0",
+        "count" : "1300"
+      }, {
+        "item" : "590.0",
+        "count" : "538"
+      }, {
+        "item" : "100.0",
+        "count" : "514"
+      }, {
+        "item" : "380.0",
+        "count" : "219"
+      }, {
+        "item" : "150.0",
+        "count" : "151"
+      }, {
+        "item" : "65.0",
+        "count" : "141"
+      }, {
+        "item" : "30.0",
+        "count" : "115"
+      }, {
+        "item" : "40.0",
+        "count" : "96"
+      }, {
+        "item" : "-30.0",
+        "count" : "96"
+      }, {
+        "item" : "125.0",
+        "count" : "74"
+      }, {
+        "item" : "60.0",
+        "count" : "60"
+      }, {
+        "item" : "200.0",
+        "count" : "45"
+      }, {
+        "item" : "570.0",
+        "count" : "40"
+      }, {
+        "item" : "130.0",
+        "count" : "40"
+      }, {
+        "item" : "90.0",
+        "count" : "28"
+      }, {
+        "item" : "240.0",
+        "count" : "27"
+      }, {
+        "item" : "250.0",
+        "count" : "27"
+      }, {
+        "item" : "-20.0",
+        "count" : "26"
+      } ],
+      "smallest" : "-637500.0",
+      "not_null" : "217181",
+      "count" : "349078",
+      "sum" : "980839.41",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 175326083,
+    "name" : "TotalFees",
+    "dataTypeName" : "number",
+    "description" : "Total permit fees, in dollars",
+    "fieldName" : "totalfees",
+    "position" : 20,
+    "renderTypeName" : "number",
+    "tableColumnId" : 7988317,
+    "width" : 208,
+    "cachedContents" : {
+      "largest" : "1630536.0",
+      "non_null" : "349078",
+      "average" : "386.7283961878253",
+      "null" : "0",
+      "top" : [ {
+        "item" : "40.0",
+        "count" : "52582"
+      }, {
+        "item" : "65.0",
+        "count" : "18730"
+      }, {
+        "item" : "30.0",
+        "count" : "14809"
+      }, {
+        "item" : "0.0",
+        "count" : "12642"
+      }, {
+        "item" : "100.0",
+        "count" : "9761"
+      }, {
+        "item" : "20.0",
+        "count" : "9481"
+      }, {
+        "item" : "70.0",
+        "count" : "8120"
+      }, {
+        "item" : "52.0",
+        "count" : "7731"
+      }, {
+        "item" : "35.0",
+        "count" : "5393"
+      }, {
+        "item" : "160.0",
+        "count" : "4623"
+      }, {
+        "item" : "55.0",
+        "count" : "4490"
+      }, {
+        "item" : "50.0",
+        "count" : "4390"
+      }, {
+        "item" : "103.0",
+        "count" : "4223"
+      }, {
+        "item" : "185.0",
+        "count" : "3965"
+      }, {
+        "item" : "80.0",
+        "count" : "3954"
+      }, {
+        "item" : "145.0",
+        "count" : "3801"
+      }, {
+        "item" : "85.0",
+        "count" : "3739"
+      }, {
+        "item" : "130.0",
+        "count" : "3487"
+      }, {
+        "item" : "195.0",
+        "count" : "3471"
+      }, {
+        "item" : "60.0",
+        "count" : "3151"
+      } ],
+      "smallest" : "-634410.0",
+      "not_null" : "217181",
+      "count" : "349078",
+      "sum" : "82252102.40",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 175326084,
+    "name" : "BldgArea",
+    "dataTypeName" : "number",
+    "description" : "Square footage of new construction or addition (if applicable)",
+    "fieldName" : "bldgarea",
+    "position" : 21,
+    "renderTypeName" : "number",
+    "tableColumnId" : 7988318,
+    "width" : 196,
+    "cachedContents" : {
+      "largest" : "1710944.0",
+      "non_null" : "349078",
+      "average" : "108.5216491840122",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "337087"
+      }, {
+        "item" : "2000",
+        "count" : "123"
+      }, {
+        "item" : "1800.0",
+        "count" : "97"
+      }, {
+        "item" : "1300.0",
+        "count" : "92"
+      }, {
+        "item" : "400.0",
+        "count" : "88"
+      }, {
+        "item" : "1500.0",
+        "count" : "86"
+      }, {
+        "item" : "1700.0",
+        "count" : "76"
+      }, {
+        "item" : "1600.0",
+        "count" : "75"
+      }, {
+        "item" : "3000.0",
+        "count" : "74"
+      }, {
+        "item" : "1200.0",
+        "count" : "74"
+      }, {
+        "item" : "200.0",
+        "count" : "67"
+      }, {
+        "item" : "2400.0",
+        "count" : "64"
+      }, {
+        "item" : "1400.0",
+        "count" : "61"
+      }, {
+        "item" : "2200.0",
+        "count" : "61"
+      }, {
+        "item" : "1.0",
+        "count" : "60"
+      }, {
+        "item" : "100.0",
+        "count" : "59"
+      }, {
+        "item" : "300.0",
+        "count" : "56"
+      }, {
+        "item" : "1000.0",
+        "count" : "55"
+      }, {
+        "item" : "500.0",
+        "count" : "54"
+      }, {
+        "item" : "600.0",
+        "count" : "54"
+      } ],
+      "smallest" : "-932.0",
+      "not_null" : "217181",
+      "count" : "349078",
+      "sum" : "23081144",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 175326085,
+    "name" : "ConstrVal",
+    "dataTypeName" : "number",
+    "description" : "Construction value, based on a copy of the construction contract or an itemized estimate in the case of self-performed work",
+    "fieldName" : "constrval",
+    "position" : 22,
+    "renderTypeName" : "number",
+    "tableColumnId" : 7988319,
+    "width" : 208,
+    "cachedContents" : {
+      "largest" : "503321600.0",
+      "non_null" : "349078",
+      "average" : "64473.71068753614",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "151481"
+      }, {
+        "item" : "500.0",
+        "count" : "5605"
+      }, {
+        "item" : "1000.0",
+        "count" : "5060"
+      }, {
+        "item" : "25000.0",
+        "count" : "4960"
+      }, {
+        "item" : "27000",
+        "count" : "4250"
+      }, {
+        "item" : "5000.0",
+        "count" : "4014"
+      }, {
+        "item" : "2500.0",
+        "count" : "3627"
+      }, {
+        "item" : "10000.0",
+        "count" : "3241"
+      }, {
+        "item" : "1500.0",
+        "count" : "2914"
+      }, {
+        "item" : "2000",
+        "count" : "2675"
+      }, {
+        "item" : "350.0",
+        "count" : "2645"
+      }, {
+        "item" : "300.0",
+        "count" : "2610"
+      }, {
+        "item" : "3000.0",
+        "count" : "2541"
+      }, {
+        "item" : "400",
+        "count" : "2096"
+      }, {
+        "item" : "20000",
+        "count" : "2033"
+      }, {
+        "item" : "450.0",
+        "count" : "1956"
+      }, {
+        "item" : "4000.0",
+        "count" : "1918"
+      }, {
+        "item" : "8000.0",
+        "count" : "1905"
+      }, {
+        "item" : "21000.0",
+        "count" : "1892"
+      }, {
+        "item" : "15000.0",
+        "count" : "1821"
+      } ],
+      "smallest" : "-5000",
+      "not_null" : "217181",
+      "count" : "349078",
+      "sum" : "13712720105",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 175326086,
+    "name" : "BondAmount",
+    "dataTypeName" : "number",
+    "description" : "Not used by Safety & Permits",
+    "fieldName" : "bondamount",
+    "position" : 23,
+    "renderTypeName" : "number",
+    "tableColumnId" : 7988320,
+    "width" : 220,
+    "cachedContents" : {
+      "largest" : "0.0",
+      "non_null" : "349078",
+      "average" : "0.0",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "349078"
+      } ],
+      "smallest" : "0.0",
+      "not_null" : "217181",
+      "count" : "349078",
+      "sum" : "0.0",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 175326088,
+    "name" : "OpenComments",
+    "dataTypeName" : "number",
+    "description" : "Number of permit review comments that have not been resolved or withdrawn",
+    "fieldName" : "opencomments",
+    "position" : 24,
+    "renderTypeName" : "number",
+    "tableColumnId" : 7988321,
+    "width" : 244,
+    "cachedContents" : {
+      "largest" : "55.0",
+      "non_null" : "349078",
+      "average" : "0.06967515645055880",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "325468"
+      }, {
+        "item" : "1.0",
+        "count" : "16285"
+      }, {
+        "item" : "2.0",
+        "count" : "4480"
+      }, {
+        "item" : "3.0",
+        "count" : "1399"
+      }, {
+        "item" : "4.0",
+        "count" : "623"
+      }, {
+        "item" : "5",
+        "count" : "297"
+      }, {
+        "item" : "6.0",
+        "count" : "237"
+      }, {
+        "item" : "7",
+        "count" : "120"
+      }, {
+        "item" : "8.0",
+        "count" : "57"
+      }, {
+        "item" : "9.0",
+        "count" : "33"
+      }, {
+        "item" : "10.0",
+        "count" : "30"
+      }, {
+        "item" : "11",
+        "count" : "15"
+      }, {
+        "item" : "13.0",
+        "count" : "10"
+      }, {
+        "item" : "12.0",
+        "count" : "8"
+      }, {
+        "item" : "14.0",
+        "count" : "4"
+      }, {
+        "item" : "15.0",
+        "count" : "4"
+      }, {
+        "item" : "20.0",
+        "count" : "2"
+      }, {
+        "item" : "16.0",
+        "count" : "2"
+      }, {
+        "item" : "55.0",
+        "count" : "1"
+      }, {
+        "item" : "17.0",
+        "count" : "1"
+      } ],
+      "smallest" : "0.0",
+      "not_null" : "217181",
+      "count" : "349078",
+      "sum" : "14819",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 175326089,
+    "name" : "Applicant",
+    "dataTypeName" : "text",
+    "description" : "Name of the individual or entity who filed the permit application",
+    "fieldName" : "applicant",
+    "position" : 25,
+    "renderTypeName" : "text",
+    "tableColumnId" : 7988322,
+    "width" : 208,
+    "cachedContents" : {
+      "largest" : "Zydeco Ownings LLC",
+      "non_null" : "347032",
+      "null" : "2046",
+      "top" : [ {
+        "item" : "Charles Thurber Pierson",
+        "count" : "4530"
+      }, {
+        "item" : "Damon Tyris Reed",
+        "count" : "2683"
+      }, {
+        "item" : "Keefe John Ditta",
+        "count" : "2421"
+      }, {
+        "item" : "Herman L. McClain's Jr.",
+        "count" : "2202"
+      }, {
+        "item" : "Earl L Langhoff  Jr.",
+        "count" : "2106"
+      }, {
+        "item" : "Jeremiah Alexander Johnson",
+        "count" : "2101"
+      }, {
+        "item" : "Eugene J Lawrence  Jr.",
+        "count" : "1949"
+      }, {
+        "item" : "Glynn Raye Woodall, Jr",
+        "count" : "1865"
+      }, {
+        "item" : "Evelyn Ailshie",
+        "count" : "1835"
+      }, {
+        "item" : "Elbred Malone",
+        "count" : "1816"
+      }, {
+        "item" : "Miguel Rivera",
+        "count" : "1810"
+      }, {
+        "item" : "Dean Walters",
+        "count" : "1779"
+      }, {
+        "item" : "Evelyn Lawson",
+        "count" : "1767"
+      }, {
+        "item" : "Brandon Augustus Francois",
+        "count" : "1739"
+      }, {
+        "item" : "Michael Anthony King",
+        "count" : "1670"
+      }, {
+        "item" : "Jeffrey David Cantin",
+        "count" : "1593"
+      }, {
+        "item" : "Juan Jose Arriago-Moreno",
+        "count" : "1591"
+      }, {
+        "item" : "Charles K Sardi",
+        "count" : "1450"
+      }, {
+        "item" : "Herman L. McClain Jr.",
+        "count" : "1419"
+      }, {
+        "item" : "Robert Mendoza",
+        "count" : "1352"
+      } ],
+      "smallest" : "",
+      "not_null" : "215370",
+      "count" : "349078",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 175326090,
+    "name" : "TotalInspections",
+    "dataTypeName" : "number",
+    "description" : "Total number of inspections required or performed, both complete and incomplete",
+    "fieldName" : "totalinspections",
+    "position" : 26,
+    "renderTypeName" : "number",
+    "tableColumnId" : 7988323,
+    "width" : 292,
+    "cachedContents" : {
+      "largest" : "119.0",
+      "non_null" : "349078",
+      "average" : "2.429006004128132",
+      "null" : "0",
+      "top" : [ {
+        "item" : "3.0",
+        "count" : "100272"
+      }, {
+        "item" : "2.0",
+        "count" : "75349"
+      }, {
+        "item" : "1.0",
+        "count" : "68986"
+      }, {
+        "item" : "4",
+        "count" : "33121"
+      }, {
+        "item" : "5.0",
+        "count" : "32423"
+      }, {
+        "item" : "0.0",
+        "count" : "25701"
+      }, {
+        "item" : "6.0",
+        "count" : "7173"
+      }, {
+        "item" : "7.0",
+        "count" : "3355"
+      }, {
+        "item" : "8.0",
+        "count" : "1086"
+      }, {
+        "item" : "9.0",
+        "count" : "517"
+      }, {
+        "item" : "10.0",
+        "count" : "299"
+      }, {
+        "item" : "11.0",
+        "count" : "146"
+      }, {
+        "item" : "12.0",
+        "count" : "110"
+      }, {
+        "item" : "13.0",
+        "count" : "80"
+      }, {
+        "item" : "14.0",
+        "count" : "70"
+      }, {
+        "item" : "15.0",
+        "count" : "49"
+      }, {
+        "item" : "16.0",
+        "count" : "43"
+      }, {
+        "item" : "17.0",
+        "count" : "40"
+      }, {
+        "item" : "21.0",
+        "count" : "24"
+      }, {
+        "item" : "19.0",
+        "count" : "23"
+      } ],
+      "smallest" : "0.0",
+      "not_null" : "217181",
+      "count" : "349078",
+      "sum" : "516618",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 175326091,
+    "name" : "Contractors",
+    "dataTypeName" : "text",
+    "description" : "Name or names of contractors associated with the permit",
+    "fieldName" : "contractors",
+    "position" : 27,
+    "renderTypeName" : "text",
+    "tableColumnId" : 7988324,
+    "width" : 232,
+    "cachedContents" : {
+      "largest" : "Zuppardo's Renovations Roofing, Siding, Fencing, Painting LLC",
+      "non_null" : "252400",
+      "null" : "96678",
+      "top" : [ {
+        "item" : "Charles Thurber Pierson",
+        "count" : "4513"
+      }, {
+        "item" : "Earl L Langhoff  Jr.",
+        "count" : "2134"
+      }, {
+        "item" : "POSIGEN OF LOUISIANA LLC",
+        "count" : "1817"
+      }, {
+        "item" : "Elbred Malone",
+        "count" : "1768"
+      }, {
+        "item" : "Glynn Raye Woodall, Jr",
+        "count" : "1661"
+      }, {
+        "item" : "Eugene J Lawrence  Jr.",
+        "count" : "1645"
+      }, {
+        "item" : "Juan Jose Arriago-Moreno",
+        "count" : "1611"
+      }, {
+        "item" : "Keefe John Ditta",
+        "count" : "1556"
+      }, {
+        "item" : "Jeremiah Alexander Johnson",
+        "count" : "1516"
+      }, {
+        "item" : "Michael Anthony King",
+        "count" : "1324"
+      }, {
+        "item" : "Herman L. McClain's Jr.",
+        "count" : "1302"
+      }, {
+        "item" : "Dean Walters",
+        "count" : "1284"
+      }, {
+        "item" : "Samuel Madison Tillman",
+        "count" : "1221"
+      }, {
+        "item" : "Damon Tyris Reed",
+        "count" : "1214"
+      }, {
+        "item" : "Hoai Trong Do",
+        "count" : "1181"
+      }, {
+        "item" : "Vernon Marcotte",
+        "count" : "1143"
+      }, {
+        "item" : "Timothy Blanchard",
+        "count" : "1140"
+      }, {
+        "item" : "Bruce J Frischhertz",
+        "count" : "1132"
+      }, {
+        "item" : "Blanchard Timothy",
+        "count" : "1110"
+      }, {
+        "item" : "Jeffrey David Cantin",
+        "count" : "1092"
+      } ],
+      "smallest" : "",
+      "not_null" : "167196",
+      "count" : "349078",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 175326092,
+    "name" : "PIN",
+    "dataTypeName" : "text",
+    "description" : "The assessor's tax bill number for the parcel",
+    "fieldName" : "pin",
+    "position" : 28,
+    "renderTypeName" : "text",
+    "tableColumnId" : 7988325,
+    "width" : 136,
+    "cachedContents" : {
+      "largest" : "IRISH BAYOU SEC 6 LOT 21\n50' X 120'. FORMERLY IDENTIFIED AS RTE 6 BOX 309-C RIDGEWAY BD\nSGLE/FR 5/RM A/R\n",
+      "non_null" : "315121",
+      "null" : "33957",
+      "top" : [ {
+        "item" : "513837601",
+        "count" : "610"
+      }, {
+        "item" : "39W965701",
+        "count" : "609"
+      }, {
+        "item" : "208104214",
+        "count" : "542"
+      }, {
+        "item" : "39W965601",
+        "count" : "539"
+      }, {
+        "item" : "39W908613",
+        "count" : "456"
+      }, {
+        "item" : "39W920010",
+        "count" : "447"
+      }, {
+        "item" : "101103819",
+        "count" : "437"
+      }, {
+        "item" : "614352302",
+        "count" : "424"
+      }, {
+        "item" : "102106013, 102106026, 102106027, 102106028",
+        "count" : "416"
+      }, {
+        "item" : "206207006",
+        "count" : "400"
+      }, {
+        "item" : "103100121",
+        "count" : "395"
+      }, {
+        "item" : "206105307",
+        "count" : "367"
+      }, {
+        "item" : "39W909630",
+        "count" : "322"
+      }, {
+        "item" : "615211904",
+        "count" : "320"
+      }, {
+        "item" : "103105307",
+        "count" : "317"
+      }, {
+        "item" : "206207608, 206207602",
+        "count" : "302"
+      }, {
+        "item" : "39W206523",
+        "count" : "301"
+      }, {
+        "item" : "105101602",
+        "count" : "295"
+      }, {
+        "item" : "103105606, 103105708, 103105709",
+        "count" : "294"
+      }, {
+        "item" : "206300102, 206300114, 206300111",
+        "count" : "292"
+      } ],
+      "smallest" : "",
+      "not_null" : "190525",
+      "count" : "349078",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 175326093,
+    "name" : "Beds",
+    "dataTypeName" : "number",
+    "description" : "Optional - number of bedrooms",
+    "fieldName" : "beds",
+    "position" : 29,
+    "renderTypeName" : "number",
+    "tableColumnId" : 7988327,
+    "width" : 148,
+    "cachedContents" : {
+      "largest" : "612.0",
+      "non_null" : "349078",
+      "average" : "0.1941068330457433",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "328444"
+      }, {
+        "item" : "3.0",
+        "count" : "7757"
+      }, {
+        "item" : "4.0",
+        "count" : "4808"
+      }, {
+        "item" : "2.0",
+        "count" : "3294"
+      }, {
+        "item" : "6.0",
+        "count" : "1286"
+      }, {
+        "item" : "5.0",
+        "count" : "1254"
+      }, {
+        "item" : "1.0",
+        "count" : "1236"
+      }, {
+        "item" : "8.0",
+        "count" : "283"
+      }, {
+        "item" : "7",
+        "count" : "121"
+      }, {
+        "item" : "10",
+        "count" : "91"
+      }, {
+        "item" : "9.0",
+        "count" : "52"
+      }, {
+        "item" : "12.0",
+        "count" : "45"
+      }, {
+        "item" : "11.0",
+        "count" : "21"
+      }, {
+        "item" : "24.0",
+        "count" : "18"
+      }, {
+        "item" : "16.0",
+        "count" : "17"
+      }, {
+        "item" : "14.0",
+        "count" : "17"
+      }, {
+        "item" : "18.0",
+        "count" : "14"
+      }, {
+        "item" : "15.0",
+        "count" : "13"
+      }, {
+        "item" : "-2.0",
+        "count" : "13"
+      }, {
+        "item" : "21.0",
+        "count" : "13"
+      } ],
+      "smallest" : "-22.0",
+      "not_null" : "217181",
+      "count" : "349078",
+      "sum" : "41284",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 175326094,
+    "name" : "Baths",
+    "dataTypeName" : "number",
+    "description" : "Optional - number of bathrooms",
+    "fieldName" : "baths",
+    "position" : 30,
+    "renderTypeName" : "number",
+    "tableColumnId" : 7988328,
+    "width" : 160,
+    "cachedContents" : {
+      "largest" : "1350.0",
+      "non_null" : "349078",
+      "average" : "0.1715168298955742",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "325600"
+      }, {
+        "item" : "2.0",
+        "count" : "9635"
+      }, {
+        "item" : "3.0",
+        "count" : "3794"
+      }, {
+        "item" : "1.0",
+        "count" : "3664"
+      }, {
+        "item" : "4.0",
+        "count" : "2604"
+      }, {
+        "item" : "2.5",
+        "count" : "1007"
+      }, {
+        "item" : "5.0",
+        "count" : "585"
+      }, {
+        "item" : "6.0",
+        "count" : "450"
+      }, {
+        "item" : "3.5",
+        "count" : "432"
+      }, {
+        "item" : "1.5",
+        "count" : "205"
+      }, {
+        "item" : "8.0",
+        "count" : "165"
+      }, {
+        "item" : "4.5",
+        "count" : "161"
+      }, {
+        "item" : "7.0",
+        "count" : "109"
+      }, {
+        "item" : "9.0",
+        "count" : "55"
+      }, {
+        "item" : "10.0",
+        "count" : "50"
+      }, {
+        "item" : "12.0",
+        "count" : "39"
+      }, {
+        "item" : "5.5",
+        "count" : "37"
+      }, {
+        "item" : "14.0",
+        "count" : "33"
+      }, {
+        "item" : "11.0",
+        "count" : "23"
+      }, {
+        "item" : "24.0",
+        "count" : "21"
+      } ],
+      "smallest" : "-59.0",
+      "not_null" : "217181",
+      "count" : "349078",
+      "sum" : "36479.4",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 175326095,
+    "name" : "HeatType",
+    "dataTypeName" : "text",
+    "description" : "Optional - type of heating to be installed",
+    "fieldName" : "heattype",
+    "position" : 31,
+    "renderTypeName" : "text",
+    "tableColumnId" : 7988329,
+    "width" : 196,
+    "cachedContents" : {
+      "largest" : "Upgrade",
+      "non_null" : "2275",
+      "null" : "346803",
+      "top" : [ {
+        "item" : "",
+        "count" : "966"
+      }, {
+        "item" : "None",
+        "count" : "630"
+      }, {
+        "item" : "New",
+        "count" : "353"
+      }, {
+        "item" : "Upgrade",
+        "count" : "129"
+      }, {
+        "item" : "Air Conditioning",
+        "count" : "105"
+      }, {
+        "item" : "Electric Furnace",
+        "count" : "33"
+      }, {
+        "item" : "Gas Furnance",
+        "count" : "22"
+      }, {
+        "item" : "Build-Out",
+        "count" : "19"
+      }, {
+        "item" : "Heat Pump",
+        "count" : "7"
+      }, {
+        "item" : "Gas Pack",
+        "count" : "4"
+      }, {
+        "item" : "Replace ",
+        "count" : "2"
+      }, {
+        "item" : "Replacement",
+        "count" : "2"
+      }, {
+        "item" : "Gas Line ",
+        "count" : "2"
+      }, {
+        "item" : "Replacement ",
+        "count" : "1"
+      } ],
+      "smallest" : "",
+      "not_null" : "43944",
+      "count" : "349078",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 175326096,
+    "name" : "SecondFloo",
+    "dataTypeName" : "number",
+    "description" : "Not used - area of second floor in square feet",
+    "fieldName" : "secondfloo",
+    "position" : 32,
+    "renderTypeName" : "number",
+    "tableColumnId" : 7988330,
+    "width" : 220,
+    "cachedContents" : {
+      "largest" : "0.0",
+      "non_null" : "349078",
+      "average" : "0",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "349078"
+      } ],
+      "smallest" : "0.0",
+      "not_null" : "217181",
+      "count" : "349078",
+      "sum" : "0",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 175326097,
+    "name" : "BasementAr",
+    "dataTypeName" : "number",
+    "description" : "Not used - area of basement in square feet",
+    "fieldName" : "basementar",
+    "position" : 33,
+    "renderTypeName" : "number",
+    "tableColumnId" : 7988331,
+    "width" : 220,
+    "cachedContents" : {
+      "largest" : "0.0",
+      "non_null" : "349078",
+      "average" : "0",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "349078"
+      } ],
+      "smallest" : "0.0",
+      "not_null" : "217181",
+      "count" : "349078",
+      "sum" : "0",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 175326098,
+    "name" : "DaysOpen",
+    "dataTypeName" : "number",
+    "description" : "Number of days from filing the application to closing the permit (whether finaled, voided, withdrawn, or denied)",
+    "fieldName" : "daysopen",
+    "position" : 34,
+    "renderTypeName" : "number",
+    "tableColumnId" : 7988332,
+    "width" : 196,
+    "cachedContents" : {
+      "largest" : "7193.0",
+      "non_null" : "349078",
+      "average" : "665.8300366265921",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "12069"
+      }, {
+        "item" : "1.0",
+        "count" : "6785"
+      }, {
+        "item" : "6.0",
+        "count" : "4372"
+      }, {
+        "item" : "2.0",
+        "count" : "4323"
+      }, {
+        "item" : "5.0",
+        "count" : "4036"
+      }, {
+        "item" : "3",
+        "count" : "3915"
+      }, {
+        "item" : "7.0",
+        "count" : "3808"
+      }, {
+        "item" : "4.0",
+        "count" : "3696"
+      }, {
+        "item" : "8",
+        "count" : "2710"
+      }, {
+        "item" : "13.0",
+        "count" : "2146"
+      }, {
+        "item" : "14.0",
+        "count" : "2090"
+      }, {
+        "item" : "9.0",
+        "count" : "2036"
+      }, {
+        "item" : "12.0",
+        "count" : "1818"
+      }, {
+        "item" : "11.0",
+        "count" : "1797"
+      }, {
+        "item" : "10.0",
+        "count" : "1749"
+      }, {
+        "item" : "15",
+        "count" : "1573"
+      }, {
+        "item" : "20.0",
+        "count" : "1492"
+      }, {
+        "item" : "21.0",
+        "count" : "1423"
+      }, {
+        "item" : "28.0",
+        "count" : "1244"
+      }, {
+        "item" : "27.0",
+        "count" : "1242"
+      } ],
+      "smallest" : "0.0",
+      "not_null" : "217181",
+      "count" : "349078",
+      "sum" : "141613393",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 175326099,
+    "name" : "DaysIssued",
+    "dataTypeName" : "number",
+    "description" : "Number of days from issuing the permit to closing the permit (whether finaled, voided, withdrawn, or denied)",
+    "fieldName" : "daysissued",
+    "position" : 35,
+    "renderTypeName" : "number",
+    "tableColumnId" : 7988333,
+    "width" : 220,
+    "cachedContents" : {
+      "largest" : "4850.0",
+      "non_null" : "349078",
+      "average" : "649.9688650458185",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "23432"
+      }, {
+        "item" : "1.0",
+        "count" : "8600"
+      }, {
+        "item" : "2.0",
+        "count" : "4837"
+      }, {
+        "item" : "3.0",
+        "count" : "4564"
+      }, {
+        "item" : "5.0",
+        "count" : "4361"
+      }, {
+        "item" : "4.0",
+        "count" : "4279"
+      }, {
+        "item" : "6.0",
+        "count" : "4273"
+      }, {
+        "item" : "7.0",
+        "count" : "3685"
+      }, {
+        "item" : "184.0",
+        "count" : "2487"
+      }, {
+        "item" : "8.0",
+        "count" : "2373"
+      }, {
+        "item" : "182.0",
+        "count" : "2210"
+      }, {
+        "item" : "183.0",
+        "count" : "2072"
+      }, {
+        "item" : "13.0",
+        "count" : "2024"
+      }, {
+        "item" : "14",
+        "count" : "1986"
+      }, {
+        "item" : "12.0",
+        "count" : "1860"
+      }, {
+        "item" : "11.0",
+        "count" : "1717"
+      }, {
+        "item" : "9",
+        "count" : "1715"
+      }, {
+        "item" : "181.0",
+        "count" : "1629"
+      }, {
+        "item" : "10.0",
+        "count" : "1532"
+      }, {
+        "item" : "20.0",
+        "count" : "1450"
+      } ],
+      "smallest" : "0.0",
+      "not_null" : "217181",
+      "count" : "349078",
+      "sum" : "138239928",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 175326100,
+    "name" : "LeadAgency",
+    "dataTypeName" : "text",
+    "description" : "Always City of New Orleans",
+    "fieldName" : "leadagency",
+    "position" : 36,
+    "renderTypeName" : "text",
+    "tableColumnId" : 7988334,
+    "width" : 220,
+    "cachedContents" : {
+      "largest" : "New Orleans Parrish",
+      "non_null" : "349078",
+      "null" : "0",
+      "top" : [ {
+        "item" : "City of New Orleans",
+        "count" : "349076"
+      }, {
+        "item" : "New Orleans Parrish",
+        "count" : "2"
+      } ],
+      "smallest" : "City of New Orleans",
+      "not_null" : "217181",
+      "count" : "349078",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 175326101,
+    "name" : "ExitReason",
+    "dataTypeName" : "text",
+    "description" : "If the permit application has been closed, the reason for closing it",
+    "fieldName" : "exitreason",
+    "position" : 37,
+    "renderTypeName" : "text",
+    "tableColumnId" : 7988335,
+    "width" : 220,
+    "cachedContents" : {
+      "largest" : "Zoning Denied",
+      "non_null" : "302065",
+      "null" : "47013",
+      "top" : [ {
+        "item" : "Finaled",
+        "count" : "283788"
+      }, {
+        "item" : "Closed",
+        "count" : "10977"
+      }, {
+        "item" : "Permit Expired",
+        "count" : "2005"
+      }, {
+        "item" : "Permit Expired Due to Inactivity",
+        "count" : "1584"
+      }, {
+        "item" : "",
+        "count" : "914"
+      }, {
+        "item" : "VOIDED - Owner Changed Contractor",
+        "count" : "769"
+      }, {
+        "item" : "VOIDED - Applicant Withdrew Permit",
+        "count" : "749"
+      }, {
+        "item" : "VOIDED - Duplicate Permit",
+        "count" : "345"
+      }, {
+        "item" : "Permit Application Expired",
+        "count" : "282"
+      }, {
+        "item" : "VOIDED",
+        "count" : "104"
+      }, {
+        "item" : "VOIDED - Issued in Error",
+        "count" : "75"
+      }, {
+        "item" : "Permit not required",
+        "count" : "70"
+      }, {
+        "item" : "Permit Denied",
+        "count" : "67"
+      }, {
+        "item" : "Permit Inactive - Awaiting Response",
+        "count" : "60"
+      }, {
+        "item" : "Inspection Required",
+        "count" : "50"
+      }, {
+        "item" : "Application Deficiencies",
+        "count" : "47"
+      }, {
+        "item" : "Additional information required",
+        "count" : "43"
+      }, {
+        "item" : "Complete - Historical Import",
+        "count" : "39"
+      }, {
+        "item" : "Different Permit Type required",
+        "count" : "36"
+      }, {
+        "item" : "Ineligible Address",
+        "count" : "34"
+      } ],
+      "smallest" : "",
+      "not_null" : "215733",
+      "count" : "349078",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 175326102,
+    "name" : "Subdivision",
+    "dataTypeName" : "text",
+    "description" : "City Planning Commission's neighborhood name",
+    "fieldName" : "subdivision",
+    "position" : 38,
+    "renderTypeName" : "text",
+    "tableColumnId" : 7988336,
+    "width" : 232,
+    "cachedContents" : {
+      "largest" : "Whitney,Whitney",
+      "non_null" : "288416",
+      "null" : "60662",
+      "top" : [ {
+        "item" : "Central City",
+        "count" : "13834"
+      }, {
+        "item" : "Central Business District",
+        "count" : "13216"
+      }, {
+        "item" : "Little Woods",
+        "count" : "11064"
+      }, {
+        "item" : "Seventh Ward",
+        "count" : "10990"
+      }, {
+        "item" : "Audubon",
+        "count" : "10031"
+      }, {
+        "item" : "Mid-City",
+        "count" : "9350"
+      }, {
+        "item" : "French Quarter",
+        "count" : "8321"
+      }, {
+        "item" : "Treme - Lafitte",
+        "count" : "7361"
+      }, {
+        "item" : "St Claude",
+        "count" : "7245"
+      }, {
+        "item" : "St Roch",
+        "count" : "7154"
+      }, {
+        "item" : "Lakeview",
+        "count" : "7148"
+      }, {
+        "item" : "Lower Garden District",
+        "count" : "6636"
+      }, {
+        "item" : "Leonidas",
+        "count" : "5812"
+      }, {
+        "item" : "Old Aurora",
+        "count" : "5785"
+      }, {
+        "item" : "Milan",
+        "count" : "5738"
+      }, {
+        "item" : "Gentilly Terrace",
+        "count" : "5393"
+      }, {
+        "item" : "Lower Ninth Ward",
+        "count" : "5384"
+      }, {
+        "item" : "Bywater",
+        "count" : "5052"
+      }, {
+        "item" : "Uptown",
+        "count" : "5018"
+      }, {
+        "item" : "Fillmore",
+        "count" : "4991"
+      } ],
+      "smallest" : "",
+      "not_null" : "157460",
+      "count" : "349078",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 175326103,
+    "name" : "CouncilDist",
+    "dataTypeName" : "text",
+    "description" : "Council District (A, B, C, D, E)",
+    "fieldName" : "councildist",
+    "position" : 39,
+    "renderTypeName" : "text",
+    "tableColumnId" : 7988337,
+    "width" : 232,
+    "cachedContents" : {
+      "largest" : "E,",
+      "non_null" : "326477",
+      "null" : "22601",
+      "top" : [ {
+        "item" : "B",
+        "count" : "84488"
+      }, {
+        "item" : "D",
+        "count" : "68299"
+      }, {
+        "item" : "A",
+        "count" : "63326"
+      }, {
+        "item" : "C",
+        "count" : "59888"
+      }, {
+        "item" : "E",
+        "count" : "45791"
+      }, {
+        "item" : "B,",
+        "count" : "1218"
+      }, {
+        "item" : "D,",
+        "count" : "1087"
+      }, {
+        "item" : "A,",
+        "count" : "1032"
+      }, {
+        "item" : "C,",
+        "count" : "908"
+      }, {
+        "item" : "E,",
+        "count" : "439"
+      }, {
+        "item" : "",
+        "count" : "1"
+      } ],
+      "smallest" : "",
+      "not_null" : "199179",
+      "count" : "349078",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 175326104,
+    "name" : "Zoning",
+    "dataTypeName" : "text",
+    "description" : "How the property was zoned at the time of the permit application",
+    "fieldName" : "zoning",
+    "position" : 40,
+    "renderTypeName" : "text",
+    "tableColumnId" : 7988338,
+    "width" : 172,
+    "cachedContents" : {
+      "largest" : "X",
+      "non_null" : "345463",
+      "null" : "3615",
+      "top" : [ {
+        "item" : "HU-RD2",
+        "count" : "78471"
+      }, {
+        "item" : "S-RS",
+        "count" : "36036"
+      }, {
+        "item" : "RD-2",
+        "count" : "21766"
+      }, {
+        "item" : "RD-3",
+        "count" : "19644"
+      }, {
+        "item" : "RS-2",
+        "count" : "16220"
+      }, {
+        "item" : "HU-RD1",
+        "count" : "12003"
+      }, {
+        "item" : "HU-MU",
+        "count" : "10163"
+      }, {
+        "item" : "S-RD",
+        "count" : "9832"
+      }, {
+        "item" : "S-LRS1",
+        "count" : "8336"
+      }, {
+        "item" : "LRS-1",
+        "count" : "5948"
+      }, {
+        "item" : "HU-RM1",
+        "count" : "5623"
+      }, {
+        "item" : "HMR-3",
+        "count" : "5541"
+      }, {
+        "item" : "HU-B1",
+        "count" : "5222"
+      }, {
+        "item" : "MU-1",
+        "count" : "5019"
+      }, {
+        "item" : "C-1",
+        "count" : "4865"
+      }, {
+        "item" : "CBD-1",
+        "count" : "4691"
+      }, {
+        "item" : "RS-1",
+        "count" : "4639"
+      }, {
+        "item" : "HU-RS",
+        "count" : "3916"
+      }, {
+        "item" : "MU-2",
+        "count" : "3838"
+      }, {
+        "item" : "RM-4",
+        "count" : "3768"
+      } ],
+      "smallest" : "",
+      "not_null" : "214067",
+      "count" : "349078",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 175326105,
+    "name" : "HistoricDistrict",
+    "dataTypeName" : "text",
+    "description" : "Historical District name",
+    "fieldName" : "historicdistrict",
+    "position" : 41,
+    "renderTypeName" : "text",
+    "tableColumnId" : 7988340,
+    "width" : 292,
+    "cachedContents" : {
+      "largest" : "Warehouse District,Warehouse District",
+      "non_null" : "99808",
+      "null" : "249270",
+      "top" : [ {
+        "item" : "Uptown",
+        "count" : "20849"
+      }, {
+        "item" : "Carrollton",
+        "count" : "9237"
+      }, {
+        "item" : "Mid-City",
+        "count" : "8241"
+      }, {
+        "item" : "Esplanade Ridge",
+        "count" : "7898"
+      }, {
+        "item" : "Bywater",
+        "count" : "6766"
+      }, {
+        "item" : "Irish Channel",
+        "count" : "5658"
+      }, {
+        "item" : "Faubourg Marigny",
+        "count" : "5111"
+      }, {
+        "item" : "Lower Garden District",
+        "count" : "4113"
+      }, {
+        "item" : "Tremé",
+        "count" : "4099"
+      }, {
+        "item" : "Algiers Point",
+        "count" : "3901"
+      }, {
+        "item" : "Garden District",
+        "count" : "3740"
+      }, {
+        "item" : "Treme",
+        "count" : "3550"
+      }, {
+        "item" : "Lafayette Square",
+        "count" : "2667"
+      }, {
+        "item" : "Holy Cross",
+        "count" : "2577"
+      }, {
+        "item" : "Warehouse District",
+        "count" : "2222"
+      }, {
+        "item" : "Parkview",
+        "count" : "1888"
+      }, {
+        "item" : "Canal Street",
+        "count" : "1609"
+      }, {
+        "item" : "Saint Charles Avenue",
+        "count" : "1045"
+      }, {
+        "item" : "Picayune Place",
+        "count" : "713"
+      }, {
+        "item" : "Uptown,Uptown",
+        "count" : "640"
+      } ],
+      "smallest" : "",
+      "not_null" : "76266",
+      "count" : "349078",
+      "cardinality" : "349078"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 175326106,
+    "name" : "Location 1",
+    "dataTypeName" : "location",
+    "description" : "Latitude/Longitude coordinates",
+    "fieldName" : "location_1",
+    "position" : 42,
+    "renderTypeName" : "location",
+    "tableColumnId" : 7988341,
+    "width" : 220,
+    "format" : {
+      "view" : "address_coords",
+      "align" : "left"
+    }
+  }, {
+    "id" : 429255340,
+    "name" : "Blocks",
+    "dataTypeName" : "number",
+    "fieldName" : ":@computed_region_ewbu_t8bu",
+    "position" : 47,
+    "renderTypeName" : "number",
+    "tableColumnId" : 87823244,
+    "computationStrategy" : {
+      "source_columns" : [ "location_1" ],
+      "type" : "georegion_match_on_point",
+      "parameters" : {
+        "region" : "_ewbu-t8bu",
+        "primary_key" : "_feature_id"
+      }
+    },
+    "format" : { }
+  }, {
+    "id" : 429255341,
+    "name" : "Council Districts",
+    "dataTypeName" : "number",
+    "fieldName" : ":@computed_region_k37d_then",
+    "position" : 48,
+    "renderTypeName" : "number",
+    "tableColumnId" : 87823245,
+    "computationStrategy" : {
+      "source_columns" : [ "location_1" ],
+      "type" : "georegion_match_on_point",
+      "parameters" : {
+        "region" : "_k37d-then",
+        "primary_key" : "_feature_id"
+      }
+    },
+    "format" : { }
+  }, {
+    "id" : 429255342,
+    "name" : "Self-Reported Neighborhood Organizations (SRNOs) Boundaries",
+    "dataTypeName" : "number",
+    "fieldName" : ":@computed_region_m56f_hbma",
+    "position" : 49,
+    "renderTypeName" : "number",
+    "tableColumnId" : 87823246,
+    "computationStrategy" : {
+      "source_columns" : [ "location_1" ],
+      "type" : "georegion_match_on_point",
+      "parameters" : {
+        "region" : "_m56f-hbma",
+        "primary_key" : "_feature_id"
+      }
+    },
+    "format" : { }
+  }, {
+    "id" : 429255343,
+    "name" : "(ALTERNATE) - Neighborhood Statistical Areas",
+    "dataTypeName" : "number",
+    "fieldName" : ":@computed_region_7fw3_kdpf",
+    "position" : 50,
+    "renderTypeName" : "number",
+    "tableColumnId" : 87823247,
+    "computationStrategy" : {
+      "source_columns" : [ "location_1" ],
+      "type" : "georegion_match_on_point",
+      "parameters" : {
+        "region" : "_7fw3-kdpf",
+        "primary_key" : "_feature_id"
+      }
+    },
+    "format" : { }
+  }, {
+    "id" : 429255344,
+    "name" : "Zip Codes",
+    "dataTypeName" : "number",
+    "fieldName" : ":@computed_region_spev_d8jm",
+    "position" : 51,
+    "renderTypeName" : "number",
+    "tableColumnId" : 87823248,
+    "computationStrategy" : {
+      "source_columns" : [ "location_1" ],
+      "type" : "georegion_match_on_point",
+      "parameters" : {
+        "region" : "_spev-d8jm",
+        "primary_key" : "_feature_id"
+      }
+    },
+    "format" : { }
+  }, {
+    "id" : 429255345,
+    "name" : "Neighborhood Organizations",
+    "dataTypeName" : "number",
+    "fieldName" : ":@computed_region_sikx_bdeb",
+    "position" : 52,
+    "renderTypeName" : "number",
+    "tableColumnId" : 87823249,
+    "computationStrategy" : {
+      "source_columns" : [ "location_1" ],
+      "type" : "georegion_match_on_point",
+      "parameters" : {
+        "region" : "_sikx-bdeb",
+        "primary_key" : "_feature_id"
+      }
+    },
+    "format" : { }
+  }, {
+    "id" : 429255346,
+    "name" : "Police Districts",
+    "dataTypeName" : "number",
+    "fieldName" : ":@computed_region_evki_aju8",
+    "position" : 53,
+    "renderTypeName" : "number",
+    "tableColumnId" : 87823250,
+    "computationStrategy" : {
+      "source_columns" : [ "location_1" ],
+      "type" : "georegion_match_on_point",
+      "parameters" : {
+        "region" : "_evki-aju8",
+        "primary_key" : "_feature_id"
+      }
+    },
+    "format" : { }
+  }, {
+    "id" : 429255347,
+    "name" : "Census - 2010",
+    "dataTypeName" : "number",
+    "fieldName" : ":@computed_region_u4yh_3wk9",
+    "position" : 54,
+    "renderTypeName" : "number",
+    "tableColumnId" : 87823251,
+    "computationStrategy" : {
+      "source_columns" : [ "location_1" ],
+      "type" : "georegion_match_on_point",
+      "parameters" : {
+        "region" : "_u4yh-3wk9",
+        "primary_key" : "_feature_id"
+      }
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "Creative Commons 1.0 Universal (Public Domain Dedication)",
+    "logoUrl" : "images/licenses/ccZero.png",
+    "termsLink" : "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+  },
+  "metadata" : {
+    "rdfClass" : "",
+    "rdfSubject" : "0",
+    "attachments" : [ {
+      "filename" : "Safety & Permits - Data Dictionary for NOLA Permits.xlsx",
+      "assetId" : "6faf82bc-fea7-4b87-a3a7-eab635b842f1",
+      "blobId" : "",
+      "name" : "Safety & Permits - Data Dictionary for NOLA Permits.xlsx"
+    } ],
+    "custom_fields" : {
+      "Common Core" : {
+        "Contact Email" : "data@nola.gov"
+      },
+      "Source Information" : {
+        "Source Department" : "Safety and Permits"
+      }
+    },
+    "rowIdentifier" : 175326067,
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ],
+    "rowLabel" : "Row",
+    "renderTypeConfig" : {
+      "visible" : {
+        "table" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "y6db-ky2f",
+    "displayName" : "Becky Houtman",
+    "screenName" : "Becky Houtman",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "y6db-ky2f",
+    "displayName" : "Becky Houtman",
+    "screenName" : "Becky Houtman",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "city of new orleans", "permits" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

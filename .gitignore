@@ -1,0 +1,9 @@
+# Downloaded source data stays out of git; raw snapshots live in R2 (seedat-raw).
+research/validation/data/
+data/
+node_modules/
+.wrangler/
+.dev.vars
+*.sqlite
+*.db
+__pycache__/

@@ -1,0 +1,75 @@
+[
+ {
+  "service_request": "2026-1314799",
+  "request_type": "Tree Service",
+  "request_reason": "Dead or Dying Tree",
+  "date_created": "2026-08-31T23:28:31.000",
+  "date_modified": "2026-08-31T23:28:33.000",
+  "request_status": "Pending",
+  "responsible_agency": "Department of Parks & Parkways",
+  "final_address": "3016 S Carrollton Ave",
+  "address_councildis": "A",
+  "status": "Pending",
+  "rowid": "1314799",
+  "final_x": "3666364.95009",
+  "final_y": "533384.911236",
+  "longitude": "-90.11579897104731",
+  "latitude": "29.961074435274007",
+  "geocoded_column": {
+   "type": "Point",
+   "coordinates": [
+    -90.11579897104731,
+    29.961074435274007
+   ]
+  }
+ },
+ {
+  "service_request": "2026-1314795",
+  "request_type": "Streetlights",
+  "request_reason": "Streetlight Outage/Malfunction",
+  "date_created": "2026-08-31T21:46:08.000",
+  "date_modified": "2026-09-01T08:01:04.000",
+  "case_close_date": "2026-09-01T03:01:01.000",
+  "request_status": "Closed",
+  "responsible_agency": "Department of Public Works",
+  "final_address": "7727 Nelson St",
+  "address_councildis": "A",
+  "status": "Duplicate Request",
+  "rowid": "1314795",
+  "final_x": "3666036.67437",
+  "final_y": "531058.649602",
+  "longitude": "-90.11691359354394",
+  "latitude": "29.95468756436451",
+  "geocoded_column": {
+   "type": "Point",
+   "coordinates": [
+    -90.11691359354394,
+    29.95468756436451
+   ]
+  }
+ },
+ {
+  "service_request": "2026-1314793",
+  "request_type": "Roads and Streets",
+  "request_reason": "Curb Damage",
+  "date_created": "2026-08-31T21:35:22.000",
+  "date_modified": "2026-09-01T08:39:26.000",
+  "request_status": "Pending",
+  "responsible_agency": "Department of Public Works",
+  "final_address": "1560 N Tonti St",
+  "address_councildis": "D",
+  "status": "Pending",
+  "rowid": "1314793",
+  "final_x": "3680172.76322",
+  "final_y": "539111.193802",
+  "longitude": "-90.07199739256836",
+  "latitude": "29.97640910054258",
+  "geocoded_column": {
+   "type": "Point",
+   "coordinates": [
+    -90.07199739256836,
+    29.97640910054258
+   ]
+  }
+ }
+]

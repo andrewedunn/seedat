@@ -1,0 +1,67 @@
+[
+ {
+  "ticket_id": "101000847991",
+  "issue_type": "Street Light",
+  "ticket_created_date_time": "2018-08-21T14:03:55.000",
+  "ticket_closed_date_time": "2018-08-28T09:38:35.000",
+  "ticket_status": "Closed",
+  "issue_description": "Issue: Outage Or Cycling | Pole number: PB164",
+  "street_address": "5417 Constance St",
+  "neighborhood_district": "WEST RIVERSIDE",
+  "council_district": "A",
+  "city": "NEW ORLEANS",
+  "state": "LA",
+  "zip_code": "70115",
+  "location": {
+   "latitude": "29.9202224971517",
+   "longitude": "-90.1157700850457"
+  },
+  "latitude": "29.9202224971517",
+  "longitude": "-90.1157700850457",
+  "closure_reason": "Case is Invalid",
+  "case_title": "Streetlight - Outage Or Cycling"
+ },
+ {
+  "ticket_id": "101000847903",
+  "issue_type": "Large Item Trash/Garbage Pickup",
+  "ticket_created_date_time": "2018-08-21T12:29:40.000",
+  "ticket_closed_date_time": "2018-08-28T10:51:27.000",
+  "ticket_status": "Closed",
+  "issue_description": "Description of item: 4 bags of trash",
+  "street_address": "1801 S White St",
+  "neighborhood_district": "BROADMOOR",
+  "council_district": "B",
+  "city": "NEW ORLEANS",
+  "state": "LA",
+  "zip_code": "70125",
+  "location": {
+   "latitude": "29.950804540038",
+   "longitude": "-90.1019344489206"
+  },
+  "latitude": "29.950804540038",
+  "longitude": "-90.1019344489206",
+  "closure_reason": "Case Resolved",
+  "case_title": "Large Item Trash/Garbage Pickup"
+ },
+ {
+  "ticket_id": "101000849742",
+  "issue_type": "Pothole/Roadway Surface Repair",
+  "ticket_created_date_time": "2018-08-24T14:41:00.000",
+  "ticket_closed_date_time": "2018-08-28T09:38:50.000",
+  "ticket_status": "Closed",
+  "issue_description": "Street area affected: Travel Lane / Roadway | Running water: No | Standing Water: No | Rocks: No",
+  "street_address": "MAYO RD & I 10 E SERVICE RD",
+  "neighborhood_district": "WEST LAKE FOREST",
+  "council_district": "E",
+  "city": "NEW ORLEANS",
+  "state": "LA",
+  "zip_code": "70126",
+  "location": {
+   "latitude": "30.0271568286374",
+   "longitude": "-90.0028355253192"
+  },
+  "latitude": "30.0271568286374",
+  "longitude": "-90.0028355253192",
+  "case_title": "Pothole/Roadway Surface Repair (District E)"
+ }
+]

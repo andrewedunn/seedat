@@ -1,0 +1,143 @@
+{
+ "id": "3iz8-nghx",
+ "name": "311 Calls (Historic Data: 2012-2018)",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "City Administration",
+ "attribution": null,
+ "attributionLink": null,
+ "licenseId": "CC0_10",
+ "license": {
+  "name": "Creative Commons 1.0 Universal (Public Domain Dedication)",
+  "logoUrl": "images/licenses/ccZero.png",
+  "termsLink": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+ },
+ "rowsUpdatedAt": "2019-01-08 04:38",
+ "createdAt": 1413315860,
+ "viewLastModified": 1546921846,
+ "publicationDate": 1535483101,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "311",
+  "calls",
+  "requests",
+  "archive"
+ ],
+ "metadata": {
+  "rdfSubject": "0",
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "data@nola.gov",
+    "Publisher": "appsteam@socrata.com",
+    "Public Access Level": "public"
+   },
+   "Source Information": {
+    "Source Department": "311"
+   }
+  },
+  "rowLabel": "Row",
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ],
+  "renderTypeConfig": {
+   "visible": {
+    "table": true
+   }
+  }
+ },
+ "description": "This dataset represents calls to the City of New Orleans' 311 Call Center from opening in 2012 to 12/28/2018. At the end of 2018, the call center moved to 24 hour operations with the Orleans Parish Communications District (OPCD). You can find the new dataset here: https://data.nola.gov/dataset/311-OPCD-Calls-2012-Present-/2jgv-pqrq",
+ "columns": [
+  {
+   "f": "ticket_id",
+   "n": "ticket_id",
+   "t": "text"
+  },
+  {
+   "f": "issue_type",
+   "n": "issue_type",
+   "t": "text"
+  },
+  {
+   "f": "ticket_created_date_time",
+   "n": "ticket_created_date_time",
+   "t": "calendar_date"
+  },
+  {
+   "f": "ticket_closed_date_time",
+   "n": "ticket_closed_date_time",
+   "t": "calendar_date"
+  },
+  {
+   "f": "ticket_status",
+   "n": "ticket_status",
+   "t": "text"
+  },
+  {
+   "f": "issue_description",
+   "n": "issue_description",
+   "t": "text"
+  },
+  {
+   "f": "street_address",
+   "n": "street_address",
+   "t": "text"
+  },
+  {
+   "f": "neighborhood_district",
+   "n": "neighborhood_district",
+   "t": "text"
+  },
+  {
+   "f": "council_district",
+   "n": "council_district",
+   "t": "text"
+  },
+  {
+   "f": "city",
+   "n": "city",
+   "t": "text"
+  },
+  {
+   "f": "state",
+   "n": "state",
+   "t": "text"
+  },
+  {
+   "f": "zip_code",
+   "n": "zip_code",
+   "t": "number"
+  },
+  {
+   "f": "location",
+   "n": "location",
+   "t": "location"
+  },
+  {
+   "f": "geom",
+   "n": "geom",
+   "t": "location"
+  },
+  {
+   "f": "latitude",
+   "n": "latitude",
+   "t": "number"
+  },
+  {
+   "f": "longitude",
+   "n": "longitude",
+   "t": "number"
+  },
+  {
+   "f": "closure_reason",
+   "n": "closure_reason",
+   "t": "text"
+  },
+  {
+   "f": "case_title",
+   "n": "case_title",
+   "t": "text"
+  }
+ ]
+}

@@ -1,0 +1,154 @@
+{
+ "id": "44ct-56tr",
+ "name": "Code Enforcement All Hearings",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Housing, Land Use, and Blight",
+ "attribution": null,
+ "attributionLink": null,
+ "licenseId": "CC0_10",
+ "license": {
+  "name": "Creative Commons 1.0 Universal (Public Domain Dedication)",
+  "logoUrl": "images/licenses/ccZero.png",
+  "termsLink": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+ },
+ "rowsUpdatedAt": "2026-10-17 04:08",
+ "createdAt": 1380521334,
+ "viewLastModified": 1706653645,
+ "publicationDate": 1706653645,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "blightstatus",
+  "hearing"
+ ],
+ "metadata": {
+  "rdfSubject": "0",
+  "rdfClass": "",
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "data@nola.gov"
+   },
+   "Source Information": {
+    "Source Department": "Code Enforcement"
+   }
+  },
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ],
+  "renderTypeConfig": {
+   "visible": {
+    "table": true
+   }
+  }
+ },
+ "description": "Code Enforcement All Hearings.",
+ "columns": [
+  {
+   "f": "o_c",
+   "n": "O/C",
+   "t": "text"
+  },
+  {
+   "f": "casenumber",
+   "n": "CaseNumber",
+   "t": "text"
+  },
+  {
+   "f": "propertyaddress",
+   "n": "PropertyAddress",
+   "t": "text"
+  },
+  {
+   "f": "casehistory",
+   "n": "CaseHistory",
+   "t": "text"
+  },
+  {
+   "f": "hearingdate",
+   "n": "HearingDate",
+   "t": "calendar_date"
+  },
+  {
+   "f": "hearingtime",
+   "n": "HearingTime",
+   "t": "calendar_date"
+  },
+  {
+   "f": "judgment",
+   "n": "Judgment",
+   "t": "text"
+  },
+  {
+   "f": "prevhearing",
+   "n": "PrevHearing",
+   "t": "calendar_date"
+  },
+  {
+   "f": "prevhearingstat",
+   "n": "PrevHearingStat",
+   "t": "text"
+  },
+  {
+   "f": "caseestablished",
+   "n": "CaseEstablished",
+   "t": "calendar_date"
+  },
+  {
+   "f": "inspected",
+   "n": "Inspected",
+   "t": "calendar_date"
+  },
+  {
+   "f": "inspectionresult",
+   "n": "InspectionResult",
+   "t": "text"
+  },
+  {
+   "f": "councildistrict",
+   "n": "CouncilDistrict",
+   "t": "text"
+  },
+  {
+   "f": "geoaddress",
+   "n": "GeoAddress",
+   "t": "text"
+  },
+  {
+   "f": "city",
+   "n": "City",
+   "t": "text"
+  },
+  {
+   "f": "state",
+   "n": "State",
+   "t": "text"
+  },
+  {
+   "f": "zip",
+   "n": "Zip",
+   "t": "text"
+  },
+  {
+   "f": "geopin",
+   "n": "GeoPIN",
+   "t": "text"
+  },
+  {
+   "f": "xpos",
+   "n": "XPos",
+   "t": "number"
+  },
+  {
+   "f": "ypos",
+   "n": "YPos",
+   "t": "number"
+  },
+  {
+   "f": "caseid",
+   "n": "CaseID",
+   "t": "number"
+  }
+ ]
+}

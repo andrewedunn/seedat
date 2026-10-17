@@ -1,0 +1,89 @@
+{
+ "id": "uh5a-f7uw",
+ "name": "Code Enforcement All Inspections",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Housing, Land Use, and Blight",
+ "attribution": null,
+ "attributionLink": null,
+ "licenseId": "CC0_10",
+ "license": {
+  "name": "Creative Commons 1.0 Universal (Public Domain Dedication)",
+  "logoUrl": "images/licenses/ccZero.png",
+  "termsLink": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+ },
+ "rowsUpdatedAt": "2026-10-17 04:09",
+ "createdAt": 1380522065,
+ "viewLastModified": 1706653569,
+ "publicationDate": 1706653569,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "blightstatus",
+  "inspection"
+ ],
+ "metadata": {
+  "rdfSubject": "0",
+  "rdfClass": "",
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "data@nola.gov"
+   },
+   "Source Information": {
+    "Source Department": "Code Enforcement"
+   }
+  },
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ],
+  "renderTypeConfig": {
+   "visible": {
+    "table": true
+   }
+  }
+ },
+ "description": "Code Enforcement All Inspections.",
+ "columns": [
+  {
+   "f": "caseid",
+   "n": "CaseID",
+   "t": "number"
+  },
+  {
+   "f": "caseno",
+   "n": "CaseNo",
+   "t": "text"
+  },
+  {
+   "f": "location",
+   "n": "Location",
+   "t": "text"
+  },
+  {
+   "f": "inspectiondate",
+   "n": "InspectionDate",
+   "t": "calendar_date"
+  },
+  {
+   "f": "inspectiontype",
+   "n": "InspectionType",
+   "t": "text"
+  },
+  {
+   "f": "inspectionresult",
+   "n": "InspectionResult",
+   "t": "text"
+  },
+  {
+   "f": "inspector",
+   "n": "Inspector",
+   "t": "text"
+  },
+  {
+   "f": "check",
+   "n": "Check",
+   "t": "number"
+  }
+ ]
+}

@@ -1,0 +1,105 @@
+[
+ {
+  "nopd_item": "B1105225",
+  "type_": "21J",
+  "typetext": "MISSING JUVENILE",
+  "priority": "1",
+  "initialtype": "21J",
+  "initialtypetext": "MISSING JUVENILE",
+  "initialpriority": "2F",
+  "mapx": "37369000",
+  "mapy": "3513814",
+  "timecreate": "2025-02-11T22:48:15.970000",
+  "timedispatch": "2025-02-12T03:56:01.003000",
+  "timearrive": "2025-02-12T03:56:09.213000",
+  "timeclosed": "2025-02-12T06:01:17.150000",
+  "disposition": "RTF",
+  "dispositiontext": "REPORT TO FOLLOW",
+  "selfinitiated": "N",
+  "beat": "7D02",
+  "block_address": "064XX Chestershire Dr",
+  "zip": "70126",
+  "policedistrict": "7",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    0,
+    0
+   ]
+  }
+ },
+ {
+  "nopd_item": "E1305925",
+  "type_": "52",
+  "typetext": "SIMPLE ARSON",
+  "priority": "1D",
+  "initialtype": "21",
+  "initialtypetext": "COMPLAINT OTHER",
+  "initialpriority": "1F",
+  "mapx": "3669577",
+  "mapy": "535978",
+  "timecreate": "2025-05-14T09:46:47.553000",
+  "timedispatch": "2025-05-14T10:57:43.867000",
+  "timearrive": "2025-05-14T11:08:34.473000",
+  "timeclosed": "2025-05-14T16:06:04.473000",
+  "disposition": "RTF",
+  "dispositiontext": "REPORT TO FOLLOW",
+  "selfinitiated": "N",
+  "beat": "1K02",
+  "block_address": "040XX Tulane Av",
+  "zip": "70119",
+  "policedistrict": "1",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -90.10556551,
+    29.96811038
+   ]
+  },
+  ":@computed_region_ewbu_t8bu": "3106",
+  ":@computed_region_k37d_then": "1",
+  ":@computed_region_m56f_hbma": "109",
+  ":@computed_region_7fw3_kdpf": "47",
+  ":@computed_region_spev_d8jm": "3768",
+  ":@computed_region_sikx_bdeb": "109",
+  ":@computed_region_evki_aju8": "6",
+  ":@computed_region_u4yh_3wk9": "3106"
+ },
+ {
+  "nopd_item": "F0608625",
+  "type_": "35D",
+  "typetext": "SIMPLE BATTERY DOMESTIC",
+  "priority": "2C",
+  "initialtype": "103D",
+  "initialtypetext": "DOMESTIC DISTURBANCE",
+  "initialpriority": "1A",
+  "mapx": "3668911",
+  "mapy": "532344",
+  "timecreate": "2025-06-06T22:16:37.057000",
+  "timedispatch": "2025-06-08T08:07:07.007000",
+  "timearrive": "2025-06-08T08:13:39.363000",
+  "timeclosed": "2025-06-08T11:08:07.127000",
+  "disposition": "RTF",
+  "dispositiontext": "REPORT TO FOLLOW",
+  "selfinitiated": "N",
+  "beat": "2V03",
+  "block_address": "032XX Bloomingdale Ct",
+  "zip": "70125",
+  "policedistrict": "2",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -90.10779393,
+    29.9581383
+   ]
+  },
+  ":@computed_region_ewbu_t8bu": "761",
+  ":@computed_region_k37d_then": "2",
+  ":@computed_region_m56f_hbma": "92",
+  ":@computed_region_7fw3_kdpf": "30",
+  ":@computed_region_spev_d8jm": "4147",
+  ":@computed_region_sikx_bdeb": "92",
+  ":@computed_region_evki_aju8": "3",
+  ":@computed_region_u4yh_3wk9": "761"
+ }
+]

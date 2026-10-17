@@ -1,0 +1,111 @@
+[
+ {
+  "nopd_item": "A0599223",
+  "type_": "SEXOFF",
+  "typetext": "SEX OFFENSE: GENERAL/MISC",
+  "priority": "2",
+  "initialtype": "ASLT",
+  "initialtypetext": "SIMPLE ASSAULT",
+  "initialpriority": "1",
+  "mapx": "3662781",
+  "mapy": "517589",
+  "timecreate": "2023-01-06T16:55:53.930",
+  "timedispatch": "2023-01-06T17:02:01.257",
+  "timearrive": "2023-01-06T18:28:28.477",
+  "timeclosed": "2023-01-06T19:15:31.787",
+  "disposition": "RTF",
+  "dispositiontext": "REPORT TO FOLLOW",
+  "selfinitiated": "N",
+  "beat": "2A02",
+  "block_address": "002XX Henry Clay Av",
+  "zip": "70118",
+  "policedistrict": "2",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -90.12764112,
+    29.91774739
+   ]
+  },
+  ":@computed_region_ewbu_t8bu": "3690",
+  ":@computed_region_k37d_then": "1",
+  ":@computed_region_m56f_hbma": "42",
+  ":@computed_region_7fw3_kdpf": "72",
+  ":@computed_region_spev_d8jm": "3767",
+  ":@computed_region_sikx_bdeb": "42",
+  ":@computed_region_evki_aju8": "3",
+  ":@computed_region_u4yh_3wk9": "3690"
+ },
+ {
+  "nopd_item": "B0272423",
+  "type_": "TRESP",
+  "typetext": "TRESPASSING",
+  "priority": "2",
+  "initialtype": "TRESP",
+  "initialtypetext": "TRESPASSING",
+  "initialpriority": "2",
+  "mapx": "3687848",
+  "mapy": "536417",
+  "timecreate": "2023-02-03T17:30:36.337",
+  "timedispatch": "2023-02-03T18:09:35.350",
+  "timearrive": "2023-02-03T18:16:17.567",
+  "timeclosed": "2023-02-03T18:27:44.347",
+  "disposition": "GOA",
+  "dispositiontext": "GONE ON ARRIVAL",
+  "selfinitiated": "N",
+  "beat": "5C02",
+  "block_address": "028XX St Claude Av",
+  "zip": "70117",
+  "policedistrict": "5",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -90.04784966,
+    29.96876737
+   ]
+  },
+  ":@computed_region_ewbu_t8bu": "13736",
+  ":@computed_region_k37d_then": "3",
+  ":@computed_region_m56f_hbma": "155",
+  ":@computed_region_7fw3_kdpf": "61",
+  ":@computed_region_spev_d8jm": "3766",
+  ":@computed_region_sikx_bdeb": "155",
+  ":@computed_region_evki_aju8": "8",
+  ":@computed_region_u4yh_3wk9": "13736"
+ },
+ {
+  "nopd_item": "A0653023",
+  "type_": "THEFT",
+  "typetext": "THEFT",
+  "priority": "2",
+  "initialtype": "BURGV",
+  "initialtypetext": "BURGLARY FROM VEHICLE",
+  "initialpriority": "0",
+  "mapx": "3706231",
+  "mapy": "564651",
+  "timecreate": "2023-01-07T07:05:08.077",
+  "timeclosed": "2023-01-07T10:21:05.607",
+  "disposition": "RTF",
+  "dispositiontext": "REPORT TO FOLLOW",
+  "selfinitiated": "N",
+  "beat": "7P04",
+  "block_address": "080XX Trapier Av",
+  "zip": "70127",
+  "policedistrict": "7",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -89.98874997,
+    30.04582091
+   ]
+  },
+  ":@computed_region_ewbu_t8bu": "1211",
+  ":@computed_region_k37d_then": "5",
+  ":@computed_region_m56f_hbma": "158",
+  ":@computed_region_7fw3_kdpf": "20",
+  ":@computed_region_spev_d8jm": "4149",
+  ":@computed_region_sikx_bdeb": "158",
+  ":@computed_region_evki_aju8": "1",
+  ":@computed_region_u4yh_3wk9": "1211"
+ }
+]

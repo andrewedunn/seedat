@@ -1,0 +1,41 @@
+[
+ {
+  "identifier": "ORA901031",
+  "property_address": "1918-1920 St Maurice Ave",
+  "address_number": "1918-1920",
+  "street_name": "St Maurice Ave",
+  "zip_code": "70117",
+  "city_planning_neighborhood": "LOWER NINTH WARD",
+  "council_district": "E",
+  "geopin_2": "41124541",
+  "property_type": "VACANT LOT",
+  "zoning": "S-RS",
+  "square_footage": "4032"
+ },
+ {
+  "identifier": "ORA901021",
+  "property_address": "6126 N Prieur St",
+  "address_number": "6126",
+  "street_name": "N Prieur St",
+  "zip_code": "70117",
+  "city_planning_neighborhood": "LOWER NINTH WARD",
+  "council_district": "E",
+  "geopin_2": "41124325",
+  "property_type": "VACANT LOT",
+  "zoning": "S-RS",
+  "square_footage": "5160"
+ },
+ {
+  "identifier": "ORA901020",
+  "property_address": "5619 N Miro St",
+  "address_number": "5619",
+  "street_name": "N Miro St",
+  "zip_code": "70117",
+  "city_planning_neighborhood": "LOWER NINTH WARD",
+  "council_district": "E",
+  "geopin_2": "41123824",
+  "property_type": "VACANT LOT",
+  "zoning": "HU-RD2",
+  "square_footage": "5270"
+ }
+]

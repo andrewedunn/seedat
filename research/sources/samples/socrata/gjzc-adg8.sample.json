@@ -1,0 +1,85 @@
+[
+ {
+  "the_geom": {
+   "type": "Point",
+   "coordinates": [
+    -90.040223127556,
+    29.983135230015
+   ]
+  },
+  "objectid": "2823",
+  "casefiled": "20230808095733.000",
+  "caseid": "287941",
+  "caseno": "23-04468-MPM",
+  "geoaddress": "3040 Law St",
+  "geopin": "41071411",
+  "initinspection": "20240209083000.000",
+  "initinspresult": "Violation: No WIP",
+  "keystatus": "The property was inspected on 02/09/2024 with a finding of \"Violation: No WIP\". The file is now awaiting title research before it can be set for a hearing.",
+  "lastpermit": "21-12850-RNVN",
+  "location": "3040 - 44 Law St",
+  "o_c": "Open",
+  "permitfiling": "20230515122600.000",
+  "permitstatus": "VOIDED - Applicant Withdrew Permit",
+  "permittype": "Renovation (Non-Structural)",
+  "stage": "2 - Title Research",
+  "statdate": "20240209083000.000",
+  "zipcode": "70117"
+ },
+ {
+  "the_geom": {
+   "type": "Point",
+   "coordinates": [
+    -90.032353766236,
+    29.976519317365
+   ]
+  },
+  "objectid": "3184",
+  "casefiled": "20220208141749.000",
+  "caseid": "273800",
+  "caseno": "22-00565-MPM",
+  "geoaddress": "2122 Bartholomew St",
+  "geopin": "41062536",
+  "initinspection": "20220610000000.000",
+  "initinspresult": "Violation: No WIP",
+  "keystatus": "A hearing was held on 01/09/2023 with a result of \"Guilty\".",
+  "lastpermit": "11BLD-05127",
+  "location": "2122 Bartholomew St",
+  "o_c": "Open",
+  "permitfiling": "20110811000000.000",
+  "permitstatus": "Inspection - Completed",
+  "permittype": "Renovation (Structural)",
+  "prevhearingdate": "20230109144500.000",
+  "prevhearingresult": "Guilty",
+  "stage": "4 - Judgment",
+  "statdate": "20230109144500.000",
+  "zipcode": "70117"
+ },
+ {
+  "the_geom": {
+   "type": "Point",
+   "coordinates": [
+    -90.015277308145,
+    29.96090389177
+   ]
+  },
+  "objectid": "22484",
+  "casefiled": "20230803133248.000",
+  "caseid": "287856",
+  "caseno": "23-04383-MPM",
+  "geoaddress": "5620 Saint Claude Ave",
+  "geopin": "41183882",
+  "initinspection": "20230803133000.000",
+  "initinspresult": "Violation: No WIP",
+  "keystatus": "The property was inspected on 08/03/2023 with a finding of \"Violation: No WIP\". The file is now awaiting title research before it can be set for a hearing.",
+  "lastpermit": "23-22877-DEMO",
+  "location": "5620 Saint Claude Ave",
+  "o_c": "Open",
+  "permitfiling": "20230818152133.000",
+  "permitstatus": "Certificate of Completion",
+  "permittype": "City IDC Demolition",
+  "stage": "2 - Title Research",
+  "statdate": "20230803133000.000",
+  "zipcode": "70117"
+ }
+]

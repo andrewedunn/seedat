@@ -1,0 +1,299 @@
+id,name,category,type,data_updated_at,metadata_updated_at,created,row_count,relevance_name,relevance_desc_only,columns,permalink,stale_gt_90d,probed
+9x7m-e8sq,Buildings,,map,2026-08-08,2026-08-08,2026-07-09,,permits,,0,https://data.nola.gov/d/9x7m-e8sq,,
+fja2-5dmw,Buildings,,dataset,2026-08-08,2026-08-08,2026-07-09,162486,permits,,13,https://data.nola.gov/d/fja2-5dmw,,Y
+2zer-6wpb,Catch Basin Cleanings / Inspections,,dataset,2026-10-17,2026-10-17,2018-10-03,103767,code_enf,,26,https://data.nola.gov/d/2zer-6wpb,,Y
+xv8z-gn8b,Code Enforcement - Abatements,,dataset,2026-10-16,2026-10-16,2015-03-09,7240,code_enf,,15,https://data.nola.gov/d/xv8z-gn8b,,Y
+gjzc-adg8,Code Enforcement Active Pipeline,,dataset,2025-02-24,2025-02-24,2025-02-24,9928,code_enf,,22,https://data.nola.gov/d/gjzc-adg8,Y,Y
+ig77-dd47,Code Enforcement Active Pipeline,,map,2025-02-24,2026-09-25,2025-02-24,,code_enf,,0,https://data.nola.gov/d/ig77-dd47,Y,
+c3as-66tn,Code Enforcement All Cases,,dataset,2025-02-24,2025-02-24,2025-02-24,171089,code_enf,,11,https://data.nola.gov/d/c3as-66tn,Y,Y
+55kc-rfaq,Code Enforcement All Cases,,map,2025-02-24,2026-09-25,2025-02-24,,code_enf,,0,https://data.nola.gov/d/55kc-rfaq,Y,
+rzfa-3k6b,Code Enforcement Districts,,dataset,2025-02-24,2025-02-24,2025-02-24,,code_enf,property,5,https://data.nola.gov/d/rzfa-3k6b,Y,
+e9fn-rhvt,Code Enforcement Districts,,map,2025-02-24,2026-09-25,2025-02-24,,code_enf,property,0,https://data.nola.gov/d/e9fn-rhvt,Y,
+m5br-772y,Lots,,dataset,2026-10-15,2026-10-15,2022-01-11,190009,property,,6,https://data.nola.gov/d/m5br-772y,,Y
+tr87-5sf5,Mandatory Inclusionary Zoning,,dataset,2026-07-09,2026-07-09,2026-07-09,,zoning,,3,https://data.nola.gov/d/tr87-5sf5,Y,
+4748-qbay,Mandatory Inclusionary Zoning,,map,2026-07-09,2026-08-08,2026-07-09,,zoning,,0,https://data.nola.gov/d/4748-qbay,Y,
+v9q5-fz7t,Parcels,,dataset,2026-10-15,2026-10-15,2022-01-11,151255,property,,11,https://data.nola.gov/d/v9q5-fz7t,,Y
+aned-jbk9,Post-Katrina Damage Assessment,Archived,dataset,2013-04-03,2015-08-25,2013-04-03,165564,property,,59,https://data.nola.gov/d/aned-jbk9,Y,Y
+3iz8-nghx,311 Calls (Historic Data: 2012-2018),City Administration,dataset,2019-01-08,2019-01-08,2014-10-14,303735,311,,26,https://data.nola.gov/d/3iz8-nghx,Y,Y
+2jgv-pqrq,311 OPCD Calls (2012-Present),City Administration,dataset,2026-10-17,2026-10-17,2019-01-02,1039503,311,,31,https://data.nola.gov/d/2jgv-pqrq,,Y
+iqay-p646,Active Occupational Licenses,City Finance and Budget,dataset,2026-10-17,2026-10-17,2021-12-13,16655,business,,18,https://data.nola.gov/d/iqay-p646,,Y
+qx7d-6vrr,Sales Tax Revenues To The City's General Fund (2003 - Present),City Finance and Budget,dataset,2016-02-16,2016-02-16,2016-02-11,,sales,,5,https://data.nola.gov/d/qx7d-6vrr,Y,
+c77v-v89q,Historical Occupational Business Licenses 2012,Economy and Workforce,dataset,2018-03-22,2018-03-27,2018-03-22,12869,business,,23,https://data.nola.gov/d/c77v-v89q,Y,Y
+tc3j-b7gd,Historical Occupational Business Licenses 2013,Economy and Workforce,dataset,2018-03-22,2018-03-27,2018-03-22,12892,business,,23,https://data.nola.gov/d/tc3j-b7gd,Y,Y
+xw7z-p5m2,Historical Occupational Business Licenses 2014,Economy and Workforce,dataset,2018-02-07,2018-03-27,2018-02-07,13553,business,,23,https://data.nola.gov/d/xw7z-p5m2,Y,Y
+yc4x-fza2,Historical Occupational Business Licenses 2015,Economy and Workforce,dataset,2018-02-07,2018-03-27,2018-02-07,13860,business,,23,https://data.nola.gov/d/yc4x-fza2,Y,Y
+xy7w-r8a6,Historical Occupational Business Licenses 2016,Economy and Workforce,dataset,2018-02-07,2018-03-27,2018-02-07,14011,business,,23,https://data.nola.gov/d/xy7w-r8a6,Y,Y
+sbc5-uppx,Historical Occupational Business Licenses 2017,Economy and Workforce,dataset,2018-02-07,2018-03-27,2018-02-07,13669,business,,23,https://data.nola.gov/d/sbc5-uppx,Y,Y
+abc4-h3u3,Occupational Business License Data for the Office of Business and External Services,Economy and Workforce,dataset,2026-10-17,2026-10-17,2022-10-31,21115,business,,52,https://data.nola.gov/d/abc4-h3u3,,Y
+hjcd-grvu,Occupational Business Licenses,Economy and Workforce,dataset,2026-10-17,2026-10-17,2017-02-02,38077,business,,35,https://data.nola.gov/d/hjcd-grvu,,Y
+dm3n-f3pu,Municipal Building Energy Use,Environment,dataset,2026-09-21,2026-09-21,2024-09-13,,permits,,59,https://data.nola.gov/d/dm3n-f3pu,,
+4eex-dv6s,Restaurant Inspections (Orleans Parish),"Health, Education, and Social Services",href,2015-04-28,2018-08-28,2015-04-28,,code_enf,permits,0,https://data.nola.gov/d/4eex-dv6s,Y,
+d2is-2r79,Accela Legacy Hearings,"Housing, Land Use, and Blight",dataset,2013-10-31,2017-01-23,2013-10-31,2957,code_enf,zoning,17,https://data.nola.gov/d/d2is-2r79,Y,Y
+ufdg-ajws,Active Short-Term Rental Licenses,"Housing, Land Use, and Blight",dataset,2026-10-17,2026-10-17,2025-01-16,4318,str,,29,https://data.nola.gov/d/ufdg-ajws,,Y
+uzyk-jrck,Adjudication Enforcement Detailed Hearings Data for the Office of Business and External Services,"Housing, Land Use, and Blight",dataset,2026-10-17,2026-10-17,2022-08-17,52563,code_enf,str;property;zoning,34,https://data.nola.gov/d/uzyk-jrck,,Y
+9a4m-i64z,Assessment Areas,"Housing, Land Use, and Blight",dataset,2025-08-18,2025-08-18,2021-08-04,18,property,,6,https://data.nola.gov/d/9a4m-i64z,Y,Y
+3mrg-5stb,Benchmarks for Blight,"Housing, Land Use, and Blight",href,2012-09-11,2016-03-09,2012-09-11,,code_enf,,0,https://data.nola.gov/d/3mrg-5stb,Y,
+e3wd-h7q2,BlightStatus Demolitions,"Housing, Land Use, and Blight",dataset,2019-11-26,2019-11-26,2013-01-11,3940,code_enf;demo,,8,https://data.nola.gov/d/e3wd-h7q2,Y,Y
+68qb-xc34,CBD multi-family permits,"Housing, Land Use, and Blight",filter,2026-10-17,2026-10-17,2018-03-12,0,permits,,42,https://data.nola.gov/d/68qb-xc34,,Y
+mrcm-dtu5,CE Hearings Detail,"Housing, Land Use, and Blight",filter,2026-10-17,2026-10-17,2014-01-21,103309,code_enf,,16,https://data.nola.gov/d/mrcm-dtu5,,Y
+8pqz-ftzc,Code Enforcement Active Pipeline,"Housing, Land Use, and Blight",dataset,2026-10-17,2026-10-17,2013-09-30,44067,code_enf,,36,https://data.nola.gov/d/8pqz-ftzc,,Y
+d4d6-yab5,Code Enforcement Active Pipeline,"Housing, Land Use, and Blight",dataset,2024-07-09,2024-07-09,2021-12-13,9928,code_enf,,22,https://data.nola.gov/d/d4d6-yab5,Y,Y
+u6yx-v2tw,Code Enforcement All Cases,"Housing, Land Use, and Blight",dataset,2026-10-17,2026-10-17,2013-09-30,183007,code_enf,,26,https://data.nola.gov/d/u6yx-v2tw,,Y
+6ha4-bwyc,Code Enforcement All Cases,"Housing, Land Use, and Blight",dataset,2024-07-09,2024-07-09,2021-12-13,171089,code_enf,,11,https://data.nola.gov/d/6ha4-bwyc,Y,Y
+44ct-56tr,Code Enforcement All Hearings,"Housing, Land Use, and Blight",dataset,2026-10-17,2026-10-17,2013-09-30,103309,code_enf,,21,https://data.nola.gov/d/44ct-56tr,,Y
+uh5a-f7uw,Code Enforcement All Inspections,"Housing, Land Use, and Blight",dataset,2026-10-17,2026-10-17,2013-09-30,246064,code_enf,,8,https://data.nola.gov/d/uh5a-f7uw,,Y
+3ehi-je3s,Code Enforcement All Violations,"Housing, Land Use, and Blight",dataset,2026-10-17,2026-10-17,2014-02-05,272896,code_enf,,9,https://data.nola.gov/d/3ehi-je3s,,Y
+um5k-74mk,Code Enforcement Districts,"Housing, Land Use, and Blight",dataset,2023-06-13,2023-06-13,2021-12-13,,code_enf,property,5,https://data.nola.gov/d/um5k-74mk,Y,
+w6gf-dnv6,Code Enforcement Hearings,"Housing, Land Use, and Blight",dataset,2026-10-17,2026-10-17,2020-09-14,5014,code_enf,,31,https://data.nola.gov/d/w6gf-dnv6,,Y
+g7yr-kp9j,Code Enforcement Hearings Calendar,"Housing, Land Use, and Blight",calendar,2026-10-17,2026-10-17,2023-07-24,,code_enf,,0,https://data.nola.gov/d/g7yr-kp9j,,
+wzrb-fh4z,Code Enforcement Hearings with Teleconference Code,"Housing, Land Use, and Blight",filter,2026-10-17,2026-10-17,2020-09-16,,code_enf,,7,https://data.nola.gov/d/wzrb-fh4z,,
+a2w6-xuk2,Code Enforcement Rodent Harborage,"Housing, Land Use, and Blight",filter,2026-10-17,2026-10-17,2020-08-21,30957,code_enf,,9,https://data.nola.gov/d/a2w6-xuk2,,Y
+xhih-vxs6,Grass Cutting (Lot Abatement/Chapter 66),"Housing, Land Use, and Blight",dataset,2026-10-17,2026-10-17,2021-04-15,23437,code_enf;property,,37,https://data.nola.gov/d/xhih-vxs6,,Y
+grqp-bvwk,Historical Inspection Requests,"Housing, Land Use, and Blight",dataset,2015-05-20,2017-01-23,2015-04-24,19020,code_enf,permits,26,https://data.nola.gov/d/grqp-bvwk,Y,Y
+f7tt-z5vu,Historical Permit Data,"Housing, Land Use, and Blight",dataset,2015-04-24,2015-08-25,2015-04-23,85899,permits,,17,https://data.nola.gov/d/f7tt-z5vu,Y,Y
+fcuq-eeca,Katrina 2005 FEMA Demolition Requests,"Housing, Land Use, and Blight",dataset,2025-09-02,2025-09-02,2025-09-02,9334,demo,,99,https://data.nola.gov/d/fcuq-eeca,Y,Y
+j5u3-2ueh,Map of Short-Term Rental License Applications,"Housing, Land Use, and Blight",map,2026-10-17,2026-10-17,2017-03-30,,str,,0,https://data.nola.gov/d/j5u3-2ueh,,
+rw6e-a9x3,NOLA Permits - Accela (Historic Data: 3/2004 - 3/2012),"Housing, Land Use, and Blight",file,2011-08-26,2017-01-23,2011-08-26,,permits,,0,https://data.nola.gov/d/rw6e-a9x3,Y,Y
+fdhh-psg3,NOLA Permits - LAMA (Historic Data: 2004-2011),"Housing, Land Use, and Blight",file,2012-12-14,2017-01-23,2012-12-14,,permits,,0,https://data.nola.gov/d/fdhh-psg3,Y,Y
+hpm5-48nj,NORA Sold Properties,"Housing, Land Use, and Blight",dataset,2026-08-11,2026-08-11,2013-02-06,5618,sales,property,20,https://data.nola.gov/d/hpm5-48nj,,Y
+5ktx-e9wc,NORA Uncommitted Property Inventory,"Housing, Land Use, and Blight",dataset,2026-10-09,2026-10-09,2013-03-12,189,property,,11,https://data.nola.gov/d/5ktx-e9wc,,Y
+2ei9-wqw2,Non-Commercial Short-Term Rental Licenses,"Housing, Land Use, and Blight",dataset,2026-10-17,2026-10-17,2024-07-02,1235,str,permits,33,https://data.nola.gov/d/2ei9-wqw2,,Y
+x5fx-4tmu,Non-Commercial Short-Term Rental Permits Map,"Housing, Land Use, and Blight",map,2026-10-17,2026-10-17,2024-07-26,,permits;str,,0,https://data.nola.gov/d/x5fx-4tmu,,
+8qns-53az,Occupancy Limit by License Type - Based on Short-Term Rental Licenses,"Housing, Land Use, and Blight",chart,2026-10-17,2026-10-17,2017-03-30,,str,,0,https://data.nola.gov/d/8qns-53az,,
+c8uq-kxp3,OneStop Hearings,"Housing, Land Use, and Blight",dataset,2026-10-17,2026-10-17,2020-10-19,5006,code_enf,,34,https://data.nola.gov/d/c8uq-kxp3,,Y
+35zb-hvew,OneStop Hearings with Teleconference Code,"Housing, Land Use, and Blight",filter,2026-10-17,2026-10-17,2020-10-19,,code_enf,,8,https://data.nola.gov/d/35zb-hvew,,
+aib5-en5t,Permit Application Data for the Office of Business and External Services,"Housing, Land Use, and Blight",dataset,2026-10-17,2026-10-17,2022-11-02,228560,permits,demo,51,https://data.nola.gov/d/aib5-en5t,,Y
+rcm3-fn58,Permits,"Housing, Land Use, and Blight",dataset,2026-10-17,2026-10-17,2013-02-19,349078,permits,,54,https://data.nola.gov/d/rcm3-fn58,,Y
+72f9-bi28,Permits - BLDS,"Housing, Land Use, and Blight",dataset,2026-10-15,2026-10-15,2016-06-16,466337,permits,,45,https://data.nola.gov/d/72f9-bi28,,Y
+en36-xvxg,Short-Term Rental Permit Applications,"Housing, Land Use, and Blight",dataset,2026-10-17,2026-10-17,2017-03-29,39027,permits;str,,33,https://data.nola.gov/d/en36-xvxg,,Y
+rbhq-zbz9,"Vacation Rentals (Hotels, B&B, short-term rentals, etc.)","Housing, Land Use, and Blight",dataset,2025-01-04,2025-02-15,2017-09-25,1393,str,,21,https://data.nola.gov/d/rbhq-zbz9,Y,Y
+nbcf-m6c2,Building Permits (2018-present),"Planning, Zoning",dataset,2025-08-17,2026-09-25,2021-12-13,35720,permits,,16,https://data.nola.gov/d/nbcf-m6c2,Y,Y
+itxd-2247,Future Land Use,"Planning, Zoning",dataset,2025-04-16,2025-04-16,2021-12-13,,zoning,,9,https://data.nola.gov/d/itxd-2247,Y,
+prwi-gn8f,Historic Zoning Pre-2015,"Planning, Zoning",dataset,2023-06-13,2024-09-09,2021-12-13,,zoning,permits;property,9,https://data.nola.gov/d/prwi-gn8f,Y,
+jcvy-gbgr,Mandatory Inclusionary Zoning,"Planning, Zoning",dataset,2026-06-06,2026-06-06,2021-12-14,3,zoning,,9,https://data.nola.gov/d/jcvy-gbgr,Y,Y
+kb74-hpue,Overlay and Interim Zoning,"Planning, Zoning",dataset,2026-08-08,2026-08-25,2021-12-13,202,zoning,,9,https://data.nola.gov/d/kb74-hpue,,Y
+bizp-xi7c,Zoning Districts,"Planning, Zoning",dataset,2026-08-08,2026-08-08,2021-12-13,1494,zoning,permits,14,https://data.nola.gov/d/bizp-xi7c,,Y
+ezfk-aiyx,311 OPCD Francine Calls,Public Safety and Preparedness,filter,2026-10-17,2026-10-17,2024-09-16,199111,311,,19,https://data.nola.gov/d/ezfk-aiyx,,Y
+em4n-zidu,Calls for Service - Hurricane Francine 9/11/24 - 9/12/24,Public Safety and Preparedness,filter,2025-01-01,2025-01-01,2024-09-17,72,cfs,,21,https://data.nola.gov/d/em4n-zidu,Y,Y
+28ec-c8d6,Calls for Service 2011,Public Safety and Preparedness,dataset,2015-11-02,2025-02-17,2013-01-02,510153,cfs,,28,https://data.nola.gov/d/28ec-c8d6,Y,Y
+rv3g-ypg7,Calls for Service 2012,Public Safety and Preparedness,dataset,2015-11-02,2025-02-17,2013-01-03,505012,cfs,,28,https://data.nola.gov/d/rv3g-ypg7,Y,Y
+5fn8-vtui,Calls for Service 2013,Public Safety and Preparedness,dataset,2015-11-02,2018-02-15,2013-02-04,463619,cfs,,28,https://data.nola.gov/d/5fn8-vtui,Y,Y
+jsyu-nz5r,Calls for Service 2014,Public Safety and Preparedness,dataset,2016-07-28,2018-02-15,2014-01-03,447462,cfs,,33,https://data.nola.gov/d/jsyu-nz5r,Y,Y
+w68y-xmk6,Calls for Service 2015,Public Safety and Preparedness,dataset,2016-07-28,2018-02-15,2015-01-03,432733,cfs,,33,https://data.nola.gov/d/w68y-xmk6,Y,Y
+wgrp-d3ma,Calls for Service 2016,Public Safety and Preparedness,dataset,2017-04-05,2018-02-15,2016-01-03,404062,cfs,,33,https://data.nola.gov/d/wgrp-d3ma,Y,Y
+bqmt-f3jk,Calls for Service 2017,Public Safety and Preparedness,dataset,2018-01-01,2018-02-15,2017-01-01,444111,cfs,,33,https://data.nola.gov/d/bqmt-f3jk,Y,Y
+9san-ivhk,Calls for Service 2018,Public Safety and Preparedness,dataset,2019-01-01,2019-01-01,2018-01-01,460874,cfs,,33,https://data.nola.gov/d/9san-ivhk,Y,Y
+qf6q-pp4b,Calls for Service 2019,Public Safety and Preparedness,dataset,2020-04-01,2020-04-01,2019-01-02,487362,cfs,,33,https://data.nola.gov/d/qf6q-pp4b,Y,Y
+3pha-hum9,Calls for Service 2021,Public Safety and Preparedness,dataset,2022-01-01,2022-01-03,2021-01-05,428315,cfs,,29,https://data.nola.gov/d/3pha-hum9,Y,Y
+nci8-thrr,Calls for Service 2022,Public Safety and Preparedness,dataset,2023-01-01,2023-01-01,2022-01-03,354207,cfs,,29,https://data.nola.gov/d/nci8-thrr,Y,Y
+pc5d-tvaw,Calls for Service 2023,Public Safety and Preparedness,dataset,2024-01-01,2024-01-01,2023-01-01,325091,cfs,,29,https://data.nola.gov/d/pc5d-tvaw,Y,Y
+2zcj-b6ts,Calls for Service 2024,Public Safety and Preparedness,dataset,2025-01-01,2025-01-01,2024-01-01,327696,cfs,,29,https://data.nola.gov/d/2zcj-b6ts,Y,Y
+4xwx-sfte,Calls for Service 2025,Public Safety and Preparedness,dataset,2026-01-01,2026-01-01,2025-01-01,329770,cfs,,29,https://data.nola.gov/d/4xwx-sfte,Y,Y
+es9j-6y5d,Calls for Service 2026,Public Safety and Preparedness,dataset,2026-10-17,2026-10-17,2026-01-01,274866,cfs,,29,https://data.nola.gov/d/es9j-6y5d,,Y
+698v-cx3a,Map of Calls for Service,Public Safety and Preparedness,map,2023-01-01,2023-01-01,2022-04-30,,cfs,,0,https://data.nola.gov/d/698v-cx3a,Y,
+prh5-qsuf,Building Footprint,"Real Estate, Land Records",dataset,2026-08-08,2026-08-08,2023-06-13,162486,permits,,8,https://data.nola.gov/d/prh5-qsuf,,Y
+pzqp-4ri7,Parcels To Join,"Real Estate, Land Records",dataset,2026-09-25,2026-09-25,2023-03-13,162773,property,,4,https://data.nola.gov/d/pzqp-4ri7,,Y
+d52w-8nva,Sheriff Sales - Lien Foreclosures,"Real Estate, Land Records",dataset,2018-11-16,2018-11-16,2017-02-21,1771,sales,code_enf,9,https://data.nola.gov/d/d52w-8nva,Y,Y
+aj8a-ghih,Live Entertainment Permits,Recreation and Culture,dataset,2025-08-17,2026-09-25,2021-12-13,149,permits,,13,https://data.nola.gov/d/aj8a-ghih,Y,Y
+nkfc-ad56,Residential Parking Permit Segments,Transportation and Infrastructure,dataset,2023-06-13,2023-06-13,2021-12-13,,permits,,10,https://data.nola.gov/d/nkfc-ad56,Y,
+fbvk-78i5,Residential Parking Permit Zones,Transportation and Infrastructure,dataset,2023-06-13,2023-06-13,2021-12-13,,permits,,3,https://data.nola.gov/d/fbvk-78i5,Y,
+bsnu-de3a,RoadWork SWB Projects,Transportation and Infrastructure,dataset,2026-10-17,2026-10-17,2023-11-06,8416,swb,,13,https://data.nola.gov/d/bsnu-de3a,,Y
+nczh-259p,BioDistrict,,dataset,2025-03-17,2025-03-17,2025-03-17,,,,5,https://data.nola.gov/d/nczh-259p,Y,
+vucf-rzwe,BioDistrict,,map,2025-03-17,2026-09-25,2025-03-17,,,,0,https://data.nola.gov/d/vucf-rzwe,Y,
+kj92-h3tx,Brake Tag Stations,,map,2023-04-05,2026-09-25,2023-04-05,,,code_enf,0,https://data.nola.gov/d/kj92-h3tx,Y,
+tej4-24un,Brake Tag Stations,,dataset,2023-04-05,2024-10-15,2023-04-05,,,code_enf,10,https://data.nola.gov/d/tej4-24un,Y,
+22q2-dqpb,Centerline,,dataset,2026-07-06,2026-07-06,2025-02-24,,,,39,https://data.nola.gov/d/22q2-dqpb,Y,
+4b8x-cy4c,Centerline,,map,2026-07-06,2026-08-08,2025-02-24,,,,0,https://data.nola.gov/d/4b8x-cy4c,Y,
+ti3t-pm8k,City Council Districts Demographics 2020,,dataset,2023-06-13,2023-06-13,2023-05-15,,,,43,https://data.nola.gov/d/ti3t-pm8k,Y,
+h5ix-hf8k,Cultural Products District,,dataset,2026-07-09,2026-07-09,2026-07-09,,,,3,https://data.nola.gov/d/h5ix-hf8k,Y,
+5huu-r22j,Cultural Products District,,map,2026-07-09,2026-09-25,2026-07-09,,,,0,https://data.nola.gov/d/5huu-r22j,Y,
+6a26-q6dq,Data Policy Annual Report 2017,,story,2017-12-21,2017-12-21,2017-12-05,,,,0,https://data.nola.gov/stories/s/6a26-q6dq,Y,
+2wzp-49eq,Data Policy Annual Report 2018,,story,2019-01-11,2019-01-11,2018-11-13,,,,0,https://data.nola.gov/stories/s/2wzp-49eq,Y,
+cdqz-z63v,Daycare Facilities,,map,2026-08-25,2026-09-25,2024-10-29,,,,0,https://data.nola.gov/d/cdqz-z63v,,
+cqum-288k,Drug Free Zones,,dataset,2023-06-13,2023-06-13,2022-04-13,,,permits;property,7,https://data.nola.gov/d/cqum-288k,Y,
+tnxd-7sn7,Evacuspots,,dataset,2022-06-15,2022-06-15,2022-04-13,,,,8,https://data.nola.gov/d/tnxd-7sn7,Y,
+wg2n-nu8y,Fire Stations,,dataset,2023-07-14,2026-09-25,2022-04-13,,,,19,https://data.nola.gov/d/wg2n-nu8y,Y,
+2yuy-the3,Firearm Free Zones,,dataset,2026-08-25,2026-08-25,2022-04-13,,,,6,https://data.nola.gov/d/2yuy-the3,,
+jun9-d6hp,Local Historic District,,map,2026-07-09,2026-09-25,2026-07-09,,,,0,https://data.nola.gov/d/jun9-d6hp,Y,
+hea7-kccz,Local Historic District,,dataset,2026-07-09,2026-07-09,2026-07-09,22,,,3,https://data.nola.gov/d/hea7-kccz,Y,Y
+vgpk-2scb,Local Historic Districts,,dataset,2025-02-16,2025-12-29,2021-08-04,,,,8,https://data.nola.gov/d/vgpk-2scb,Y,
+d7nm-e54m,Local Historic Districts,,map,2025-02-16,2026-09-25,2021-08-04,,,,0,https://data.nola.gov/d/d7nm-e54m,Y,
+gwkn-mg2e,Mardi Gras Cleanup Zones,,dataset,2025-02-17,2025-02-17,2025-02-17,,,,5,https://data.nola.gov/d/gwkn-mg2e,Y,
+qa73-irdh,Mardi Gras First Aid Stations,,dataset,2025-02-17,2025-02-17,2025-02-17,,,,7,https://data.nola.gov/d/qa73-irdh,Y,
+diq2-v2kc,Mardi Gras Lost Children Stations,,dataset,2025-02-17,2026-09-25,2025-02-17,,,,3,https://data.nola.gov/d/diq2-v2kc,Y,
+ekd9-snag,Mardi Gras Port O Let Locations,,dataset,2026-02-28,2026-02-28,2025-02-17,,,,8,https://data.nola.gov/d/ekd9-snag,Y,
+955d-h748,Mardi Gras Recycling Stations,,dataset,2026-02-28,2026-02-28,2025-02-17,,,,4,https://data.nola.gov/d/955d-h748,Y,
+tcwv-7j7z,Market Value Analysis 2018 Vis,,map,2023-06-13,2023-06-13,2021-10-19,,,property,0,https://data.nola.gov/d/tcwv-7j7z,Y,
+7bkj-j2qu,Market Value Analysis 2023,,map,2023-11-30,2026-09-25,2023-11-30,,,,0,https://data.nola.gov/d/7bkj-j2qu,Y,
+cghu-3gjz,Market Value Analysis 2023,,dataset,2023-11-30,2023-11-30,2023-11-30,,,,6,https://data.nola.gov/d/cghu-3gjz,Y,
+4irm-jnd2,NOPD Reporting District,,dataset,2023-06-13,2026-09-25,2022-04-13,,,,8,https://data.nola.gov/d/4irm-jnd2,Y,
+q549-95xv,NOPD Zones,,dataset,2023-06-13,2026-09-25,2022-04-13,,,,6,https://data.nola.gov/d/q549-95xv,Y,
+exvn-jeh2,Neighborhood Statistical Area,,dataset,2025-03-17,2025-03-17,2025-03-17,,,,7,https://data.nola.gov/d/exvn-jeh2,Y,
+68xw-8wjn,Neighborhood Statistical Area,,map,2025-03-17,2026-08-25,2025-03-17,,,,0,https://data.nola.gov/d/68xw-8wjn,Y,
+2w4d-xaw2,Neighborhood Statistical Areas Demographics 2020,,dataset,2023-06-13,2023-06-13,2023-05-15,,,,45,https://data.nola.gov/d/2w4d-xaw2,Y,
+b64f-vr88,New Market Tax Credits,,dataset,2021-07-12,2021-07-12,2021-07-09,,,,3,https://data.nola.gov/d/b64f-vr88,Y,
+fynd-gnga,Open Water & Beach Access,,dataset,2026-07-09,2026-07-09,2026-07-09,,,,5,https://data.nola.gov/d/fynd-gnga,Y,
+kch7-up8j,Open Water & Beach Access,,map,2026-07-09,2026-09-25,2026-07-09,,,,0,https://data.nola.gov/d/kch7-up8j,Y,
+tu2j-8k42,Orleans Parish Boundary,,dataset,2024-02-09,2025-08-18,2024-02-09,,,,12,https://data.nola.gov/d/tu2j-8k42,Y,
+n8cw-5w4i,Orleans Parish Boundary,,map,2024-02-09,2026-09-25,2024-02-09,,,,0,https://data.nola.gov/d/n8cw-5w4i,Y,
+8js4-isah,Police Districts Demographics 2020,,dataset,2023-06-13,2023-06-13,2023-05-15,,,,43,https://data.nola.gov/d/8js4-isah,Y,
+ygwj-3bs7,Police Stations,,map,2022-12-22,2026-09-25,2022-05-14,,,,0,https://data.nola.gov/d/ygwj-3bs7,Y,
+7r9k-td95,Police Stations,,dataset,2022-12-22,2026-09-25,2022-04-13,,,,18,https://data.nola.gov/d/7r9k-td95,Y,
+nrs2-ncc8,Police Stations,,dataset,2022-12-22,2024-07-09,2022-05-14,,,,4,https://data.nola.gov/d/nrs2-ncc8,Y,
+jqq3-ib4e,Post Secondary Schools,,dataset,2026-08-25,2026-08-25,2024-10-29,,,,8,https://data.nola.gov/d/jqq3-ib4e,,
+db3d-w6kr,Post Secondary Schools,,map,2026-08-25,2026-09-25,2024-10-29,,,,0,https://data.nola.gov/d/db3d-w6kr,,
+xm7h-aswq,Public Land,,map,2025-11-10,2026-09-25,2024-10-29,,,,0,https://data.nola.gov/d/xm7h-aswq,Y,
+bsqt-btyi,Public Land,,dataset,2025-11-10,2025-11-10,2024-10-29,2149,,,16,https://data.nola.gov/d/bsqt-btyi,Y,Y
+tj9d-i2g2,Public Libraries,,dataset,2022-05-14,2026-09-25,2022-04-13,,,,9,https://data.nola.gov/d/tj9d-i2g2,Y,
+745i-sbac,Public Pools,,map,2026-07-09,2026-09-25,2026-07-09,,,,0,https://data.nola.gov/d/745i-sbac,Y,
+g59g-npjv,Public Pools,,dataset,2026-07-09,2026-07-09,2026-07-09,,,,8,https://data.nola.gov/d/g59g-npjv,Y,
+khgm-sxx8,Public Structures and Facilities,,map,2024-10-29,2026-09-25,2024-10-29,,,,0,https://data.nola.gov/d/khgm-sxx8,Y,
+3wv4-3ffg,Public Structures and Facilities,,dataset,2024-10-29,2024-10-29,2024-10-29,,,,24,https://data.nola.gov/d/3wv4-3ffg,Y,
+httk-ckrn,School Board Districts,,dataset,2024-10-29,2024-10-29,2024-10-29,,,,5,https://data.nola.gov/d/httk-ckrn,Y,
+8xpg-33vz,School Board Districts,,map,2024-10-29,2026-09-25,2024-10-29,,,,0,https://data.nola.gov/d/8xpg-33vz,Y,
+5qye-4vt5,Schools,,dataset,2026-08-25,2026-08-25,2025-03-17,,,,8,https://data.nola.gov/d/5qye-4vt5,,
+tcew-squc,Schools,,map,2026-08-25,2026-09-25,2025-03-17,,,,0,https://data.nola.gov/d/tcew-squc,,
+2ikm-ik65,Schools (pre K-12),,dataset,2026-08-08,2026-08-08,2024-10-29,,,,8,https://data.nola.gov/d/2ikm-ik65,,
+i7t6-4zts,Schools (pre K-12),,map,2026-08-08,2026-09-25,2024-10-29,,,,0,https://data.nola.gov/d/i7t6-4zts,,
+cbmq-eiar,Self Reported Neighborhood Organizations,,map,2026-09-25,2026-09-25,2026-07-09,,,,0,https://data.nola.gov/d/cbmq-eiar,,
+bqyy-s7xy,Self Reported Neighborhood Organizations,,dataset,2026-09-25,2026-09-25,2026-07-09,,,,12,https://data.nola.gov/d/bqyy-s7xy,,
+gz4p-phzs,SoQL Testing,,dataset,2015-12-22,2019-04-20,2015-12-22,,,,28,https://data.nola.gov/d/gz4p-phzs,Y,
+vn2p-458h,Solid Waste Collection,,dataset,2025-08-18,2025-08-18,2025-03-17,,,,9,https://data.nola.gov/d/vn2p-458h,Y,
+bd52-tcts,Solid Waste Collection,,map,2025-08-18,2026-09-25,2025-03-17,,,,0,https://data.nola.gov/d/bd52-tcts,Y,
+cytw-t54v,Squares,,dataset,2023-06-13,2026-07-08,2022-01-11,,,property,7,https://data.nola.gov/d/cytw-t54v,Y,
+az4j-aztw,Streetlights,,map,2026-09-25,2026-09-25,2026-07-09,,,,0,https://data.nola.gov/d/az4j-aztw,,
+symk-y92t,Streetlights,,dataset,2026-09-25,2026-09-25,2026-07-09,,,,71,https://data.nola.gov/d/symk-y92t,,
+3tyj-9x33,Tree Location,,dataset,2025-04-17,2025-04-17,2025-04-17,,,,4,https://data.nola.gov/d/3tyj-9x33,Y,
+pawn-vka7,Tree Location,,map,2025-04-17,2026-10-17,2025-04-17,,,,0,https://data.nola.gov/d/pawn-vka7,Y,
+8vmv-aipz,Truck Routes,,dataset,2024-10-16,2026-09-25,2024-10-16,,,permits,9,https://data.nola.gov/d/8vmv-aipz,Y,
+vtnf-hkz2,Truck Routes,,map,2024-10-16,2026-09-25,2024-10-16,,,permits,0,https://data.nola.gov/d/vtnf-hkz2,Y,
+mxt2-p8df,Wards Demographics 2020,,dataset,2023-06-13,2023-06-13,2023-05-15,,,,43,https://data.nola.gov/d/mxt2-p8df,Y,
+ypa9-w32k,We Live Here: B.W. Cooper - Resilience and Resident Leadership,,story,2026-01-05,2026-01-05,2025-05-28,,,,0,https://data.nola.gov/stories/s/ypa9-w32k,Y,
+mkp8-zt36,Zipcodes,,map,2026-07-09,2026-09-25,2026-07-09,,,,0,https://data.nola.gov/d/mkp8-zt36,Y,
+shbj-jjc6,Zipcodes,,dataset,2026-07-09,2026-07-09,2026-07-09,,,,42,https://data.nola.gov/d/shbj-jjc6,Y,
+bpzh-bryg,Zipcodes Demographics 2020,,dataset,2023-06-13,2023-06-13,2023-05-15,,,,42,https://data.nola.gov/d/bpzh-bryg,Y,
+c9gq-4kyr,NOLA Census 1990,Archived,file,2011-07-11,2015-08-25,2011-07-11,,,,0,https://data.nola.gov/d/c9gq-4kyr,Y,
+h3yb-9ury,Pallas Implosion scheduled 7-22-12 8am,Archived,file,2012-07-17,2015-08-25,2012-07-17,,,,0,https://data.nola.gov/d/h3yb-9ury,Y,
+ssw4-9pg7,Place Based Planning,Archived,map,2013-05-28,2024-04-24,2013-05-28,,,,0,https://data.nola.gov/d/ssw4-9pg7,Y,
+25e8-s5xx,HDLC Landmarks,"Arts, Culture, History",dataset,2026-10-07,2026-10-07,2021-08-04,342,,,10,https://data.nola.gov/d/25e8-s5xx,,Y
+tkeu-9s5e,Mardi Gras Routes,"Arts, Culture, History",dataset,2026-02-06,2026-02-06,2025-02-18,,,,11,https://data.nola.gov/d/tkeu-9s5e,Y,
+4egi-zc5t,National Register Historic Places Districts,"Arts, Culture, History",dataset,2023-06-13,2025-12-30,2021-08-04,,,permits,7,https://data.nola.gov/d/4egi-zc5t,Y,
+d49t-wy6p,City Council Districts,City Administration,dataset,2026-01-29,2026-01-29,2021-08-04,,,,9,https://data.nola.gov/d/d49t-wy6p,Y,
+hkuw-i89a,City Data Discovery,City Administration,dataset,2020-04-14,2020-04-14,2017-11-10,,,,4,https://data.nola.gov/d/hkuw-i89a,Y,
+iakh-mkws,City Data Discovery Progress,City Administration,chart,2020-04-14,2020-04-14,2017-12-01,,,,0,https://data.nola.gov/d/iakh-mkws,Y,
+dhg4-3vbu,City Data Inventory,City Administration,dataset,2019-01-10,2019-01-10,2017-11-06,,,,28,https://data.nola.gov/d/dhg4-3vbu,Y,
+ewwx-j8eu,City Job Applications Submitted,City Administration,dataset,2025-12-05,2025-12-05,2019-04-16,,,,2,https://data.nola.gov/d/ewwx-j8eu,Y,
+wx2k-rsac,City Jobs Hiring Data,City Administration,dataset,2025-12-05,2025-12-05,2019-04-16,,,,8,https://data.nola.gov/d/wx2k-rsac,Y,
+m99x-bsvt,City Jobs Requisition Requests,City Administration,dataset,2025-12-05,2025-12-05,2019-03-07,,,,9,https://data.nola.gov/d/m99x-bsvt,Y,
+ge7x-6fwd,Council_Districts_Archive,City Administration,dataset,2014-04-30,2024-04-10,2014-04-30,,,,6,https://data.nola.gov/d/ge7x-6fwd,Y,
+xizv-ihxa,Master Street Name Table,City Administration,href,2016-07-08,2017-01-23,2016-07-08,,,,0,https://data.nola.gov/d/xizv-ihxa,Y,
+3dnv-gjst,Missed Trash Pick-Ups Dec 22-Jan 23,City Administration,filter,2026-10-17,2026-10-17,2023-01-10,8518,,311,19,https://data.nola.gov/d/3dnv-gjst,,Y
+jsrk-e98x,Public Records Requests,City Administration,dataset,2026-10-17,2026-10-17,2017-07-11,,,,15,https://data.nola.gov/d/jsrk-e98x,,
+r6b2-hfba,Published Datasets,City Administration,filter,2026-10-16,2026-10-16,2023-02-14,,,,42,https://data.nola.gov/d/r6b2-hfba,,
+i57e-74kx,Residential Recycling Requests,City Administration,filter,2019-01-08,2025-01-17,2017-06-02,27501,,311,16,https://data.nola.gov/d/i57e-74kx,Y,Y
+jqyq-axtx,ResultsNOLA (historic),City Administration,dataset,2016-09-13,2016-09-13,2015-11-10,,,,20,https://data.nola.gov/d/jqyq-axtx,Y,
+fhf2-hepk,Ticket Count by Day,City Administration,filter,2019-01-08,2025-01-30,2015-02-26,,,,2,https://data.nola.gov/d/fhf2-hepk,Y,
+62d3-pst8,Website Analytics,City Administration,href,2017-02-02,2017-02-02,2017-02-02,,,,0,https://data.nola.gov/d/62d3-pst8,Y,
+ns2v-hzec,Hotels Motels BBs,City Finance and Budget,dataset,2024-07-16,2024-07-16,2021-12-13,391,,str,12,https://data.nola.gov/d/ns2v-hzec,Y,Y
+8yrz-i6tf,Revenue Zones,City Finance and Budget,dataset,2025-08-17,2025-08-17,2021-12-13,,,,7,https://data.nola.gov/d/8yrz-i6tf,Y,
+bwdf-rxmm,Tax Increment Financing Districts,City Finance and Budget,dataset,2025-08-17,2025-08-17,2021-12-13,,,permits;property,7,https://data.nola.gov/d/bwdf-rxmm,Y,
+hzrb-uud6,City Council Constituent Engagement,Customer Service,dataset,2025-04-14,2025-04-14,2022-01-13,,,,12,https://data.nola.gov/d/hzrb-uud6,Y,
+5zkd-bcqp,1990 Census Data by Block,Demographics,map,2015-03-24,2024-04-24,2015-03-24,,,,0,https://data.nola.gov/d/5zkd-bcqp,Y,
+aird-4z7g,Census 2010 - New Orleans Regional Planning Commission,Demographics,href,2011-07-15,2017-01-23,2011-07-15,,,,0,https://data.nola.gov/d/aird-4z7g,Y,
+nhr5-n3a5,We Live Here (and Work Here): The Central Business District,Demographics,story,2026-01-05,2026-01-05,2025-06-02,,,,0,https://data.nola.gov/stories/s/nhr5-n3a5,Y,
+5wcw-86p6,We Live Here: Algiers - A Village on the River,Demographics,story,2026-01-05,2026-01-05,2025-05-06,,,permits,0,https://data.nola.gov/stories/s/5wcw-86p6,Y,
+3kny-f7xp,"We Live Here: Audubon - Parkside Living, University Life",Demographics,story,2026-01-05,2026-01-05,2025-05-06,,,,0,https://data.nola.gov/stories/s/3kny-f7xp,Y,
+x8cz-epkt,We Live Here: Bayou St. John - Rooted by the Water,Demographics,story,2026-01-05,2026-01-05,2025-05-05,,,,0,https://data.nola.gov/stories/s/x8cz-epkt,Y,
+is9m-79s8,We Live Here: Bywater - Between the River and the Canal,Demographics,story,2026-01-05,2026-01-05,2025-06-02,,,,0,https://data.nola.gov/stories/s/is9m-79s8,Y,
+mzyq-2ggt,We Live Here: Dixon - A Compact Community with Vital Connections,Demographics,story,2026-01-05,2026-01-05,2025-06-09,,,,0,https://data.nola.gov/stories/s/mzyq-2ggt,Y,
+n5r8-85rm,"We Live Here: The French Quarter, Louisiana's Crown Jewel",Demographics,story,2026-01-05,2026-01-05,2025-04-07,,,,0,https://data.nola.gov/stories/s/n5r8-85rm,Y,
+9xra-d95k,blockgroups_1990,Demographics,dataset,2015-03-24,2024-04-10,2015-03-24,,,,35,https://data.nola.gov/d/9xra-d95k,Y,
+hv7z-tzuv,blocks_1990,Demographics,dataset,2015-03-24,2024-04-10,2015-03-24,,,,13,https://data.nola.gov/d/hv7z-tzuv,Y,
+chdr-aebd,tracts_1990,Demographics,dataset,2015-03-24,2024-04-10,2015-03-24,,,,19,https://data.nola.gov/d/chdr-aebd,Y,
+q42h-ptn2,Certified Disadvantaged Business Enterprise (DBE) Directory,Economy and Workforce,dataset,2019-11-11,2019-11-11,2018-07-12,,,,17,https://data.nola.gov/d/q42h-ptn2,Y,
+mwpi-m8zd,Design Cultural Businesses,Economy and Workforce,href,2017-07-19,2017-07-19,2017-07-19,,,,0,https://data.nola.gov/d/mwpi-m8zd,Y,
+8bhu-3gmi,Market Value Analysis 2012,Economy and Workforce,dataset,2021-08-04,2021-12-05,2021-08-04,,,property,6,https://data.nola.gov/d/8bhu-3gmi,Y,
+eahd-efws,Market Value Analysis 2015,Economy and Workforce,dataset,2023-06-13,2023-06-13,2021-08-04,,,,6,https://data.nola.gov/d/eahd-efws,Y,
+34sq-9jk5,Market Value Analysis 2018,Economy and Workforce,dataset,2023-06-13,2023-06-13,2021-08-04,,,property,6,https://data.nola.gov/d/34sq-9jk5,Y,
+p2sw-2br8,New Orleans 2009 - 2012 Market Value Analysis (MVA)  Web Map,Economy and Workforce,href,2014-05-07,2023-09-25,2014-05-07,,,,0,https://data.nola.gov/d/p2sw-2br8,Y,
+9mq2-fppy,New Orleans 2015 Market Value Analysis (MVA) Web Map,Economy and Workforce,href,2016-03-09,2017-03-14,2016-03-09,,,,0,https://data.nola.gov/d/9mq2-fppy,Y,
+tbyf-mn78,New Orleans 2015 Market Value Analysis - Final Report 3.17.2016,Economy and Workforce,file,2016-03-17,2016-04-04,2016-03-17,,,property,0,https://data.nola.gov/d/tbyf-mn78,Y,
+9spa-yn9d,New Orleans 2016-2017 Market Value Analysis (MVA) Web Map,Economy and Workforce,href,2018-07-25,2018-07-26,2018-07-25,,,,0,https://data.nola.gov/d/9spa-yn9d,Y,
+kex2-vq3e,New Orleans Market Value Analysis - Final Report 3.25.2013,Economy and Workforce,file,2013-04-09,2017-01-23,2013-04-09,,,property,0,https://data.nola.gov/d/kex2-vq3e,Y,
+eghs-zztk,2026 New Orleans City Council Districts,"Elections, Politics",file,2025-08-18,2025-08-18,2025-08-18,,,,0,https://data.nola.gov/d/eghs-zztk,Y,
+n66j-anfy,Voting Precincts,"Elections, Politics",dataset,2025-09-17,2025-09-17,2021-08-04,,,,5,https://data.nola.gov/d/n66j-anfy,Y,
+d4y8-p3zu,Wards,"Elections, Politics",dataset,2023-06-13,2023-06-13,2021-08-04,,,,5,https://data.nola.gov/d/d4y8-p3zu,Y,
+eigp-x49x,Trash Pickup,Environment,dataset,2023-06-13,2023-06-13,2023-03-13,,,,11,https://data.nola.gov/d/eigp-x49x,Y,
+igww-2uzd,Edge of Pavement (Line and Polygon),Geographic Base Layers,href,2016-12-28,2021-04-01,2016-12-28,,,,0,https://data.nola.gov/d/igww-2uzd,Y,
+73z2-h53k,Orleans_ZCTA_2010_SP,Geographic Base Layers,dataset,2013-03-25,2024-04-10,2013-03-25,,,,12,https://data.nola.gov/d/73z2-h53k,Y,
+hfvu-md72,Site Address Point,Geographic Base Layers,dataset,2026-08-25,2026-08-25,2021-08-04,268595,,,23,https://data.nola.gov/d/hfvu-md72,,Y
+rgeq-44vf,Zip Code Tabulation Areas - 2010,Geographic Base Layers,map,2013-03-25,2024-04-24,2013-03-25,,,,0,https://data.nola.gov/d/rgeq-44vf,Y,
+k6e3-ypu7,Daycare Facilities,"Health, Education, and Social Services",dataset,2026-08-25,2026-09-25,2024-10-29,,,,7,https://data.nola.gov/d/k6e3-ypu7,,
+hprg-srae,Openly Available Computers and Computer Resources,"Health, Education, and Social Services",href,2017-07-25,2017-07-25,2017-07-25,,,,0,https://data.nola.gov/d/hprg-srae,Y,
+wy29-i338,Adjudication Enforcement Cases for the Office of Business and External Services,"Housing, Land Use, and Blight",dataset,2026-10-17,2026-10-17,2022-08-16,114020,,code_enf;str;property;zoning,42,https://data.nola.gov/d/wy29-i338,,Y
+f5zm-xkyr,Adjudication Enforcement Fines and Fees Data for the Office of Business and External Services,"Housing, Land Use, and Blight",dataset,2026-10-17,2026-10-17,2022-08-17,224946,,code_enf;str;zoning,26,https://data.nola.gov/d/f5zm-xkyr,,Y
+xxb5-5azv,CPC Projects,"Housing, Land Use, and Blight",dataset,2026-10-17,2026-10-17,2024-01-08,15611,,property;zoning,26,https://data.nola.gov/d/xxb5-5azv,,Y
+rtej-a36y,Housing and Urban Development (HUD) Grants,"Housing, Land Use, and Blight",dataset,2018-01-23,2018-01-26,2017-01-10,,,,6,https://data.nola.gov/d/rtej-a36y,Y,
+qfg2-kjjz,Alcohol Beverage Outlets,"Planning, Zoning",dataset,2025-08-17,2025-08-17,2021-12-13,,,permits,13,https://data.nola.gov/d/qfg2-kjjz,Y,
+9zkz-jw88,Claiborne Corridor,"Planning, Zoning",href,2016-04-20,2017-07-03,2016-04-20,,,,0,https://data.nola.gov/d/9zkz-jw88,Y,
+ecst-qwxv,Conditional Use,"Planning, Zoning",dataset,2026-08-08,2026-08-08,2021-12-13,1450,,zoning,10,https://data.nola.gov/d/ecst-qwxv,,Y
+uxum-hzga,Food Truck Zones,"Planning, Zoning",dataset,2025-08-17,2025-08-17,2021-12-13,,,permits;business,9,https://data.nola.gov/d/uxum-hzga,Y,
+ssrd-hdhv,HDLC Solar Panel Review Area,"Planning, Zoning",dataset,2025-03-17,2025-03-18,2025-03-17,,,,4,https://data.nola.gov/d/ssrd-hdhv,Y,
+c8ew-p2c8,Neighborhood Conservation Districts,"Planning, Zoning",dataset,2023-06-13,2026-09-25,2021-08-04,,,,6,https://data.nola.gov/d/c8ew-p2c8,Y,
+3r6c-wt99,Planning Districts,"Planning, Zoning",map,2026-07-09,2026-09-25,2026-07-09,,,,0,https://data.nola.gov/d/3r6c-wt99,Y,
+put8-sks2,Planning Districts,"Planning, Zoning",dataset,2026-07-09,2026-09-25,2026-07-09,,,,4,https://data.nola.gov/d/put8-sks2,Y,
+hp7u-i9hf,Call for Service 2020,Public Safety and Preparedness,dataset,2021-01-05,2022-01-03,2020-03-27,432892,,,29,https://data.nola.gov/d/hp7u-i9hf,Y,Y
+e3a9-erd7,Drug Stores,Public Safety and Preparedness,dataset,2024-07-09,2026-09-25,2021-12-13,,,,6,https://data.nola.gov/d/e3a9-erd7,Y,
+s25y-s63t,Electronic Police Report 2010,Public Safety and Preparedness,dataset,2026-06-30,2026-06-30,2016-09-28,,,,21,https://data.nola.gov/d/s25y-s63t,Y,
+t596-ginn,Electronic Police Report 2011,Public Safety and Preparedness,dataset,2026-06-30,2026-06-30,2016-09-28,,,,21,https://data.nola.gov/d/t596-ginn,Y,
+x7yt-gfg9,Electronic Police Report 2012,Public Safety and Preparedness,dataset,2026-06-30,2026-06-30,2016-09-28,,,,21,https://data.nola.gov/d/x7yt-gfg9,Y,
+je4t-6qub,Electronic Police Report 2013,Public Safety and Preparedness,dataset,2026-06-30,2026-06-30,2016-09-28,,,,21,https://data.nola.gov/d/je4t-6qub,Y,
+6mst-xjhm,Electronic Police Report 2014,Public Safety and Preparedness,dataset,2026-06-30,2026-06-30,2016-09-28,,,,21,https://data.nola.gov/d/6mst-xjhm,Y,
+9ctg-u58a,Electronic Police Report 2015,Public Safety and Preparedness,dataset,2026-06-30,2026-06-30,2016-09-28,,,,21,https://data.nola.gov/d/9ctg-u58a,Y,
+4gc2-25he,Electronic Police Report 2016,Public Safety and Preparedness,dataset,2026-06-30,2026-06-30,2016-09-12,,,,21,https://data.nola.gov/d/4gc2-25he,Y,
+qtcu-97s9,Electronic Police Report 2017,Public Safety and Preparedness,dataset,2026-06-30,2026-06-30,2017-01-03,,,,21,https://data.nola.gov/d/qtcu-97s9,Y,
+3m97-9vtw,Electronic Police Report 2018,Public Safety and Preparedness,dataset,2026-06-30,2026-06-30,2018-01-03,,,,21,https://data.nola.gov/d/3m97-9vtw,Y,
+mm32-zkg7,Electronic Police Report 2019,Public Safety and Preparedness,dataset,2026-06-30,2026-06-30,2019-01-07,,,,21,https://data.nola.gov/d/mm32-zkg7,Y,
+hjbe-qzaz,Electronic Police Report 2020,Public Safety and Preparedness,dataset,2026-06-30,2026-06-30,2021-02-04,,,,23,https://data.nola.gov/d/hjbe-qzaz,Y,
+6pqh-bfxa,Electronic Police Report 2021,Public Safety and Preparedness,dataset,2026-06-30,2026-06-30,2021-03-19,,,,23,https://data.nola.gov/d/6pqh-bfxa,Y,
+9wdb-bznc,Electronic Police Report 2022,Public Safety and Preparedness,dataset,2026-06-30,2026-06-30,2022-01-03,,,,23,https://data.nola.gov/d/9wdb-bznc,Y,
+j3gz-62a2,Electronic Police Report 2023,Public Safety and Preparedness,dataset,2026-06-30,2026-06-30,2023-01-03,,,,23,https://data.nola.gov/d/j3gz-62a2,Y,
+c5iy-ew8n,Electronic Police Report 2024,Public Safety and Preparedness,dataset,2026-06-30,2026-06-30,2024-01-24,690329,,,23,https://data.nola.gov/d/c5iy-ew8n,Y,Y
+agqi-9adb,Electronic Police Report 2025,Public Safety and Preparedness,dataset,2026-07-06,2026-07-06,2025-01-06,51195,,,23,https://data.nola.gov/d/agqi-9adb,Y,Y
+vu86-6ctm,Fire Engine Zones,Public Safety and Preparedness,dataset,2023-06-13,2023-06-13,2021-12-13,,,,5,https://data.nola.gov/d/vu86-6ctm,Y,
+596e-eu55,Fire Zones,Public Safety and Preparedness,dataset,2023-06-13,2023-06-13,2021-12-13,,,,8,https://data.nola.gov/d/596e-eu55,Y,
+9zhf-rwjb,Gas Stations,Public Safety and Preparedness,dataset,2024-07-09,2024-07-09,2021-12-13,,,,7,https://data.nola.gov/d/9zhf-rwjb,Y,
+a6y4-ezh3,Gender Breakdown,Public Safety and Preparedness,chart,2026-06-30,2026-06-30,2022-04-26,,,,0,https://data.nola.gov/d/a6y4-ezh3,Y,
+fjp2-vp3i,Grocery Stores,Public Safety and Preparedness,dataset,2024-07-09,2024-07-09,2021-12-13,,,,7,https://data.nola.gov/d/fjp2-vp3i,Y,
+thsy-fhdi,Hardware Stores,Public Safety and Preparedness,dataset,2024-07-09,2024-07-09,2021-12-13,,,,7,https://data.nola.gov/d/thsy-fhdi,Y,
+md6i-s3e6,LCPD - Simple Burglary Vehicle 2020,Public Safety and Preparedness,map,2021-01-05,2021-01-29,2021-01-29,,,,0,https://data.nola.gov/d/md6i-s3e6,Y,
+njp4-h4zp,Metro E Sites,Public Safety and Preparedness,dataset,2023-06-13,2024-07-09,2021-12-13,,,,7,https://data.nola.gov/d/njp4-h4zp,Y,
+6r4n-y3uh,NOFD Districts,Public Safety and Preparedness,dataset,2023-06-13,2026-09-25,2021-12-13,,,,5,https://data.nola.gov/d/6r4n-y3uh,Y,
+qarb-kkbj,NOPD Body Worn Camera Metadata,Public Safety and Preparedness,dataset,2026-08-01,2026-08-01,2016-03-23,,,,15,https://data.nola.gov/d/qarb-kkbj,,
+e2he-xim8,NOPD Districts,Public Safety and Preparedness,dataset,2023-06-13,2026-09-25,2021-12-13,,,,5,https://data.nola.gov/d/e2he-xim8,Y,
+md3v-ph3u,NOPD In-Car Camera Metadata,Public Safety and Preparedness,dataset,2023-04-10,2023-04-10,2016-04-08,,,,6,https://data.nola.gov/d/md3v-ph3u,Y,
+gz2m-ef5u,NOPD Misconduct Complaints,Public Safety and Preparedness,dataset,2026-10-17,2026-10-17,2016-11-01,,,,24,https://data.nola.gov/d/gz2m-ef5u,,
+9mnw-mbde,NOPD Use of Force Incidents,Public Safety and Preparedness,dataset,2026-10-17,2026-10-17,2016-08-03,,,,33,https://data.nola.gov/d/9mnw-mbde,,
+a6bp-behb,NOPD Use of Force Incidents (Archive),Public Safety and Preparedness,dataset,2021-04-27,2021-04-27,2021-04-27,,,,33,https://data.nola.gov/d/a6bp-behb,Y,
+kitu-f4uy,Stop and Search (Field Interviews),Public Safety and Preparedness,dataset,2026-10-17,2026-10-17,2015-07-10,,,,29,https://data.nola.gov/d/kitu-f4uy,,
+7r3s-xgrg,Suspect Gender Breakdown,Public Safety and Preparedness,chart,2026-06-30,2026-06-30,2022-04-26,,,,0,https://data.nola.gov/d/7r3s-xgrg,Y,
+va3u-jspg,Traffic Camera Citations,Public Safety and Preparedness,dataset,2022-02-06,2022-02-06,2019-05-30,,,,9,https://data.nola.gov/d/va3u-jspg,Y,
+mgu2-cpgz,Victim Demographics,Public Safety and Preparedness,chart,2026-06-30,2026-06-30,2022-06-14,,,,0,https://data.nola.gov/d/mgu2-cpgz,Y,
+8jph-7i6h,suspicious persons calls,Public Safety and Preparedness,filter,2016-07-28,2025-01-14,2015-10-16,,,,12,https://data.nola.gov/d/8jph-7i6h,Y,
+svze-8ffj,Market Value Analysis Final Report 2018,"Real Estate, Land Records",file,2018-07-25,2018-07-25,2018-07-25,,,property,0,https://data.nola.gov/d/svze-8ffj,Y,
+cym7-cw5z,Tabular Address Points,"Real Estate, Land Records",dataset,2018-07-02,2018-07-02,2018-07-02,225956,,property;zoning,4,https://data.nola.gov/d/cym7-cw5z,Y,Y
+n4z3-4iyi,Open Greenspace,Recreation and Culture,dataset,2026-04-28,2026-04-28,2024-12-17,,,,12,https://data.nola.gov/d/n4z3-4iyi,Y,
+65t6-gi32,Playgrounds Remediated for Lead 2011,Recreation and Culture,dataset,2011-11-08,2019-04-20,2011-11-08,,,,15,https://data.nola.gov/d/65t6-gi32,Y,
+skez-k7ak,Brake Tag Stations,Transportation and Infrastructure,href,2017-01-12,2017-05-24,2017-01-12,,,code_enf,0,https://data.nola.gov/d/skez-k7ak,Y,
+se4p-ierc,Catch Basins,Transportation and Infrastructure,dataset,2026-04-29,2026-04-29,2021-12-13,80553,,,8,https://data.nola.gov/d/se4p-ierc,Y,Y
+thvj-m69y,City Streetlights Retrofitted with LED Technology (2012 - Present),Transportation and Infrastructure,dataset,2016-02-05,2016-02-05,2016-02-05,,,,13,https://data.nola.gov/d/thvj-m69y,Y,
+qdze-iuzu,Lafitte Greenway Project,Transportation and Infrastructure,map,2012-11-09,2024-04-24,2012-11-09,,,,0,https://data.nola.gov/d/qdze-iuzu,Y,
+umyg-h5q3,Max Pave II,Transportation and Infrastructure,dataset,2023-10-13,2023-10-13,2023-04-05,,,,16,https://data.nola.gov/d/umyg-h5q3,Y,
+uyn6-t6t8,Metered Parking,Transportation and Infrastructure,dataset,2023-06-13,2023-06-13,2021-12-13,,,,9,https://data.nola.gov/d/uyn6-t6t8,Y,
+devm-es8b,RTA Routes,Transportation and Infrastructure,dataset,2025-01-17,2025-01-17,2021-12-13,,,,14,https://data.nola.gov/d/devm-es8b,Y,
+hp2r-gr3h,RTA Stops,Transportation and Infrastructure,dataset,2025-02-24,2025-02-24,2021-12-13,,,,14,https://data.nola.gov/d/hp2r-gr3h,Y,
+u5mk-y9z4,RoadWork DPW Projects,Transportation and Infrastructure,dataset,2026-10-17,2026-10-17,2023-11-06,14297,,swb,26,https://data.nola.gov/d/u5mk-y9z4,,Y
+fdkj-rjrv,Street Name,Transportation and Infrastructure,dataset,2026-07-06,2026-07-06,2021-12-13,28526,,,39,https://data.nola.gov/d/fdkj-rjrv,Y,Y
+i3e4-42kc,Streetlights Other,Transportation and Infrastructure,dataset,2026-07-06,2026-07-06,2021-12-13,,,,18,https://data.nola.gov/d/i3e4-42kc,Y,
+te2d-4txp,Traffic Camera,Transportation and Infrastructure,dataset,2024-11-28,2024-11-28,2021-12-13,,,,22,https://data.nola.gov/d/te2d-4txp,Y,
+uk22-twen,Unhoused Health Care Facilities,Transportation and Infrastructure,dataset,2022-02-12,2023-01-24,2021-12-13,,,,9,https://data.nola.gov/d/uk22-twen,Y,

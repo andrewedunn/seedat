@@ -1,0 +1,150 @@
+[
+ {
+  "the_geom": {
+   "type": "MultiLineString",
+   "coordinates": [
+    [
+     [
+      -90.108221007366,
+      30.019645412046
+     ],
+     [
+      -90.108303069493,
+      30.019652152602
+     ],
+     [
+      -90.108521969923,
+      30.019670334306
+     ],
+     [
+      -90.108598203939,
+      30.019678681705
+     ]
+    ]
+   ]
+  },
+  "objectid": "24478",
+  "centerlineid": "2559361",
+  "fromleft": "0",
+  "toleft": "0",
+  "fromright": "500",
+  "toright": "538",
+  "fullname": "Allen Toussaint Boulevard",
+  "roadclass": "Major Arterial",
+  "munileft": "New Orleans",
+  "muniright": "New Orleans",
+  "stateleft": "LA",
+  "stateright": "LA",
+  "lastupdate": "2022-01-24T22:19:23.000Z",
+  "lasteditor": "CMARD",
+  "fullnameabv": "Allen Toussaint Blvd",
+  "joinid": "2414",
+  "shape_stlength": "119.99167277129665"
+ },
+ {
+  "the_geom": {
+   "type": "MultiLineString",
+   "coordinates": [
+    [
+     [
+      -90.110948840458,
+      29.956301934242
+     ],
+     [
+      -90.111041921231,
+      29.956376026819
+     ],
+     [
+      -90.111279743624,
+      29.956570921403
+     ],
+     [
+      -90.111353767139,
+      29.956631574181
+     ],
+     [
+      -90.111613826371,
+      29.956844699935
+     ]
+    ]
+   ]
+  },
+  "objectid": "18435",
+  "centerlineid": "2501935",
+  "fromleft": "7100",
+  "toleft": "7198",
+  "fromright": "7101",
+  "toright": "7199",
+  "fullname": "Fig Street",
+  "roadclass": "Local",
+  "munileft": "New Orleans",
+  "muniright": "New Orleans",
+  "stateleft": "LA",
+  "stateright": "LA",
+  "lastupdate": "2019-10-21T19:56:52.000Z",
+  "lasteditor": "CMARD",
+  "fullnameabv": "Fig St",
+  "joinid": "722",
+  "shape_stlength": "288.62760853669994"
+ },
+ {
+  "the_geom": {
+   "type": "MultiLineString",
+   "coordinates": [
+    [
+     [
+      -89.948180203769,
+      29.902523774852
+     ],
+     [
+      -89.948276718196,
+      29.902560778531
+     ],
+     [
+      -89.948335076313,
+      29.902577727274
+     ],
+     [
+      -89.948371452545,
+      29.902585583097
+     ],
+     [
+      -89.948456844974,
+      29.902600868653
+     ],
+     [
+      -89.948484154653,
+      29.902605754311
+     ],
+     [
+      -89.94857690218,
+      29.902622356301
+     ]
+    ]
+   ]
+  },
+  "objectid": "23661",
+  "centerlineid": "2525387",
+  "fromleft": "5",
+  "toleft": "13",
+  "fromright": "0",
+  "toright": "0",
+  "fullname": "Bonita Bay Drive",
+  "roadlevel": "0",
+  "inwater": "No",
+  "roadclass": "Local",
+  "ownedby": "-1",
+  "maintby": "-1",
+  "munileft": "New Orleans",
+  "muniright": "New Orleans",
+  "stateleft": "LA",
+  "stateright": "LA",
+  "esnleft": "3103",
+  "esnright": "3103",
+  "lastupdate": "2021-02-05T16:16:12.000Z",
+  "lasteditor": "AKKUEMMEL",
+  "fullnameabv": "Bonita Bay Dr",
+  "joinid": "250",
+  "shape_stlength": "131.22861117878014"
+ }
+]

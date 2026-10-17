@@ -1,0 +1,23 @@
+[
+ {
+  "program": "IDC",
+  "full_address": "601 Tricou St",
+  "units": "1",
+  "demolition_start": "2019-09-10T00:00:00.000",
+  "demolition_complete": "2019-09-11T00:00:00.000"
+ },
+ {
+  "program": "IDC",
+  "full_address": "4642 Perelli Dr",
+  "units": "1",
+  "demolition_start": "2019-09-04T00:00:00.000",
+  "demolition_complete": "2019-09-06T00:00:00.000"
+ },
+ {
+  "program": "IDC",
+  "full_address": "4025 N Rocheblave St",
+  "units": "1",
+  "demolition_start": "2019-08-29T00:00:00.000",
+  "demolition_complete": "2019-09-03T00:00:00.000"
+ }
+]

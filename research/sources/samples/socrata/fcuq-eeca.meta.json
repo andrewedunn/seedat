@@ -1,0 +1,537 @@
+{
+ "id": "fcuq-eeca",
+ "name": "Katrina 2005 FEMA Demolition Requests",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Housing, Land Use, and Blight",
+ "attribution": "City of New Orleans",
+ "attributionLink": null,
+ "licenseId": "CC0_10",
+ "license": {
+  "name": "Creative Commons 1.0 Universal (Public Domain Dedication)",
+  "logoUrl": "images/licenses/ccZero.png",
+  "termsLink": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+ },
+ "rowsUpdatedAt": "2025-09-02 17:23",
+ "createdAt": 1756829815,
+ "viewLastModified": 1756833883,
+ "publicationDate": 1756833883,
+ "rowIdentifierColumnId": null,
+ "tags": null,
+ "metadata": {
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "data@nola.gov",
+    "Public Access Level": "public"
+   },
+   "Source Information": {
+    "Source Department": "Information Technology and Innovation - Enterprise GIS",
+    "Format": "Shapefile",
+    "Frequency of Data Change": "No change"
+   }
+  },
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ]
+ },
+ "description": "Properties submitted for demolition following Hurricane Katrina as part of the requirements of Section 106 of the Historic Preservation Act.",
+ "columns": [
+  {
+   "f": "the_geom",
+   "n": "the_geom",
+   "t": "point"
+  },
+  {
+   "f": "objectid",
+   "n": "OBJECTID",
+   "t": "number"
+  },
+  {
+   "f": "gps_id",
+   "n": "GPS_ID",
+   "t": "text"
+  },
+  {
+   "f": "cultural_r",
+   "n": "Cultural_R",
+   "t": "text"
+  },
+  {
+   "f": "location_i",
+   "n": "Location_I",
+   "t": "text"
+  },
+  {
+   "f": "survey_id",
+   "n": "Survey_ID",
+   "t": "text"
+  },
+  {
+   "f": "boundary_t",
+   "n": "Boundary_T",
+   "t": "text"
+  },
+  {
+   "f": "map_method",
+   "n": "Map_Method",
+   "t": "text"
+  },
+  {
+   "f": "source",
+   "n": "Source",
+   "t": "text"
+  },
+  {
+   "f": "source_dat",
+   "n": "Source_Dat",
+   "t": "calendar_date"
+  },
+  {
+   "f": "source_d_1",
+   "n": "Source_D_1",
+   "t": "text"
+  },
+  {
+   "f": "source_coo",
+   "n": "Source_Coo",
+   "t": "text"
+  },
+  {
+   "f": "source_acc",
+   "n": "Source_Acc",
+   "t": "text"
+  },
+  {
+   "f": "last_updat",
+   "n": "Last_Updat",
+   "t": "calendar_date"
+  },
+  {
+   "f": "restrict_s",
+   "n": "Restrict_S",
+   "t": "text"
+  },
+  {
+   "f": "property_n",
+   "n": "Property_N",
+   "t": "text"
+  },
+  {
+   "f": "street_num",
+   "n": "Street_Num",
+   "t": "text"
+  },
+  {
+   "f": "street_nam",
+   "n": "Street_Nam",
+   "t": "text"
+  },
+  {
+   "f": "city_tag",
+   "n": "City_Tag",
+   "t": "text"
+  },
+  {
+   "f": "city_datab",
+   "n": "City_Datab",
+   "t": "text"
+  },
+  {
+   "f": "historic_n",
+   "n": "Historic_N",
+   "t": "text"
+  },
+  {
+   "f": "constructi",
+   "n": "Constructi",
+   "t": "text"
+  },
+  {
+   "f": "date_estim",
+   "n": "Date_Estim",
+   "t": "text"
+  },
+  {
+   "f": "less_than_",
+   "n": "Less_than_",
+   "t": "text"
+  },
+  {
+   "f": "listed_sta",
+   "n": "Listed_Sta",
+   "t": "text"
+  },
+  {
+   "f": "contribute",
+   "n": "Contribute",
+   "t": "text"
+  },
+  {
+   "f": "significan",
+   "n": "Significan",
+   "t": "text"
+  },
+  {
+   "f": "historic_c",
+   "n": "Historic_C",
+   "t": "text"
+  },
+  {
+   "f": "materials_",
+   "n": "Materials_",
+   "t": "text"
+  },
+  {
+   "f": "design_int",
+   "n": "Design_Int",
+   "t": "text"
+  },
+  {
+   "f": "wrkmanship",
+   "n": "Wrkmanship",
+   "t": "text"
+  },
+  {
+   "f": "setting_in",
+   "n": "Setting_In",
+   "t": "text"
+  },
+  {
+   "f": "location_1",
+   "n": "Location_1",
+   "t": "text"
+  },
+  {
+   "f": "foundatio2",
+   "n": "Foundatio2",
+   "t": "text"
+  },
+  {
+   "f": "wall_condi",
+   "n": "Wall_Condi",
+   "t": "text"
+  },
+  {
+   "f": "roof_condi",
+   "n": "Roof_Condi",
+   "t": "text"
+  },
+  {
+   "f": "damage_typ",
+   "n": "Damage_Typ",
+   "t": "text"
+  },
+  {
+   "f": "current_us",
+   "n": "Current_Us",
+   "t": "text"
+  },
+  {
+   "f": "style",
+   "n": "Style",
+   "t": "text"
+  },
+  {
+   "f": "building_t",
+   "n": "Building_T",
+   "t": "text"
+  },
+  {
+   "f": "footprint",
+   "n": "Footprint",
+   "t": "text"
+  },
+  {
+   "f": "height",
+   "n": "Height",
+   "t": "text"
+  },
+  {
+   "f": "foundation",
+   "n": "Foundation",
+   "t": "text"
+  },
+  {
+   "f": "const_mate",
+   "n": "Const_Mate",
+   "t": "text"
+  },
+  {
+   "f": "cladding",
+   "n": "Cladding",
+   "t": "text"
+  },
+  {
+   "f": "roof_mate",
+   "n": "Roof_Mate",
+   "t": "text"
+  },
+  {
+   "f": "roof_type",
+   "n": "Roof_Type",
+   "t": "text"
+  },
+  {
+   "f": "chimneys",
+   "n": "Chimneys",
+   "t": "text"
+  },
+  {
+   "f": "chimney_ma",
+   "n": "Chimney_Ma",
+   "t": "text"
+  },
+  {
+   "f": "porches",
+   "n": "Porches",
+   "t": "text"
+  },
+  {
+   "f": "point_reco",
+   "n": "Point_Reco",
+   "t": "text"
+  },
+  {
+   "f": "outbuildin",
+   "n": "Outbuildin",
+   "t": "text"
+  },
+  {
+   "f": "comment",
+   "n": "Comment",
+   "t": "text"
+  },
+  {
+   "f": "eligibilit",
+   "n": "Eligibilit",
+   "t": "text"
+  },
+  {
+   "f": "shpo_concu",
+   "n": "SHPO_Concu",
+   "t": "text"
+  },
+  {
+   "f": "fema_deter",
+   "n": "FEMA_Deter",
+   "t": "text"
+  },
+  {
+   "f": "shpo_revie",
+   "n": "SHPO_Revie",
+   "t": "text"
+  },
+  {
+   "f": "fema_revie",
+   "n": "FEMA_Revie",
+   "t": "text"
+  },
+  {
+   "f": "concur_dat",
+   "n": "Concur_Dat",
+   "t": "calendar_date"
+  },
+  {
+   "f": "review_com",
+   "n": "Review_Com",
+   "t": "text"
+  },
+  {
+   "f": "collapsed_",
+   "n": "Collapsed_",
+   "t": "text"
+  },
+  {
+   "f": "pub_commen",
+   "n": "Pub_Commen",
+   "t": "text"
+  },
+  {
+   "f": "surveyor_n",
+   "n": "Surveyor_N",
+   "t": "text"
+  },
+  {
+   "f": "photograph",
+   "n": "Photograph",
+   "t": "text"
+  },
+  {
+   "f": "photo1",
+   "n": "Photo1",
+   "t": "text"
+  },
+  {
+   "f": "photo2",
+   "n": "Photo2",
+   "t": "text"
+  },
+  {
+   "f": "photo3",
+   "n": "Photo3",
+   "t": "text"
+  },
+  {
+   "f": "photo4",
+   "n": "Photo4",
+   "t": "text"
+  },
+  {
+   "f": "photo1path",
+   "n": "Photo1path",
+   "t": "text"
+  },
+  {
+   "f": "photo2path",
+   "n": "Photo2path",
+   "t": "text"
+  },
+  {
+   "f": "photo3path",
+   "n": "Photo3path",
+   "t": "text"
+  },
+  {
+   "f": "photo4path",
+   "n": "Photo4path",
+   "t": "text"
+  },
+  {
+   "f": "photofile",
+   "n": "Photofile",
+   "t": "text"
+  },
+  {
+   "f": "corr_type",
+   "n": "Corr_Type",
+   "t": "text"
+  },
+  {
+   "f": "rcvr_type",
+   "n": "Rcvr_Type",
+   "t": "text"
+  },
+  {
+   "f": "gps_date",
+   "n": "GPS_Date",
+   "t": "calendar_date"
+  },
+  {
+   "f": "gps_time",
+   "n": "GPS_Time",
+   "t": "text"
+  },
+  {
+   "f": "update_sta",
+   "n": "Update_Sta",
+   "t": "text"
+  },
+  {
+   "f": "feat_nam",
+   "n": "Feat_Nam",
+   "t": "text"
+  },
+  {
+   "f": "datafile",
+   "n": "Datafile",
+   "t": "text"
+  },
+  {
+   "f": "unfilt_pos",
+   "n": "Unfilt_Pos",
+   "t": "text"
+  },
+  {
+   "f": "data_dicti",
+   "n": "Data_Dicti",
+   "t": "text"
+  },
+  {
+   "f": "latitude",
+   "n": "Latitude",
+   "t": "text"
+  },
+  {
+   "f": "longitude",
+   "n": "Longitude",
+   "t": "text"
+  },
+  {
+   "f": "nhd",
+   "n": "NHD",
+   "t": "text"
+  },
+  {
+   "f": "prob_zone",
+   "n": "Prob_Zone",
+   "t": "text"
+  },
+  {
+   "f": "d_zone",
+   "n": "D_Zone",
+   "t": "text"
+  },
+  {
+   "f": "d_list",
+   "n": "D_List",
+   "t": "text"
+  },
+  {
+   "f": "shpo_consu",
+   "n": "SHPO_Consu",
+   "t": "text"
+  },
+  {
+   "f": "arch_tier",
+   "n": "Arch_Tier",
+   "t": "text"
+  },
+  {
+   "f": "zipcode",
+   "n": "Zipcode",
+   "t": "text"
+  },
+  {
+   "f": "address",
+   "n": "Address",
+   "t": "text"
+  },
+  {
+   "f": "demostatus",
+   "n": "DemoStatus",
+   "t": "text"
+  },
+  {
+   "f": "demoinfo",
+   "n": "DemoInfo",
+   "t": "text"
+  },
+  {
+   "f": "st_num",
+   "n": "ST_Num",
+   "t": "text"
+  },
+  {
+   "f": "st_dir",
+   "n": "ST_Dir",
+   "t": "text"
+  },
+  {
+   "f": "st_name",
+   "n": "ST_Name",
+   "t": "text"
+  },
+  {
+   "f": "st_suffix",
+   "n": "ST_Suffix",
+   "t": "text"
+  },
+  {
+   "f": "location_2",
+   "n": "Location",
+   "t": "point"
+  }
+ ]
+}

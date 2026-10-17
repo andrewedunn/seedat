@@ -1,0 +1,135 @@
+{
+ "id": "gjzc-adg8",
+ "name": "Code Enforcement Active Pipeline",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": null,
+ "attribution": null,
+ "attributionLink": null,
+ "licenseId": null,
+ "license": null,
+ "rowsUpdatedAt": "2025-02-24 16:21",
+ "createdAt": 1740414102,
+ "viewLastModified": 1740414104,
+ "publicationDate": 1740414104,
+ "rowIdentifierColumnId": null,
+ "tags": null,
+ "metadata": {
+  "arcgis_connection": {
+   "url": "https://maps.nola.gov/server/rest/services/Streets/Code_Enforcement_Layers/FeatureServer/1"
+  }
+ },
+ "description": "<DIV STYLE=\"text-align:Left;\"><DIV><P><SPAN>Point dataset showing blighted properties reported via citizens. Updated weekly based on LAMA database. Also available via data.nola.gov as tabular dataset.</SPAN></P></DIV></DIV>",
+ "columns": [
+  {
+   "f": "the_geom",
+   "n": "the_geom",
+   "t": "point"
+  },
+  {
+   "f": "objectid",
+   "n": "OBJECTID",
+   "t": "number"
+  },
+  {
+   "f": "casefiled",
+   "n": "Date Case Filed",
+   "t": "text"
+  },
+  {
+   "f": "caseid",
+   "n": "Case ID",
+   "t": "text"
+  },
+  {
+   "f": "caseno",
+   "n": "Case Number",
+   "t": "text"
+  },
+  {
+   "f": "geoaddress",
+   "n": "GeoAddress",
+   "t": "text"
+  },
+  {
+   "f": "geopin",
+   "n": "GeoPIN",
+   "t": "text"
+  },
+  {
+   "f": "initinspection",
+   "n": "Initial Inspection",
+   "t": "text"
+  },
+  {
+   "f": "initinspresult",
+   "n": "Initial Result",
+   "t": "text"
+  },
+  {
+   "f": "keystatus",
+   "n": "Key Status",
+   "t": "text"
+  },
+  {
+   "f": "lastpermit",
+   "n": "Last Permit",
+   "t": "text"
+  },
+  {
+   "f": "location",
+   "n": "Location",
+   "t": "text"
+  },
+  {
+   "f": "nexthearingdate",
+   "n": "Next Hearing Date",
+   "t": "text"
+  },
+  {
+   "f": "o_c",
+   "n": "Open/Closed",
+   "t": "text"
+  },
+  {
+   "f": "permitfiling",
+   "n": "Permit Filing Date",
+   "t": "text"
+  },
+  {
+   "f": "permitstatus",
+   "n": "Permit Status",
+   "t": "text"
+  },
+  {
+   "f": "permittype",
+   "n": "Permit Type",
+   "t": "text"
+  },
+  {
+   "f": "prevhearingdate",
+   "n": "Previous Hearing Date",
+   "t": "text"
+  },
+  {
+   "f": "prevhearingresult",
+   "n": "Prev Hearing Result",
+   "t": "text"
+  },
+  {
+   "f": "stage",
+   "n": "Stage",
+   "t": "text"
+  },
+  {
+   "f": "statdate",
+   "n": "Status Date",
+   "t": "text"
+  },
+  {
+   "f": "zipcode",
+   "n": "Zipcode",
+   "t": "text"
+  }
+ ]
+}

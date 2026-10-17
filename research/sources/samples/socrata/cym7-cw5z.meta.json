@@ -1,0 +1,72 @@
+{
+ "id": "cym7-cw5z",
+ "name": "Tabular Address Points",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Real Estate, Land Records",
+ "attribution": "City of New Orleans Land Records database",
+ "attributionLink": null,
+ "licenseId": "USGOV_WORKS",
+ "license": {
+  "name": "Public Domain U.S. Government",
+  "termsLink": "https://www.usa.gov/government-works"
+ },
+ "rowsUpdatedAt": "2018-07-02 21:28",
+ "createdAt": 1530566888,
+ "viewLastModified": 1530567346,
+ "publicationDate": 1530567346,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "addresses",
+  "zoning"
+ ],
+ "metadata": {
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "gis@nola.gov",
+    "Contact Name": "",
+    "Publisher": "",
+    "Public Access Level": ""
+   },
+   "Source Information": {
+    "Source Department": "Safety and Permits",
+    "Format": "",
+    "Frequency of Data Change": ""
+   }
+  },
+  "rowLabel": "Address points",
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ],
+  "renderTypeConfig": {
+   "visible": {
+    "table": true
+   }
+  }
+ },
+ "description": "A list of address points with zoning information and GEOPIN attached. This is not set up with a replication schedule yet. Data current as of July 2, 2018.",
+ "columns": [
+  {
+   "f": "address",
+   "n": "Address",
+   "t": "text"
+  },
+  {
+   "f": "zoningclassification",
+   "n": "ZoningClassification",
+   "t": "text"
+  },
+  {
+   "f": "zoningdescription",
+   "n": "ZoningDescription",
+   "t": "text"
+  },
+  {
+   "f": "geopin",
+   "n": "GEOPIN",
+   "t": "number"
+  }
+ ]
+}

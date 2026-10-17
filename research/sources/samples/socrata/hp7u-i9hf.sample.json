@@ -1,0 +1,112 @@
+[
+ {
+  "nopd_item": "A0000120",
+  "type_": "94F",
+  "typetext": "FIREWORKS",
+  "priority": "1A",
+  "initialtype": "103",
+  "initialtypetext": "DISTURBANCE (OTHER)",
+  "initialpriority": "1C",
+  "mapx": "3677228",
+  "mapy": "550814",
+  "timecreate": "2020-01-01T00:00:34.983",
+  "timedispatch": "2020-01-01T02:34:18.173",
+  "timeclosed": "2020-01-01T06:53:08.130",
+  "disposition": "NAT",
+  "dispositiontext": "Necessary Action Taken",
+  "selfinitiated": "N",
+  "beat": "3N01",
+  "block_address": "001XX Blk Riviera Ave",
+  "zip": "70122",
+  "policedistrict": "3",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -90.0808922,
+    30.0086791
+   ]
+  },
+  ":@computed_region_ewbu_t8bu": "11730",
+  ":@computed_region_k37d_then": "4",
+  ":@computed_region_m56f_hbma": "134",
+  ":@computed_region_7fw3_kdpf": "22",
+  ":@computed_region_spev_d8jm": "3770",
+  ":@computed_region_sikx_bdeb": "134",
+  ":@computed_region_evki_aju8": "7",
+  ":@computed_region_u4yh_3wk9": "11730"
+ },
+ {
+  "nopd_item": "A0000220",
+  "type_": "21",
+  "typetext": "COMPLAINT OTHER",
+  "priority": "1J",
+  "initialtype": "21",
+  "initialtypetext": "COMPLAINT OTHER",
+  "initialpriority": "1J",
+  "mapx": "3668710",
+  "mapy": "533007",
+  "timecreate": "2020-01-01T00:00:42.930",
+  "timedispatch": "2020-01-01T00:00:42.930",
+  "timearrive": "2020-01-01T00:00:42.930",
+  "timeclosed": "2020-01-01T01:37:16.847",
+  "disposition": "NAT",
+  "dispositiontext": "Necessary Action Taken",
+  "selfinitiated": "Y",
+  "beat": "2U04",
+  "block_address": "034XX Broadway St",
+  "zip": "70125",
+  "policedistrict": "2",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -90.10840522,
+    29.95996774
+   ]
+  },
+  ":@computed_region_ewbu_t8bu": "9528",
+  ":@computed_region_k37d_then": "2",
+  ":@computed_region_m56f_hbma": "92",
+  ":@computed_region_7fw3_kdpf": "30",
+  ":@computed_region_spev_d8jm": "4147",
+  ":@computed_region_sikx_bdeb": "92",
+  ":@computed_region_evki_aju8": "3",
+  ":@computed_region_u4yh_3wk9": "9528"
+ },
+ {
+  "nopd_item": "A0000320",
+  "type_": "94F",
+  "typetext": "FIREWORKS",
+  "priority": "1A",
+  "initialtype": "94F",
+  "initialtypetext": "FIREWORKS",
+  "initialpriority": "2J",
+  "mapx": "3674930",
+  "mapy": "533982",
+  "timecreate": "2020-01-01T00:01:05.793",
+  "timedispatch": "2020-01-01T01:49:42.013",
+  "timearrive": "2020-01-01T02:08:17.390",
+  "timeclosed": "2020-01-01T02:34:36.070",
+  "disposition": "NAT",
+  "dispositiontext": "Necessary Action Taken",
+  "selfinitiated": "N",
+  "beat": "1H02",
+  "block_address": "026XX Banks St",
+  "zip": "70119",
+  "policedistrict": "1",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -90.08872937,
+    29.96246347
+   ]
+  },
+  ":@computed_region_ewbu_t8bu": "6155",
+  ":@computed_region_k37d_then": "2",
+  ":@computed_region_m56f_hbma": "109",
+  ":@computed_region_7fw3_kdpf": "66",
+  ":@computed_region_spev_d8jm": "3768",
+  ":@computed_region_sikx_bdeb": "109",
+  ":@computed_region_evki_aju8": "6",
+  ":@computed_region_u4yh_3wk9": "6155"
+ }
+]

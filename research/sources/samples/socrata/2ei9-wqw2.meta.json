@@ -1,0 +1,167 @@
+{
+ "id": "2ei9-wqw2",
+ "name": "Non-Commercial Short-Term Rental Licenses",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Housing, Land Use, and Blight",
+ "attribution": "Department of Safety and Permits",
+ "attributionLink": null,
+ "licenseId": null,
+ "license": null,
+ "rowsUpdatedAt": "2026-10-17 04:45",
+ "createdAt": 1719938818,
+ "viewLastModified": 1724867997,
+ "publicationDate": 1719940160,
+ "rowIdentifierColumnId": 594880519,
+ "tags": [
+  "str",
+  "short-term rentals",
+  "airbnb",
+  "license",
+  "short term rental"
+ ],
+ "metadata": {
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "data@nola.gov"
+   },
+   "Source Information": {
+    "Source Department": "Safety and Permits"
+   }
+  },
+  "rowIdentifier": 594880519,
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ]
+ },
+ "description": "Permit applications for non-commercial short-term rentals.",
+ "columns": [
+  {
+   "f": "licid",
+   "n": "LicID",
+   "t": "number"
+  },
+  {
+   "f": "license_number",
+   "n": "License Number",
+   "t": "text"
+  },
+  {
+   "f": "reference_code",
+   "n": "Reference Code",
+   "t": "text"
+  },
+  {
+   "f": "address",
+   "n": "Address",
+   "t": "text"
+  },
+  {
+   "f": "type",
+   "n": "Type",
+   "t": "text"
+  },
+  {
+   "f": "application_date",
+   "n": "Application Date",
+   "t": "calendar_date"
+  },
+  {
+   "f": "issue_date",
+   "n": "Issue Date",
+   "t": "calendar_date"
+  },
+  {
+   "f": "expiration_date",
+   "n": "Expiration Date",
+   "t": "calendar_date"
+  },
+  {
+   "f": "current_status",
+   "n": "Current Status",
+   "t": "text"
+  },
+  {
+   "f": "current_status_date",
+   "n": "Current Status Date",
+   "t": "calendar_date"
+  },
+  {
+   "f": "owner",
+   "n": "Owner",
+   "t": "text"
+  },
+  {
+   "f": "owner_permit_documents",
+   "n": "Owner Permit Documents",
+   "t": "url"
+  },
+  {
+   "f": "operator_permit",
+   "n": "Operator Permit",
+   "t": "text"
+  },
+  {
+   "f": "operator_permit_documents",
+   "n": "Operator Permit Documents",
+   "t": "url"
+  },
+  {
+   "f": "type_of_building",
+   "n": "Type of Building",
+   "t": "text"
+  },
+  {
+   "f": "bedrooms_rented",
+   "n": "Bedrooms Rented",
+   "t": "number"
+  },
+  {
+   "f": "max_occupancy",
+   "n": "Max Occupancy",
+   "t": "number"
+  },
+  {
+   "f": "partial_whole",
+   "n": "Partial/Whole",
+   "t": "text"
+  },
+  {
+   "f": "operator",
+   "n": "Operator",
+   "t": "text"
+  },
+  {
+   "f": "operator_type",
+   "n": "Operator Type",
+   "t": "text"
+  },
+  {
+   "f": "operator_phone",
+   "n": "Operator Phone",
+   "t": "text"
+  },
+  {
+   "f": "operator_email",
+   "n": "Operator Email",
+   "t": "text"
+  },
+  {
+   "f": "x",
+   "n": "X",
+   "t": "number"
+  },
+  {
+   "f": "y",
+   "n": "Y",
+   "t": "number"
+  },
+  {
+   "f": "location",
+   "n": "Location",
+   "t": "point"
+  }
+ ]
+}

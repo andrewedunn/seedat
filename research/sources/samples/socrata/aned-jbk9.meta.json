@@ -1,0 +1,354 @@
+{
+ "id": "aned-jbk9",
+ "name": "Post-Katrina Damage Assessment",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Archived",
+ "attribution": "City of New Orleans \u2013 Office of Information Technology & Innovation, Enterprise Information Team",
+ "attributionLink": null,
+ "licenseId": "CC0_10",
+ "license": {
+  "name": "Creative Commons 1.0 Universal (Public Domain Dedication)",
+  "logoUrl": "images/licenses/ccZero.png",
+  "termsLink": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+ },
+ "rowsUpdatedAt": "2013-04-03 17:56",
+ "createdAt": 1365004992,
+ "viewLastModified": 1440541279,
+ "publicationDate": 1365011897,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "new orleans",
+  "damage",
+  "katrina"
+ ],
+ "metadata": {
+  "rdfSubject": "0",
+  "rdfClass": "",
+  "attachments": [
+   {
+    "filename": "DA_Categories.xlsx",
+    "assetId": "",
+    "blobId": "DE25369B-C07F-47BA-A5F1-ED5FFD51073F",
+    "name": "DA_Categories.xlsx"
+   }
+  ],
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "data@nola.gov"
+   },
+   "Source Information": {
+    "Source Department": "City of New Orleans, Department of Safety and Permits"
+   }
+  },
+  "rowIdentifier": "0",
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ],
+  "renderTypeConfig": {
+   "visible": {
+    "table": true
+   }
+  }
+ },
+ "description": "Post-Katrina damage assessment conducted by City inspectors, published by address with breakdown by category. These data formerly supported the \"Damage Assessment Wizard\" web tool. Also see attachment 'DA_Categories' for insight as to how damage was assessed.",
+ "columns": [
+  {
+   "f": "address",
+   "n": "Address",
+   "t": "text"
+  },
+  {
+   "f": "percentage",
+   "n": "Percentage",
+   "t": "number"
+  },
+  {
+   "f": "foundations_basements",
+   "n": "Foundations_Basements",
+   "t": "number"
+  },
+  {
+   "f": "superstructure_framing_masonry",
+   "n": "Superstructure_Framing_Masonry",
+   "t": "number"
+  },
+  {
+   "f": "roofing",
+   "n": "Roofing",
+   "t": "number"
+  },
+  {
+   "f": "insulationandweatherstripping",
+   "n": "InsulationandWeatherStripping",
+   "t": "number"
+  },
+  {
+   "f": "exteriorfinish",
+   "n": "ExteriorFinish",
+   "t": "number"
+  },
+  {
+   "f": "interiorfinish_plaster_drywall",
+   "n": "InteriorFinish_Plaster_Drywall",
+   "t": "number"
+  },
+  {
+   "f": "doors_windows_shutters",
+   "n": "Doors_Windows_Shutters",
+   "t": "number"
+  },
+  {
+   "f": "lumberfinished",
+   "n": "LumberFinished",
+   "t": "number"
+  },
+  {
+   "f": "hardware",
+   "n": "Hardware",
+   "t": "number"
+  },
+  {
+   "f": "cabinets_countertops",
+   "n": "Cabinets_Countertops",
+   "t": "number"
+  },
+  {
+   "f": "floor_covering",
+   "n": "Floor_Covering",
+   "t": "number"
+  },
+  {
+   "f": "plumbing",
+   "n": "Plumbing",
+   "t": "number"
+  },
+  {
+   "f": "electrical",
+   "n": "Electrical",
+   "t": "number"
+  },
+  {
+   "f": "builtin_appliances",
+   "n": "Builtin_Appliances",
+   "t": "number"
+  },
+  {
+   "f": "heating_cooling",
+   "n": "Heating_Cooling",
+   "t": "number"
+  },
+  {
+   "f": "painting",
+   "n": "Painting",
+   "t": "number"
+  },
+  {
+   "f": "foundations_basements_damageper",
+   "n": "Foundations_Basements_DamagePer",
+   "t": "number"
+  },
+  {
+   "f": "superstructure_framing_masonry_damageper",
+   "n": "Superstructure_Framing_Masonry_DamagePer",
+   "t": "number"
+  },
+  {
+   "f": "roofing_damageper",
+   "n": "Roofing_DamagePer",
+   "t": "number"
+  },
+  {
+   "f": "insulationandweatherstripping_damageper",
+   "n": "InsulationandWeatherStripping_DamagePer",
+   "t": "number"
+  },
+  {
+   "f": "exteriorfinish_damageper",
+   "n": "ExteriorFinish_DamagePer",
+   "t": "number"
+  },
+  {
+   "f": "interiorfinish_plaster_drywall_damageper",
+   "n": "InteriorFinish_Plaster_Drywall_DamagePer",
+   "t": "number"
+  },
+  {
+   "f": "doors_windows_shutters_damageper",
+   "n": "Doors_Windows_Shutters_DamagePer",
+   "t": "number"
+  },
+  {
+   "f": "lumberfinished_damageper",
+   "n": "LumberFinished_DamagePer",
+   "t": "number"
+  },
+  {
+   "f": "hardware_damageper",
+   "n": "Hardware_DamagePer",
+   "t": "number"
+  },
+  {
+   "f": "cabinets_countertops_damageper",
+   "n": "Cabinets_Countertops_DamagePer",
+   "t": "number"
+  },
+  {
+   "f": "floor_covering_damageper",
+   "n": "Floor_Covering_DamagePer",
+   "t": "number"
+  },
+  {
+   "f": "plumbing_damageper",
+   "n": "Plumbing_DamagePer",
+   "t": "number"
+  },
+  {
+   "f": "electrical_damageper",
+   "n": "Electrical_DamagePer",
+   "t": "number"
+  },
+  {
+   "f": "builtin_appliances_damageper",
+   "n": "Builtin_Appliances_DamagePer",
+   "t": "number"
+  },
+  {
+   "f": "heating_cooling_damageper",
+   "n": "Heating_Cooling_DamagePer",
+   "t": "number"
+  },
+  {
+   "f": "painting_damageper",
+   "n": "Painting_DamagePer",
+   "t": "number"
+  },
+  {
+   "f": "flooddepth",
+   "n": "FloodDepth",
+   "t": "number"
+  },
+  {
+   "f": "floodduration",
+   "n": "FloodDuration",
+   "t": "number"
+  },
+  {
+   "f": "floodzone",
+   "n": "FloodZone",
+   "t": "text"
+  },
+  {
+   "f": "propertydescription",
+   "n": "PropertyDescription",
+   "t": "text"
+  },
+  {
+   "f": "owner",
+   "n": "Owner",
+   "t": "text"
+  },
+  {
+   "f": "taxbill",
+   "n": "TaxBill",
+   "t": "text"
+  },
+  {
+   "f": "add1",
+   "n": "Add1",
+   "t": "text"
+  },
+  {
+   "f": "add2",
+   "n": "Add2",
+   "t": "text"
+  },
+  {
+   "f": "add3",
+   "n": "Add3",
+   "t": "text"
+  },
+  {
+   "f": "add4",
+   "n": "Add4",
+   "t": "text"
+  },
+  {
+   "f": "add5",
+   "n": "Add5",
+   "t": "text"
+  },
+  {
+   "f": "add6",
+   "n": "Add6",
+   "t": "text"
+  },
+  {
+   "f": "add7",
+   "n": "Add7",
+   "t": "text"
+  },
+  {
+   "f": "add8",
+   "n": "Add8",
+   "t": "text"
+  },
+  {
+   "f": "add9",
+   "n": "Add9",
+   "t": "text"
+  },
+  {
+   "f": "add10",
+   "n": "Add10",
+   "t": "text"
+  },
+  {
+   "f": "add11",
+   "n": "Add11",
+   "t": "text"
+  },
+  {
+   "f": "add12",
+   "n": "Add12",
+   "t": "text"
+  },
+  {
+   "f": "add13",
+   "n": "Add13",
+   "t": "text"
+  },
+  {
+   "f": "add14",
+   "n": "Add14",
+   "t": "text"
+  },
+  {
+   "f": "add15",
+   "n": "Add15",
+   "t": "text"
+  },
+  {
+   "f": "add16",
+   "n": "Add16",
+   "t": "text"
+  },
+  {
+   "f": "add17",
+   "n": "Add17",
+   "t": "text"
+  },
+  {
+   "f": "add18",
+   "n": "Add18",
+   "t": "text"
+  },
+  {
+   "f": "add19",
+   "n": "Add19",
+   "t": "text"
+  }
+ ]
+}

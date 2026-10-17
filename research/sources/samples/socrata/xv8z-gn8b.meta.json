@@ -1,0 +1,117 @@
+{
+ "id": "xv8z-gn8b",
+ "name": "Code Enforcement - Abatements",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": null,
+ "attribution": null,
+ "attributionLink": null,
+ "licenseId": null,
+ "license": null,
+ "rowsUpdatedAt": "2026-10-16 04:00",
+ "createdAt": 1425929039,
+ "viewLastModified": 1477943879,
+ "publicationDate": 1436543668,
+ "rowIdentifierColumnId": 212343908,
+ "tags": null,
+ "metadata": {
+  "rdfSubject": "0",
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "data@nola.gov"
+   },
+   "Source Information": {
+    "Source Department": "Code Enforcement"
+   }
+  },
+  "rowIdentifier": 212343908,
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ],
+  "renderTypeConfig": {
+   "visible": {
+    "table": true
+   }
+  }
+ },
+ "description": "Code Enforcement - Abatements",
+ "columns": [
+  {
+   "f": "caseno",
+   "n": "CaseNo",
+   "t": "text"
+  },
+  {
+   "f": "address",
+   "n": "Address",
+   "t": "text"
+  },
+  {
+   "f": "o_c",
+   "n": "O/C",
+   "t": "text"
+  },
+  {
+   "f": "judgment",
+   "n": "Judgment",
+   "t": "text"
+  },
+  {
+   "f": "eventname",
+   "n": "EventName",
+   "t": "text"
+  },
+  {
+   "f": "status",
+   "n": "Status",
+   "t": "text"
+  },
+  {
+   "f": "exitreason",
+   "n": "ExitReason",
+   "t": "text"
+  },
+  {
+   "f": "datefiled",
+   "n": "DateFiled",
+   "t": "calendar_date"
+  },
+  {
+   "f": "dateclosed",
+   "n": "DateClosed",
+   "t": "calendar_date"
+  },
+  {
+   "f": "dateenteredabatement",
+   "n": "DateEnteredAbatement",
+   "t": "calendar_date"
+  },
+  {
+   "f": "stage",
+   "n": "Stage",
+   "t": "text"
+  },
+  {
+   "f": "xpos",
+   "n": "XPos",
+   "t": "number"
+  },
+  {
+   "f": "ypos",
+   "n": "YPos",
+   "t": "number"
+  },
+  {
+   "f": "caseid",
+   "n": "CaseID",
+   "t": "number"
+  },
+  {
+   "f": "lastupload",
+   "n": "LastUpload",
+   "t": "calendar_date"
+  }
+ ]
+}

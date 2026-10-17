@@ -1,0 +1,68 @@
+[
+ {
+  "identifier": "ORA800003",
+  "property_address": "1805 S Rampart St",
+  "zip_code": "70113",
+  "geopin": "41037042",
+  "council_district": "B",
+  "disposition_channel": "Development",
+  "sale_date": "1980-03-03T00:00:00.000",
+  "geocoded_column": {
+   "latitude": "29.93959",
+   "longitude": "-90.08167",
+   "human_address": "{\"address\": \"1805 S Rampart St\", \"city\": \"New Orleans\", \"state\": \"LA\", \"zip\": \"70113\"}"
+  },
+  ":@computed_region_evki_aju8": "4",
+  ":@computed_region_sikx_bdeb": "232",
+  ":@computed_region_k37d_then": "2",
+  ":@computed_region_ewbu_t8bu": "9335",
+  ":@computed_region_u4yh_3wk9": "9335",
+  ":@computed_region_7fw3_kdpf": "13",
+  ":@computed_region_m56f_hbma": "232",
+  ":@computed_region_spev_d8jm": "3455"
+ },
+ {
+  "identifier": "ORA800004",
+  "property_address": "1811 S Rampart St",
+  "zip_code": "70113",
+  "geopin": "41037043",
+  "council_district": "B",
+  "disposition_channel": "Development",
+  "sale_date": "1980-03-03T00:00:00.000",
+  "geocoded_column": {
+   "latitude": "29.93953",
+   "longitude": "-90.08173",
+   "human_address": "{\"address\": \"1811 S Rampart St\", \"city\": \"New Orleans\", \"state\": \"LA\", \"zip\": \"70113\"}"
+  },
+  ":@computed_region_evki_aju8": "4",
+  ":@computed_region_sikx_bdeb": "232",
+  ":@computed_region_k37d_then": "2",
+  ":@computed_region_ewbu_t8bu": "9335",
+  ":@computed_region_u4yh_3wk9": "9335",
+  ":@computed_region_7fw3_kdpf": "13",
+  ":@computed_region_m56f_hbma": "232",
+  ":@computed_region_spev_d8jm": "3455"
+ },
+ {
+  "identifier": "ORA800002",
+  "property_address": "2711-2741 Piety St",
+  "zip_code": "70126",
+  "geopin": "41091525",
+  "council_district": "D",
+  "disposition_channel": "Development",
+  "sale_date": "1989-06-30T00:00:00.000",
+  "geocoded_column": {
+   "latitude": "29.98553",
+   "longitude": "-90.03602",
+   "human_address": "{\"address\": \"2711-2741 Piety St\", \"city\": \"New Orleans\", \"state\": \"LA\", \"zip\": \"70126\"}"
+  },
+  ":@computed_region_evki_aju8": "8",
+  ":@computed_region_sikx_bdeb": "150",
+  ":@computed_region_k37d_then": "4",
+  ":@computed_region_ewbu_t8bu": "4089",
+  ":@computed_region_u4yh_3wk9": "4089",
+  ":@computed_region_7fw3_kdpf": "15",
+  ":@computed_region_m56f_hbma": "150",
+  ":@computed_region_spev_d8jm": "4148"
+ }
+]

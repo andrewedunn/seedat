@@ -1,0 +1,150 @@
+{
+ "id": "em4n-zidu",
+ "name": "Calls for Service - Hurricane Francine 9/11/24 - 9/12/24",
+ "assetType": "filter",
+ "viewType": "tabular",
+ "category": "Public Safety and Preparedness",
+ "attribution": "Orleans Parish Communications District",
+ "attributionLink": null,
+ "licenseId": null,
+ "license": null,
+ "rowsUpdatedAt": "2025-01-01 09:00",
+ "createdAt": 1726596056,
+ "viewLastModified": 1726596286,
+ "publicationDate": 1726596285,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "hurricane",
+  "calls for service"
+ ],
+ "metadata": {
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "jrpadgett@nola.gov",
+    "Contact Name": "Jonathan Padgett",
+    "Publisher": "Jonathan Padgett"
+   },
+   "Source Information": {
+    "Source Department": "Police Department (NOPD)"
+   }
+  },
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ],
+  "renderTypeConfig": {
+   "visible": {
+    "table": true
+   }
+  }
+ },
+ "description": "All calls for service from 09/11/24 - 9/12/24 for the following types: Abandoned Boat, Abandoned Vehicle, Disabled/Stranded Motorist, Flood Event",
+ "columns": [
+  {
+   "f": "nopd_item",
+   "n": "NOPD_Item",
+   "t": "text"
+  },
+  {
+   "f": "type_",
+   "n": "Type",
+   "t": "text"
+  },
+  {
+   "f": "typetext",
+   "n": "TypeText",
+   "t": "text"
+  },
+  {
+   "f": "priority",
+   "n": "Priority",
+   "t": "text"
+  },
+  {
+   "f": "initialtype",
+   "n": "InitialType",
+   "t": "text"
+  },
+  {
+   "f": "initialtypetext",
+   "n": "InitialTypeText",
+   "t": "text"
+  },
+  {
+   "f": "initialpriority",
+   "n": "InitialPriority",
+   "t": "text"
+  },
+  {
+   "f": "mapx",
+   "n": "MapX",
+   "t": "text"
+  },
+  {
+   "f": "mapy",
+   "n": "MapY",
+   "t": "text"
+  },
+  {
+   "f": "timecreate",
+   "n": "TimeCreate",
+   "t": "calendar_date"
+  },
+  {
+   "f": "timedispatch",
+   "n": "TimeDispatch",
+   "t": "calendar_date"
+  },
+  {
+   "f": "timearrive",
+   "n": "TimeArrive",
+   "t": "calendar_date"
+  },
+  {
+   "f": "timeclosed",
+   "n": "TimeClosed",
+   "t": "calendar_date"
+  },
+  {
+   "f": "disposition",
+   "n": "Disposition",
+   "t": "text"
+  },
+  {
+   "f": "dispositiontext",
+   "n": "DispositionText",
+   "t": "text"
+  },
+  {
+   "f": "selfinitiated",
+   "n": "SelfInitiated",
+   "t": "text"
+  },
+  {
+   "f": "beat",
+   "n": "Beat",
+   "t": "text"
+  },
+  {
+   "f": "block_address",
+   "n": "BLOCK_ADDRESS",
+   "t": "text"
+  },
+  {
+   "f": "zip",
+   "n": "Zip",
+   "t": "text"
+  },
+  {
+   "f": "policedistrict",
+   "n": "PoliceDistrict",
+   "t": "number"
+  },
+  {
+   "f": "location",
+   "n": "Location",
+   "t": "point"
+  }
+ ]
+}

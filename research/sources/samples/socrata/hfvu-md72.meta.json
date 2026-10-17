@@ -1,0 +1,160 @@
+{
+ "id": "hfvu-md72",
+ "name": "Site Address Point",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Geographic Base Layers",
+ "attribution": null,
+ "attributionLink": null,
+ "licenseId": "CC0_10",
+ "license": {
+  "name": "Creative Commons 1.0 Universal (Public Domain Dedication)",
+  "logoUrl": "images/licenses/ccZero.png",
+  "termsLink": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+ },
+ "rowsUpdatedAt": "2026-08-25 19:13",
+ "createdAt": 1628103116,
+ "viewLastModified": 1638702984,
+ "publicationDate": 1628103118,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "addresses",
+  "egis"
+ ],
+ "metadata": {
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "gis@nola.gov",
+    "Public Access Level": "public"
+   },
+   "Source Information": {
+    "Source Department": "Safety and Permits",
+    "Format": "GIS layer",
+    "Frequency of Data Change": "weekly"
+   }
+  },
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ]
+ },
+ "description": "<DIV STYLE=\"text-align:Left;\"><DIV><DIV><P><SPAN>Site address points represent the location of site or service delivery addresses assigned by local governments. Used to standardize addresses across city departments. Uses ESRI Local Government Information schema, and is projected in Louisiana State Plane. Updated weekly based on changes made by Safety and Permits.</SPAN></P></DIV></DIV></DIV>",
+ "columns": [
+  {
+   "f": "the_geom",
+   "n": "the_geom",
+   "t": "point"
+  },
+  {
+   "f": "objectid",
+   "n": "OBJECTID",
+   "t": "number"
+  },
+  {
+   "f": "siteaddid",
+   "n": "Site Address ID",
+   "t": "text"
+  },
+  {
+   "f": "preaddrnum",
+   "n": "Address Number Prefix",
+   "t": "text"
+  },
+  {
+   "f": "addrnumsuf",
+   "n": "Address Number Suffix",
+   "t": "text"
+  },
+  {
+   "f": "addrnum",
+   "n": "Full Address Number",
+   "t": "text"
+  },
+  {
+   "f": "unittype",
+   "n": "Address Unit Type",
+   "t": "text"
+  },
+  {
+   "f": "unitid",
+   "n": "Address Unit Number",
+   "t": "text"
+  },
+  {
+   "f": "fullname",
+   "n": "Full Road Name",
+   "t": "text"
+  },
+  {
+   "f": "fulladdr",
+   "n": "Full Address",
+   "t": "text"
+  },
+  {
+   "f": "placename",
+   "n": "Place Name",
+   "t": "text"
+  },
+  {
+   "f": "pointtype",
+   "n": "Location",
+   "t": "text"
+  },
+  {
+   "f": "capturemeth",
+   "n": "Capture Method",
+   "t": "text"
+  },
+  {
+   "f": "status",
+   "n": "Status",
+   "t": "text"
+  },
+  {
+   "f": "lastupdate",
+   "n": "Last Update Date",
+   "t": "date"
+  },
+  {
+   "f": "lasteditor",
+   "n": "Last Editor",
+   "t": "text"
+  },
+  {
+   "f": "source",
+   "n": "Address Source",
+   "t": "text"
+  },
+  {
+   "f": "lat",
+   "n": "LAT",
+   "t": "number"
+  },
+  {
+   "f": "long",
+   "n": "LONG",
+   "t": "number"
+  },
+  {
+   "f": "addr_type",
+   "n": "ADDR_TYPE",
+   "t": "text"
+  },
+  {
+   "f": "last_edited_user",
+   "n": "last_edited_user",
+   "t": "text"
+  },
+  {
+   "f": "last_edited_date",
+   "n": "last_edited_date",
+   "t": "date"
+  },
+  {
+   "f": "joinid",
+   "n": "Join ID",
+   "t": "number"
+  }
+ ]
+}

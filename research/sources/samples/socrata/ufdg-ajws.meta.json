@@ -1,0 +1,145 @@
+{
+ "id": "ufdg-ajws",
+ "name": "Active Short-Term Rental Licenses",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Housing, Land Use, and Blight",
+ "attribution": null,
+ "attributionLink": null,
+ "licenseId": null,
+ "license": null,
+ "rowsUpdatedAt": "2026-10-17 04:45",
+ "createdAt": 1737060039,
+ "viewLastModified": 1757965866,
+ "publicationDate": 1757965866,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "str",
+  "short term rental",
+  "airbnb",
+  "license"
+ ],
+ "metadata": {
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "data@nola.gov"
+   },
+   "Source Information": {
+    "Source Department": "Safety and Permits"
+   }
+  },
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ]
+ },
+ "description": "All Active Short-Term Licenses.  This dataset includes Commercial, Non-Commercial, and Operator Licenses, as well as listings for lodging providers exempt from STR licensing (i.e., licensed Hotels, Motels, and Bed and Breakfasts who may list their properties on Short-Term Rental platforms).",
+ "columns": [
+  {
+   "f": "license_number",
+   "n": "License Number",
+   "t": "text"
+  },
+  {
+   "f": "address",
+   "n": "Address",
+   "t": "text"
+  },
+  {
+   "f": "license_type",
+   "n": "License Type",
+   "t": "text"
+  },
+  {
+   "f": "residential_subtype",
+   "n": "Residential Subtype",
+   "t": "text"
+  },
+  {
+   "f": "expiration_date",
+   "n": "Expiration Date",
+   "t": "calendar_date"
+  },
+  {
+   "f": "bedroom_limit",
+   "n": "Bedroom Limit",
+   "t": "number"
+  },
+  {
+   "f": "guest_occupancy_limit",
+   "n": "Guest Occupancy Limit",
+   "t": "number"
+  },
+  {
+   "f": "link",
+   "n": "Link",
+   "t": "url"
+  },
+  {
+   "f": "operator_name",
+   "n": "Operator Name",
+   "t": "text"
+  },
+  {
+   "f": "operator_phone",
+   "n": "Operator Phone",
+   "t": "text"
+  },
+  {
+   "f": "operator_email",
+   "n": "Operator Email",
+   "t": "text"
+  },
+  {
+   "f": "operator_license_number",
+   "n": "Operator License Number",
+   "t": "text"
+  },
+  {
+   "f": "license_holder_name",
+   "n": "License Holder Name",
+   "t": "text"
+  },
+  {
+   "f": "application_date",
+   "n": "Application Date",
+   "t": "calendar_date"
+  },
+  {
+   "f": "issue_date",
+   "n": "Issue Date",
+   "t": "calendar_date"
+  },
+  {
+   "f": "reference_code",
+   "n": "Reference Code",
+   "t": "text"
+  },
+  {
+   "f": "x",
+   "n": "X",
+   "t": "number"
+  },
+  {
+   "f": "y",
+   "n": "Y",
+   "t": "number"
+  },
+  {
+   "f": "longitude",
+   "n": "Longitude",
+   "t": "number"
+  },
+  {
+   "f": "latitude",
+   "n": "Latitude",
+   "t": "number"
+  },
+  {
+   "f": "location",
+   "n": "Location",
+   "t": "point"
+  }
+ ]
+}

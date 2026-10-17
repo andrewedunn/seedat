@@ -1,0 +1,154 @@
+{
+ "id": "agqi-9adb",
+ "name": "Electronic Police Report 2025",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Public Safety and Preparedness",
+ "attribution": "Police Department (NOPD)",
+ "attributionLink": null,
+ "licenseId": null,
+ "license": null,
+ "rowsUpdatedAt": "2026-07-06 05:45",
+ "createdAt": 1736187202,
+ "viewLastModified": 1736356518,
+ "publicationDate": 1736356518,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "police",
+  "epr",
+  "electronic police report"
+ ],
+ "metadata": {
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "data@nola.gov"
+   },
+   "Source Information": {
+    "Source Department": "Police Department (NOPD)"
+   }
+  },
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ]
+ },
+ "description": "All Police Reports filed by NOPD officers including incident and supplemental reports containing the item number, location, disposition, signal, charges, offender race, offender gender, offender age, victim age, victim gender, and victim race. Police Reports can be updated when subsequent information is determined as a result of an investigation. In order to protect the privacy of victims, addresses are shown at the block level. Disclaimer: The New Orleans Police Department does not guarantee (either expressed or implied) the accuracy, completeness, timeliness, or correct sequencing of the information. The New Orleans Police Department will not be responsible for any error or omission, or for the use of, or the results obtained from the use of this information. For instance, the data contains ages that may be negative due to data entry errors. NOPD has chosen to publish the data as it exists in the source systems for transparency and has instituted data validation where appropriate to ensure quality data in the future. All data visualizations on maps should be considered approximate and attempts to derive specific addresses are strictly prohibited. The New Orleans Police Department is not responsible for the content of any off-site pages that are referenced by or that reference this web page other than an official City of New Orleans or New Orleans Police Department web page. The user specifically acknowledges that the New Orleans Police Department is not responsible for any defamatory, offensive, misleading, or illegal conduct of other users, links, or third parties and that the risk of injury from the foregoing rests entirely with the user. Any use of the information for commercial purposes is strictly prohibited. The unauthorized use of the words \"New Orleans Police Department,\" \"NOPD,\" or any colorable imitation of these words or the unauthorized use of the New Orleans Police Department logo is unlawful. This web page does not, in any way, authorize such use.",
+ "columns": [
+  {
+   "f": "item_number",
+   "n": "Item_Number",
+   "t": "text"
+  },
+  {
+   "f": "district",
+   "n": "District",
+   "t": "text"
+  },
+  {
+   "f": "location",
+   "n": "Location",
+   "t": "text"
+  },
+  {
+   "f": "disposition",
+   "n": "Disposition",
+   "t": "text"
+  },
+  {
+   "f": "signal_type",
+   "n": "Signal_Type",
+   "t": "text"
+  },
+  {
+   "f": "signal_description",
+   "n": "Signal_Description",
+   "t": "text"
+  },
+  {
+   "f": "occurred_date_time",
+   "n": "Occurred_Date_Time",
+   "t": "text"
+  },
+  {
+   "f": "charge_code",
+   "n": "Charge_Code",
+   "t": "text"
+  },
+  {
+   "f": "charge_description",
+   "n": "Charge_Description",
+   "t": "text"
+  },
+  {
+   "f": "offender_number",
+   "n": "Offender_Number",
+   "t": "text"
+  },
+  {
+   "f": "offenderid",
+   "n": "OffenderID",
+   "t": "text"
+  },
+  {
+   "f": "offenderstatus",
+   "n": "OffenderStatus",
+   "t": "text"
+  },
+  {
+   "f": "offender_race",
+   "n": "Offender_Race",
+   "t": "text"
+  },
+  {
+   "f": "offender_gender",
+   "n": "Offender_Gender",
+   "t": "text"
+  },
+  {
+   "f": "offender_age",
+   "n": "Offender_Age",
+   "t": "text"
+  },
+  {
+   "f": "victim_number",
+   "n": "Victim_Number",
+   "t": "text"
+  },
+  {
+   "f": "persontype",
+   "n": "PersonType",
+   "t": "text"
+  },
+  {
+   "f": "victim_race",
+   "n": "Victim_Race",
+   "t": "text"
+  },
+  {
+   "f": "victim_gender",
+   "n": "Victim_Gender",
+   "t": "text"
+  },
+  {
+   "f": "victim_age",
+   "n": "Victim_Age",
+   "t": "text"
+  },
+  {
+   "f": "victim_fatal_status",
+   "n": "Victim_Fatal_Status",
+   "t": "text"
+  },
+  {
+   "f": "hate_crime",
+   "n": "Hate Crime",
+   "t": "text"
+  },
+  {
+   "f": "report_type",
+   "n": "Report Type",
+   "t": "text"
+  }
+ ]
+}

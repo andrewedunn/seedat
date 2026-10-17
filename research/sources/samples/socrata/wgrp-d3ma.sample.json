@@ -1,0 +1,77 @@
+[
+ {
+  "nopd_item": "D0808216",
+  "type_": "24",
+  "typetext": "MEDICAL",
+  "priority": "2B",
+  "initialtype": "21",
+  "initialtypetext": "COMPLAINT OTHER",
+  "initialpriority": "2A",
+  "mapx": "37369000",
+  "mapy": "3513814",
+  "timecreate": "2016-04-07T21:24:16.000",
+  "timedispatch": "2016-04-07T21:26:29.000",
+  "timearrive": "2016-04-07T21:37:10.000",
+  "timeclosed": "2016-04-07T21:47:44.000",
+  "disposition": "NAT",
+  "dispositiontext": "Necessary Action Taken",
+  "selfinitiated": "N",
+  "beat": "8F02",
+  "block_address": "Dauphine St & Pauger St",
+  "zip": "70116",
+  "policedistrict": "8",
+  "location": {
+   "latitude": "0.0",
+   "longitude": "0.0"
+  }
+ },
+ {
+  "nopd_item": "D0812216",
+  "type_": "18",
+  "typetext": "TRAFFIC INCIDENT",
+  "priority": "1H",
+  "initialtype": "18",
+  "initialtypetext": "TRAFFIC INCIDENT",
+  "initialpriority": "1H",
+  "mapx": "37369000",
+  "mapy": "3513814",
+  "timecreate": "2016-04-07T21:56:49.000",
+  "timearrive": "2016-04-07T21:56:49.000",
+  "timeclosed": "2016-04-07T21:56:54.000",
+  "disposition": "NAT",
+  "dispositiontext": "Necessary Action Taken",
+  "selfinitiated": "Y",
+  "block_address": "Fou & Nas",
+  "policedistrict": "0",
+  "location": {
+   "latitude": "0.0",
+   "longitude": "0.0"
+  }
+ },
+ {
+  "nopd_item": "D0812716",
+  "type_": "103M",
+  "typetext": "MENTAL PATIENT",
+  "priority": "2A",
+  "initialtype": "103M",
+  "initialtypetext": "MENTAL PATIENT",
+  "initialpriority": "2A",
+  "mapx": "37369000",
+  "mapy": "3513814",
+  "timecreate": "2016-04-07T22:00:09.000",
+  "timedispatch": "2016-04-07T22:03:15.000",
+  "timearrive": "2016-04-07T22:12:58.000",
+  "timeclosed": "2016-04-07T22:51:50.000",
+  "disposition": "GOA",
+  "dispositiontext": "GONE ON ARRIVAL",
+  "selfinitiated": "N",
+  "beat": "7I13",
+  "block_address": "101XX Curran Blvd",
+  "zip": "70127",
+  "policedistrict": "7",
+  "location": {
+   "latitude": "0.0",
+   "longitude": "0.0"
+  }
+ }
+]

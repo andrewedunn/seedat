@@ -1,0 +1,127 @@
+{
+ "id": "u5mk-y9z4",
+ "name": "RoadWork DPW Projects",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Transportation and Infrastructure",
+ "attribution": null,
+ "attributionLink": null,
+ "licenseId": null,
+ "license": null,
+ "rowsUpdatedAt": "2026-10-17 03:26",
+ "createdAt": 1699308630,
+ "viewLastModified": 1751915502,
+ "publicationDate": 1699384244,
+ "rowIdentifierColumnId": 584455571,
+ "tags": null,
+ "metadata": {
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "data@nola.gov"
+   },
+   "Source Information": {
+    "Source Department": "Public Works (DPW)"
+   }
+  },
+  "rowIdentifier": 584455571,
+  "rowLabel": "Project",
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ]
+ },
+ "description": "The City and Sewerage and Water Board of New Orleans are working together to implement an unprecedented capital improvement program to restore the City\u2019s damaged infrastructure. Using a combination of local and Federal funds, the two-billion dollar program will be the most comprehensive that our region has seen in a generation. Work will include more than 200 individual projects and consist of repairing all or portions of about 400 miles of roadway. For more information please visit http://roadwork.nola.gov/.",
+ "columns": [
+  {
+   "f": "segmentid",
+   "n": "SEGMENTID",
+   "t": "number"
+  },
+  {
+   "f": "projid",
+   "n": "PROJID",
+   "t": "text"
+  },
+  {
+   "f": "councildst",
+   "n": "COUNCILDST",
+   "t": "text"
+  },
+  {
+   "f": "consttype",
+   "n": "CONSTTYPE",
+   "t": "text"
+  },
+  {
+   "f": "projtype",
+   "n": "PROJTYPE",
+   "t": "text"
+  },
+  {
+   "f": "nhood",
+   "n": "NHOOD",
+   "t": "text"
+  },
+  {
+   "f": "project_name",
+   "n": "Project_Name",
+   "t": "text"
+  },
+  {
+   "f": "current_phase",
+   "n": "Current_Phase",
+   "t": "text"
+  },
+  {
+   "f": "startqtr",
+   "n": "StartQtr",
+   "t": "text"
+  },
+  {
+   "f": "endqtr",
+   "n": "EndQtr",
+   "t": "text"
+  },
+  {
+   "f": "total_cost",
+   "n": "Total_Cost",
+   "t": "number"
+  },
+  {
+   "f": "project_contractor",
+   "n": "Project_Contractor",
+   "t": "text"
+  },
+  {
+   "f": "outreach_contact",
+   "n": "Outreach_Contact",
+   "t": "text"
+  },
+  {
+   "f": "lookahead_start",
+   "n": "Lookahead_Start",
+   "t": "calendar_date"
+  },
+  {
+   "f": "lookahead_end",
+   "n": "Lookahead_End",
+   "t": "calendar_date"
+  },
+  {
+   "f": "project_lookahead",
+   "n": "Project_Lookahead",
+   "t": "text"
+  },
+  {
+   "f": "lookahead_comments",
+   "n": "Lookahead_Comments",
+   "t": "text"
+  },
+  {
+   "f": "location",
+   "n": "Location",
+   "t": "point"
+  }
+ ]
+}

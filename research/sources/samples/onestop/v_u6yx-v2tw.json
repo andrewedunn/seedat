@@ -1,0 +1,1961 @@
+{
+  "id" : "u6yx-v2tw",
+  "name" : "Code Enforcement All Cases",
+  "assetType" : "dataset",
+  "averageRating" : 0,
+  "category" : "Housing, Land Use, and Blight",
+  "createdAt" : 1380520348,
+  "description" : "Code Enforcement All Cases.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 9055,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "licenseId" : "CC0_10",
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 40396389,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1706653549,
+  "publicationGroup" : 1200318,
+  "publicationStage" : "published",
+  "rowClass" : "",
+  "rowsUpdatedAt" : 1792210033,
+  "rowsUpdatedBy" : "uqfu-rapx",
+  "tableId" : 19443848,
+  "totalTimesRated" : 0,
+  "viewCount" : 10944,
+  "viewLastModified" : 1706653549,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1386774820,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 6114137,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1386774820,
+    "targetAudience" : "public",
+    "workflowId" : 2032,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "failureCount" : 0,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "ubzy-vsh3",
+      "displayName" : "Socrata Service Account"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 588874140,
+    "name" : "O/C",
+    "dataTypeName" : "text",
+    "fieldName" : "o_c",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 14716374,
+    "width" : 136,
+    "cachedContents" : {
+      "non_null" : "183007",
+      "largest" : "Open",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Closed",
+        "count" : "168084"
+      }, {
+        "item" : "Open",
+        "count" : "14923"
+      } ],
+      "smallest" : "Closed",
+      "count" : "183007",
+      "cardinality" : "183007"
+    },
+    "format" : { }
+  }, {
+    "id" : 588874141,
+    "name" : "CaseNo",
+    "dataTypeName" : "text",
+    "fieldName" : "caseno",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 14716375,
+    "width" : 172,
+    "cachedContents" : {
+      "non_null" : "183007",
+      "largest" : "HCEVU-HIS09-009571",
+      "null" : "0",
+      "top" : [ {
+        "item" : "25-08930-MPM",
+        "count" : "2"
+      }, {
+        "item" : "25-12639-MPM",
+        "count" : "2"
+      }, {
+        "item" : "ENVHADJ-20012827PR",
+        "count" : "1"
+      }, {
+        "item" : "HCES-10-00608",
+        "count" : "1"
+      }, {
+        "item" : "17-12895-MPM",
+        "count" : "1"
+      }, {
+        "item" : "ENVHADJ-10-01372",
+        "count" : "1"
+      }, {
+        "item" : "ENVHADJ-20051960PR",
+        "count" : "1"
+      }, {
+        "item" : "ENVHADJ-2004306EH",
+        "count" : "1"
+      }, {
+        "item" : "13-03810-PNBL",
+        "count" : "1"
+      }, {
+        "item" : "15-00078-MPM",
+        "count" : "1"
+      }, {
+        "item" : "13-07424-PNBL",
+        "count" : "1"
+      }, {
+        "item" : "20-22067-MPM",
+        "count" : "1"
+      }, {
+        "item" : "20-23596-MPM",
+        "count" : "1"
+      }, {
+        "item" : "17-13450-MPM",
+        "count" : "1"
+      }, {
+        "item" : "ENVHADJ-20043936EH",
+        "count" : "1"
+      }, {
+        "item" : "ENVHADJ-952529",
+        "count" : "1"
+      }, {
+        "item" : "HCEC-08-00201",
+        "count" : "1"
+      }, {
+        "item" : "17-10782-MPM",
+        "count" : "1"
+      }, {
+        "item" : "16-00558-MPM",
+        "count" : "1"
+      }, {
+        "item" : "ENVHADJ-96919",
+        "count" : "1"
+      } ],
+      "smallest" : "09-002855",
+      "count" : "183007",
+      "cardinality" : "183007"
+    },
+    "format" : { }
+  }, {
+    "id" : 588874142,
+    "name" : "Location",
+    "dataTypeName" : "text",
+    "fieldName" : "location",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 14716376,
+    "width" : 196,
+    "cachedContents" : {
+      "non_null" : "182786",
+      "largest" : "  4200 Erato St",
+      "null" : "221",
+      "top" : [ {
+        "item" : "941 St. Philip St./1000 Burgundy St.",
+        "count" : "183"
+      }, {
+        "item" : "800 S. Peters St.",
+        "count" : "116"
+      }, {
+        "item" : "941 St. Philip St.",
+        "count" : "89"
+      }, {
+        "item" : "7108 Tudor Ct.",
+        "count" : "78"
+      }, {
+        "item" : "2438 Tupelo St.(D3 Sq1276)",
+        "count" : "67"
+      }, {
+        "item" : "1300 Perdido St",
+        "count" : "54"
+      }, {
+        "item" : "9130 Almonaster Ave.",
+        "count" : "53"
+      }, {
+        "item" : "1340 Poydras St",
+        "count" : "48"
+      }, {
+        "item" : "601 Chartres St.",
+        "count" : "47"
+      }, {
+        "item" : "6001 Downman Rd.",
+        "count" : "45"
+      }, {
+        "item" : "6880 Parc Brittany Blvd.",
+        "count" : "43"
+      }, {
+        "item" : "8300 Almonaster Ave.",
+        "count" : "40"
+      }, {
+        "item" : "1820 Hastings Pl.",
+        "count" : "38"
+      }, {
+        "item" : "239 Bourbon St.",
+        "count" : "38"
+      }, {
+        "item" : "1235 Bourbon St.",
+        "count" : "37"
+      }, {
+        "item" : "730 St. Louis St.",
+        "count" : "37"
+      }, {
+        "item" : "4536 Louisa Dr.",
+        "count" : "36"
+      }, {
+        "item" : "936 N. Rampart St.",
+        "count" : "35"
+      }, {
+        "item" : "816 Burgundy St.",
+        "count" : "34"
+      }, {
+        "item" : "613 Decatur St.",
+        "count" : "34"
+      } ],
+      "smallest" : "`/*--`",
+      "count" : "183007",
+      "cardinality" : "183007"
+    },
+    "format" : { }
+  }, {
+    "id" : 588874143,
+    "name" : "Stage",
+    "dataTypeName" : "text",
+    "fieldName" : "stage",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 14716377,
+    "width" : 160,
+    "cachedContents" : {
+      "non_null" : "183007",
+      "largest" : "X - Processing",
+      "null" : "0",
+      "top" : [ {
+        "item" : "6 - Case Closed",
+        "count" : "148762"
+      }, {
+        "item" : "4 - Judgment",
+        "count" : "23254"
+      }, {
+        "item" : "3 - Hearing",
+        "count" : "4551"
+      }, {
+        "item" : "2 - Title Research",
+        "count" : "2662"
+      }, {
+        "item" : "5 - In Compliance",
+        "count" : "1603"
+      }, {
+        "item" : "1 - Inspection",
+        "count" : "1386"
+      }, {
+        "item" : "X - Processing",
+        "count" : "789"
+      } ],
+      "smallest" : "1 - Inspection",
+      "count" : "183007",
+      "cardinality" : "183007"
+    },
+    "format" : { }
+  }, {
+    "id" : 588874144,
+    "name" : "KeyStatus",
+    "dataTypeName" : "text",
+    "fieldName" : "keystatus",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 14716378,
+    "width" : 208,
+    "cachedContents" : {
+      "non_null" : "183004",
+      "largest" : "This file requires further review and should be closed or reset for a new inspection.",
+      "null" : "3",
+      "top" : [ {
+        "item" : "A hearing was held on 04/10/2009 with a result of \"Found Guilty\". The case was subsequently closed.",
+        "count" : "52119"
+      }, {
+        "item" : "The case was filed on 04/10/2009 but has since been closed without further action.",
+        "count" : "3118"
+      }, {
+        "item" : "A hearing was held on 04/10/2009 with a result of \"Dismissed\". The case was subsequently closed.",
+        "count" : "2534"
+      }, {
+        "item" : "The property was inspected on 04/10/2009 with a finding of \"Complete\". The file was subsequently closed.",
+        "count" : "1812"
+      }, {
+        "item" : "The file was processed and reviewed by a title examiner and was closed without further action.",
+        "count" : "1613"
+      }, {
+        "item" : "The file has been processed and reviewed by a title examiner and is awaiting scheduling for a hearing.",
+        "count" : "1542"
+      }, {
+        "item" : "A hearing was held on 05/12/2012 but the result of the hearing is still pending.",
+        "count" : "1247"
+      }, {
+        "item" : "The property was inspected and after file research the case was closed without further action.",
+        "count" : "822"
+      }, {
+        "item" : "This file requires further review and should be closed or reset for a new inspection.",
+        "count" : "786"
+      }, {
+        "item" : "The file has been researched and is awaiting Quality Assurance review before being set for a hearing.",
+        "count" : "771"
+      }, {
+        "item" : "A hearing was held on 12/15/2010 with a result of \"Found Guilty\". The case was subsequently closed.",
+        "count" : "388"
+      }, {
+        "item" : "A hearing was held on 04/26/2010 with a result of \"Found Guilty\". The case was subsequently closed.",
+        "count" : "309"
+      }, {
+        "item" : "A hearing was held on 05/03/2010 with a result of \"Found Guilty\". The case was subsequently closed.",
+        "count" : "309"
+      }, {
+        "item" : "A hearing was held on 08/11/2009 with a result of \"Closed\". The case was subsequently closed.",
+        "count" : "296"
+      }, {
+        "item" : "A hearing was held on 08/04/2009 with a result of \"Found Guilty\". The case was subsequently closed.",
+        "count" : "269"
+      }, {
+        "item" : "A hearing was held on 01/06/2010 with a result of \"Found Guilty\". The case was subsequently closed.",
+        "count" : "267"
+      }, {
+        "item" : "A hearing was held on 12/14/2010 with a result of \"Found Guilty\". The case was subsequently closed.",
+        "count" : "263"
+      }, {
+        "item" : "A hearing was held on 12/08/2009 with a result of \"Found Guilty\". The case was subsequently closed.",
+        "count" : "239"
+      }, {
+        "item" : "A hearing was held on 06/29/2010 with a result of \"Found Guilty\". The case was subsequently closed.",
+        "count" : "230"
+      }, {
+        "item" : "The case was filed on 12/14/2010 but has since been closed without further action.",
+        "count" : "215"
+      } ],
+      "smallest" : "A hearing was held on 01/01/2015 with a result of \"Guilty\".",
+      "count" : "183007",
+      "cardinality" : "183007"
+    },
+    "format" : { }
+  }, {
+    "id" : 588874145,
+    "name" : "StatDate",
+    "dataTypeName" : "calendar_date",
+    "fieldName" : "statdate",
+    "position" : 6,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 14716379,
+    "width" : 196,
+    "cachedContents" : {
+      "non_null" : "183004",
+      "largest" : "2026-11-08T00:00:00.000",
+      "null" : "3",
+      "top" : [ {
+        "item" : "2009-04-10T16:00:39.000",
+        "count" : "54724"
+      }, {
+        "item" : "2009-04-10T15:52:46.000",
+        "count" : "3097"
+      }, {
+        "item" : "2009-04-10T16:16:54.000",
+        "count" : "1811"
+      }, {
+        "item" : "2009-08-11T11:04:29.000",
+        "count" : "674"
+      }, {
+        "item" : "2010-12-15T00:00:00.000",
+        "count" : "456"
+      }, {
+        "item" : "2010-05-03T00:00:00.000",
+        "count" : "333"
+      }, {
+        "item" : "2010-04-26T00:00:00.000",
+        "count" : "329"
+      }, {
+        "item" : "2010-12-14T00:00:00.000",
+        "count" : "289"
+      }, {
+        "item" : "2009-08-04T00:00:00.000",
+        "count" : "288"
+      }, {
+        "item" : "2010-01-06T00:00:00.000",
+        "count" : "277"
+      }, {
+        "item" : "2009-12-08T00:00:00.000",
+        "count" : "266"
+      }, {
+        "item" : "2010-06-29T00:00:00.000",
+        "count" : "251"
+      }, {
+        "item" : "2011-02-07T00:00:00.000",
+        "count" : "239"
+      }, {
+        "item" : "2011-02-08T00:00:00.000",
+        "count" : "216"
+      }, {
+        "item" : "2010-06-30T00:00:00.000",
+        "count" : "215"
+      }, {
+        "item" : "2011-02-10T00:00:00.000",
+        "count" : "204"
+      }, {
+        "item" : "2011-01-14T00:00:00.000",
+        "count" : "185"
+      }, {
+        "item" : "2009-09-01T00:00:00.000",
+        "count" : "170"
+      }, {
+        "item" : "2009-11-09T00:00:00.000",
+        "count" : "163"
+      }, {
+        "item" : "2009-10-07T00:00:00.000",
+        "count" : "160"
+      } ],
+      "smallest" : "1988-10-12T00:00:00.000",
+      "count" : "183007",
+      "cardinality" : "183007"
+    },
+    "format" : { }
+  }, {
+    "id" : 588874146,
+    "name" : "CaseFiled",
+    "dataTypeName" : "calendar_date",
+    "fieldName" : "casefiled",
+    "position" : 7,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 14716380,
+    "width" : 208,
+    "cachedContents" : {
+      "non_null" : "183007",
+      "largest" : "2026-10-16T16:21:38.000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2009-04-10T15:52:46.000",
+        "count" : "68678"
+      }, {
+        "item" : "2009-04-10T06:27:14.000",
+        "count" : "802"
+      }, {
+        "item" : "2011-05-12T09:18:35.000",
+        "count" : "2"
+      }, {
+        "item" : "2010-04-26T09:13:21.000",
+        "count" : "2"
+      }, {
+        "item" : "2011-07-27T10:01:56.000",
+        "count" : "2"
+      }, {
+        "item" : "2013-09-25T09:08:01.000",
+        "count" : "2"
+      }, {
+        "item" : "2011-12-21T16:00:44.000",
+        "count" : "2"
+      }, {
+        "item" : "2017-07-07T14:50:08.000",
+        "count" : "2"
+      }, {
+        "item" : "2011-06-20T20:14:53.000",
+        "count" : "2"
+      }, {
+        "item" : "2008-08-14T14:37:41.000",
+        "count" : "2"
+      }, {
+        "item" : "2010-02-17T16:45:58.000",
+        "count" : "2"
+      }, {
+        "item" : "2011-08-17T09:41:31.000",
+        "count" : "2"
+      }, {
+        "item" : "2018-08-21T15:03:26.000",
+        "count" : "2"
+      }, {
+        "item" : "2010-02-02T14:46:29.000",
+        "count" : "2"
+      }, {
+        "item" : "2011-03-25T08:29:38.000",
+        "count" : "2"
+      }, {
+        "item" : "2013-03-19T10:02:08.000",
+        "count" : "2"
+      }, {
+        "item" : "2010-02-17T08:47:43.000",
+        "count" : "2"
+      }, {
+        "item" : "2011-04-20T22:35:32.000",
+        "count" : "2"
+      }, {
+        "item" : "2025-10-15T12:00:22.000",
+        "count" : "2"
+      }, {
+        "item" : "2011-07-06T09:00:46.000",
+        "count" : "2"
+      } ],
+      "smallest" : "2008-07-28T04:27:58.000",
+      "count" : "183007",
+      "cardinality" : "183007"
+    },
+    "format" : { }
+  }, {
+    "id" : 588874147,
+    "name" : "InitInspection",
+    "dataTypeName" : "calendar_date",
+    "fieldName" : "initinspection",
+    "position" : 8,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 14716381,
+    "width" : 268,
+    "cachedContents" : {
+      "non_null" : "143285",
+      "largest" : "2026-11-08T00:00:00.000",
+      "null" : "39722",
+      "top" : [ {
+        "item" : "2009-04-10T16:16:54.000",
+        "count" : "1811"
+      }, {
+        "item" : "2013-11-15T00:00:00.000",
+        "count" : "188"
+      }, {
+        "item" : "2013-11-14T00:00:00.000",
+        "count" : "186"
+      }, {
+        "item" : "2000-04-27T00:00:00.000",
+        "count" : "163"
+      }, {
+        "item" : "2008-10-15T00:00:00.000",
+        "count" : "132"
+      }, {
+        "item" : "2001-01-08T00:00:00.000",
+        "count" : "130"
+      }, {
+        "item" : "2001-03-20T00:00:00.000",
+        "count" : "125"
+      }, {
+        "item" : "1997-12-30T00:00:00.000",
+        "count" : "120"
+      }, {
+        "item" : "2000-05-17T00:00:00.000",
+        "count" : "115"
+      }, {
+        "item" : "2000-08-09T00:00:00.000",
+        "count" : "108"
+      }, {
+        "item" : "2001-12-10T00:00:00.000",
+        "count" : "104"
+      }, {
+        "item" : "2019-06-11T00:00:00.000",
+        "count" : "100"
+      }, {
+        "item" : "2008-09-18T00:00:00.000",
+        "count" : "99"
+      }, {
+        "item" : "2013-11-18T00:00:00.000",
+        "count" : "96"
+      }, {
+        "item" : "2000-03-03T00:00:00.000",
+        "count" : "95"
+      }, {
+        "item" : "2014-08-25T00:00:00.000",
+        "count" : "94"
+      }, {
+        "item" : "1997-12-22T00:00:00.000",
+        "count" : "92"
+      }, {
+        "item" : "2015-05-20T00:00:00.000",
+        "count" : "92"
+      }, {
+        "item" : "1996-09-16T00:00:00.000",
+        "count" : "91"
+      }, {
+        "item" : "2019-04-18T00:00:00.000",
+        "count" : "91"
+      } ],
+      "smallest" : "1905-03-23T00:00:00.000",
+      "count" : "183007",
+      "cardinality" : "183007"
+    },
+    "format" : { }
+  }, {
+    "id" : 588874148,
+    "name" : "InitInspResult",
+    "dataTypeName" : "text",
+    "fieldName" : "initinspresult",
+    "position" : 9,
+    "renderTypeName" : "text",
+    "tableColumnId" : 14716382,
+    "width" : 268,
+    "cachedContents" : {
+      "non_null" : "143285",
+      "largest" : "Work In Progress",
+      "null" : "39722",
+      "top" : [ {
+        "item" : "Complete",
+        "count" : "57663"
+      }, {
+        "item" : "Violation: No WIP",
+        "count" : "45681"
+      }, {
+        "item" : "No Violation",
+        "count" : "15757"
+      }, {
+        "item" : "Violation Unoccupied",
+        "count" : "12231"
+      }, {
+        "item" : "Adjudication Fast Track",
+        "count" : "2645"
+      }, {
+        "item" : "Vacant Lot",
+        "count" : "1982"
+      }, {
+        "item" : "Violation Unoccupied - Bldg",
+        "count" : "1708"
+      }, {
+        "item" : "Violation: WIP",
+        "count" : "1625"
+      }, {
+        "item" : "Violation Posted No WIP",
+        "count" : "1054"
+      }, {
+        "item" : "Occupied",
+        "count" : "488"
+      }, {
+        "item" : "Occupied w/ Violations",
+        "count" : "456"
+      }, {
+        "item" : "Existing Case",
+        "count" : "312"
+      }, {
+        "item" : "Violation Occupied",
+        "count" : "236"
+      }, {
+        "item" : "Rescheduled",
+        "count" : "186"
+      }, {
+        "item" : "No Access",
+        "count" : "178"
+      }, {
+        "item" : "Abated",
+        "count" : "161"
+      }, {
+        "item" : "In Compliance",
+        "count" : "157"
+      }, {
+        "item" : "Work In Progress",
+        "count" : "141"
+      }, {
+        "item" : "Violation WIP",
+        "count" : "85"
+      }, {
+        "item" : "Cancelled",
+        "count" : "83"
+      } ],
+      "smallest" : "Abated",
+      "count" : "183007",
+      "cardinality" : "183007"
+    },
+    "format" : { }
+  }, {
+    "id" : 588874149,
+    "name" : "PrevHearingDate",
+    "dataTypeName" : "text",
+    "fieldName" : "prevhearingdate",
+    "position" : 10,
+    "renderTypeName" : "text",
+    "tableColumnId" : 14716383,
+    "width" : 280,
+    "cachedContents" : {
+      "non_null" : "92343",
+      "largest" : "2026-10-15 15:00:58",
+      "null" : "90664",
+      "top" : [ {
+        "item" : "2009-04-10 16:00:39.043000",
+        "count" : "54724"
+      }, {
+        "item" : "2009-08-11 11:04:29.020000",
+        "count" : "674"
+      }, {
+        "item" : "2010-12-15 00:00:00",
+        "count" : "456"
+      }, {
+        "item" : "2010-05-03 00:00:00",
+        "count" : "333"
+      }, {
+        "item" : "2010-04-26 00:00:00",
+        "count" : "329"
+      }, {
+        "item" : "2009-08-04 00:00:00",
+        "count" : "288"
+      }, {
+        "item" : "2010-12-14 00:00:00",
+        "count" : "288"
+      }, {
+        "item" : "2010-01-06 00:00:00",
+        "count" : "277"
+      }, {
+        "item" : "2009-12-08 00:00:00",
+        "count" : "266"
+      }, {
+        "item" : "2010-06-29 00:00:00",
+        "count" : "251"
+      }, {
+        "item" : "2011-02-07 00:00:00",
+        "count" : "237"
+      }, {
+        "item" : "2011-02-08 00:00:00",
+        "count" : "216"
+      }, {
+        "item" : "2010-06-30 00:00:00",
+        "count" : "215"
+      }, {
+        "item" : "2011-02-10 00:00:00",
+        "count" : "204"
+      }, {
+        "item" : "2011-01-14 00:00:00",
+        "count" : "185"
+      }, {
+        "item" : "2009-09-01 00:00:00",
+        "count" : "170"
+      }, {
+        "item" : "2009-11-09 00:00:00",
+        "count" : "163"
+      }, {
+        "item" : "2009-10-07 00:00:00",
+        "count" : "160"
+      }, {
+        "item" : "2009-11-16 00:00:00",
+        "count" : "154"
+      }, {
+        "item" : "2011-02-09 00:00:00",
+        "count" : "153"
+      } ],
+      "smallest" : "2008-08-27 00:00:00",
+      "count" : "183007",
+      "cardinality" : "183007"
+    },
+    "format" : { }
+  }, {
+    "id" : 588874150,
+    "name" : "PrevHearingResult",
+    "dataTypeName" : "text",
+    "fieldName" : "prevhearingresult",
+    "position" : 11,
+    "renderTypeName" : "text",
+    "tableColumnId" : 14716384,
+    "width" : 304,
+    "cachedContents" : {
+      "non_null" : "92343",
+      "largest" : "yes",
+      "null" : "90664",
+      "top" : [ {
+        "item" : "Found Guilty",
+        "count" : "59200"
+      }, {
+        "item" : "Guilty",
+        "count" : "13379"
+      }, {
+        "item" : "Guilty: Abated",
+        "count" : "4327"
+      }, {
+        "item" : "Dismissed",
+        "count" : "2961"
+      }, {
+        "item" : "Guilty: Public Nuisance Blight",
+        "count" : "2566"
+      }, {
+        "item" : "Guilty: Public Nuisance",
+        "count" : "1669"
+      }, {
+        "item" : "Result Pending",
+        "count" : "1617"
+      }, {
+        "item" : "In Compliance Fees Due",
+        "count" : "972"
+      }, {
+        "item" : "Guilty Public Nuisance Blight",
+        "count" : "889"
+      }, {
+        "item" : "Dismissed: Abated",
+        "count" : "611"
+      }, {
+        "item" : "Closed",
+        "count" : "480"
+      }, {
+        "item" : "Dismissed Wrong Location",
+        "count" : "407"
+      }, {
+        "item" : "In Compliance",
+        "count" : "299"
+      }, {
+        "item" : "Reset",
+        "count" : "297"
+      }, {
+        "item" : "Dismissed: Insufficient Evidence",
+        "count" : "258"
+      }, {
+        "item" : "Closed: In Compliance",
+        "count" : "255"
+      }, {
+        "item" : "Dismissed: Wrong Location",
+        "count" : "225"
+      }, {
+        "item" : "Dismissed Wrong Owner",
+        "count" : "212"
+      }, {
+        "item" : "Guilty Public Nuisance",
+        "count" : "211"
+      }, {
+        "item" : "Dismissed Abated",
+        "count" : "195"
+      } ],
+      "smallest" : "Abated",
+      "count" : "183007",
+      "cardinality" : "183007"
+    },
+    "format" : { }
+  }, {
+    "id" : 588874151,
+    "name" : "NextHearingDate",
+    "dataTypeName" : "text",
+    "fieldName" : "nexthearingdate",
+    "position" : 12,
+    "renderTypeName" : "text",
+    "tableColumnId" : 14716385,
+    "width" : 280,
+    "cachedContents" : {
+      "non_null" : "226",
+      "largest" : "2026-12-15 09:00:30",
+      "null" : "182781",
+      "top" : [ {
+        "item" : "2026-07-30 00:00:00",
+        "count" : "2"
+      }, {
+        "item" : "2019-03-12 09:15:03",
+        "count" : "1"
+      }, {
+        "item" : "2025-10-09 09:00:44",
+        "count" : "1"
+      }, {
+        "item" : "2022-03-02 13:45:00",
+        "count" : "1"
+      }, {
+        "item" : "2022-08-16 13:45:04",
+        "count" : "1"
+      }, {
+        "item" : "2024-07-01 10:30:53",
+        "count" : "1"
+      }, {
+        "item" : "2024-08-20 10:00:23",
+        "count" : "1"
+      }, {
+        "item" : "2024-11-25 13:45:00",
+        "count" : "1"
+      }, {
+        "item" : "2024-12-17 14:45:01",
+        "count" : "1"
+      }, {
+        "item" : "2025-01-16 14:15:16",
+        "count" : "1"
+      }, {
+        "item" : "2025-01-21 10:30:00",
+        "count" : "1"
+      }, {
+        "item" : "2025-02-25 10:00:50",
+        "count" : "1"
+      }, {
+        "item" : "2025-04-02 09:30:00",
+        "count" : "1"
+      }, {
+        "item" : "2025-08-14 09:00:42",
+        "count" : "1"
+      }, {
+        "item" : "2022-02-03 10:00:00",
+        "count" : "1"
+      }, {
+        "item" : "2025-10-16 14:15:00",
+        "count" : "1"
+      }, {
+        "item" : "2025-12-02 13:15:00",
+        "count" : "1"
+      }, {
+        "item" : "2026-02-26 11:00:41",
+        "count" : "1"
+      }, {
+        "item" : "2026-03-03 13:45:07",
+        "count" : "1"
+      }, {
+        "item" : "2018-03-01 10:45:47",
+        "count" : "1"
+      } ],
+      "smallest" : "2018-01-01 10:45:07",
+      "count" : "183007",
+      "cardinality" : "183007"
+    },
+    "format" : { }
+  }, {
+    "id" : 588874152,
+    "name" : "LastPermit",
+    "dataTypeName" : "text",
+    "fieldName" : "lastpermit",
+    "position" : 13,
+    "renderTypeName" : "text",
+    "tableColumnId" : 14716386,
+    "width" : 220,
+    "cachedContents" : {
+      "non_null" : "145681",
+      "largest" : "W-386",
+      "null" : "37326",
+      "top" : [ {
+        "item" : "13-40006-SPMA",
+        "count" : "453"
+      }, {
+        "item" : "26-17575-RCZD",
+        "count" : "273"
+      }, {
+        "item" : "13-35979-SPMA",
+        "count" : "248"
+      }, {
+        "item" : "25-02155-FGAS",
+        "count" : "168"
+      }, {
+        "item" : "24-35320-RSTC",
+        "count" : "116"
+      }, {
+        "item" : "18-41915-SOLR",
+        "count" : "105"
+      }, {
+        "item" : "07COM-01545",
+        "count" : "88"
+      }, {
+        "item" : "06BLD-05930",
+        "count" : "86"
+      }, {
+        "item" : "18-37065-SLBN",
+        "count" : "77"
+      }, {
+        "item" : "26-29637-SPMA",
+        "count" : "64"
+      }, {
+        "item" : "26-30206-ACCS",
+        "count" : "63"
+      }, {
+        "item" : "26-19715-EGEN",
+        "count" : "61"
+      }, {
+        "item" : "24-10312-RNVN",
+        "count" : "60"
+      }, {
+        "item" : "25-09082-SPMA",
+        "count" : "56"
+      }, {
+        "item" : "20-28602-EVAC",
+        "count" : "54"
+      }, {
+        "item" : "10COM-01470",
+        "count" : "52"
+      }, {
+        "item" : "23-26382-RCZD",
+        "count" : "50"
+      }, {
+        "item" : "10BLD-04971",
+        "count" : "49"
+      }, {
+        "item" : "26-20178-VCGEN",
+        "count" : "48"
+      }, {
+        "item" : "25-33773-VCGEN",
+        "count" : "47"
+      } ],
+      "smallest" : "04BLD-00001",
+      "count" : "183007",
+      "cardinality" : "183007"
+    },
+    "format" : { }
+  }, {
+    "id" : 588874153,
+    "name" : "PermitFiling",
+    "dataTypeName" : "calendar_date",
+    "fieldName" : "permitfiling",
+    "position" : 14,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 14716387,
+    "width" : 244,
+    "cachedContents" : {
+      "non_null" : "145681",
+      "largest" : "2026-10-16T20:06:17.000",
+      "null" : "37326",
+      "top" : [ {
+        "item" : "2006-09-14T00:00:00.000",
+        "count" : "528"
+      }, {
+        "item" : "2013-10-03T00:00:00.000",
+        "count" : "477"
+      }, {
+        "item" : "2007-05-04T00:00:00.000",
+        "count" : "351"
+      }, {
+        "item" : "2006-08-23T00:00:00.000",
+        "count" : "300"
+      }, {
+        "item" : "2013-08-28T00:00:00.000",
+        "count" : "283"
+      }, {
+        "item" : "2026-06-11T16:15:34.000",
+        "count" : "273"
+      }, {
+        "item" : "2006-08-31T00:00:00.000",
+        "count" : "268"
+      }, {
+        "item" : "2006-11-16T00:00:00.000",
+        "count" : "264"
+      }, {
+        "item" : "2006-09-10T00:00:00.000",
+        "count" : "204"
+      }, {
+        "item" : "2006-09-08T00:00:00.000",
+        "count" : "199"
+      }, {
+        "item" : "2007-05-18T00:00:00.000",
+        "count" : "198"
+      }, {
+        "item" : "2008-01-05T00:00:00.000",
+        "count" : "193"
+      }, {
+        "item" : "2025-01-19T12:43:20.000",
+        "count" : "168"
+      }, {
+        "item" : "2007-04-08T00:00:00.000",
+        "count" : "164"
+      }, {
+        "item" : "2006-12-21T00:00:00.000",
+        "count" : "132"
+      }, {
+        "item" : "2006-08-26T00:00:00.000",
+        "count" : "128"
+      }, {
+        "item" : "2024-11-20T11:24:54.000",
+        "count" : "116"
+      }, {
+        "item" : "2013-06-26T00:00:00.000",
+        "count" : "111"
+      }, {
+        "item" : "2018-12-28T10:53:41.000",
+        "count" : "105"
+      }, {
+        "item" : "2011-08-17T00:00:00.000",
+        "count" : "103"
+      } ],
+      "smallest" : "1995-12-15T00:00:00.000",
+      "count" : "183007",
+      "cardinality" : "183007"
+    },
+    "format" : { }
+  }, {
+    "id" : 588874154,
+    "name" : "PermitType",
+    "dataTypeName" : "text",
+    "fieldName" : "permittype",
+    "position" : 15,
+    "renderTypeName" : "text",
+    "tableColumnId" : 14716388,
+    "width" : 220,
+    "cachedContents" : {
+      "non_null" : "145680",
+      "largest" : "Water Certificate",
+      "null" : "37327",
+      "top" : [ {
+        "item" : "Demolition",
+        "count" : "25202"
+      }, {
+        "item" : "Mechanical Fuel Gas",
+        "count" : "16780"
+      }, {
+        "item" : "General Mechanical",
+        "count" : "15333"
+      }, {
+        "item" : "Electrical Service / Circuit / Feeder",
+        "count" : "11201"
+      }, {
+        "item" : "Electrical Repair / Replacement / Addition",
+        "count" : "8780"
+      }, {
+        "item" : "HDLC COA",
+        "count" : "7243"
+      }, {
+        "item" : "Mechanical HVAC",
+        "count" : "6477"
+      }, {
+        "item" : "Renovation (Non-Structural)",
+        "count" : "6090"
+      }, {
+        "item" : "Change of Address",
+        "count" : "5250"
+      }, {
+        "item" : "Electrical Vacancy",
+        "count" : "4855"
+      }, {
+        "item" : "Solar",
+        "count" : "4401"
+      }, {
+        "item" : "Plumbing Permit",
+        "count" : "3136"
+      }, {
+        "item" : "Street Cut",
+        "count" : "2789"
+      }, {
+        "item" : "Special Event - Master",
+        "count" : "2778"
+      }, {
+        "item" : "Renovation (Structural)",
+        "count" : "2423"
+      }, {
+        "item" : "New Construction",
+        "count" : "2295"
+      }, {
+        "item" : "Construction Loop",
+        "count" : "2288"
+      }, {
+        "item" : "City IDC Demolition",
+        "count" : "1698"
+      }, {
+        "item" : "Building - SPIN",
+        "count" : "1523"
+      }, {
+        "item" : "Accessory Structure",
+        "count" : "1307"
+      } ],
+      "smallest" : "Accessory Structure",
+      "count" : "183007",
+      "cardinality" : "183007"
+    },
+    "format" : { }
+  }, {
+    "id" : 588874155,
+    "name" : "PermitStatus",
+    "dataTypeName" : "text",
+    "fieldName" : "permitstatus",
+    "position" : 16,
+    "renderTypeName" : "text",
+    "tableColumnId" : 14716389,
+    "width" : 244,
+    "cachedContents" : {
+      "non_null" : "145676",
+      "largest" : "Zoning Review",
+      "null" : "37331",
+      "top" : [ {
+        "item" : "Permit Issued",
+        "count" : "36571"
+      }, {
+        "item" : "Certificate of Completion",
+        "count" : "27212"
+      }, {
+        "item" : "Application Acceptance - Approved",
+        "count" : "8970"
+      }, {
+        "item" : "Finaled",
+        "count" : "8924"
+      }, {
+        "item" : "Meter Release",
+        "count" : "8314"
+      }, {
+        "item" : "Inspection - Completed",
+        "count" : "7587"
+      }, {
+        "item" : "Permit Issuance - Active",
+        "count" : "5731"
+      }, {
+        "item" : "Closed",
+        "count" : "5200"
+      }, {
+        "item" : "Application Acceptance - Approved No Review",
+        "count" : "4844"
+      }, {
+        "item" : "Inspection - Completed No Requirements",
+        "count" : "4503"
+      }, {
+        "item" : "Certificate of Occupancy - Issued No Meter",
+        "count" : "4097"
+      }, {
+        "item" : "Application Submitted",
+        "count" : "3608"
+      }, {
+        "item" : "Permit Application Expired",
+        "count" : "2390"
+      }, {
+        "item" : "Permit Expired Due to Inactivity",
+        "count" : "1955"
+      }, {
+        "item" : "Permit Finaled",
+        "count" : "1733"
+      }, {
+        "item" : "Certificate of Occupancy",
+        "count" : "1662"
+      }, {
+        "item" : "VOIDED - Applicant Withdrew Permit",
+        "count" : "1285"
+      }, {
+        "item" : "Permit Approved",
+        "count" : "1259"
+      }, {
+        "item" : "VOIDED - Duplicate Permit",
+        "count" : "1070"
+      }, {
+        "item" : "Permit Denied",
+        "count" : "1020"
+      } ],
+      "smallest" : "Additional information required",
+      "count" : "183007",
+      "cardinality" : "183007"
+    },
+    "format" : { }
+  }, {
+    "id" : 588874156,
+    "name" : "GeoAddress",
+    "dataTypeName" : "text",
+    "fieldName" : "geoaddress",
+    "position" : 17,
+    "renderTypeName" : "text",
+    "tableColumnId" : 14716390,
+    "width" : 220,
+    "cachedContents" : {
+      "non_null" : "169587",
+      "largest" : "9 W Blue Ridge Ct",
+      "null" : "13420",
+      "top" : [ {
+        "item" : "941 Saint Philip St",
+        "count" : "273"
+      }, {
+        "item" : "609 Jackson Ave",
+        "count" : "168"
+      }, {
+        "item" : "800 S Peters St",
+        "count" : "116"
+      }, {
+        "item" : "7108 Tudor Ct",
+        "count" : "105"
+      }, {
+        "item" : "5501 Bundy Rd",
+        "count" : "88"
+      }, {
+        "item" : "2438 Tupelo St",
+        "count" : "86"
+      }, {
+        "item" : "1300 Perdido St",
+        "count" : "69"
+      }, {
+        "item" : "1340 Poydras St",
+        "count" : "65"
+      }, {
+        "item" : "9701 Lake Forest Blvd",
+        "count" : "63"
+      }, {
+        "item" : "1100 S Claiborne Ave",
+        "count" : "61"
+      }, {
+        "item" : "230 N Broad St",
+        "count" : "56"
+      }, {
+        "item" : "6001 Downman Rd",
+        "count" : "54"
+      }, {
+        "item" : "6880 Parc Brittany Blvd",
+        "count" : "52"
+      }, {
+        "item" : "3010 Sandra Dr",
+        "count" : "51"
+      }, {
+        "item" : "4536 Louisa Dr",
+        "count" : "49"
+      }, {
+        "item" : "601 Chartres St",
+        "count" : "48"
+      }, {
+        "item" : "239 Bourbon St",
+        "count" : "47"
+      }, {
+        "item" : "2400 Palmyra St",
+        "count" : "46"
+      }, {
+        "item" : "936 N Rampart St",
+        "count" : "41"
+      }, {
+        "item" : "1820 Hastings Pl",
+        "count" : "41"
+      } ],
+      "smallest" : "0 013000177",
+      "count" : "183007",
+      "cardinality" : "183007"
+    },
+    "format" : { }
+  }, {
+    "id" : 588874157,
+    "name" : "City",
+    "dataTypeName" : "text",
+    "fieldName" : "city",
+    "position" : 18,
+    "renderTypeName" : "text",
+    "tableColumnId" : 14716391,
+    "width" : 148,
+    "cachedContents" : {
+      "non_null" : "169415",
+      "largest" : "New Orleans",
+      "null" : "13592",
+      "top" : [ {
+        "item" : "New Orleans",
+        "count" : "169415"
+      } ],
+      "smallest" : "New Orleans",
+      "count" : "183007",
+      "cardinality" : "183007"
+    },
+    "format" : { }
+  }, {
+    "id" : 588874158,
+    "name" : "State",
+    "dataTypeName" : "text",
+    "fieldName" : "state",
+    "position" : 19,
+    "renderTypeName" : "text",
+    "tableColumnId" : 14716392,
+    "width" : 160,
+    "cachedContents" : {
+      "non_null" : "169415",
+      "largest" : "LA",
+      "null" : "13592",
+      "top" : [ {
+        "item" : "LA",
+        "count" : "169415"
+      } ],
+      "smallest" : "LA",
+      "count" : "183007",
+      "cardinality" : "183007"
+    },
+    "format" : { }
+  }, {
+    "id" : 588874159,
+    "name" : "Zipcode",
+    "dataTypeName" : "text",
+    "fieldName" : "zipcode",
+    "position" : 20,
+    "renderTypeName" : "text",
+    "tableColumnId" : 14716393,
+    "width" : 184,
+    "cachedContents" : {
+      "non_null" : "169389",
+      "largest" : "70163",
+      "null" : "13618",
+      "top" : [ {
+        "item" : "70117",
+        "count" : "34228"
+      }, {
+        "item" : "70126",
+        "count" : "16425"
+      }, {
+        "item" : "70119",
+        "count" : "15861"
+      }, {
+        "item" : "70122",
+        "count" : "14881"
+      }, {
+        "item" : "70118",
+        "count" : "11147"
+      }, {
+        "item" : "70116",
+        "count" : "11014"
+      }, {
+        "item" : "70114",
+        "count" : "10530"
+      }, {
+        "item" : "70115",
+        "count" : "10344"
+      }, {
+        "item" : "70125",
+        "count" : "8789"
+      }, {
+        "item" : "70127",
+        "count" : "7637"
+      }, {
+        "item" : "70113",
+        "count" : "6586"
+      }, {
+        "item" : "70130",
+        "count" : "5016"
+      }, {
+        "item" : "70128",
+        "count" : "4390"
+      }, {
+        "item" : "70124",
+        "count" : "4039"
+      }, {
+        "item" : "70131",
+        "count" : "4025"
+      }, {
+        "item" : "70129",
+        "count" : "2448"
+      }, {
+        "item" : "70112",
+        "count" : "2028"
+      }, {
+        "item" : "70163",
+        "count" : "1"
+      } ],
+      "smallest" : "70112",
+      "count" : "183007",
+      "cardinality" : "183007"
+    },
+    "format" : { }
+  }, {
+    "id" : 588874167,
+    "name" : "GeoPIN",
+    "dataTypeName" : "text",
+    "description" : "",
+    "fieldName" : "geopin",
+    "position" : 21,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151143645,
+    "width" : 172,
+    "cachedContents" : {
+      "non_null" : "169523",
+      "largest" : "52001022",
+      "null" : "13484",
+      "top" : [ {
+        "item" : "41022052",
+        "count" : "273"
+      }, {
+        "item" : "41041104",
+        "count" : "170"
+      }, {
+        "item" : "41031531",
+        "count" : "166"
+      }, {
+        "item" : "41145370",
+        "count" : "118"
+      }, {
+        "item" : "41095705",
+        "count" : "105"
+      }, {
+        "item" : "41123434",
+        "count" : "88"
+      }, {
+        "item" : "41098943",
+        "count" : "88"
+      }, {
+        "item" : "41032325",
+        "count" : "69"
+      }, {
+        "item" : "41021782",
+        "count" : "66"
+      }, {
+        "item" : "41030869",
+        "count" : "65"
+      }, {
+        "item" : "41180899",
+        "count" : "63"
+      }, {
+        "item" : "41182254",
+        "count" : "61"
+      }, {
+        "item" : "41192584",
+        "count" : "56"
+      }, {
+        "item" : "41095119",
+        "count" : "54"
+      }, {
+        "item" : "41096577",
+        "count" : "52"
+      }, {
+        "item" : "41206118",
+        "count" : "51"
+      }, {
+        "item" : "41110797",
+        "count" : "49"
+      }, {
+        "item" : "41022666",
+        "count" : "49"
+      }, {
+        "item" : "41041239",
+        "count" : "41"
+      }, {
+        "item" : "41022989",
+        "count" : "41"
+      } ],
+      "smallest" : "41000001",
+      "count" : "183007",
+      "cardinality" : "183007"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "true",
+      "align" : "right"
+    }
+  }, {
+    "id" : 588874161,
+    "name" : "XPos",
+    "dataTypeName" : "number",
+    "fieldName" : "xpos",
+    "position" : 22,
+    "renderTypeName" : "number",
+    "tableColumnId" : 14716395,
+    "width" : 148,
+    "cachedContents" : {
+      "non_null" : "183007",
+      "largest" : "3785114.26218",
+      "null" : "0",
+      "top" : [ {
+        "item" : "-1.0",
+        "count" : "8371"
+      }, {
+        "item" : "3682421.40872",
+        "count" : "273"
+      }, {
+        "item" : "3679901.14023",
+        "count" : "163"
+      }, {
+        "item" : "3682301.38138",
+        "count" : "116"
+      }, {
+        "item" : "3703803.50051",
+        "count" : "105"
+      }, {
+        "item" : "3701402.67083",
+        "count" : "70"
+      }, {
+        "item" : "3708795.43",
+        "count" : "68"
+      }, {
+        "item" : "3702661.06844",
+        "count" : "49"
+      }, {
+        "item" : "3682597.22868",
+        "count" : "47"
+      }, {
+        "item" : "3695180.22831",
+        "count" : "46"
+      }, {
+        "item" : "3695815.35086",
+        "count" : "46"
+      }, {
+        "item" : "3681320.11905",
+        "count" : "46"
+      }, {
+        "item" : "3690875.5581",
+        "count" : "42"
+      }, {
+        "item" : "3682069.24442",
+        "count" : "41"
+      }, {
+        "item" : "3708987.99344",
+        "count" : "40"
+      }, {
+        "item" : "3679989.94785",
+        "count" : "39"
+      }, {
+        "item" : "3683480.52891",
+        "count" : "38"
+      }, {
+        "item" : "3680576.60129",
+        "count" : "37"
+      }, {
+        "item" : "3681875.25499",
+        "count" : "37"
+      }, {
+        "item" : "3681307.31002",
+        "count" : "36"
+      } ],
+      "smallest" : "-1.0",
+      "count" : "183007",
+      "cardinality" : "183007"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "true",
+      "align" : "right"
+    }
+  }, {
+    "id" : 588874162,
+    "name" : "YPos",
+    "dataTypeName" : "number",
+    "fieldName" : "ypos",
+    "position" : 23,
+    "renderTypeName" : "number",
+    "tableColumnId" : 14716396,
+    "width" : 148,
+    "cachedContents" : {
+      "non_null" : "183007",
+      "largest" : "3719244.91967",
+      "null" : "0",
+      "top" : [ {
+        "item" : "-1.0",
+        "count" : "8371"
+      }, {
+        "item" : "534013.51663",
+        "count" : "273"
+      }, {
+        "item" : "520810.42821",
+        "count" : "163"
+      }, {
+        "item" : "527506.4588",
+        "count" : "116"
+      }, {
+        "item" : "559689.68373",
+        "count" : "105"
+      }, {
+        "item" : "538306.03522",
+        "count" : "70"
+      }, {
+        "item" : "557834.72",
+        "count" : "68"
+      }, {
+        "item" : "557779.03688",
+        "count" : "49"
+      }, {
+        "item" : "531981.5239",
+        "count" : "47"
+      }, {
+        "item" : "521997.92792",
+        "count" : "46"
+      }, {
+        "item" : "531499.33484",
+        "count" : "46"
+      }, {
+        "item" : "554932.46367",
+        "count" : "46"
+      }, {
+        "item" : "550638.17908",
+        "count" : "42"
+      }, {
+        "item" : "534149.96115",
+        "count" : "41"
+      }, {
+        "item" : "551390.18178",
+        "count" : "40"
+      }, {
+        "item" : "522836.6748",
+        "count" : "39"
+      }, {
+        "item" : "534380.89158",
+        "count" : "38"
+      }, {
+        "item" : "531991.92515",
+        "count" : "37"
+      }, {
+        "item" : "531004.63001",
+        "count" : "37"
+      }, {
+        "item" : "533111.307",
+        "count" : "36"
+      } ],
+      "smallest" : "-1.0",
+      "count" : "183007",
+      "cardinality" : "183007"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "true",
+      "align" : "right"
+    }
+  }, {
+    "id" : 588874163,
+    "name" : "CaseID",
+    "dataTypeName" : "number",
+    "fieldName" : "caseid",
+    "position" : 24,
+    "renderTypeName" : "number",
+    "tableColumnId" : 14716397,
+    "width" : 172,
+    "cachedContents" : {
+      "non_null" : "183007",
+      "largest" : "338142",
+      "null" : "0",
+      "top" : [ {
+        "item" : "70315",
+        "count" : "1"
+      }, {
+        "item" : "83970",
+        "count" : "1"
+      }, {
+        "item" : "147077",
+        "count" : "1"
+      }, {
+        "item" : "141747",
+        "count" : "1"
+      }, {
+        "item" : "163585",
+        "count" : "1"
+      }, {
+        "item" : "48498",
+        "count" : "1"
+      }, {
+        "item" : "165443",
+        "count" : "1"
+      }, {
+        "item" : "186836",
+        "count" : "1"
+      }, {
+        "item" : "201395",
+        "count" : "1"
+      }, {
+        "item" : "272581",
+        "count" : "1"
+      }, {
+        "item" : "213442",
+        "count" : "1"
+      }, {
+        "item" : "322808",
+        "count" : "1"
+      }, {
+        "item" : "272381",
+        "count" : "1"
+      }, {
+        "item" : "163069",
+        "count" : "1"
+      }, {
+        "item" : "65792",
+        "count" : "1"
+      }, {
+        "item" : "136016",
+        "count" : "1"
+      }, {
+        "item" : "85241",
+        "count" : "1"
+      }, {
+        "item" : "335001",
+        "count" : "1"
+      }, {
+        "item" : "180429",
+        "count" : "1"
+      }, {
+        "item" : "24481",
+        "count" : "1"
+      } ],
+      "smallest" : "19457",
+      "count" : "183007",
+      "cardinality" : "183007"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "true",
+      "align" : "right"
+    }
+  }, {
+    "id" : 588874165,
+    "name" : "TitleResearch",
+    "dataTypeName" : "calendar_date",
+    "fieldName" : "titleresearch",
+    "position" : 26,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 16895441,
+    "width" : 100,
+    "cachedContents" : {
+      "non_null" : "28011",
+      "largest" : "2026-10-16T14:32:17.000",
+      "null" : "154996",
+      "top" : [ {
+        "item" : "2012-09-24T00:00:00.000",
+        "count" : "47"
+      }, {
+        "item" : "2014-05-23T00:00:00.000",
+        "count" : "35"
+      }, {
+        "item" : "2014-04-07T00:00:00.000",
+        "count" : "33"
+      }, {
+        "item" : "2014-05-07T00:00:00.000",
+        "count" : "30"
+      }, {
+        "item" : "2014-05-12T00:00:00.000",
+        "count" : "30"
+      }, {
+        "item" : "2014-03-20T00:00:00.000",
+        "count" : "28"
+      }, {
+        "item" : "2013-07-23T00:00:00.000",
+        "count" : "27"
+      }, {
+        "item" : "2014-01-17T00:00:00.000",
+        "count" : "26"
+      }, {
+        "item" : "2014-04-21T00:00:00.000",
+        "count" : "25"
+      }, {
+        "item" : "2013-08-22T00:00:00.000",
+        "count" : "25"
+      }, {
+        "item" : "2014-01-21T00:00:00.000",
+        "count" : "25"
+      }, {
+        "item" : "2014-03-27T00:00:00.000",
+        "count" : "25"
+      }, {
+        "item" : "2014-03-26T00:00:00.000",
+        "count" : "25"
+      }, {
+        "item" : "2013-09-04T00:00:00.000",
+        "count" : "23"
+      }, {
+        "item" : "2014-08-12T00:00:00.000",
+        "count" : "23"
+      }, {
+        "item" : "2014-02-04T00:00:00.000",
+        "count" : "23"
+      }, {
+        "item" : "2013-08-05T00:00:00.000",
+        "count" : "22"
+      }, {
+        "item" : "2014-04-17T00:00:00.000",
+        "count" : "22"
+      }, {
+        "item" : "2013-10-15T00:00:00.000",
+        "count" : "22"
+      }, {
+        "item" : "2014-03-17T00:00:00.000",
+        "count" : "22"
+      } ],
+      "smallest" : "2011-11-14T00:00:00.000",
+      "count" : "183007",
+      "cardinality" : "183007"
+    },
+    "format" : { }
+  }, {
+    "id" : 588874166,
+    "name" : "RecordationDate",
+    "dataTypeName" : "calendar_date",
+    "fieldName" : "recordationdate",
+    "position" : 27,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 16895442,
+    "width" : 100,
+    "cachedContents" : {
+      "non_null" : "11532",
+      "largest" : "5015-12-07T00:00:00.000",
+      "null" : "171475",
+      "top" : [ {
+        "item" : "2012-10-11T00:00:00.000",
+        "count" : "152"
+      }, {
+        "item" : "2014-12-18T00:00:00.000",
+        "count" : "94"
+      }, {
+        "item" : "2022-09-22T00:00:00.000",
+        "count" : "89"
+      }, {
+        "item" : "2014-09-08T00:00:00.000",
+        "count" : "85"
+      }, {
+        "item" : "2018-09-07T00:00:00.000",
+        "count" : "80"
+      }, {
+        "item" : "2016-08-16T00:00:00.000",
+        "count" : "77"
+      }, {
+        "item" : "2015-03-02T00:00:00.000",
+        "count" : "75"
+      }, {
+        "item" : "2015-01-26T00:00:00.000",
+        "count" : "73"
+      }, {
+        "item" : "2016-08-17T00:00:00.000",
+        "count" : "73"
+      }, {
+        "item" : "2015-04-10T00:00:00.000",
+        "count" : "73"
+      }, {
+        "item" : "2014-08-14T00:00:00.000",
+        "count" : "72"
+      }, {
+        "item" : "2021-10-04T00:00:00.000",
+        "count" : "72"
+      }, {
+        "item" : "2012-12-04T00:00:00.000",
+        "count" : "71"
+      }, {
+        "item" : "2015-01-29T00:00:00.000",
+        "count" : "70"
+      }, {
+        "item" : "2016-01-12T00:00:00.000",
+        "count" : "69"
+      }, {
+        "item" : "2017-02-01T00:00:00.000",
+        "count" : "65"
+      }, {
+        "item" : "2015-02-18T00:00:00.000",
+        "count" : "63"
+      }, {
+        "item" : "2015-11-24T00:00:00.000",
+        "count" : "63"
+      }, {
+        "item" : "2015-01-21T00:00:00.000",
+        "count" : "62"
+      }, {
+        "item" : "2016-04-04T00:00:00.000",
+        "count" : "61"
+      } ],
+      "smallest" : "2001-10-05T00:00:00.000",
+      "count" : "183007",
+      "cardinality" : "183007"
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "Creative Commons 1.0 Universal (Public Domain Dedication)",
+    "logoUrl" : "images/licenses/ccZero.png",
+    "termsLink" : "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+  },
+  "metadata" : {
+    "rdfSubject" : "0",
+    "rdfClass" : "",
+    "custom_fields" : {
+      "Common Core" : {
+        "Contact Email" : "data@nola.gov"
+      },
+      "Source Information" : {
+        "Source Department" : "Code Enforcement"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ],
+    "renderTypeConfig" : {
+      "visible" : {
+        "table" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "ubzy-vsh3",
+    "displayName" : "Socrata Service Account",
+    "screenName" : "Socrata Service Account",
+    "type" : "interactive"
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "ubzy-vsh3",
+    "displayName" : "Socrata Service Account",
+    "screenName" : "Socrata Service Account",
+    "type" : "interactive"
+  },
+  "tags" : [ "blightstatus", "case", "violation" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

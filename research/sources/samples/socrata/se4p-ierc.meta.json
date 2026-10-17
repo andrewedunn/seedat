@@ -1,0 +1,85 @@
+{
+ "id": "se4p-ierc",
+ "name": "Catch Basins",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Transportation and Infrastructure",
+ "attribution": "Public Works (DPW)",
+ "attributionLink": null,
+ "licenseId": "CC0_10",
+ "license": {
+  "name": "Creative Commons 1.0 Universal (Public Domain Dedication)",
+  "logoUrl": "images/licenses/ccZero.png",
+  "termsLink": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+ },
+ "rowsUpdatedAt": "2026-04-29 20:30",
+ "createdAt": 1639429447,
+ "viewLastModified": 1761841272,
+ "publicationDate": 1761841272,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "dpw",
+  "flood",
+  "311"
+ ],
+ "metadata": {
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "gis@nola.gov",
+    "Public Access Level": "public"
+   },
+   "Source Information": {
+    "Source Department": "Public Works (DPW)",
+    "Frequency of Data Change": "as streets are improved"
+   }
+  },
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ]
+ },
+ "description": "<DIV STYLE=\"text-align:Left;\"><P><SPAN>Most current layer of catch basins for the City of New Orleans. Updated as needed by DPW to track cleaning and other attributes.</SPAN></P></DIV>",
+ "columns": [
+  {
+   "f": "the_geom",
+   "n": "the_geom",
+   "t": "point"
+  },
+  {
+   "f": "objectid",
+   "n": "OBJECTID",
+   "t": "number"
+  },
+  {
+   "f": "gisid",
+   "n": "GISID",
+   "t": "text"
+  },
+  {
+   "f": "loc",
+   "n": "LOC",
+   "t": "text"
+  },
+  {
+   "f": "cbtype",
+   "n": "CBTYPE",
+   "t": "text"
+  },
+  {
+   "f": "stname",
+   "n": "STNAME",
+   "t": "text"
+  },
+  {
+   "f": "neighborhood",
+   "n": "Neighborhood",
+   "t": "text"
+  },
+  {
+   "f": "globalid",
+   "n": "GlobalID",
+   "t": "text"
+  }
+ ]
+}

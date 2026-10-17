@@ -1,0 +1,53 @@
+[
+ {
+  "the_geom": {
+   "type": "Point",
+   "coordinates": [
+    -90.014803792331,
+    29.969614706333
+   ]
+  },
+  "objectid": "165649",
+  "caseno": "ENVHADJ-932075N",
+  "geopin": "41123098",
+  "o_c": "Closed",
+  "stage": "6 - Case Closed",
+  "statdate": "20090410155247.000",
+  "zipcode": "70117"
+ },
+ {
+  "the_geom": {
+   "type": "Point",
+   "coordinates": [
+    -90.131706503888,
+    29.958007898648
+   ]
+  },
+  "objectid": "128272",
+  "caseno": "ENVHADJ-992153SN",
+  "geopin": "41137225",
+  "o_c": "Closed",
+  "permitstatus": "Inspection - Completed",
+  "prevhearingresult": "Found Guilty",
+  "stage": "6 - Case Closed",
+  "statdate": "20090410160039.000",
+  "zipcode": "70118"
+ },
+ {
+  "the_geom": {
+   "type": "Point",
+   "coordinates": [
+    -90.018029171682,
+    29.967582525875
+   ]
+  },
+  "objectid": "99909",
+  "caseno": "HCEC-11-00424",
+  "geopin": "41121612",
+  "o_c": "Closed",
+  "permitstatus": "Inspection - Completed No Requirements",
+  "stage": "6 - Case Closed",
+  "statdate": "20110215114459.000",
+  "zipcode": "70117"
+ }
+]

@@ -1,0 +1,93 @@
+{
+ "id": "25e8-s5xx",
+ "name": "HDLC Landmarks",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Arts, Culture, History",
+ "attribution": "HDLC",
+ "attributionLink": null,
+ "licenseId": "CC0_10",
+ "license": {
+  "name": "Creative Commons 1.0 Universal (Public Domain Dedication)",
+  "logoUrl": "images/licenses/ccZero.png",
+  "termsLink": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+ },
+ "rowsUpdatedAt": "2026-10-07 11:57",
+ "createdAt": 1628101214,
+ "viewLastModified": 1767071846,
+ "publicationDate": 1628101216,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "preservation"
+ ],
+ "metadata": {
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "gis@nola.gov",
+    "Public Access Level": "public"
+   },
+   "Source Information": {
+    "Source Department": "Historic District Landmarks Commission (HDLC)",
+    "Frequency of Data Change": "a few nominations and designations per year"
+   }
+  },
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ]
+ },
+ "description": "Historic Landmarks- updated based on nomination/designation by HDLC",
+ "columns": [
+  {
+   "f": "the_geom",
+   "n": "the_geom",
+   "t": "point"
+  },
+  {
+   "f": "objectid",
+   "n": "OBJECTID",
+   "t": "number"
+  },
+  {
+   "f": "addr",
+   "n": "Address",
+   "t": "text"
+  },
+  {
+   "f": "name",
+   "n": "Name",
+   "t": "text"
+  },
+  {
+   "f": "architect",
+   "n": "Architect",
+   "t": "text"
+  },
+  {
+   "f": "nom_des",
+   "n": "Status",
+   "t": "text"
+  },
+  {
+   "f": "no_cbd",
+   "n": "Location",
+   "t": "text"
+  },
+  {
+   "f": "date",
+   "n": "Date",
+   "t": "text"
+  },
+  {
+   "f": "hyperlink",
+   "n": "Hyperlink",
+   "t": "text"
+  },
+  {
+   "f": "editdate",
+   "n": "EditDate",
+   "t": "date"
+  }
+ ]
+}

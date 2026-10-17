@@ -1,0 +1,59 @@
+[
+ {
+  "the_geom": {
+   "type": "Point",
+   "coordinates": [
+    -90.068488049798,
+    29.938455963278
+   ]
+  },
+  "objectid": "745",
+  "businessaddress": "1216 ANNUNCIATION ST",
+  "businessname": "FLEUR DE LIS MANSION",
+  "businessstartdate": "2013-02-15",
+  "businesstype": "4703 - BED & BREAKFAST INNS",
+  "city": "NEW ORLEANS",
+  "locationx": "3681437.92149",
+  "locationy": "525320.328189",
+  "state": "LA",
+  "zip": "70130"
+ },
+ {
+  "the_geom": {
+   "type": "Point",
+   "coordinates": [
+    -90.063549252453,
+    29.961286309335
+   ]
+  },
+  "objectid": "609",
+  "businessaddress": "1003 BOURBON ST",
+  "businessname": "LAFITTE GUEST HOUSE",
+  "businessstartdate": "2017-08-30",
+  "businesstype": "4701 - HOTELS (EXC CASINO HOTELS) & MOTELS",
+  "city": "NEW ORLEANS",
+  "locationx": "3682910.07733",
+  "locationy": "533639.572101",
+  "state": "LA",
+  "zip": "70116"
+ },
+ {
+  "the_geom": {
+   "type": "Point",
+   "coordinates": [
+    -90.085946951612,
+    29.931216189033
+   ]
+  },
+  "objectid": "398",
+  "businessaddress": "2727 ST CHARLES AVE",
+  "businessname": "THE GRAND VICTORIAN BED & BREAKFAST",
+  "businessstartdate": "1998-10-01",
+  "businesstype": "4701 - HOTELS (EXC CASINO HOTELS) & MOTELS",
+  "city": "NEW ORLEANS",
+  "locationx": "3675937.20494",
+  "locationy": "522627.067898",
+  "state": "LA",
+  "zip": "70130"
+ }
+]

@@ -1,0 +1,91 @@
+{
+ "id": "kb74-hpue",
+ "name": "Overlay and Interim Zoning",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Planning, Zoning",
+ "attribution": "City Planning Commission",
+ "attributionLink": null,
+ "licenseId": "CC0_10",
+ "license": {
+  "name": "Creative Commons 1.0 Universal (Public Domain Dedication)",
+  "logoUrl": "images/licenses/ccZero.png",
+  "termsLink": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+ },
+ "rowsUpdatedAt": "2026-08-08 20:10",
+ "createdAt": 1639429355,
+ "viewLastModified": 1787684657,
+ "publicationDate": 1639429356,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "land use",
+  "cpc",
+  "zoning"
+ ],
+ "metadata": {
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "gis@nola.gov",
+    "Publisher": "City of New Orleans Enterprise GIS",
+    "Public Access Level": "public"
+   },
+   "Source Information": {
+    "Source Department": "City Planning Commission",
+    "Frequency of Data Change": "Updated frequently"
+   }
+  },
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ]
+ },
+ "description": "Overlay zoning districts are designed to require special controls in certain areas of the City that have special characteristics or special development issues. The intent of an overlay zoning district is to provide common controls over areas that require a specific type of zoning control but are typically zoned with more than one (1) base zoning district. Unless modified by the overlay zoning district regulations, the regulations of the base zoning district apply. Whenever a lot and/or development site, as defined below, is covered by more than one overlay zoning district, the regulations of each overlay zoning district shall apply, except that where the regulations of such overlay zoning districts contain an actual, implied or apparent conflict, the more restrictive regulation shall apply unless stated otherwise.",
+ "columns": [
+  {
+   "f": "the_geom",
+   "n": "the_geom",
+   "t": "multipolygon"
+  },
+  {
+   "f": "objectid",
+   "n": "OBJECTID",
+   "t": "number"
+  },
+  {
+   "f": "name",
+   "n": "Name",
+   "t": "text"
+  },
+  {
+   "f": "docket",
+   "n": "Docket",
+   "t": "text"
+  },
+  {
+   "f": "ordinance",
+   "n": "Ordinance",
+   "t": "text"
+  },
+  {
+   "f": "description",
+   "n": "Description",
+   "t": "text"
+  },
+  {
+   "f": "weblink",
+   "n": "Hyperlink",
+   "t": "text"
+  },
+  {
+   "f": "shape_starea",
+   "n": "Shape.STArea()",
+   "t": "number"
+  },
+  {
+   "f": "shape_stlength",
+   "n": "Shape.STLength()",
+   "t": "number"
+  }
+ ]
+}

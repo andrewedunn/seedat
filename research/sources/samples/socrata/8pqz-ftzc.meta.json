@@ -1,0 +1,192 @@
+{
+ "id": "8pqz-ftzc",
+ "name": "Code Enforcement Active Pipeline",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Housing, Land Use, and Blight",
+ "attribution": null,
+ "attributionLink": null,
+ "licenseId": "CC0_10",
+ "license": {
+  "name": "Creative Commons 1.0 Universal (Public Domain Dedication)",
+  "logoUrl": "images/licenses/ccZero.png",
+  "termsLink": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+ },
+ "rowsUpdatedAt": "2026-10-17 04:45",
+ "createdAt": 1380518293,
+ "viewLastModified": 1706727838,
+ "publicationDate": 1706727838,
+ "rowIdentifierColumnId": 588902267,
+ "tags": [
+  "blightstatus",
+  "active",
+  "case",
+  "violation"
+ ],
+ "metadata": {
+  "rdfSubject": "0",
+  "rdfClass": "",
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "data@nola.gov"
+   },
+   "Source Information": {
+    "Source Department": "Code Enforcement"
+   }
+  },
+  "rowIdentifier": 588902267,
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ],
+  "renderTypeConfig": {
+   "visible": {
+    "table": true
+   }
+  }
+ },
+ "description": "Please note that this data set contains Code Enforcement cases from May 12th, 2009 to present. For the purpose of analyzing active cases, please filter for \"Open\" on the first column, \"O/C\". Cases are closed in when the in rem judgement is paid and violations are abated. Please see https://www.nola.gov/code-enforcement/ for more information.",
+ "columns": [
+  {
+   "f": "o_c",
+   "n": "O/C",
+   "t": "text"
+  },
+  {
+   "f": "caseno",
+   "n": "CaseNo",
+   "t": "text"
+  },
+  {
+   "f": "location",
+   "n": "Location",
+   "t": "text"
+  },
+  {
+   "f": "stage",
+   "n": "Stage",
+   "t": "text"
+  },
+  {
+   "f": "keystatus",
+   "n": "KeyStatus",
+   "t": "text"
+  },
+  {
+   "f": "statdate",
+   "n": "StatDate",
+   "t": "calendar_date"
+  },
+  {
+   "f": "casefiled",
+   "n": "CaseFiled",
+   "t": "calendar_date"
+  },
+  {
+   "f": "initinspection",
+   "n": "InitInspection",
+   "t": "calendar_date"
+  },
+  {
+   "f": "initinspresult",
+   "n": "InitInspResult",
+   "t": "text"
+  },
+  {
+   "f": "prevhearingdate",
+   "n": "PrevHearingDate",
+   "t": "text"
+  },
+  {
+   "f": "prevhearingresult",
+   "n": "PrevHearingResult",
+   "t": "text"
+  },
+  {
+   "f": "nexthearingdate",
+   "n": "NextHearingDate",
+   "t": "text"
+  },
+  {
+   "f": "lastpermit",
+   "n": "LastPermit",
+   "t": "text"
+  },
+  {
+   "f": "permitfiling",
+   "n": "PermitFiling",
+   "t": "calendar_date"
+  },
+  {
+   "f": "permittype",
+   "n": "PermitType",
+   "t": "text"
+  },
+  {
+   "f": "permitstatus",
+   "n": "PermitStatus",
+   "t": "text"
+  },
+  {
+   "f": "unpaidfees",
+   "n": "UnpaidFees",
+   "t": "number"
+  },
+  {
+   "f": "geoaddress",
+   "n": "GeoAddress",
+   "t": "text"
+  },
+  {
+   "f": "city",
+   "n": "City",
+   "t": "text"
+  },
+  {
+   "f": "state",
+   "n": "State",
+   "t": "text"
+  },
+  {
+   "f": "zipcode",
+   "n": "Zipcode",
+   "t": "text"
+  },
+  {
+   "f": "geopin",
+   "n": "GeoPIN",
+   "t": "text"
+  },
+  {
+   "f": "xpos",
+   "n": "XPos",
+   "t": "number"
+  },
+  {
+   "f": "ypos",
+   "n": "YPos",
+   "t": "number"
+  },
+  {
+   "f": "longitude",
+   "n": "Longitude",
+   "t": "number"
+  },
+  {
+   "f": "latitude",
+   "n": "Latitude",
+   "t": "number"
+  },
+  {
+   "f": "caseid",
+   "n": "CaseID",
+   "t": "number"
+  },
+  {
+   "f": "pointlocation",
+   "n": "PointLocation",
+   "t": "point"
+  }
+ ]
+}

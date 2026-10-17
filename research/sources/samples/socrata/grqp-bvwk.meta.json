@@ -1,0 +1,186 @@
+{
+ "id": "grqp-bvwk",
+ "name": "Historical Inspection Requests",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Housing, Land Use, and Blight",
+ "attribution": "",
+ "attributionLink": null,
+ "licenseId": "CC0_10",
+ "license": {
+  "name": "Creative Commons 1.0 Universal (Public Domain Dedication)",
+  "logoUrl": "images/licenses/ccZero.png",
+  "termsLink": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+ },
+ "rowsUpdatedAt": "2015-05-20 19:55",
+ "createdAt": 1429909519,
+ "viewLastModified": 1485207665,
+ "publicationDate": 1432151737,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "permit",
+  "violation",
+  "inspection",
+  "code enforcement",
+  "abo",
+  "zoning",
+  "legacy"
+ ],
+ "metadata": {
+  "rdfSubject": "0",
+  "rdfClass": "",
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "data@nola.gov"
+   },
+   "Source Information": {
+    "Source Department": "Safety and Permits"
+   }
+  },
+  "rowIdentifier": "0",
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ],
+  "rowLabel": "Row",
+  "renderTypeConfig": {
+   "visible": {
+    "table": true
+   }
+  }
+ },
+ "description": "This dataset includes requests for inspections not associated with issuance of a permit, beginning in November 1997 and ending in March 2005, from the Safety and Permits Information Network (SPIN). Inspection requests include complaints about violations of City code reported to Safety and Permits (e.g. building, zoning, and health codes) as well as non-complaint-related inspection requests for new business applications, alcoholic beverage outlets (ABO), zoning verifications, subdivisions, and address changes.",
+ "columns": [
+  {
+   "f": "complaintnumber",
+   "n": "ComplaintNumber",
+   "t": "text"
+  },
+  {
+   "f": "recieveddate",
+   "n": "RecievedDate",
+   "t": "calendar_date"
+  },
+  {
+   "f": "housenum",
+   "n": "HouseNum",
+   "t": "text"
+  },
+  {
+   "f": "streetdir",
+   "n": "StreetDir",
+   "t": "text"
+  },
+  {
+   "f": "streetname",
+   "n": "StreetName",
+   "t": "text"
+  },
+  {
+   "f": "streetsuffix",
+   "n": "StreetSuffix",
+   "t": "text"
+  },
+  {
+   "f": "unitnumber",
+   "n": "UnitNumber",
+   "t": "text"
+  },
+  {
+   "f": "violationaddress",
+   "n": "ViolationAddress",
+   "t": "text"
+  },
+  {
+   "f": "category",
+   "n": "Category",
+   "t": "text"
+  },
+  {
+   "f": "violatorname",
+   "n": "ViolatorName",
+   "t": "text"
+  },
+  {
+   "f": "parcelowner",
+   "n": "ParcelOwner",
+   "t": "text"
+  },
+  {
+   "f": "zoning",
+   "n": "Zoning",
+   "t": "text"
+  },
+  {
+   "f": "complaintmeth",
+   "n": "ComplaintMeth",
+   "t": "text"
+  },
+  {
+   "f": "complainttype",
+   "n": "ComplaintType",
+   "t": "text"
+  },
+  {
+   "f": "complaintclass",
+   "n": "ComplaintClass",
+   "t": "text"
+  },
+  {
+   "f": "stopworkissued",
+   "n": "StopWorkIssued",
+   "t": "text"
+  },
+  {
+   "f": "description",
+   "n": "Description",
+   "t": "text"
+  },
+  {
+   "f": "inspector",
+   "n": "Inspector",
+   "t": "text"
+  },
+  {
+   "f": "resolutiontype",
+   "n": "ResolutionType",
+   "t": "text"
+  },
+  {
+   "f": "createdatetime",
+   "n": "CreateDateTime",
+   "t": "calendar_date"
+  },
+  {
+   "f": "createopid",
+   "n": "CreateOpID",
+   "t": "text"
+  },
+  {
+   "f": "updatedatetime",
+   "n": "UpdateDateTime",
+   "t": "calendar_date"
+  },
+  {
+   "f": "updateopid",
+   "n": "UpdateOpID",
+   "t": "text"
+  },
+  {
+   "f": "propertykey",
+   "n": "PropertyKey",
+   "t": "text"
+  },
+  {
+   "f": "x",
+   "n": "X",
+   "t": "number"
+  },
+  {
+   "f": "y",
+   "n": "Y",
+   "t": "number"
+  }
+ ]
+}

@@ -1,0 +1,125 @@
+{
+ "id": "nbcf-m6c2",
+ "name": "Building Permits (2018-present)",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Planning, Zoning",
+ "attribution": "Bureau of Revenue",
+ "attributionLink": null,
+ "licenseId": "CC0_10",
+ "license": {
+  "name": "Creative Commons 1.0 Universal (Public Domain Dedication)",
+  "logoUrl": "images/licenses/ccZero.png",
+  "termsLink": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+ },
+ "rowsUpdatedAt": "2025-08-17 02:03",
+ "createdAt": 1639428243,
+ "viewLastModified": 1790334170,
+ "publicationDate": 1755396182,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "permits",
+  "revenue",
+  "construction"
+ ],
+ "metadata": {
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "gis@nola.gov",
+    "Public Access Level": "public"
+   },
+   "Source Information": {
+    "Source Department": "Safety and Permits",
+    "Frequency of Data Change": "Daily"
+   }
+  },
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ]
+ },
+ "description": "Building Permits symbolized by permit type. Pulled from LAMA database weekly with records beginning June 2012.",
+ "columns": [
+  {
+   "f": "the_geom",
+   "n": "the_geom",
+   "t": "point"
+  },
+  {
+   "f": "objectid",
+   "n": "OBJECTID",
+   "t": "number"
+  },
+  {
+   "f": "address",
+   "n": "Address",
+   "t": "text"
+  },
+  {
+   "f": "constructionval",
+   "n": "ConstructionVal",
+   "t": "text"
+  },
+  {
+   "f": "descr",
+   "n": "Descr",
+   "t": "text"
+  },
+  {
+   "f": "issuedate",
+   "n": "IssueDate",
+   "t": "date"
+  },
+  {
+   "f": "landuse",
+   "n": "LandUse",
+   "t": "text"
+  },
+  {
+   "f": "locationx",
+   "n": "LocationX",
+   "t": "text"
+  },
+  {
+   "f": "locationy",
+   "n": "LocationY",
+   "t": "text"
+  },
+  {
+   "f": "numstring",
+   "n": "NumString",
+   "t": "text"
+  },
+  {
+   "f": "permittype",
+   "n": "PermitType",
+   "t": "text"
+  },
+  {
+   "f": "prmtid",
+   "n": "PrmtID",
+   "t": "text"
+  },
+  {
+   "f": "proposedusecategory",
+   "n": "ProposedUseCategory",
+   "t": "text"
+  },
+  {
+   "f": "proposeduseindustry",
+   "n": "ProposedUseIndustry",
+   "t": "text"
+  },
+  {
+   "f": "topcat",
+   "n": "TopCat",
+   "t": "text"
+  },
+  {
+   "f": "globalid",
+   "n": "GlobalID",
+   "t": "text"
+  }
+ ]
+}

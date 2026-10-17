@@ -1,0 +1,104 @@
+[
+ {
+  "nopd_item": "A1096622",
+  "type_": "24",
+  "typetext": "MEDICAL",
+  "priority": "2D",
+  "initialtype": "35",
+  "initialtypetext": "SIMPLE BATTERY",
+  "initialpriority": "1F",
+  "mapx": "37369000",
+  "mapy": "3513814",
+  "timecreate": "2022-01-10T17:21:07.940",
+  "timedispatch": "2022-01-10T20:19:46.603",
+  "timearrive": "2022-01-10T20:34:03.580",
+  "timeclosed": "2022-01-10T23:10:07.257",
+  "disposition": "RTF",
+  "dispositiontext": "REPORT TO FOLLOW",
+  "selfinitiated": "N",
+  "beat": "2A02",
+  "block_address": "002XX Henry Clay Ave",
+  "zip": "70118",
+  "policedistrict": "2",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    0,
+    0
+   ]
+  }
+ },
+ {
+  "nopd_item": "A1898722",
+  "type_": "103D",
+  "typetext": "DOMESTIC DISTURBANCE",
+  "priority": "2C",
+  "initialtype": "67A",
+  "initialtypetext": "AUTO THEFT",
+  "initialpriority": "1D",
+  "mapx": "3671098",
+  "mapy": "535885",
+  "timecreate": "2022-01-17T21:06:24.663",
+  "timedispatch": "2022-01-19T07:25:57.380",
+  "timearrive": "2022-01-19T07:38:14.783",
+  "timeclosed": "2022-01-19T09:10:50.773",
+  "disposition": "RTF",
+  "dispositiontext": "REPORT TO FOLLOW",
+  "selfinitiated": "N",
+  "beat": "1L03",
+  "block_address": "037XX D'Hemecourt St",
+  "zip": "70119",
+  "policedistrict": "1",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -90.10076745,
+    29.96781152
+   ]
+  },
+  ":@computed_region_ewbu_t8bu": "10067",
+  ":@computed_region_k37d_then": "2",
+  ":@computed_region_m56f_hbma": "109",
+  ":@computed_region_7fw3_kdpf": "47",
+  ":@computed_region_spev_d8jm": "3768",
+  ":@computed_region_sikx_bdeb": "109",
+  ":@computed_region_evki_aju8": "6",
+  ":@computed_region_u4yh_3wk9": "10067"
+ },
+ {
+  "nopd_item": "A1933722",
+  "type_": "20I",
+  "typetext": "AUTO ACCIDENT WITH INJURY",
+  "priority": "2D",
+  "initialtype": "20",
+  "initialtypetext": "AUTO ACCIDENT",
+  "initialpriority": "1E",
+  "mapx": "3671195",
+  "mapy": "535351",
+  "timecreate": "2022-01-18T07:16:16.767",
+  "timearrive": "2022-01-18T07:41:30.560",
+  "timeclosed": "2022-01-18T09:58:58.313",
+  "disposition": "RTF",
+  "dispositiontext": "REPORT TO FOLLOW",
+  "selfinitiated": "N",
+  "beat": "1L03",
+  "block_address": "Tulane Ave & S Genois St",
+  "zip": "70119",
+  "policedistrict": "1",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -90.10047893,
+    29.96634034
+   ]
+  },
+  ":@computed_region_ewbu_t8bu": "131",
+  ":@computed_region_k37d_then": "2",
+  ":@computed_region_m56f_hbma": "109",
+  ":@computed_region_7fw3_kdpf": "47",
+  ":@computed_region_spev_d8jm": "3768",
+  ":@computed_region_sikx_bdeb": "109",
+  ":@computed_region_evki_aju8": "6",
+  ":@computed_region_u4yh_3wk9": "131"
+ }
+]

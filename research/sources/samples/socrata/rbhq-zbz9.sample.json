@@ -1,0 +1,71 @@
+[
+ {
+  "name": "1002 N Broad St",
+  "address": "1002 N Broad St",
+  "type": "Short Term Rental Commercial Owner",
+  "bedroom_limit": "3",
+  "guest_limit": "6",
+  "expiration_date": "2025-11-26T23:59:00.000",
+  "location": {
+   "latitude": "29.9730275248524",
+   "longitude": "-90.0805496425567",
+   "human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+  },
+  "x": "3677478.67",
+  "y": "537851.82",
+  ":@computed_region_ewbu_t8bu": "3677",
+  ":@computed_region_k37d_then": "4",
+  ":@computed_region_m56f_hbma": "255",
+  ":@computed_region_7fw3_kdpf": "58",
+  ":@computed_region_spev_d8jm": "3768",
+  ":@computed_region_sikx_bdeb": "255",
+  ":@computed_region_evki_aju8": "6",
+  ":@computed_region_u4yh_3wk9": "3677"
+ },
+ {
+  "name": "1006 Race St",
+  "address": "1006 Race St",
+  "type": "Short Term Rental Commercial Owner",
+  "bedroom_limit": "5",
+  "guest_limit": "10",
+  "expiration_date": "2025-08-17T23:59:00.000",
+  "location": {
+   "latitude": "29.9341057406729",
+   "longitude": "-90.0715577293161",
+   "human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+  },
+  "x": "3680481.35",
+  "y": "523729.66",
+  ":@computed_region_ewbu_t8bu": "11079",
+  ":@computed_region_k37d_then": "2",
+  ":@computed_region_m56f_hbma": "58",
+  ":@computed_region_7fw3_kdpf": "42",
+  ":@computed_region_spev_d8jm": "4152",
+  ":@computed_region_sikx_bdeb": "58",
+  ":@computed_region_evki_aju8": "4",
+  ":@computed_region_u4yh_3wk9": "11079"
+ },
+ {
+  "name": "1012 Elysian Fields Ave Apt 1",
+  "address": "1012 Elysian Fields Ave Apt 1",
+  "type": "Short Term Rental Commercial Owner",
+  "bedroom_limit": "1",
+  "guest_limit": "2",
+  "expiration_date": "2025-10-15T23:59:00.000",
+  "location": {
+   "latitude": "29.9678544498245",
+   "longitude": "-90.0570963583748",
+   "human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+  },
+  "x": "3684924.89",
+  "y": "536052.64",
+  ":@computed_region_ewbu_t8bu": "2007",
+  ":@computed_region_k37d_then": "3",
+  ":@computed_region_m56f_hbma": "249",
+  ":@computed_region_7fw3_kdpf": "44",
+  ":@computed_region_spev_d8jm": "3458",
+  ":@computed_region_sikx_bdeb": "249",
+  ":@computed_region_evki_aju8": "5",
+  ":@computed_region_u4yh_3wk9": "2007"
+ }
+]

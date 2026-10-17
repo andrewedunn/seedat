@@ -1,0 +1,775 @@
+{
+  "id" : "3ehi-je3s",
+  "name" : "Code Enforcement All Violations",
+  "assetType" : "dataset",
+  "averageRating" : 0,
+  "category" : "Housing, Land Use, and Blight",
+  "createdAt" : 1391620148,
+  "description" : "Code Enforcement All Violations.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 8267,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "indexUpdatedAt" : 1568694992,
+  "licenseId" : "CC0_10",
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 7383257,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1392780900,
+  "publicationGroup" : 1466899,
+  "publicationStage" : "published",
+  "rowClass" : "",
+  "rowIdentifierColumnId" : 134154036,
+  "rowsUpdatedAt" : 1792210252,
+  "rowsUpdatedBy" : "uqfu-rapx",
+  "tableId" : 1481451,
+  "totalTimesRated" : 0,
+  "viewCount" : 23546,
+  "viewLastModified" : 1706653523,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1392780900,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 701515,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1392780900,
+    "targetAudience" : "public",
+    "workflowId" : 2032,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "failureCount" : 0,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "ubzy-vsh3",
+      "displayName" : "Socrata Service Account"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 134154035,
+    "name" : "CaseID",
+    "dataTypeName" : "number",
+    "fieldName" : "caseid",
+    "position" : 1,
+    "renderTypeName" : "number",
+    "tableColumnId" : 17970229,
+    "width" : 172,
+    "cachedContents" : {
+      "largest" : "338124",
+      "non_null" : "272896",
+      "average" : "199949.7518042148",
+      "null" : "0",
+      "top" : [ {
+        "item" : "286945",
+        "count" : "151"
+      }, {
+        "item" : "287978",
+        "count" : "90"
+      }, {
+        "item" : "170558",
+        "count" : "89"
+      }, {
+        "item" : "155103",
+        "count" : "85"
+      }, {
+        "item" : "172519",
+        "count" : "83"
+      }, {
+        "item" : "170046",
+        "count" : "80"
+      }, {
+        "item" : "168949",
+        "count" : "79"
+      }, {
+        "item" : "163887",
+        "count" : "70"
+      }, {
+        "item" : "167715",
+        "count" : "70"
+      }, {
+        "item" : "288330",
+        "count" : "69"
+      }, {
+        "item" : "170640",
+        "count" : "68"
+      }, {
+        "item" : "294950",
+        "count" : "67"
+      }, {
+        "item" : "163908",
+        "count" : "66"
+      }, {
+        "item" : "167251",
+        "count" : "63"
+      }, {
+        "item" : "164614",
+        "count" : "62"
+      }, {
+        "item" : "263458",
+        "count" : "62"
+      }, {
+        "item" : "293230",
+        "count" : "61"
+      }, {
+        "item" : "159804",
+        "count" : "61"
+      }, {
+        "item" : "170399",
+        "count" : "58"
+      }, {
+        "item" : "292704",
+        "count" : "56"
+      } ],
+      "smallest" : "19759",
+      "not_null" : "186140",
+      "count" : "272896",
+      "sum" : "36765760613",
+      "cardinality" : "272896"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "true",
+      "align" : "right"
+    }
+  }, {
+    "id" : 134154036,
+    "name" : "ViolationID",
+    "dataTypeName" : "number",
+    "fieldName" : "violationid",
+    "position" : 2,
+    "renderTypeName" : "number",
+    "tableColumnId" : 17970230,
+    "width" : 232,
+    "cachedContents" : {
+      "largest" : "1052761",
+      "non_null" : "272896",
+      "average" : "643647.3145723997",
+      "null" : "0",
+      "top" : [ {
+        "item" : "616133",
+        "count" : "1"
+      }, {
+        "item" : "896642",
+        "count" : "1"
+      }, {
+        "item" : "1003411",
+        "count" : "1"
+      }, {
+        "item" : "599400",
+        "count" : "1"
+      }, {
+        "item" : "533497",
+        "count" : "1"
+      }, {
+        "item" : "561877",
+        "count" : "1"
+      }, {
+        "item" : "849050",
+        "count" : "1"
+      }, {
+        "item" : "599766",
+        "count" : "1"
+      }, {
+        "item" : "855866",
+        "count" : "1"
+      }, {
+        "item" : "620957",
+        "count" : "1"
+      }, {
+        "item" : "547833",
+        "count" : "1"
+      }, {
+        "item" : "732756",
+        "count" : "1"
+      }, {
+        "item" : "558507",
+        "count" : "1"
+      }, {
+        "item" : "524991",
+        "count" : "1"
+      }, {
+        "item" : "769420",
+        "count" : "1"
+      }, {
+        "item" : "687032",
+        "count" : "1"
+      }, {
+        "item" : "663624",
+        "count" : "1"
+      }, {
+        "item" : "609514",
+        "count" : "1"
+      }, {
+        "item" : "680628",
+        "count" : "1"
+      }, {
+        "item" : "847835",
+        "count" : "1"
+      } ],
+      "smallest" : "311581",
+      "not_null" : "186140",
+      "count" : "272896",
+      "sum" : "118350649967",
+      "cardinality" : "272896"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "true",
+      "align" : "right"
+    }
+  }, {
+    "id" : 134154037,
+    "name" : "CaseNo",
+    "dataTypeName" : "text",
+    "fieldName" : "caseno",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 17970231,
+    "width" : 172,
+    "cachedContents" : {
+      "largest" : "HCEVU-HIS09-00932",
+      "non_null" : "272896",
+      "null" : "0",
+      "top" : [ {
+        "item" : "23-03472-MPM",
+        "count" : "151"
+      }, {
+        "item" : "23-04505-MPM",
+        "count" : "90"
+      }, {
+        "item" : "12-10645-PNBL",
+        "count" : "89"
+      }, {
+        "item" : "CEHB-11-7339",
+        "count" : "85"
+      }, {
+        "item" : "12-12604-PNBL",
+        "count" : "83"
+      }, {
+        "item" : "12-10133-PNBL",
+        "count" : "80"
+      }, {
+        "item" : "12-09036-PNBL",
+        "count" : "79"
+      }, {
+        "item" : "12-07803-PNBL",
+        "count" : "70"
+      }, {
+        "item" : "HCEC-12-00620",
+        "count" : "70"
+      }, {
+        "item" : "23-04857-MPM",
+        "count" : "69"
+      }, {
+        "item" : "12-10727-PNBL",
+        "count" : "68"
+      }, {
+        "item" : "24-02198-MPM",
+        "count" : "67"
+      }, {
+        "item" : "CEHB-12-1002",
+        "count" : "66"
+      }, {
+        "item" : "12-07341-PNBL",
+        "count" : "63"
+      }, {
+        "item" : "20-22838-MPM",
+        "count" : "62"
+      }, {
+        "item" : "CEHB-12-1363",
+        "count" : "62"
+      }, {
+        "item" : "CEHB-12-0219",
+        "count" : "61"
+      }, {
+        "item" : "24-00482-MPM",
+        "count" : "61"
+      }, {
+        "item" : "12-10486-PNBL",
+        "count" : "58"
+      }, {
+        "item" : "24-00599-MPM",
+        "count" : "56"
+      } ],
+      "smallest" : "09-002855",
+      "not_null" : "186140",
+      "count" : "272896",
+      "cardinality" : "272896"
+    },
+    "format" : { }
+  }, {
+    "id" : 134154038,
+    "name" : "Location",
+    "dataTypeName" : "text",
+    "fieldName" : "location",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 17970232,
+    "width" : 196,
+    "cachedContents" : {
+      "largest" : "  4200 Erato St",
+      "non_null" : "272889",
+      "null" : "7",
+      "top" : [ {
+        "item" : "6700 Plaza Dr",
+        "count" : "198"
+      }, {
+        "item" : "9660 Lake Forest Blvd",
+        "count" : "174"
+      }, {
+        "item" : "4402 Reynes St",
+        "count" : "167"
+      }, {
+        "item" : "1900 Numa St",
+        "count" : "160"
+      }, {
+        "item" : "6605 Dwyer Rd",
+        "count" : "143"
+      }, {
+        "item" : "4760 Laine Ave",
+        "count" : "138"
+      }, {
+        "item" : "6324 Chef Menteur Hwy",
+        "count" : "134"
+      }, {
+        "item" : "2013 Dumaine St",
+        "count" : "134"
+      }, {
+        "item" : "4420 Laine Ave",
+        "count" : "127"
+      }, {
+        "item" : "2524 Gravier St",
+        "count" : "122"
+      }, {
+        "item" : "1008 Jourdan Ave",
+        "count" : "121"
+      }, {
+        "item" : "1450 N Dorgenois St",
+        "count" : "109"
+      }, {
+        "item" : "6701 Cindy Pl",
+        "count" : "107"
+      }, {
+        "item" : "10141 Curran Rd",
+        "count" : "104"
+      }, {
+        "item" : "7857 S Coronet Ct",
+        "count" : "101"
+      }, {
+        "item" : "2473 N Johnson St",
+        "count" : "101"
+      }, {
+        "item" : "2647-2649 Abundance St",
+        "count" : "100"
+      }, {
+        "item" : "13501 Chef Menteur Hwy",
+        "count" : "100"
+      }, {
+        "item" : "7160 W Tamaron Blvd",
+        "count" : "100"
+      }, {
+        "item" : "9001 Palmetto St",
+        "count" : "99"
+      } ],
+      "smallest" : "0907901 Thomas St",
+      "not_null" : "186140",
+      "count" : "272896",
+      "cardinality" : "272896"
+    },
+    "format" : { }
+  }, {
+    "id" : 134154039,
+    "name" : "ViolationDate",
+    "dataTypeName" : "calendar_date",
+    "fieldName" : "violationdate",
+    "position" : 5,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 18109107,
+    "width" : 100,
+    "cachedContents" : {
+      "largest" : "2026-10-16T13:40:15.000",
+      "non_null" : "272896",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2013-11-15T00:00:00.000",
+        "count" : "528"
+      }, {
+        "item" : "2013-11-14T00:00:00.000",
+        "count" : "462"
+      }, {
+        "item" : "2013-03-18T00:00:00.000",
+        "count" : "384"
+      }, {
+        "item" : "2015-02-23T00:00:00.000",
+        "count" : "339"
+      }, {
+        "item" : "2014-11-13T00:00:00.000",
+        "count" : "330"
+      }, {
+        "item" : "2015-02-03T00:00:00.000",
+        "count" : "322"
+      }, {
+        "item" : "2013-11-18T00:00:00.000",
+        "count" : "319"
+      }, {
+        "item" : "2015-02-05T00:00:00.000",
+        "count" : "314"
+      }, {
+        "item" : "2019-04-18T00:00:00.000",
+        "count" : "306"
+      }, {
+        "item" : "2014-08-27T00:00:00.000",
+        "count" : "296"
+      }, {
+        "item" : "2014-10-08T00:00:00.000",
+        "count" : "295"
+      }, {
+        "item" : "2014-12-04T00:00:00.000",
+        "count" : "292"
+      }, {
+        "item" : "2014-09-29T00:00:00.000",
+        "count" : "286"
+      }, {
+        "item" : "2013-04-23T00:00:00.000",
+        "count" : "281"
+      }, {
+        "item" : "2019-05-23T00:00:00.000",
+        "count" : "276"
+      }, {
+        "item" : "2013-11-25T00:00:00.000",
+        "count" : "275"
+      }, {
+        "item" : "2014-08-25T00:00:00.000",
+        "count" : "269"
+      }, {
+        "item" : "2015-02-26T00:00:00.000",
+        "count" : "261"
+      }, {
+        "item" : "2019-06-11T00:00:00.000",
+        "count" : "256"
+      }, {
+        "item" : "2019-06-05T00:00:00.000",
+        "count" : "247"
+      } ],
+      "smallest" : "2008-05-19T00:00:00.000",
+      "not_null" : "186140",
+      "count" : "272896",
+      "cardinality" : "272896"
+    },
+    "format" : { }
+  }, {
+    "id" : 134154040,
+    "name" : "CodeSection",
+    "dataTypeName" : "text",
+    "fieldName" : "codesection",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 17970233,
+    "width" : 232,
+    "cachedContents" : {
+      "largest" : "505.1",
+      "non_null" : "272896",
+      "null" : "0",
+      "top" : [ {
+        "item" : "26-160(a)",
+        "count" : "31820"
+      }, {
+        "item" : "26-157",
+        "count" : "28138"
+      }, {
+        "item" : "26-161(a)",
+        "count" : "24687"
+      }, {
+        "item" : "26-159",
+        "count" : "16552"
+      }, {
+        "item" : "26-169",
+        "count" : "14191"
+      }, {
+        "item" : "26-172",
+        "count" : "14057"
+      }, {
+        "item" : "26-167(b)",
+        "count" : "13882"
+      }, {
+        "item" : "26-167(a)",
+        "count" : "11991"
+      }, {
+        "item" : "26-171",
+        "count" : "11941"
+      }, {
+        "item" : "26-179",
+        "count" : "9811"
+      }, {
+        "item" : "28-33",
+        "count" : "8829"
+      }, {
+        "item" : "26-163",
+        "count" : "8044"
+      }, {
+        "item" : "26-167(c)",
+        "count" : "5568"
+      }, {
+        "item" : "26-168",
+        "count" : "5140"
+      }, {
+        "item" : "26-174",
+        "count" : "4995"
+      }, {
+        "item" : "26-181",
+        "count" : "4826"
+      }, {
+        "item" : "26-164",
+        "count" : "4795"
+      }, {
+        "item" : "28-11",
+        "count" : "4515"
+      }, {
+        "item" : "28-20",
+        "count" : "4413"
+      }, {
+        "item" : "26-176",
+        "count" : "4408"
+      } ],
+      "smallest" : "138.2 (66-282)",
+      "not_null" : "186140",
+      "count" : "272896",
+      "cardinality" : "272896"
+    },
+    "format" : { }
+  }, {
+    "id" : 134154041,
+    "name" : "Violation",
+    "dataTypeName" : "text",
+    "fieldName" : "violation",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 17970234,
+    "width" : 208,
+    "cachedContents" : {
+      "largest" : "Walkways/Stairways Obstructed",
+      "non_null" : "272892",
+      "null" : "4",
+      "top" : [ {
+        "item" : "160 Weeds and Plant Growth",
+        "count" : "31820"
+      }, {
+        "item" : "157 Sanitation",
+        "count" : "28138"
+      }, {
+        "item" : "161 Rodent Harborage",
+        "count" : "24687"
+      }, {
+        "item" : "167 Paint or Protective Treatment",
+        "count" : "13882"
+      }, {
+        "item" : "159 Sidewalks",
+        "count" : "12920"
+      }, {
+        "item" : "167 Exterior Surfaces",
+        "count" : "11991"
+      }, {
+        "item" : "172 Roofs",
+        "count" : "8467"
+      }, {
+        "item" : "179 Windows",
+        "count" : "7647"
+      }, {
+        "item" : "171 Weatherboards",
+        "count" : "7152"
+      }, {
+        "item" : "172 Gutters and Downspouts",
+        "count" : "5590"
+      }, {
+        "item" : "167 Siding and Masonry",
+        "count" : "5568"
+      }, {
+        "item" : "168 Premises Identification",
+        "count" : "5140"
+      }, {
+        "item" : "174 Decorative Features",
+        "count" : "4995"
+      }, {
+        "item" : "163 Fences and Walls",
+        "count" : "4891"
+      }, {
+        "item" : "181 Doors",
+        "count" : "4826"
+      }, {
+        "item" : "164 Motor Vehicles",
+        "count" : "4795"
+      }, {
+        "item" : "169 Studs",
+        "count" : "4688"
+      }, {
+        "item" : "171 Exterior Walls",
+        "count" : "4630"
+      }, {
+        "item" : "28-33 Duty to Mow Grass",
+        "count" : "4512"
+      }, {
+        "item" : "28-20 Rodent Harborage",
+        "count" : "4413"
+      } ],
+      "smallest" : "157 Sanitation",
+      "not_null" : "186139",
+      "count" : "272896",
+      "cardinality" : "272896"
+    },
+    "format" : { }
+  }, {
+    "id" : 134154042,
+    "name" : "Description",
+    "dataTypeName" : "text",
+    "fieldName" : "description",
+    "position" : 8,
+    "renderTypeName" : "text",
+    "tableColumnId" : 17970235,
+    "width" : 232,
+    "cachedContents" : {
+      "largest" : "Windows must be kept in good condition and weather tight.",
+      "non_null" : "272892",
+      "null" : "4",
+      "top" : [ {
+        "item" : "(a)\tAll premises and exterior property shall be maintained free from weeds or plant growth in excess of eighteen (18) inches.  All noxious weeds shall be prohibited.  Weeds shall be defined as all grasses, annual plants and vegetation, other than trees or shrubs.  Said term shall not include cultivated flowers and gardens.",
+        "count" : "31820"
+      }, {
+        "item" : "All exterior property and premises shall be maintained in a clean, safe and sanitary condition, free from any accumulation of trash, litter, debris, garbage, waste, rubbish or other similar material.  Every occupant of a structure shall dispose of all rubbish in a clean and sanitary manner by placing such trash in approved container(s), as provided in Chapter 138 of the Code of the City of New Orleans.",
+        "count" : "28138"
+      }, {
+        "item" : "(a)\tAll structures and exterior property shall be kept free from rodent harborage and infestation.  Where rodents are found, they shall be promptly exterminated by approved processes which will not be injurious to human health. After extermination, proper precautions shall be taken to eliminate rodent harborage and prevent re-infestation.",
+        "count" : "24687"
+      }, {
+        "item" : "All sidewalks, walkways, driveways, parking spaces and similar areas shall be kept in a proper state of repair and maintained free from hazardous conditions, including but not limited to, deterioration, deformation, fractures, fissures, spalling, or detached, dislodged or failing connections.",
+        "count" : "16552"
+      }, {
+        "item" : "All structural members shall be maintained free from deterioration and shall be capable of safely supporting the imposed dead and live loads of the structure’s legal use and occupancy.",
+        "count" : "14191"
+      }, {
+        "item" : "The roof and flashing shall be sound, tight and not have defects that admit rain.  Roofs must be adequate to prevent dampness or deterioration in the walls or interior portion of the structure. Roof drains, gutters and downspouts must be maintained in good repair and free from obstructions.  Roof water shall not be discharged in a manner that it falls onto adjacent property.  Roof tiles, shingles, and any other attachments shall be properly attached and kept in good condition.",
+        "count" : "14057"
+      }, {
+        "item" : "Exterior wood surfaces, other than decay-resistant woods, shall be protected from the elements and decay by painting or other protective covering or treatment.  Peeling, flaking and chipped paint shall be eliminated and surfaces repainted.",
+        "count" : "13882"
+      }, {
+        "item" : "All exterior surfaces, including but not limited to: doors, door and window frames, cornices, porches, trim, balconies, decks, and fences, shall be maintained in good condition.",
+        "count" : "11991"
+      }, {
+        "item" : "Exterior walls must be free from holes, breaks, and loose or rotting materials; and maintained weatherproof and properly surface coated where required to prevent deterioration.",
+        "count" : "11941"
+      }, {
+        "item" : "Every window, skylight, door and frame shall be kept in sound condition, good repair and weather tight.  All glazing materials shall be maintained free from cracks and holes.  Every window, other than fixed windows, shall be operable and capable of being held in position by window hardware.",
+        "count" : "9811"
+      }, {
+        "item" : "All accessory structures, including detached garages, fences and walls, shall be maintained structurally sound and in good repair.",
+        "count" : "8043"
+      }, {
+        "item" : "All siding and masonry joints, as well as those between the building envelope and the perimeter of windows, doors and skylights, shall be maintained weather resistant and water tight.",
+        "count" : "5568"
+      }, {
+        "item" : "Buildings shall have approved address numbers placed in a position to be plainly legible and visible from the street or road fronting the property.  These numbers shall contrast with their background.  Address numbers shall be Arabic numerals or alphabetic letters.  Numbers shall be a minimum of four inches in height with a minimum width of .5 inches.",
+        "count" : "5140"
+      }, {
+        "item" : "All cornices, belt courses, corbels, terra cotta trim, wall facings and similar decorative features shall be maintained in good repair with proper anchorage and in a safe condition.",
+        "count" : "4995"
+      }, {
+        "item" : "All exterior doors, door assemblies and hardware shall be maintained in good condition and all exterior doors shall lock tightly to secure the door.",
+        "count" : "4826"
+      }, {
+        "item" : "Except as provided for in other regulations, no inoperative and/or unlicensed motor vehicle shall be parked, kept or stored on any premises, and no vehicle shall at any time be in a state of major disassembly, disrepair, or in the process of being stripped or dismantled.  Painting of vehicles is prohibited.",
+        "count" : "4795"
+      }, {
+        "item" : "It is the duty of the property owner to at all times cut and mow the grass and weeds on the property to the curbline on all sides, keeping the height below 18 inches and removing cuttings.",
+        "count" : "4512"
+      }, {
+        "item" : "All structures and exterior property must be kept free from rodent harborage and infestation. When found, rodents must be promptly exterminated by approved processes.",
+        "count" : "4413"
+      }, {
+        "item" : "Every exterior stairway, deck, porch, balcony and gallery, and all appurtenances attached thereto, shall be maintained structurally sound, safe and in good repair, with proper anchorage and capable of supporting the imposed loads.",
+        "count" : "4407"
+      }, {
+        "item" : "It is the duty of the property owner to at all times remove any trash, debris, refuse, or discarded matter from the property.",
+        "count" : "4317"
+      } ],
+      "smallest" : "(a)\tAll premises and exterior property shall be maintained free from weeds or plant growth in excess of eighteen (18) inches.  All noxious weeds shall be prohibited.  Weeds shall be defined as all grasses, annual plants and vegetation, other than trees or shrubs.  Said term shall not include cultivated flowers and gardens.",
+      "not_null" : "186140",
+      "count" : "272896",
+      "cardinality" : "272896"
+    },
+    "format" : { }
+  }, {
+    "id" : 134154043,
+    "name" : "LastUpload",
+    "dataTypeName" : "calendar_date",
+    "fieldName" : "lastupload",
+    "position" : 9,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 17973556,
+    "width" : 100,
+    "cachedContents" : {
+      "non_null" : "0",
+      "null" : "272896",
+      "not_null" : "186140",
+      "count" : "272896",
+      "cardinality" : "272896"
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "Creative Commons 1.0 Universal (Public Domain Dedication)",
+    "logoUrl" : "images/licenses/ccZero.png",
+    "termsLink" : "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+  },
+  "metadata" : {
+    "rdfSubject" : "0",
+    "rdfClass" : "",
+    "custom_fields" : {
+      "Common Core" : {
+        "Contact Email" : "data@nola.gov"
+      },
+      "Source Information" : {
+        "Source Department" : "Code Enforcement"
+      }
+    },
+    "rowIdentifier" : 134154036,
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ],
+    "renderTypeConfig" : {
+      "visible" : {
+        "table" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "ubzy-vsh3",
+    "displayName" : "Socrata Service Account",
+    "screenName" : "Socrata Service Account",
+    "type" : "interactive"
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "ubzy-vsh3",
+    "displayName" : "Socrata Service Account",
+    "screenName" : "Socrata Service Account",
+    "type" : "interactive"
+  },
+  "tags" : [ "blightstatus", "violation" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

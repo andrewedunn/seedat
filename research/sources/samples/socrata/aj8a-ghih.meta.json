@@ -1,0 +1,110 @@
+{
+ "id": "aj8a-ghih",
+ "name": "Live Entertainment Permits",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Recreation and Culture",
+ "attribution": "Bureau of Revenue",
+ "attributionLink": null,
+ "licenseId": "CC0_10",
+ "license": {
+  "name": "Creative Commons 1.0 Universal (Public Domain Dedication)",
+  "logoUrl": "images/licenses/ccZero.png",
+  "termsLink": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+ },
+ "rowsUpdatedAt": "2025-08-17 02:01",
+ "createdAt": 1639428117,
+ "viewLastModified": 1790334110,
+ "publicationDate": 1755396095,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "revenue",
+  "permits",
+  "entertainment"
+ ],
+ "metadata": {
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "gis@nola.gov",
+    "Public Access Level": "public"
+   },
+   "Source Information": {
+    "Source Department": "Revenue",
+    "Frequency of Data Change": "Monthly"
+   }
+  },
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ]
+ },
+ "description": "Venues with active Live Entertainment Permits. Data provided by Bureau of Revenue, updated weekly.",
+ "columns": [
+  {
+   "f": "the_geom",
+   "n": "the_geom",
+   "t": "point"
+  },
+  {
+   "f": "objectid",
+   "n": "OBJECTID",
+   "t": "number"
+  },
+  {
+   "f": "businessaddress",
+   "n": "BusinessAddress",
+   "t": "text"
+  },
+  {
+   "f": "businessname",
+   "n": "BusinessName",
+   "t": "text"
+  },
+  {
+   "f": "city",
+   "n": "City",
+   "t": "text"
+  },
+  {
+   "f": "ownername",
+   "n": "OwnerName",
+   "t": "text"
+  },
+  {
+   "f": "permittype",
+   "n": "PermitType",
+   "t": "text"
+  },
+  {
+   "f": "state",
+   "n": "State",
+   "t": "text"
+  },
+  {
+   "f": "suite",
+   "n": "Suite",
+   "t": "text"
+  },
+  {
+   "f": "zip",
+   "n": "Zip",
+   "t": "text"
+  },
+  {
+   "f": "locationx",
+   "n": "LocationX",
+   "t": "text"
+  },
+  {
+   "f": "locationy",
+   "n": "LocationY",
+   "t": "text"
+  },
+  {
+   "f": "globalid",
+   "n": "GlobalID",
+   "t": "text"
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+HTTP/2 302 
+cache-control: private,no-store, no-cache, must-revalidate, private
+pragma: no-cache
+content-type: text/html; charset=utf-8
+expires: -1
+location: /Search.aspx
+set-cookie: ASP.NET_SessionId=fzg4nzh5mkodxowrayabp1zz; path=/; secure; HttpOnly; SameSite=Lax
+x-aspnet-version: 4.0.30319
+set-cookie: bg_ok=1; path=/; secure; SameSite=Lax
+strict-transport-security: max-age=31536000
+referrer-policy: strict-origin
+permissions-policy: camera=*,geolocation=*,microphone=*,autoplay=*,fullscreen=*,picture-in-picture=*,syncxhr=*,encrypted-media=*,oversized-images=*
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+content-security-policy: script-src https: 'unsafe-inline' 'unsafe-eval'; style-src https: 'unsafe-inline' 'unsafeeval'; img-src https: data:; font-src https: data:;
+date: Sat, 17 Oct 2026 16:50:44 GMT
+content-length: 729
+

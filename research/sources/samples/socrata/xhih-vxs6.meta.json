@@ -1,0 +1,182 @@
+{
+ "id": "xhih-vxs6",
+ "name": "Grass Cutting (Lot Abatement/Chapter 66)",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Housing, Land Use, and Blight",
+ "attribution": null,
+ "attributionLink": null,
+ "licenseId": null,
+ "license": null,
+ "rowsUpdatedAt": "2026-10-17 03:25",
+ "createdAt": 1618501158,
+ "viewLastModified": 1636477300,
+ "publicationDate": 1636477300,
+ "rowIdentifierColumnId": 551502771,
+ "tags": null,
+ "metadata": {
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "data@nola.gov"
+   },
+   "Source Information": {
+    "Source Department": "Safety and Permits"
+   }
+  },
+  "rowIdentifier": 551502771,
+  "rowLabel": "Case",
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ]
+ },
+ "description": "The City of New Orleans can cut the grass on private property when the owners fail to do so.\n<br><br>\nWhy? Lot maintenance has a role to play in: \n<ul>\n<li>improving quality of life for all residents</li>\n<li>creating safer, healthier neighborhoods</li>\n<li>protecting property values</li>\n<li>stimulating economic development</li>\n</ul>\n<br>\nHow? The City aims to make the most of the limited funds it has to cut a lot of grass that needs cutting by:\n<ul>\n<li>Targeting tipping point neighborhoods and lots near occupied properties, schools, corners and investments</li>\n<li>Recovering costs by billing the property owners for the cuts</li>\n<li>Building public trust to secure additional funding in the future by more quickly responding to resident\u2019s requests</li>\n</ul>\n<br>\nWhat can you do?\n<ul>\n<li>Find out the status of a property with high grass in your neighborhood on this map</li>\n<li>Report a property with high grass by calling 311 or <a href=\"https://nola311.org/\" target=\"_blank\">submitting a 311 request online</a></li>\n<li>Apply to <a href=\"https://www.nola.gov/code-enforcement/mow-to-own/\" target=\"_blank\">\"mow to own\"</a> a property next to yours that has been adjudicated by the City</li>\n<li>Host a neighborhood clean-up by contacting the <a href=\"mailto:neighborhoodengagement@nola.gov\">Mayor\u2019s Office of Neighborhood Engagement</a></li>\n<li>Pay your bill if the City cut your grass</li>\n</ul>",
+ "columns": [
+  {
+   "f": "o_c",
+   "n": "Open / Closed",
+   "t": "text"
+  },
+  {
+   "f": "caseno",
+   "n": "Case Number",
+   "t": "text"
+  },
+  {
+   "f": "casetype",
+   "n": "Case Type",
+   "t": "text"
+  },
+  {
+   "f": "address",
+   "n": "Address",
+   "t": "text"
+  },
+  {
+   "f": "currentstatus",
+   "n": "Current Status",
+   "t": "text"
+  },
+  {
+   "f": "currentstatusdate",
+   "n": "Current Status Date",
+   "t": "calendar_date"
+  },
+  {
+   "f": "casefiled",
+   "n": "Case Filed Date",
+   "t": "calendar_date"
+  },
+  {
+   "f": "initinspection",
+   "n": "Initial Inspection Date",
+   "t": "calendar_date"
+  },
+  {
+   "f": "initinspresult",
+   "n": "Initial Inspection Result",
+   "t": "text"
+  },
+  {
+   "f": "violationlettersent",
+   "n": "Violation Letter Sent",
+   "t": "calendar_date"
+  },
+  {
+   "f": "hasworkorder",
+   "n": "Has Work Order",
+   "t": "text"
+  },
+  {
+   "f": "workordercurrentstatus",
+   "n": "Work Order Current Status",
+   "t": "text"
+  },
+  {
+   "f": "initialworkordercomplete",
+   "n": "Initial Work Order Complete",
+   "t": "calendar_date"
+  },
+  {
+   "f": "initialcuttype",
+   "n": "Initial Cut Type",
+   "t": "text"
+  },
+  {
+   "f": "initialcutassignment",
+   "n": "Initial Cut Assignment",
+   "t": "text"
+  },
+  {
+   "f": "initialcutcomplete",
+   "n": "Initial Cut Complete Date",
+   "t": "calendar_date"
+  },
+  {
+   "f": "countofmaintenancecuts",
+   "n": "Number Of Maintenance Cuts",
+   "t": "number"
+  },
+  {
+   "f": "latestmaintenancecut",
+   "n": "Latest Maintenance Cut",
+   "t": "calendar_date"
+  },
+  {
+   "f": "casesource",
+   "n": "Case Source",
+   "t": "text"
+  },
+  {
+   "f": "initialcomplaintnumber",
+   "n": "Initial Complaint Number",
+   "t": "text"
+  },
+  {
+   "f": "initialcomplaintdate",
+   "n": "Initial Complaint Date",
+   "t": "calendar_date"
+  },
+  {
+   "f": "latestcomplaintnumber",
+   "n": "Latest Complaint Number",
+   "t": "text"
+  },
+  {
+   "f": "latestcomplaintdate",
+   "n": "Latest Complaint Date",
+   "t": "calendar_date"
+  },
+  {
+   "f": "mva_class",
+   "n": "MVA Class",
+   "t": "text"
+  },
+  {
+   "f": "x",
+   "n": "X",
+   "t": "number"
+  },
+  {
+   "f": "y",
+   "n": "Y",
+   "t": "number"
+  },
+  {
+   "f": "longitude",
+   "n": "Longitude",
+   "t": "number"
+  },
+  {
+   "f": "latitude",
+   "n": "Latitude",
+   "t": "number"
+  },
+  {
+   "f": "location",
+   "n": "Location",
+   "t": "point"
+  }
+ ]
+}

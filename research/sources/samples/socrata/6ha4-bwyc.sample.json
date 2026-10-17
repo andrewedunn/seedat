@@ -1,0 +1,33 @@
+[
+ {
+  "objectid": "105144",
+  "caseno": "ENVHADJ-2004631EH",
+  "geopin": "41120037",
+  "o_c": "Closed",
+  "prevhearingresult": "Found Guilty",
+  "stage": "6 - Case Closed",
+  "statdate": "20090410160039.000",
+  "zipcode": "70117"
+ },
+ {
+  "objectid": "10045",
+  "caseno": "ENVHADJ-933418",
+  "geopin": "41129828",
+  "o_c": "Closed",
+  "prevhearingresult": "Found Guilty",
+  "stage": "6 - Case Closed",
+  "statdate": "20090410160039.000",
+  "zipcode": "70114"
+ },
+ {
+  "objectid": "20472",
+  "caseno": "CEHB-11-1097",
+  "geopin": "41070901",
+  "o_c": "Closed",
+  "permitstatus": "Certificate of Completion",
+  "prevhearingresult": "Guilty: Public Nuisance Blight",
+  "stage": "4 - Judgment",
+  "statdate": "20131024133000.000",
+  "zipcode": "70117"
+ }
+]

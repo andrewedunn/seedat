@@ -1,0 +1,40 @@
+{
+ "id": "hea7-kccz",
+ "name": "Local Historic District",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": null,
+ "attribution": null,
+ "attributionLink": null,
+ "licenseId": null,
+ "license": null,
+ "rowsUpdatedAt": "2026-07-09 14:33",
+ "createdAt": 1783607626,
+ "viewLastModified": 1783607626,
+ "publicationDate": 1783607626,
+ "rowIdentifierColumnId": null,
+ "tags": null,
+ "metadata": {
+  "arcgis_connection": {
+   "url": "https://maps.nola.gov/server/rest/services/EconomicDevelopment/TaxIncentives/MapServer/1"
+  }
+ },
+ "description": "",
+ "columns": [
+  {
+   "f": "the_geom",
+   "n": "the_geom",
+   "t": "multipolygon"
+  },
+  {
+   "f": "objectid",
+   "n": "OBJECTID",
+   "t": "number"
+  },
+  {
+   "f": "name",
+   "n": "Local Historic District",
+   "t": "text"
+  }
+ ]
+}

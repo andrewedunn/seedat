@@ -1,0 +1,95 @@
+{
+ "id": "3ehi-je3s",
+ "name": "Code Enforcement All Violations",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Housing, Land Use, and Blight",
+ "attribution": null,
+ "attributionLink": null,
+ "licenseId": "CC0_10",
+ "license": {
+  "name": "Creative Commons 1.0 Universal (Public Domain Dedication)",
+  "logoUrl": "images/licenses/ccZero.png",
+  "termsLink": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+ },
+ "rowsUpdatedAt": "2026-10-17 04:10",
+ "createdAt": 1391620148,
+ "viewLastModified": 1706653523,
+ "publicationDate": 1392780900,
+ "rowIdentifierColumnId": 134154036,
+ "tags": [
+  "blightstatus",
+  "violation"
+ ],
+ "metadata": {
+  "rdfSubject": "0",
+  "rdfClass": "",
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "data@nola.gov"
+   },
+   "Source Information": {
+    "Source Department": "Code Enforcement"
+   }
+  },
+  "rowIdentifier": 134154036,
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ],
+  "renderTypeConfig": {
+   "visible": {
+    "table": true
+   }
+  }
+ },
+ "description": "Code Enforcement All Violations.",
+ "columns": [
+  {
+   "f": "caseid",
+   "n": "CaseID",
+   "t": "number"
+  },
+  {
+   "f": "violationid",
+   "n": "ViolationID",
+   "t": "number"
+  },
+  {
+   "f": "caseno",
+   "n": "CaseNo",
+   "t": "text"
+  },
+  {
+   "f": "location",
+   "n": "Location",
+   "t": "text"
+  },
+  {
+   "f": "violationdate",
+   "n": "ViolationDate",
+   "t": "calendar_date"
+  },
+  {
+   "f": "codesection",
+   "n": "CodeSection",
+   "t": "text"
+  },
+  {
+   "f": "violation",
+   "n": "Violation",
+   "t": "text"
+  },
+  {
+   "f": "description",
+   "n": "Description",
+   "t": "text"
+  },
+  {
+   "f": "lastupload",
+   "n": "LastUpload",
+   "t": "calendar_date"
+  }
+ ]
+}

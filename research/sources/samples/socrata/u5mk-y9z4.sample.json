@@ -1,0 +1,89 @@
+[
+ {
+  "segmentid": "2507927",
+  "projid": "DPW823",
+  "councildst": "Council District A",
+  "consttype": "Incidental Road Repairs",
+  "projtype": "DPW",
+  "nhood": "Hollygrove",
+  "project_name": "Citywide Major/Minor Streets #1 (District A and B)",
+  "current_phase": "Planned",
+  "startqtr": "Jan-Mar 2027",
+  "endqtr": "Jul-Sep 2028",
+  "total_cost": "8500000.0",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -90.11539710991751,
+    29.969555996289813
+   ]
+  },
+  ":@computed_region_m56f_hbma": "46",
+  ":@computed_region_7fw3_kdpf": "31",
+  ":@computed_region_spev_d8jm": "3767",
+  ":@computed_region_sikx_bdeb": "46",
+  ":@computed_region_evki_aju8": "3",
+  ":@computed_region_u4yh_3wk9": "9751",
+  ":@computed_region_ewbu_t8bu": "9751",
+  ":@computed_region_k37d_then": "1"
+ },
+ {
+  "segmentid": "2512992",
+  "projid": "RR187",
+  "councildst": "Council District E",
+  "consttype": "Incidental Road Repairs",
+  "projtype": "RR",
+  "nhood": "Village De L'Est",
+  "project_name": "Village De L'Est Group A (PMOI)",
+  "current_phase": "Complete",
+  "startqtr": "11/13/2017",
+  "endqtr": "03/08/2019",
+  "total_cost": "4327381.2",
+  "project_contractor": "Hard Rock Construction, LLC",
+  "outreach_contact": "Kimuyen Tran",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -89.92041498924415,
+    30.041238107456707
+   ]
+  },
+  ":@computed_region_m56f_hbma": "199",
+  ":@computed_region_7fw3_kdpf": "70",
+  ":@computed_region_spev_d8jm": "4151",
+  ":@computed_region_sikx_bdeb": "199",
+  ":@computed_region_evki_aju8": "1",
+  ":@computed_region_ewbu_t8bu": "13794",
+  ":@computed_region_k37d_then": "5"
+ },
+ {
+  "segmentid": "2522977",
+  "projid": "RR148",
+  "councildst": "Council District E",
+  "consttype": "Full Reconstruction",
+  "projtype": "RR",
+  "nhood": "Read Blvd East",
+  "project_name": "Read Blvd East Group E (FRC)",
+  "current_phase": "Complete",
+  "startqtr": "11/11/2021",
+  "endqtr": "11/14/2022",
+  "total_cost": "9414865.12",
+  "project_contractor": "Palmisano Construction, LLC",
+  "outreach_contact": "Christopher Lloyd",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -89.96616885664965,
+    30.022027272166795
+   ]
+  },
+  ":@computed_region_m56f_hbma": "184",
+  ":@computed_region_7fw3_kdpf": "54",
+  ":@computed_region_spev_d8jm": "4149",
+  ":@computed_region_sikx_bdeb": "184",
+  ":@computed_region_evki_aju8": "1",
+  ":@computed_region_u4yh_3wk9": "4876",
+  ":@computed_region_ewbu_t8bu": "4876",
+  ":@computed_region_k37d_then": "5"
+ }
+]

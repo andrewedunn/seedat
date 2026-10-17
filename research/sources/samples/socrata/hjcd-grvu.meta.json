@@ -1,0 +1,169 @@
+{
+ "id": "hjcd-grvu",
+ "name": "Occupational Business Licenses",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Economy and Workforce",
+ "attribution": "City of New Orleans \u2013 Bureau of Revenue",
+ "attributionLink": null,
+ "licenseId": null,
+ "license": null,
+ "rowsUpdatedAt": "2026-10-17 04:20",
+ "createdAt": 1486063147,
+ "viewLastModified": 1720844413,
+ "publicationDate": 1520529669,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "business",
+  "license"
+ ],
+ "metadata": {
+  "rdfSubject": "0",
+  "jsonQuery": {
+   "order": [
+    {
+     "columnFieldName": "businessname",
+     "ascending": true
+    }
+   ]
+  },
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "data@nola.gov"
+   },
+   "Source Information": {
+    "Source Department": "Revenue",
+    "Frequency of Data Change": "Daily"
+   }
+  },
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ],
+  "rowLabel": "",
+  "renderTypeConfig": {
+   "visible": {
+    "table": true
+   }
+  }
+ },
+ "description": "An Occupational or General Business license is required if you will be conducting business in Orleans Parish. This list shows businesses that have completed the licensing process and does not include businesses that have been issued a Temporary Occupational License. More information on business services here: http://www.nola.gov/onestop/business/occupational-general-business/occupational-general-business-license/. Data provided by Bureau of Revenue.",
+ "columns": [
+  {
+   "f": "businessname",
+   "n": "BusinessName",
+   "t": "text"
+  },
+  {
+   "f": "ownername",
+   "n": "OwnerName",
+   "t": "text"
+  },
+  {
+   "f": "businesstype",
+   "n": "BusinessType",
+   "t": "text"
+  },
+  {
+   "f": "businesslicensenumber",
+   "n": "BusinessLicenseNumber",
+   "t": "text"
+  },
+  {
+   "f": "businessstartdate",
+   "n": "BusinessStartDate",
+   "t": "calendar_date"
+  },
+  {
+   "f": "address",
+   "n": "Address",
+   "t": "text"
+  },
+  {
+   "f": "streetnumber",
+   "n": "StreetNumber",
+   "t": "text"
+  },
+  {
+   "f": "streetdirection",
+   "n": "StreetDirection",
+   "t": "text"
+  },
+  {
+   "f": "streetname",
+   "n": "StreetName",
+   "t": "text"
+  },
+  {
+   "f": "streetsuffix",
+   "n": "StreetSuffix",
+   "t": "text"
+  },
+  {
+   "f": "suite",
+   "n": "Suite",
+   "t": "text"
+  },
+  {
+   "f": "city",
+   "n": "City",
+   "t": "text"
+  },
+  {
+   "f": "state",
+   "n": "State",
+   "t": "text"
+  },
+  {
+   "f": "zip",
+   "n": "Zip",
+   "t": "text"
+  },
+  {
+   "f": "phonenumber",
+   "n": "PhoneNumber",
+   "t": "text"
+  },
+  {
+   "f": "mailaddress",
+   "n": "MailAddress",
+   "t": "text"
+  },
+  {
+   "f": "mailsuite",
+   "n": "MailSuite",
+   "t": "text"
+  },
+  {
+   "f": "mailcity",
+   "n": "MailCity",
+   "t": "text"
+  },
+  {
+   "f": "mailstate",
+   "n": "MailState",
+   "t": "text"
+  },
+  {
+   "f": "mailzip",
+   "n": "MailZip",
+   "t": "text"
+  },
+  {
+   "f": "latitude",
+   "n": "Latitude",
+   "t": "number"
+  },
+  {
+   "f": "longitude",
+   "n": "Longitude",
+   "t": "number"
+  },
+  {
+   "f": "location",
+   "n": "Location",
+   "t": "location"
+  }
+ ]
+}

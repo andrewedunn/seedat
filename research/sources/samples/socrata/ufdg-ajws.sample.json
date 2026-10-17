@@ -1,0 +1,98 @@
+[
+ {
+  "license_number": "25-XSTR-45204",
+  "address": "617 Canal St",
+  "license_type": "Lodging Exempt from STR Regulation",
+  "residential_subtype": "N/A",
+  "link": {
+   "url": "https://onestopapp.nola.gov/Redirect.aspx?SearchString=Q657QJ"
+  },
+  "license_holder_name": "Jimmy's On Canal St. L.L.C.",
+  "application_date": "2025-12-17T11:39:21.000",
+  "issue_date": "2025-12-19T08:52:47.000",
+  "reference_code": "Q657QJ",
+  "x": "3681407.58",
+  "y": "530617.7",
+  "longitude": "-90.06839360321709",
+  "latitude": "29.95301746902359",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -90.06839360321709,
+    29.95301746902359
+   ]
+  },
+  ":@computed_region_k37d_then": "3",
+  ":@computed_region_m56f_hbma": "23",
+  ":@computed_region_7fw3_kdpf": "12",
+  ":@computed_region_spev_d8jm": "4152",
+  ":@computed_region_sikx_bdeb": "23",
+  ":@computed_region_evki_aju8": "5",
+  ":@computed_region_u4yh_3wk9": "231",
+  ":@computed_region_ewbu_t8bu": "231"
+ },
+ {
+  "license_number": "26-XSTR-15408",
+  "address": "3819 Patterson St Bldg C",
+  "license_type": "Lodging Exempt from STR Regulation",
+  "residential_subtype": "N/A",
+  "link": {
+   "url": "https://onestopapp.nola.gov/Redirect.aspx?SearchString=JAP7U8"
+  },
+  "license_holder_name": "Patterson Place LLC dba The Patterson",
+  "application_date": "2026-07-15T11:16:58.000",
+  "issue_date": "2026-07-16T11:58:01.000",
+  "reference_code": "JAP7U8",
+  "x": "3698093.35",
+  "y": "527061.59",
+  "longitude": "-90.01583667162328",
+  "latitude": "29.942722373926767",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -90.01583667162328,
+    29.942722373926767
+   ]
+  },
+  ":@computed_region_k37d_then": "3",
+  ":@computed_region_m56f_hbma": "2",
+  ":@computed_region_7fw3_kdpf": "1",
+  ":@computed_region_spev_d8jm": "3456",
+  ":@computed_region_sikx_bdeb": "2",
+  ":@computed_region_evki_aju8": "2",
+  ":@computed_region_u4yh_3wk9": "8487",
+  ":@computed_region_ewbu_t8bu": "8487"
+ },
+ {
+  "license_number": "26-XSTR-20565",
+  "address": "1118 Ursulines Ave",
+  "license_type": "Lodging Exempt from STR Regulation",
+  "residential_subtype": "N/A",
+  "link": {
+   "url": "https://onestopapp.nola.gov/Redirect.aspx?SearchString=S7YNFR"
+  },
+  "license_holder_name": "BKC Fund 1 LLC dba La Corte Hotel",
+  "application_date": "2026-09-18T13:15:44.000",
+  "issue_date": "2026-09-24T12:21:49.000",
+  "reference_code": "S7YNFR",
+  "x": "3682107.14",
+  "y": "534629.66",
+  "longitude": "-90.06604459452099",
+  "latitude": "29.964027738496732",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -90.06604459452099,
+    29.964027738496732
+   ]
+  },
+  ":@computed_region_k37d_then": "3",
+  ":@computed_region_m56f_hbma": "26",
+  ":@computed_region_7fw3_kdpf": "58",
+  ":@computed_region_spev_d8jm": "3458",
+  ":@computed_region_sikx_bdeb": "26",
+  ":@computed_region_evki_aju8": "6",
+  ":@computed_region_u4yh_3wk9": "8242",
+  ":@computed_region_ewbu_t8bu": "8242"
+ }
+]

@@ -1,0 +1,116 @@
+{
+ "id": "bizp-xi7c",
+ "name": "Zoning Districts",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Planning, Zoning",
+ "attribution": "City Planning Commission",
+ "attributionLink": null,
+ "licenseId": "CC0_10",
+ "license": {
+  "name": "Creative Commons 1.0 Universal (Public Domain Dedication)",
+  "logoUrl": "images/licenses/ccZero.png",
+  "termsLink": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+ },
+ "rowsUpdatedAt": "2026-08-08 20:11",
+ "createdAt": 1639429447,
+ "viewLastModified": 1730235582,
+ "publicationDate": 1639429448,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "cpc",
+  "planning",
+  "zoning",
+  "boundaries"
+ ],
+ "metadata": {
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "gis@nola.gov",
+    "Public Access Level": "public"
+   },
+   "Source Information": {
+    "Source Department": "City Planning Commission",
+    "Frequency of Data Change": "Updated frequently"
+   }
+  },
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ]
+ },
+ "description": "Zoning regulates land use to promote smart growth and preserve the quality of life in communities. Permitted Use are allowed by right, subject to compliance with appropriate standards. Conditional Use require City Planning Commission review with a recommendation forwarded to the City Council for final action.",
+ "columns": [
+  {
+   "f": "the_geom",
+   "n": "the_geom",
+   "t": "multipolygon"
+  },
+  {
+   "f": "objectid",
+   "n": "OBJECTID",
+   "t": "number"
+  },
+  {
+   "f": "zoneclass",
+   "n": "Zoning Classification",
+   "t": "text"
+  },
+  {
+   "f": "zonedesc",
+   "n": "Zone Description",
+   "t": "text"
+  },
+  {
+   "f": "zonenum",
+   "n": "Zoning Number",
+   "t": "text"
+  },
+  {
+   "f": "zoneyear",
+   "n": "Zoning Year",
+   "t": "text"
+  },
+  {
+   "f": "ordnum",
+   "n": "Zoning Ordinance Number",
+   "t": "text"
+  },
+  {
+   "f": "zoneclass1",
+   "n": "Prior Zoning Class",
+   "t": "text"
+  },
+  {
+   "f": "zonenum1",
+   "n": "Prior Zoning Number",
+   "t": "text"
+  },
+  {
+   "f": "zoneyear1",
+   "n": "Prior Zoning Year",
+   "t": "number"
+  },
+  {
+   "f": "ordnum1",
+   "n": "Prior Ordinance Number",
+   "t": "text"
+  },
+  {
+   "f": "hyperlink",
+   "n": "HYPERLINK",
+   "t": "text"
+  },
+  {
+   "f": "shape_starea",
+   "n": "Shape.STArea()",
+   "t": "number"
+  },
+  {
+   "f": "shape_stlength",
+   "n": "Shape.STLength()",
+   "t": "number"
+  }
+ ]
+}

@@ -1,0 +1,140 @@
+{
+ "id": "f5zm-xkyr",
+ "name": "Adjudication Enforcement Fines and Fees Data for the Office of Business and External Services",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Housing, Land Use, and Blight",
+ "attribution": "City of New Orleans",
+ "attributionLink": null,
+ "licenseId": null,
+ "license": null,
+ "rowsUpdatedAt": "2026-10-17 04:27",
+ "createdAt": 1660759857,
+ "viewLastModified": 1669846933,
+ "publicationDate": 1660760049,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "code enforcement",
+  "zoning",
+  "str",
+  "abo",
+  "vcc",
+  "hdlc",
+  "adjudication",
+  "obes",
+  "mpm",
+  "blight",
+  "alcohol",
+  "historic district",
+  "landmarks"
+ ],
+ "metadata": {
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "data@nola.gov",
+    "Contact Name": "Cameron MacPhee"
+   },
+   "Source Information": {
+    "Source Department": "Performance and Accountability (OPA)"
+   }
+  },
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ]
+ },
+ "description": "A dataset of fines and fees levied in Adjudication hearings for cases in Code Enforcement, Alcohol Beverage Outlets (ABO), Historic District and Landmarks Commission (HDLC), Vieux Carr\u00e9 Commission (VCC), Short Term Rentals (STR) and Zoning from January 1st, 2018 to current day.",
+ "columns": [
+  {
+   "f": "incident_number",
+   "n": "Incident Number",
+   "t": "text"
+  },
+  {
+   "f": "codeincidid",
+   "n": "CodeIncidID",
+   "t": "text"
+  },
+  {
+   "f": "codefeeid",
+   "n": "CodeFeeID",
+   "t": "text"
+  },
+  {
+   "f": "o_c",
+   "n": "O/C",
+   "t": "text"
+  },
+  {
+   "f": "address",
+   "n": "Address",
+   "t": "text"
+  },
+  {
+   "f": "case_established",
+   "n": "Case Established",
+   "t": "calendar_date"
+  },
+  {
+   "f": "amount",
+   "n": "Amount",
+   "t": "number"
+  },
+  {
+   "f": "type",
+   "n": "Type",
+   "t": "text"
+  },
+  {
+   "f": "ispaid",
+   "n": "IsPaid",
+   "t": "checkbox"
+  },
+  {
+   "f": "d_due",
+   "n": "D_Due",
+   "t": "calendar_date"
+  },
+  {
+   "f": "d_paid",
+   "n": "D_Paid",
+   "t": "calendar_date"
+  },
+  {
+   "f": "d_create",
+   "n": "D_Create",
+   "t": "calendar_date"
+  },
+  {
+   "f": "d_mod",
+   "n": "D_Mod",
+   "t": "calendar_date"
+  },
+  {
+   "f": "x",
+   "n": "X",
+   "t": "number"
+  },
+  {
+   "f": "y",
+   "n": "Y",
+   "t": "number"
+  },
+  {
+   "f": "longitude",
+   "n": "Longitude",
+   "t": "number"
+  },
+  {
+   "f": "latitude",
+   "n": "Latitude",
+   "t": "number"
+  },
+  {
+   "f": "location",
+   "n": "Location",
+   "t": "point"
+  }
+ ]
+}

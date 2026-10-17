@@ -1,0 +1,65 @@
+[
+ {
+  "segmentid": "2527247",
+  "projid": "RR153",
+  "ssstat": "Complete",
+  "sstype": "Water Line Replacement (FEMA)",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -89.97335221635258,
+    30.020890070455593
+   ]
+  },
+  ":@computed_region_m56f_hbma": "163",
+  ":@computed_region_7fw3_kdpf": "55",
+  ":@computed_region_spev_d8jm": "4149",
+  ":@computed_region_sikx_bdeb": "163",
+  ":@computed_region_evki_aju8": "1",
+  ":@computed_region_u4yh_3wk9": "4871",
+  ":@computed_region_ewbu_t8bu": "4871",
+  ":@computed_region_k37d_then": "5"
+ },
+ {
+  "segmentid": "2512806",
+  "projid": "RR187",
+  "ssstat": "Complete",
+  "sstype": "Sewer Line Repair (SSERP)",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -89.92138503385469,
+    30.03653743745992
+   ]
+  },
+  ":@computed_region_m56f_hbma": "199",
+  ":@computed_region_7fw3_kdpf": "70",
+  ":@computed_region_spev_d8jm": "4151",
+  ":@computed_region_sikx_bdeb": "199",
+  ":@computed_region_evki_aju8": "1",
+  ":@computed_region_u4yh_3wk9": "5573",
+  ":@computed_region_ewbu_t8bu": "5573",
+  ":@computed_region_k37d_then": "5"
+ },
+ {
+  "segmentid": "2527168",
+  "projid": "RR101",
+  "ssstat": "Complete",
+  "sstype": "Drainage Line, Sewer Line Replacement (SWB), and Water Line Replacement (FEMA)",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -89.99239620990811,
+    30.035698380038614
+   ]
+  },
+  ":@computed_region_m56f_hbma": "181",
+  ":@computed_region_7fw3_kdpf": "20",
+  ":@computed_region_spev_d8jm": "4149",
+  ":@computed_region_sikx_bdeb": "181",
+  ":@computed_region_evki_aju8": "1",
+  ":@computed_region_u4yh_3wk9": "431",
+  ":@computed_region_ewbu_t8bu": "431",
+  ":@computed_region_k37d_then": "5"
+ }
+]

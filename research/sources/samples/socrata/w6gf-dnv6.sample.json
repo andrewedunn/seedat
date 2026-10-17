@@ -1,0 +1,96 @@
+[
+ {
+  "o_c": "Open",
+  "casenumber": "CEHB-12-0851",
+  "propertyaddress": "3121 Josephine St",
+  "casehistory": "Initial Hearing",
+  "hearingdatetime": "2012-06-06T09:30:00.000",
+  "caseestablished": "2012-03-22T11:19:30.000",
+  "inspected": "2013-02-06T10:55:00.000",
+  "inspectionresult": "Violation: No WIP",
+  "councildistrict": "B",
+  "xpos": "3674561.73",
+  "ypos": "528368.83",
+  "longitude": "-90.09008687190092",
+  "latitude": "29.94703984941218",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -90.09008687190092,
+    29.94703984941218
+   ]
+  },
+  ":@computed_region_k37d_then": "2",
+  ":@computed_region_m56f_hbma": "4",
+  ":@computed_region_7fw3_kdpf": "13",
+  ":@computed_region_spev_d8jm": "4147",
+  ":@computed_region_sikx_bdeb": "4",
+  ":@computed_region_evki_aju8": "4",
+  ":@computed_region_u4yh_3wk9": "5656",
+  ":@computed_region_ewbu_t8bu": "5656"
+ },
+ {
+  "o_c": "Closed",
+  "casenumber": "12-10931-PNBL",
+  "propertyaddress": "1808 Peniston St",
+  "casehistory": "Initial Hearing",
+  "hearingdatetime": "2013-02-19T13:30:00.000",
+  "caseestablished": "2012-10-18T11:52:41.000",
+  "inspected": "2012-12-07T00:00:00.000",
+  "inspectionresult": "Violation: No WIP",
+  "councildistrict": "B",
+  "xpos": "3672643.47469",
+  "ypos": "521944.03358",
+  "longitude": "-90.09636251849228",
+  "latitude": "29.92943083922077",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -90.09636251849228,
+    29.92943083922077
+   ]
+  },
+  ":@computed_region_k37d_then": "2",
+  ":@computed_region_m56f_hbma": "10",
+  ":@computed_region_7fw3_kdpf": "48",
+  ":@computed_region_spev_d8jm": "3457",
+  ":@computed_region_sikx_bdeb": "10",
+  ":@computed_region_evki_aju8": "4",
+  ":@computed_region_u4yh_3wk9": "6793",
+  ":@computed_region_ewbu_t8bu": "6793"
+ },
+ {
+  "o_c": "Open",
+  "casenumber": "24-00958-MPM",
+  "propertyaddress": "8 Marlborough Gate Pl",
+  "casehistory": "Initial Hearing",
+  "hearingdatetime": "2025-06-23T10:30:00.000",
+  "caseestablished": "2024-02-06T10:15:34.000",
+  "inspected": "2024-02-06T10:15:00.000",
+  "inspectionresult": "Violation: No WIP",
+  "councildistrict": " ",
+  "geoaddress": "8 Marlborough Gate Pl",
+  "city": "New Orleans",
+  "state": "LA",
+  "zip": "70115",
+  "xpos": "3668956.57",
+  "ypos": "523684.83",
+  "longitude": "-90.10794266258837",
+  "latitude": "29.934326398135706",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -90.10794266258837,
+    29.934326398135706
+   ]
+  },
+  ":@computed_region_k37d_then": "2",
+  ":@computed_region_m56f_hbma": "54",
+  ":@computed_region_7fw3_kdpf": "26",
+  ":@computed_region_spev_d8jm": "3457",
+  ":@computed_region_sikx_bdeb": "54",
+  ":@computed_region_evki_aju8": "3",
+  ":@computed_region_u4yh_3wk9": "1252",
+  ":@computed_region_ewbu_t8bu": "1252"
+ }
+]

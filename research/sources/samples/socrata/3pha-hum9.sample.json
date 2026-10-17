@@ -1,0 +1,113 @@
+[
+ {
+  "nopd_item": "A0000121",
+  "type_": "103D",
+  "typetext": "DOMESTIC DISTURBANCE",
+  "priority": "2C",
+  "initialtype": "103D",
+  "initialtypetext": "DOMESTIC DISTURBANCE",
+  "initialpriority": "2C",
+  "mapx": "3697731",
+  "mapy": "532510",
+  "timecreate": "2021-01-01T00:01:06.450",
+  "timedispatch": "2021-01-01T00:01:46.233",
+  "timearrive": "2021-01-01T00:13:51.043",
+  "timeclosed": "2021-01-01T01:01:23.230",
+  "disposition": "RTF",
+  "dispositiontext": "REPORT TO FOLLOW",
+  "selfinitiated": "N",
+  "beat": "5E04",
+  "block_address": "007XX Caffin Ave",
+  "zip": "70117",
+  "policedistrict": "5",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -90.01678019,
+    29.95771602
+   ]
+  },
+  ":@computed_region_ewbu_t8bu": "10780",
+  ":@computed_region_k37d_then": "5",
+  ":@computed_region_m56f_hbma": "153",
+  ":@computed_region_7fw3_kdpf": "32",
+  ":@computed_region_spev_d8jm": "3766",
+  ":@computed_region_sikx_bdeb": "153",
+  ":@computed_region_evki_aju8": "8",
+  ":@computed_region_u4yh_3wk9": "10780"
+ },
+ {
+  "nopd_item": "A0000221",
+  "type_": "22A",
+  "typetext": "AREA CHECK",
+  "priority": "1K",
+  "initialtype": "22A",
+  "initialtypetext": "AREA CHECK",
+  "initialpriority": "1K",
+  "mapx": "3668804",
+  "mapy": "546585",
+  "timecreate": "2021-01-01T00:01:28.967",
+  "timedispatch": "2021-01-01T00:01:28.967",
+  "timearrive": "2021-01-01T00:01:28.967",
+  "timeclosed": "2021-01-01T00:40:31.030",
+  "disposition": "NAT",
+  "dispositiontext": "Necessary Action Taken",
+  "selfinitiated": "Y",
+  "beat": "3I04",
+  "block_address": "Vicksburg St & Brooks St",
+  "zip": "70124",
+  "policedistrict": "3",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -90.10764787,
+    29.99729994
+   ]
+  },
+  ":@computed_region_ewbu_t8bu": "5424",
+  ":@computed_region_k37d_then": "1",
+  ":@computed_region_m56f_hbma": "102",
+  ":@computed_region_7fw3_kdpf": "38",
+  ":@computed_region_spev_d8jm": "3772",
+  ":@computed_region_sikx_bdeb": "102",
+  ":@computed_region_evki_aju8": "7",
+  ":@computed_region_u4yh_3wk9": "5424"
+ },
+ {
+  "nopd_item": "A0000321",
+  "type_": "62A",
+  "typetext": "BURGLAR ALARM, SILENT",
+  "priority": "1A",
+  "initialtype": "62A",
+  "initialtypetext": "BURGLAR ALARM, SILENT",
+  "initialpriority": "2E",
+  "mapx": "3673216",
+  "mapy": "521932",
+  "timecreate": "2021-01-01T00:01:34.863",
+  "timedispatch": "2021-01-01T03:39:56.747",
+  "timearrive": "2021-01-01T03:43:58.507",
+  "timeclosed": "2021-01-01T03:51:24.143",
+  "disposition": "NAT",
+  "dispositiontext": "Necessary Action Taken",
+  "selfinitiated": "N",
+  "beat": "6Q02",
+  "block_address": "036XX Baronne St",
+  "zip": "70115",
+  "policedistrict": "6",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -90.09455243,
+    29.92938301
+   ]
+  },
+  ":@computed_region_ewbu_t8bu": "2801",
+  ":@computed_region_k37d_then": "2",
+  ":@computed_region_m56f_hbma": "10",
+  ":@computed_region_7fw3_kdpf": "48",
+  ":@computed_region_spev_d8jm": "3457",
+  ":@computed_region_sikx_bdeb": "10",
+  ":@computed_region_evki_aju8": "4",
+  ":@computed_region_u4yh_3wk9": "2801"
+ }
+]

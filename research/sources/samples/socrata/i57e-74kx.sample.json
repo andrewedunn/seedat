@@ -1,0 +1,71 @@
+[
+ {
+  "ticket_id": "101000843596",
+  "issue_type": "Residential Recycling Programs",
+  "ticket_created_date_time": "2018-08-10T10:50:59.000",
+  "ticket_closed_date_time": "2018-08-28T15:59:56.000",
+  "ticket_status": "Closed",
+  "issue_description": "Nature of request: Replacement Recycling Cart",
+  "street_address": "6865 General Haig St",
+  "neighborhood_district": "LAKEVIEW",
+  "council_district": "A",
+  "city": "NEW ORLEANS",
+  "state": "LA",
+  "zip_code": "70124",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -90.0999946006476,
+    30.0147473310199
+   ]
+  },
+  "latitude": "30.0147473310199",
+  "longitude": "-90.0999946006476"
+ },
+ {
+  "ticket_id": "101000803432",
+  "issue_type": "Residential Recycling Programs",
+  "ticket_created_date_time": "2018-05-04T14:41:21.000",
+  "ticket_closed_date_time": "2018-08-28T14:12:34.000",
+  "ticket_status": "Closed",
+  "issue_description": "Nature of request: New Recycling Cart",
+  "street_address": "228 Audubon Blvd",
+  "neighborhood_district": "AUDUBON",
+  "council_district": "A",
+  "city": "NEW ORLEANS",
+  "state": "LA",
+  "zip_code": "70118",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -90.1161620948169,
+    29.9481090666447
+   ]
+  },
+  "latitude": "29.9481090666447",
+  "longitude": "-90.1161620948169"
+ },
+ {
+  "ticket_id": "101000345006",
+  "issue_type": "Residential Recycling Programs",
+  "ticket_created_date_time": "2014-12-29T14:03:29.000",
+  "ticket_closed_date_time": "2015-01-08T11:33:01.000",
+  "ticket_status": "Closed",
+  "issue_description": "Nature of request: New Recycling Cart",
+  "street_address": "901 GOVERNOR NICHOLLS ST",
+  "neighborhood_district": "FRENCH QUARTER",
+  "council_district": "C",
+  "city": "NEW ORLEANS",
+  "state": "LA",
+  "zip_code": "70116",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -90.0630076746899,
+    29.9633433048213
+   ]
+  },
+  "latitude": "29.9633433048213",
+  "longitude": "-90.0630076746899"
+ }
+]

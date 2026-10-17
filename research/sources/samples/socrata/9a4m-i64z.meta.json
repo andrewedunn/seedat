@@ -1,0 +1,75 @@
+{
+ "id": "9a4m-i64z",
+ "name": "Assessment Areas",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Housing, Land Use, and Blight",
+ "attribution": null,
+ "attributionLink": null,
+ "licenseId": "CC0_10",
+ "license": {
+  "name": "Creative Commons 1.0 Universal (Public Domain Dedication)",
+  "logoUrl": "images/licenses/ccZero.png",
+  "termsLink": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+ },
+ "rowsUpdatedAt": "2025-08-18 09:03",
+ "createdAt": 1628101218,
+ "viewLastModified": 1755507813,
+ "publicationDate": 1628101219,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "district",
+  "historic",
+  "national register"
+ ],
+ "metadata": {
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "gis@nola.gov",
+    "Public Access Level": "public"
+   },
+   "Source Information": {
+    "Source Department": "Assessor's Office",
+    "Frequency of Data Change": "areas do not change regularly"
+   }
+  },
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ]
+ },
+ "description": "Polygon dataset of City of New Orleans Tax Assessment Districts",
+ "columns": [
+  {
+   "f": "the_geom",
+   "n": "the_geom",
+   "t": "multipolygon"
+  },
+  {
+   "f": "objectid",
+   "n": "OBJECTID",
+   "t": "number"
+  },
+  {
+   "f": "ward",
+   "n": "WARD",
+   "t": "text"
+  },
+  {
+   "f": "ward_abbre",
+   "n": "Ward",
+   "t": "text"
+  },
+  {
+   "f": "shape_area",
+   "n": "SHAPE.area",
+   "t": "number"
+  },
+  {
+   "f": "shape_len",
+   "n": "SHAPE.len",
+   "t": "number"
+  }
+ ]
+}

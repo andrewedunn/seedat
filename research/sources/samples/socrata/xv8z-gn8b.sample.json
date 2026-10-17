@@ -1,0 +1,52 @@
+[
+ {
+  "caseno": "17-04796-MPM",
+  "address": "1515 Tita St",
+  "o_c": "Open",
+  "judgment": "Guilty",
+  "eventname": "Judgment Recordation",
+  "status": "Complete",
+  "exitreason": "Duplicate Case",
+  "datefiled": "2017-05-08T12:40:11.000",
+  "dateenteredabatement": "2018-01-10T12:08:37.000",
+  "stage": "In Abatement",
+  "xpos": "3695572.98",
+  "ypos": "525708.88",
+  "caseid": "226534",
+  "lastupload": "2024-05-30T23:00:07.000"
+ },
+ {
+  "caseno": "13-08763-MPM",
+  "address": "4747 Reynes St",
+  "o_c": "Closed",
+  "judgment": "Guilty",
+  "eventname": "Judgment Recordation",
+  "status": "Complete",
+  "exitreason": "Payment Received",
+  "datefiled": "2013-10-09T11:17:48.000",
+  "dateclosed": "2021-09-17T15:32:26.000",
+  "dateenteredabatement": "2016-11-30T10:02:36.000",
+  "stage": "Closed: Payment Received",
+  "xpos": "3699216.65",
+  "ypos": "555065.31",
+  "caseid": "181628",
+  "lastupload": "2021-09-23T23:00:08.000"
+ },
+ {
+  "caseno": "15-10323-MPM",
+  "address": "205 Fairfax Pl",
+  "o_c": "Closed",
+  "judgment": "Guilty",
+  "eventname": "Judgment Recordation",
+  "status": "Complete",
+  "exitreason": "Sold at Sheriff's Auction",
+  "datefiled": "2015-11-16T11:23:31.000",
+  "dateclosed": "2021-09-29T09:12:07.000",
+  "dateenteredabatement": "2016-04-12T10:26:12.000",
+  "stage": "Closed: Sold at Sheriff's Auction",
+  "xpos": "3706209.01",
+  "ypos": "517360.84",
+  "caseid": "206532",
+  "lastupload": "2021-10-07T23:00:08.000"
+ }
+]

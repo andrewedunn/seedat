@@ -1,0 +1,238 @@
+{
+ "id": "fdkj-rjrv",
+ "name": "Street Name",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Transportation and Infrastructure",
+ "attribution": "Public Works (DPW)",
+ "attributionLink": null,
+ "licenseId": "CC0_10",
+ "license": {
+  "name": "Creative Commons 1.0 Universal (Public Domain Dedication)",
+  "logoUrl": "images/licenses/ccZero.png",
+  "termsLink": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+ },
+ "rowsUpdatedAt": "2026-07-06 19:22",
+ "createdAt": 1639429012,
+ "viewLastModified": 1728591702,
+ "publicationDate": 1674526381,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "transportation"
+ ],
+ "metadata": {
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "gis@nola.gov",
+    "Public Access Level": "public"
+   },
+   "Source Information": {
+    "Source Department": "Public Works (DPW)",
+    "Frequency of Data Change": "Doesn't change often"
+   }
+  },
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ]
+ },
+ "description": "Road segments representing centerlines of all roadways or carriageways in a local government. Typically, this information is compiled from orthoimagery or other aerial photography sources. This representation of the road centerlines support address geocoding and mapping. It also serves as a source for public works and other agencies that are responsible for the active management of the road network.",
+ "columns": [
+  {
+   "f": "the_geom",
+   "n": "the_geom",
+   "t": "multiline"
+  },
+  {
+   "f": "objectid",
+   "n": "OBJECTID",
+   "t": "number"
+  },
+  {
+   "f": "centerlineid",
+   "n": "Centerline ID",
+   "t": "text"
+  },
+  {
+   "f": "fromleft",
+   "n": "Left From Address",
+   "t": "number"
+  },
+  {
+   "f": "toleft",
+   "n": "Left To Address",
+   "t": "number"
+  },
+  {
+   "f": "fromright",
+   "n": "Right From Address",
+   "t": "number"
+  },
+  {
+   "f": "toright",
+   "n": "Right To Address",
+   "t": "number"
+  },
+  {
+   "f": "fullname",
+   "n": "Full Road Name",
+   "t": "text"
+  },
+  {
+   "f": "fedroute",
+   "n": "Federal Route",
+   "t": "text"
+  },
+  {
+   "f": "fedrtetype",
+   "n": "Federal Route Type",
+   "t": "text"
+  },
+  {
+   "f": "afedrte",
+   "n": "Alternate Federal Route",
+   "t": "text"
+  },
+  {
+   "f": "afedrtetype",
+   "n": "Alternate Federal Route Type",
+   "t": "text"
+  },
+  {
+   "f": "stroute",
+   "n": "State Route",
+   "t": "text"
+  },
+  {
+   "f": "strtetype",
+   "n": "State Route Type",
+   "t": "text"
+  },
+  {
+   "f": "astrte",
+   "n": "Alternate State Route",
+   "t": "text"
+  },
+  {
+   "f": "astrtetype",
+   "n": "Alternate State Route Type",
+   "t": "text"
+  },
+  {
+   "f": "ctyroute",
+   "n": "County Route",
+   "t": "text"
+  },
+  {
+   "f": "onewaydir",
+   "n": "One Way Indicator",
+   "t": "text"
+  },
+  {
+   "f": "roadlevel",
+   "n": "Above or Below Grade",
+   "t": "number"
+  },
+  {
+   "f": "inwater",
+   "n": "In Water",
+   "t": "text"
+  },
+  {
+   "f": "roadclass",
+   "n": "Road Class",
+   "t": "text"
+  },
+  {
+   "f": "mtfcc",
+   "n": "Census MTFCC Code",
+   "t": "text"
+  },
+  {
+   "f": "ownedby",
+   "n": "Owned By",
+   "t": "number"
+  },
+  {
+   "f": "maintby",
+   "n": "Maintained By",
+   "t": "number"
+  },
+  {
+   "f": "munileft",
+   "n": "Municipality on Left",
+   "t": "text"
+  },
+  {
+   "f": "muniright",
+   "n": "Municipality on Right",
+   "t": "text"
+  },
+  {
+   "f": "stateleft",
+   "n": "State on Left",
+   "t": "text"
+  },
+  {
+   "f": "stateright",
+   "n": "State on Right",
+   "t": "text"
+  },
+  {
+   "f": "zipleft",
+   "n": "Zip on Left",
+   "t": "text"
+  },
+  {
+   "f": "zipright",
+   "n": "Zip on Right",
+   "t": "text"
+  },
+  {
+   "f": "msagleft",
+   "n": "MSAG on Left",
+   "t": "text"
+  },
+  {
+   "f": "msagright",
+   "n": "MSAG on Right",
+   "t": "text"
+  },
+  {
+   "f": "esnleft",
+   "n": "ESN on Left",
+   "t": "text"
+  },
+  {
+   "f": "esnright",
+   "n": "ESN on Right",
+   "t": "text"
+  },
+  {
+   "f": "lastupdate",
+   "n": "Last Update Date",
+   "t": "date"
+  },
+  {
+   "f": "lasteditor",
+   "n": "Last Editor",
+   "t": "text"
+  },
+  {
+   "f": "fullnameabv",
+   "n": "Abbreviated Road Name",
+   "t": "text"
+  },
+  {
+   "f": "joinid",
+   "n": "Join ID",
+   "t": "number"
+  },
+  {
+   "f": "shape_stlength",
+   "n": "Shape.STLength()",
+   "t": "number"
+  }
+ ]
+}

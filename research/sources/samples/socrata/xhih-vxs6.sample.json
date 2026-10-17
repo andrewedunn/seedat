@@ -1,0 +1,112 @@
+[
+ {
+  "o_c": "Closed",
+  "caseno": "21-00356-CH66",
+  "casetype": "Chapter 66",
+  "address": "2632 Fourth St",
+  "currentstatus": "No Violation Found",
+  "currentstatusdate": "2021-02-09T14:39:26.000",
+  "casefiled": "2021-01-21T15:56:33.000",
+  "initinspection": "2021-01-25T09:47:00.000",
+  "initinspresult": "No Violation",
+  "hasworkorder": "False",
+  "countofmaintenancecuts": "0",
+  "mva_class": "Low Market Value Areas",
+  "x": "3673984.49",
+  "y": "525921.82",
+  "longitude": "-90.09199313697697",
+  "latitude": "29.940328584309874",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -90.09199313697697,
+    29.940328584309874
+   ]
+  },
+  ":@computed_region_spev_d8jm": "3455",
+  ":@computed_region_sikx_bdeb": "232",
+  ":@computed_region_evki_aju8": "4",
+  ":@computed_region_u4yh_3wk9": "6162",
+  ":@computed_region_ewbu_t8bu": "6162",
+  ":@computed_region_k37d_then": "2",
+  ":@computed_region_m56f_hbma": "232",
+  ":@computed_region_7fw3_kdpf": "13"
+ },
+ {
+  "o_c": "Closed",
+  "caseno": "21-00398-CH66",
+  "casetype": "Chapter 66",
+  "address": "1319 Reynes St",
+  "currentstatus": "Case Expired",
+  "currentstatusdate": "2021-07-06T12:35:00.000",
+  "casefiled": "2021-01-23T11:27:05.000",
+  "initinspection": "2021-02-24T14:30:00.000",
+  "initinspresult": "Violation: No WIP",
+  "violationlettersent": "2021-03-03T14:34:08.000",
+  "hasworkorder": "True",
+  "workordercurrentstatus": "Complete",
+  "initialworkordercomplete": "2021-04-29T12:27:16.000",
+  "initialcuttype": "Initial over 48 inches",
+  "initialcutassignment": "H&O Investments, LLC",
+  "initialcutcomplete": "2021-04-29T00:00:00.000",
+  "countofmaintenancecuts": "0",
+  "mva_class": "Low Market Value Areas",
+  "x": "3696280.7",
+  "y": "535138.49",
+  "longitude": "-90.02126760503448",
+  "latitude": "29.964988197294716",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -90.02126760503448,
+    29.964988197294716
+   ]
+  },
+  ":@computed_region_spev_d8jm": "3766",
+  ":@computed_region_sikx_bdeb": "154",
+  ":@computed_region_evki_aju8": "8",
+  ":@computed_region_u4yh_3wk9": "12949",
+  ":@computed_region_ewbu_t8bu": "12949",
+  ":@computed_region_k37d_then": "5",
+  ":@computed_region_m56f_hbma": "154",
+  ":@computed_region_7fw3_kdpf": "43"
+ },
+ {
+  "o_c": "Closed",
+  "caseno": "21-00446-CH66",
+  "casetype": "Chapter 66",
+  "address": "2057 Hope St",
+  "currentstatus": "Duplicate Case",
+  "currentstatusdate": "2024-04-04T10:53:43.000",
+  "casefiled": "2021-01-26T10:08:57.000",
+  "initinspection": "2021-01-27T00:00:00.000",
+  "initinspresult": "Violation: No WIP",
+  "violationlettersent": "2021-02-18T12:47:30.000",
+  "hasworkorder": "True",
+  "workordercurrentstatus": "Complete",
+  "initialworkordercomplete": "2021-03-10T14:26:04.000",
+  "initialcuttype": "Initial over 48 inches",
+  "initialcutassignment": "H&O Investments, LLC",
+  "countofmaintenancecuts": "0",
+  "mva_class": "Low Market Value Areas",
+  "x": "3682924.34",
+  "y": "542102.26",
+  "longitude": "-90.06320237889662",
+  "latitude": "29.984549913604283",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -90.06320237889662,
+    29.984549913604283
+   ]
+  },
+  ":@computed_region_spev_d8jm": "3768",
+  ":@computed_region_sikx_bdeb": "94",
+  ":@computed_region_evki_aju8": "8",
+  ":@computed_region_u4yh_3wk9": "9311",
+  ":@computed_region_ewbu_t8bu": "9311",
+  ":@computed_region_k37d_then": "4",
+  ":@computed_region_m56f_hbma": "94",
+  ":@computed_region_7fw3_kdpf": "57"
+ }
+]

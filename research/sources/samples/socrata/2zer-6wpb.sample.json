@@ -1,0 +1,71 @@
+[
+ {
+  "nearestfu": "2743 Cleveland Avenue",
+  "neighborhood": "Mid City",
+  "segmentid": "2510221",
+  "councildistrict": "B",
+  "gisid": "393-474-0540",
+  "y": "29.9653217374",
+  "x": "-90.0891478116",
+  "location": {
+   "latitude": "29.9653217374",
+   "longitude": "-90.0891478116"
+  },
+  ":@computed_region_ewbu_t8bu": "9506",
+  ":@computed_region_k37d_then": "2",
+  ":@computed_region_m56f_hbma": "109",
+  ":@computed_region_7fw3_kdpf": "47",
+  ":@computed_region_spev_d8jm": "3768",
+  ":@computed_region_sikx_bdeb": "109",
+  ":@computed_region_evki_aju8": "6",
+  ":@computed_region_u4yh_3wk9": "9506"
+ },
+ {
+  "nearestfu": "9901 Rockton Circle East",
+  "neighborhood": "Little Woods",
+  "segmentid": "2522573",
+  "councildistrict": "E",
+  "gisid": "426-502-0395",
+  "y": "30.0409266455",
+  "x": "-89.9807702662",
+  "location": {
+   "latitude": "30.0409266455",
+   "longitude": "-89.9807702662"
+  },
+  ":@computed_region_ewbu_t8bu": "10712",
+  ":@computed_region_k37d_then": "5",
+  ":@computed_region_m56f_hbma": "195",
+  ":@computed_region_7fw3_kdpf": "20",
+  ":@computed_region_spev_d8jm": "4149",
+  ":@computed_region_sikx_bdeb": "195",
+  ":@computed_region_evki_aju8": "1",
+  ":@computed_region_u4yh_3wk9": "10712"
+ },
+ {
+  "nearestfu": "5659 Pauline Drive",
+  "mdate": "2018-12-15T00:00:00.000",
+  "neighborhood": "Pontchartrain Park",
+  "segmentid": "2519848",
+  "councildistrict": "D",
+  "crewname": "PWD3711",
+  "reason": "GeneralMaintenance",
+  "lineflushed": "30",
+  "gisid": "411-494-0007",
+  "cbmaintid": "26876",
+  "y": "30.0197534068",
+  "x": "-90.0344927458",
+  "worktype": "Cleaned",
+  "location": {
+   "latitude": "30.0197534068",
+   "longitude": "-90.0344927458"
+  },
+  ":@computed_region_ewbu_t8bu": "6904",
+  ":@computed_region_k37d_then": "4",
+  ":@computed_region_m56f_hbma": "132",
+  ":@computed_region_7fw3_kdpf": "53",
+  ":@computed_region_spev_d8jm": "4148",
+  ":@computed_region_sikx_bdeb": "132",
+  ":@computed_region_evki_aju8": "7",
+  ":@computed_region_u4yh_3wk9": "6904"
+ }
+]

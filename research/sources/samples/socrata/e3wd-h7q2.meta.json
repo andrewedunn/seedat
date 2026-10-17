@@ -1,0 +1,104 @@
+{
+ "id": "e3wd-h7q2",
+ "name": "BlightStatus Demolitions",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Housing, Land Use, and Blight",
+ "attribution": "Office of Performance and Accountability",
+ "attributionLink": null,
+ "licenseId": "CC0_10",
+ "license": {
+  "name": "Creative Commons 1.0 Universal (Public Domain Dedication)",
+  "logoUrl": "images/licenses/ccZero.png",
+  "termsLink": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+ },
+ "rowsUpdatedAt": "2019-11-26 18:05",
+ "createdAt": 1357943536,
+ "viewLastModified": 1574791508,
+ "publicationDate": 1515615248,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "blightstat",
+  "blight",
+  "demolition",
+  "demo"
+ ],
+ "metadata": {
+  "rdfSubject": "0",
+  "jsonQuery": {
+   "order": [
+    {
+     "columnFieldName": "demolition_start",
+     "ascending": false
+    },
+    {
+     "columnFieldName": "full_address",
+     "ascending": true
+    }
+   ]
+  },
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "camacphee@nola.gov",
+    "Contact Name": "Cameron MacPhee"
+   },
+   "Source Information": {
+    "Source Department": "Code Enforcement"
+   }
+  },
+  "rowLabel": "Row",
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ],
+  "renderTypeConfig": {
+   "visible": {
+    "table": true
+   }
+  }
+ },
+ "description": "Blighted structures that have been demolished since the inception of BlightStat on October 1, 2010.  BlightStat is a public meeting that tracks the City's progress in meeting Mayor Landrieu's stated goal of eliminating 10,000 blighted New Orleans properties in three years.  Scheduled update: QuarterlyIn February 2014, the City made several changes to the dataset involving data cleaning and de-duplication. This process entailed adding demolition start and completion dates to demolitions, cleaning and verifying the addresses of demolitions, and removing duplicate cases based on their GeoPIN. The data set still includes several cases with duplicated GeoPINs, where multiple units were demolished on the same parcel.Acronyms used in the dataset:Federal Emergency Management Agency (FEMA)Imminent Danger of Collapse (IDC)New Orleans  Redevelopment Authority (NORA)Strategic Demolition for Economic Recovery (SDER) also known asNew Orleans Strategic Demo (NOSD)Louisiana Land Trust (LLT) UPDATED: 9/13/17",
+ "columns": [
+  {
+   "f": "program",
+   "n": "Program",
+   "t": "text"
+  },
+  {
+   "f": "caseid",
+   "n": "CaseID",
+   "t": "text"
+  },
+  {
+   "f": "full_address",
+   "n": "Full_Address",
+   "t": "text"
+  },
+  {
+   "f": "geopin",
+   "n": "GEOPIN",
+   "t": "text"
+  },
+  {
+   "f": "units",
+   "n": "Units",
+   "t": "number"
+  },
+  {
+   "f": "council_district",
+   "n": "Council District",
+   "t": "text"
+  },
+  {
+   "f": "demolition_start",
+   "n": "Demolition_Start",
+   "t": "calendar_date"
+  },
+  {
+   "f": "demolition_complete",
+   "n": "Demolition_Complete",
+   "t": "calendar_date"
+  }
+ ]
+}

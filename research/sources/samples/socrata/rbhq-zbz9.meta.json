@@ -1,0 +1,105 @@
+{
+ "id": "rbhq-zbz9",
+ "name": "Vacation Rentals (Hotels, B&B, short-term rentals, etc.)",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Housing, Land Use, and Blight",
+ "attribution": "City of New Orleans \u2013 Bureau of Revenue, Safety & Permits",
+ "attributionLink": null,
+ "licenseId": null,
+ "license": null,
+ "rowsUpdatedAt": "2025-01-04 08:10",
+ "createdAt": 1506371065,
+ "viewLastModified": 1739607014,
+ "publicationDate": 1514402207,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "hotel",
+  "short-term rentals",
+  "str",
+  "motel",
+  "b&b"
+ ],
+ "metadata": {
+  "jsonQuery": {
+   "order": [
+    {
+     "columnFieldName": "name",
+     "ascending": true
+    }
+   ]
+  },
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "data@nola.gov",
+    "Contact Name": "",
+    "Publisher": "",
+    "Public Access Level": ""
+   },
+   "Source Information": {
+    "Source Department": "Revenue",
+    "Format": "",
+    "Frequency of Data Change": ""
+   }
+  },
+  "rowLabel": "Property",
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ],
+  "renderTypeConfig": {
+   "visible": {
+    "table": true
+   }
+  }
+ },
+ "description": "A merged dataset of the Hotels, Motels, B&Bs, and Boarding Houses and the Short-Term Rentals datasets.",
+ "columns": [
+  {
+   "f": "name",
+   "n": "Name",
+   "t": "text"
+  },
+  {
+   "f": "address",
+   "n": "Address",
+   "t": "text"
+  },
+  {
+   "f": "type",
+   "n": "Type",
+   "t": "text"
+  },
+  {
+   "f": "bedroom_limit",
+   "n": "Bedroom limit",
+   "t": "text"
+  },
+  {
+   "f": "guest_limit",
+   "n": "Guest limit",
+   "t": "text"
+  },
+  {
+   "f": "expiration_date",
+   "n": "Expiration date",
+   "t": "calendar_date"
+  },
+  {
+   "f": "location",
+   "n": "Location",
+   "t": "location"
+  },
+  {
+   "f": "x",
+   "n": "x",
+   "t": "number"
+  },
+  {
+   "f": "y",
+   "n": "y",
+   "t": "number"
+  }
+ ]
+}

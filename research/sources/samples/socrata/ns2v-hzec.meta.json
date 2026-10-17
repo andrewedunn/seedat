@@ -1,0 +1,104 @@
+{
+ "id": "ns2v-hzec",
+ "name": "Hotels Motels BBs",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "City Finance and Budget",
+ "attribution": "Bureau of Revenue",
+ "attributionLink": null,
+ "licenseId": "CC0_10",
+ "license": {
+  "name": "Creative Commons 1.0 Universal (Public Domain Dedication)",
+  "logoUrl": "images/licenses/ccZero.png",
+  "termsLink": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+ },
+ "rowsUpdatedAt": "2024-07-16 21:43",
+ "createdAt": 1639428385,
+ "viewLastModified": 1721166179,
+ "publicationDate": 1639428386,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "hotel",
+  "tourism"
+ ],
+ "metadata": {
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "gis@nola.gov",
+    "Public Access Level": "public"
+   },
+   "Source Information": {
+    "Source Department": "Revenue",
+    "Frequency of Data Change": "Monthly"
+   }
+  },
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ]
+ },
+ "description": "Layer of actively licensed hotels, motels, and bed and breakfasts from the Department of Revenue data. Does not include licensed Short Term Rentals. For those, please see https://www.nola.gov/short-term-rentals/",
+ "columns": [
+  {
+   "f": "the_geom",
+   "n": "the_geom",
+   "t": "point"
+  },
+  {
+   "f": "objectid",
+   "n": "OBJECTID",
+   "t": "number"
+  },
+  {
+   "f": "businessaddress",
+   "n": "Business Address",
+   "t": "text"
+  },
+  {
+   "f": "businessname",
+   "n": "Business Name",
+   "t": "text"
+  },
+  {
+   "f": "businessstartdate",
+   "n": "Business Start Date",
+   "t": "text"
+  },
+  {
+   "f": "businesstype",
+   "n": "Business Type",
+   "t": "text"
+  },
+  {
+   "f": "city",
+   "n": "City",
+   "t": "text"
+  },
+  {
+   "f": "locationx",
+   "n": "LocationX",
+   "t": "text"
+  },
+  {
+   "f": "locationy",
+   "n": "LocationY",
+   "t": "text"
+  },
+  {
+   "f": "state",
+   "n": "State",
+   "t": "text"
+  },
+  {
+   "f": "suite",
+   "n": "Suite",
+   "t": "text"
+  },
+  {
+   "f": "zip",
+   "n": "Zip",
+   "t": "text"
+  }
+ ]
+}

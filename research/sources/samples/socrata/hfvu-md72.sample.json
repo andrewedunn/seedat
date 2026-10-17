@@ -1,0 +1,77 @@
+[
+ {
+  "the_geom": {
+   "type": "Point",
+   "coordinates": [
+    -90.109036022747,
+    29.918809471383
+   ]
+  },
+  "objectid": "12036",
+  "siteaddid": "85011144",
+  "addrnum": "721",
+  "fullname": "Robert Street",
+  "fulladdr": "721 Robert Street",
+  "pointtype": "Building",
+  "capturemeth": "Placed on Map",
+  "status": "Current",
+  "lastupdate": "2016-03-11T21:10:56.000Z",
+  "lasteditor": "AKKUEMMEL",
+  "source": "Safety and Permits",
+  "lat": "518036.65509407",
+  "long": "3668672.36883937",
+  "addr_type": "P",
+  "last_edited_user": "EEALLISON",
+  "last_edited_date": "2018-08-28T20:12:51.000Z",
+  "joinid": "1788"
+ },
+ {
+  "the_geom": {
+   "type": "Point",
+   "coordinates": [
+    -89.981929206843,
+    29.919500271129
+   ]
+  },
+  "objectid": "118058",
+  "siteaddid": "85121406",
+  "addrnum": "3100",
+  "fullname": "Kent Drive",
+  "fulladdr": "3100 Kent Drive",
+  "pointtype": "Building",
+  "capturemeth": "GPS",
+  "status": "Current",
+  "lastupdate": "2016-03-11T21:07:46.000Z",
+  "lasteditor": "AKKUEMMEL",
+  "source": "Original",
+  "lat": "518740.38968673",
+  "long": "3708932.96529286",
+  "addr_type": "P",
+  "joinid": "1049"
+ },
+ {
+  "the_geom": {
+   "type": "Point",
+   "coordinates": [
+    -89.990591247116,
+    29.904276988664
+   ]
+  },
+  "objectid": "618157",
+  "siteaddid": "88051409",
+  "addrnum": "5000",
+  "unittype": "Apt",
+  "unitid": "565",
+  "fullname": "Woodland Drive",
+  "fulladdr": "5000 Woodland Drive Apt 565",
+  "pointtype": "Unit, Condo, Office or Suite",
+  "capturemeth": "Placed on Map",
+  "status": "Current",
+  "source": "Safety and Permits",
+  "lat": "513172.46116954",
+  "long": "3706254.00017036",
+  "last_edited_user": "CMARD",
+  "last_edited_date": "2023-03-29T19:43:00.000Z",
+  "joinid": "2264"
+ }
+]

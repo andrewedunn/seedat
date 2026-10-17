@@ -1,0 +1,32 @@
+[
+ {
+  "caseid": "166455",
+  "violationid": "311593",
+  "caseno": "12-06545-BLGHT",
+  "location": "1121 Charbonnet St",
+  "violationdate": "2012-06-21T16:52:16.000",
+  "codesection": "28-20",
+  "violation": "28-20 Rodent Harborage",
+  "description": "All structures and exterior property must be kept free from rodent harborage and infestation. When found, rodents must be promptly exterminated by approved processes."
+ },
+ {
+  "caseid": "166455",
+  "violationid": "602821",
+  "caseno": "12-06545-BLGHT",
+  "location": "1121 Charbonnet St",
+  "violationdate": "2014-05-09T16:46:28.000",
+  "codesection": "28-20",
+  "violation": "28-20 Rodent Harborage",
+  "description": "All structures and exterior property must be kept free from rodent harborage and infestation. When found, rodents must be promptly exterminated by approved processes."
+ },
+ {
+  "caseid": "171833",
+  "violationid": "547595",
+  "caseno": "09-002855",
+  "location": "6218-6220 Wainwright Dr",
+  "violationdate": "2013-03-06T10:55:28.000",
+  "codesection": "28-20",
+  "violation": "28-20 Rodent Harborage",
+  "description": "All structures and exterior property must be kept free from rodent harborage and infestation. When found, rodents must be promptly exterminated by approved processes."
+ }
+]

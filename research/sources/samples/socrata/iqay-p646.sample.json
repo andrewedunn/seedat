@@ -1,0 +1,74 @@
+[
+ {
+  "businessaddress": "2525 BIENVILLE ST",
+  "businessphone": "504-555-0100",
+  "businessstartdate": "2016-02-25",
+  "businesstype": "Department Stores",
+  "businesslicensenumber": "105012353",
+  "city": "NEW ORLEANS",
+  "ownername": "MO'S ART SUPPLY",
+  "state": "LA",
+  "streetname": "BIENVILLE",
+  "streetnumber": "2525",
+  "streetsuffix": "ST",
+  "zip": "70119-5607",
+  "locationx": "3676507.47",
+  "locationy": "535319.04",
+  "the_geom": {
+   "type": "Point",
+   "coordinates": [
+    -90.08370412029558,
+    29.96609240335689
+   ]
+  }
+ },
+ {
+  "businessaddress": "1200 N PETERS ST",
+  "businessname": "ROYAL GRAPHICS STUDIO",
+  "businessphone": "504-555-0100",
+  "businessstartdate": "2023-01-01",
+  "businesstype": "Flea Market",
+  "businesslicensenumber": "105063158",
+  "city": "NEW ORLEANS",
+  "ownername": "JAMES DESPENZA",
+  "state": "LA",
+  "streetdirection": "N",
+  "streetname": "PETERS",
+  "streetnumber": "1200",
+  "streetsuffix": "ST",
+  "zip": "70116-2631",
+  "locationx": "3684590.01",
+  "locationy": "533137.39",
+  "the_geom": {
+   "type": "Point",
+   "coordinates": [
+    -90.05825636718689,
+    29.959848769517027
+   ]
+  }
+ },
+ {
+  "businessaddress": "3705 GENERAL DEGAULLE DR",
+  "businessphone": "504-555-0100",
+  "businessstartdate": "2025-10-01",
+  "businesstype": "Limited Service Restaurants(no table service available)",
+  "businesslicensenumber": "106039406",
+  "city": "NEW ORLEANS",
+  "ownername": "CRISPY FRESH LLC",
+  "state": "LA",
+  "streetname": "GENERAL DEGAULLE",
+  "streetnumber": "3705",
+  "streetsuffix": "DR",
+  "suite": "108",
+  "zip": "70114-8205",
+  "locationx": "3696987.72",
+  "locationy": "519605.68",
+  "the_geom": {
+   "type": "Point",
+   "coordinates": [
+    -90.01959727964416,
+    29.92225609323029
+   ]
+  }
+ }
+]

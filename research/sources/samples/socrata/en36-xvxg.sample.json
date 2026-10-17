@@ -1,0 +1,63 @@
+[
+ {
+  "address": "3604 Jena St",
+  "license_type": "Short Term Rental",
+  "residential_subtype": "N/A",
+  "current_status": "Denied",
+  "expired": "Yes",
+  "link": "https://onestopapp.nola.gov/Redirect.aspx?SearchString=J43F7N",
+  "license_holder_name": "Dennis M Bruck",
+  "application_date": "2018-11-15T13:47:04.000",
+  "reference_code": "J43F7N",
+  "x": "3669705.78766",
+  "y": "527858.46355",
+  "location": {
+   "latitude": "29.94578048669819",
+   "longitude": "-90.10543620185369"
+  },
+  ":@computed_region_ewbu_t8bu": "8418",
+  ":@computed_region_k37d_then": "2",
+  ":@computed_region_m56f_hbma": "49",
+  ":@computed_region_7fw3_kdpf": "10",
+  ":@computed_region_spev_d8jm": "4147",
+  ":@computed_region_sikx_bdeb": "49",
+  ":@computed_region_evki_aju8": "3",
+  ":@computed_region_u4yh_3wk9": "8418"
+ },
+ {
+  "address": "1868 N Rocheblave St",
+  "license_type": "Short Term Rental",
+  "residential_subtype": "Temporary STR",
+  "current_status": "Denied",
+  "expired": "Yes",
+  "link": "https://onestopapp.nola.gov/Redirect.aspx?SearchString=6LZA18",
+  "contact_name": "Jade Newman",
+  "contact_phone": "5043004481",
+  "contact_email": "redacted@example.com",
+  "license_holder_name": "Simone Newman",
+  "application_date": "2018-05-18T00:00:33.000",
+  "reference_code": "6LZA18",
+  "x": "-1.0",
+  "y": "-1.0",
+  "location": {
+   "latitude": "28.098890706026218",
+   "longitude": "-101.51779913517808"
+  }
+ },
+ {
+  "license_type": "Short Term Rental",
+  "residential_subtype": "N/A",
+  "current_status": "Duplicate",
+  "expired": "Yes",
+  "link": "https://onestopapp.nola.gov/Redirect.aspx?SearchString=YZ1BXS",
+  "license_holder_name": "Curtis Alex",
+  "application_date": "2017-03-14T00:00:00.000",
+  "reference_code": "YZ1BXS",
+  "x": "-1.0",
+  "y": "-1.0",
+  "location": {
+   "latitude": "28.098890706026218",
+   "longitude": "-101.51779913517808"
+  }
+ }
+]

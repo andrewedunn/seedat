@@ -1,0 +1,180 @@
+{
+ "id": "uzyk-jrck",
+ "name": "Adjudication Enforcement Detailed Hearings Data for the Office of Business and External Services",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Housing, Land Use, and Blight",
+ "attribution": "City of New Orleans",
+ "attributionLink": null,
+ "licenseId": null,
+ "license": null,
+ "rowsUpdatedAt": "2026-10-17 04:50",
+ "createdAt": 1660752026,
+ "viewLastModified": 1669844978,
+ "publicationDate": 1660752359,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "code enforcement",
+  "hearings",
+  "zoning",
+  "str",
+  "abo",
+  "vcc",
+  "hdlc",
+  "adjudication",
+  "obes",
+  "mpm",
+  "blight",
+  "historic district",
+  "landmarks"
+ ],
+ "metadata": {
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "data@nola.gov",
+    "Contact Name": "Cameron MacPhee"
+   },
+   "Source Information": {
+    "Source Department": "Safety and Permits"
+   }
+  },
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ]
+ },
+ "description": "A dataset of all enforcement hearings against parcels within six adjudication departments - Code Enforcement, Alcohol Beverage Outlets (ABO), Historic District and Landmarks Commission (HDLC), Vieux Carr\u00e9 Commission (VCC), Short Term Rentals (STR) and Zoning - from January 1st, 2018 to current day.",
+ "columns": [
+  {
+   "f": "hearing_id",
+   "n": "Hearing ID",
+   "t": "text"
+  },
+  {
+   "f": "incident_number",
+   "n": "Incident Number",
+   "t": "text"
+  },
+  {
+   "f": "codeincidid",
+   "n": "CodeIncidID",
+   "t": "text"
+  },
+  {
+   "f": "o_c",
+   "n": "O/C",
+   "t": "text"
+  },
+  {
+   "f": "address",
+   "n": "Address",
+   "t": "text"
+  },
+  {
+   "f": "agency",
+   "n": "Agency",
+   "t": "text"
+  },
+  {
+   "f": "case_type",
+   "n": "Case Type",
+   "t": "text"
+  },
+  {
+   "f": "updatedtype",
+   "n": "UpdatedType",
+   "t": "text"
+  },
+  {
+   "f": "hearing_date",
+   "n": "Hearing Date",
+   "t": "calendar_date"
+  },
+  {
+   "f": "prevhearingdate",
+   "n": "PrevHearingDate",
+   "t": "calendar_date"
+  },
+  {
+   "f": "nexthearingdate",
+   "n": "NextHearingDate",
+   "t": "calendar_date"
+  },
+  {
+   "f": "judgment",
+   "n": "Judgment",
+   "t": "text"
+  },
+  {
+   "f": "case_established",
+   "n": "Case Established",
+   "t": "calendar_date"
+  },
+  {
+   "f": "violation_count",
+   "n": "Violation Count",
+   "t": "number"
+  },
+  {
+   "f": "open_violations",
+   "n": "Open Violations",
+   "t": "number"
+  },
+  {
+   "f": "event_at_case_closed",
+   "n": "Event at Case Closed",
+   "t": "text"
+  },
+  {
+   "f": "close_reason",
+   "n": "Close Reason",
+   "t": "text"
+  },
+  {
+   "f": "case_history",
+   "n": "Case History",
+   "t": "text"
+  },
+  {
+   "f": "feecount",
+   "n": "FeeCount",
+   "t": "number"
+  },
+  {
+   "f": "courtfee",
+   "n": "CourtFee",
+   "t": "number"
+  },
+  {
+   "f": "sumfee",
+   "n": "SumFee",
+   "t": "number"
+  },
+  {
+   "f": "x",
+   "n": "X",
+   "t": "number"
+  },
+  {
+   "f": "y",
+   "n": "Y",
+   "t": "number"
+  },
+  {
+   "f": "longitude",
+   "n": "Longitude",
+   "t": "number"
+  },
+  {
+   "f": "latitude",
+   "n": "Latitude",
+   "t": "number"
+  },
+  {
+   "f": "location",
+   "n": "Location",
+   "t": "point"
+  }
+ ]
+}

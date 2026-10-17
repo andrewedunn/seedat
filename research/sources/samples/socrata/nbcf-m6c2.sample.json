@@ -1,0 +1,74 @@
+[
+ {
+  "the_geom": {
+   "type": "Point",
+   "coordinates": [
+    -90.105864822561,
+    29.997754292848
+   ]
+  },
+  "objectid": "45140",
+  "address": "5926 General Diaz St",
+  "constructionval": "10000",
+  "descr": "New Detached 483 sq. ft. garage",
+  "issuedate": "2018-11-30T18:22:49.000Z",
+  "landuse": "Accessory Use",
+  "locationx": "3669369.39",
+  "locationy": "546754.76",
+  "numstring": "18-38949-ACCS",
+  "permittype": "Accessory Structure",
+  "prmtid": "785901",
+  "proposedusecategory": "Uncategorized - Business",
+  "proposeduseindustry": "Accessory Structure",
+  "topcat": "Business",
+  "globalid": "{4D7C472D-5508-4EB4-B023-9EB46FE6C7BA}"
+ },
+ {
+  "the_geom": {
+   "type": "Point",
+   "coordinates": [
+    -90.068006180506,
+    29.955659871206
+   ]
+  },
+  "objectid": "70173",
+  "address": "300 Bourbon St",
+  "constructionval": "59200",
+  "descr": "Existing kitchen renovation with new food service equipment line connecting to existing electrical and plumbing.  TCO Issued 8-29-24 to match SFM",
+  "issuedate": "2024-08-15T14:45:56.000Z",
+  "landuse": "Business Use",
+  "locationx": "3681521.45",
+  "locationy": "531577.98",
+  "numstring": "24-19767-RNVN",
+  "permittype": "Renovation (Non-Structural)",
+  "prmtid": "1019626",
+  "proposedusecategory": "Uncategorized - Business",
+  "proposeduseindustry": "Uncategorized - Business",
+  "topcat": "Business",
+  "globalid": "{1C38C6D9-11CF-4347-9F7C-999B3F399281}"
+ },
+ {
+  "the_geom": {
+   "type": "Point",
+   "coordinates": [
+    -90.053325890187,
+    29.971030540878
+   ]
+  },
+  "objectid": "51298",
+  "address": "1309 Spain St",
+  "constructionval": "20000",
+  "descr": "Install 8.30 kW grid-tie solar pv system.",
+  "issuedate": "2022-08-03T16:46:15.000Z",
+  "landuse": "Two-Family",
+  "locationx": "3686107.57",
+  "locationy": "537218.95",
+  "numstring": "22-20727-RNVN",
+  "permittype": "Renovation (Non-Structural)",
+  "prmtid": "934185",
+  "proposedusecategory": "Residential",
+  "proposeduseindustry": "Two Family",
+  "topcat": "Residential",
+  "globalid": "{D0272C02-6BC8-4EA1-92DF-03B37F3A8743}"
+ }
+]

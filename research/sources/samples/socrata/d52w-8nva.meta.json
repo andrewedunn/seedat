@@ -1,0 +1,95 @@
+{
+ "id": "d52w-8nva",
+ "name": "Sheriff Sales - Lien Foreclosures",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Real Estate, Land Records",
+ "attribution": "Sheriff's Office",
+ "attributionLink": null,
+ "licenseId": null,
+ "license": null,
+ "rowsUpdatedAt": "2018-11-16 04:45",
+ "createdAt": 1487712094,
+ "viewLastModified": 1489008655,
+ "publicationDate": 1487717637,
+ "rowIdentifierColumnId": 290799697,
+ "tags": [
+  "lien",
+  "foreclosure",
+  "auction",
+  "sheriff sales"
+ ],
+ "metadata": {
+  "rdfSubject": "0",
+  "rdfClass": "",
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "data@nola.gov"
+   },
+   "Source Information": {
+    "Source Department": "Code Enforcement",
+    "Frequency of Data Change": "Daily"
+   }
+  },
+  "rowIdentifier": 290799697,
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ],
+  "rowLabel": "",
+  "renderTypeConfig": {
+   "visible": {
+    "table": true
+   }
+  }
+ },
+ "description": "Record of the status of Code Enforcement cases brought to auction. Statuses include No Bid No Sale, Pending, Sale Stopped and Sold.",
+ "columns": [
+  {
+   "f": "casetitle",
+   "n": "CaseTitle",
+   "t": "text"
+  },
+  {
+   "f": "cdccasenumber",
+   "n": "CdcCaseNumber",
+   "t": "text"
+  },
+  {
+   "f": "closeddate",
+   "n": "ClosedDate",
+   "t": "calendar_date"
+  },
+  {
+   "f": "defendant",
+   "n": "Defendant",
+   "t": "text"
+  },
+  {
+   "f": "plaintiff",
+   "n": "Plaintiff",
+   "t": "text"
+  },
+  {
+   "f": "propertyaddress",
+   "n": "PropertyAddress",
+   "t": "text"
+  },
+  {
+   "f": "saleamount",
+   "n": "SaleAmount",
+   "t": "number"
+  },
+  {
+   "f": "saledate",
+   "n": "SaleDate",
+   "t": "text"
+  },
+  {
+   "f": "salestatus",
+   "n": "SaleStatus",
+   "t": "text"
+  }
+ ]
+}

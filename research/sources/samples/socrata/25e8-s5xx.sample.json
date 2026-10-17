@@ -1,0 +1,56 @@
+[
+ {
+  "the_geom": {
+   "type": "Point",
+   "coordinates": [
+    -89.99930818823,
+    30.017635829131
+   ]
+  },
+  "objectid": "1539",
+  "addr": "4634 Wilson Avenue",
+  "name": "Rosemont Records",
+  "architect": "Unknown",
+  "nom_des": "Nominated",
+  "no_cbd": "New Orleans",
+  "date": "1960-65",
+  "hyperlink": "https://nola.gov/nola/media/HDLC/Designation%20Reports/4634-Wilson-Nomination-Report.pdf",
+  "editdate": "2026-06-16T19:43:12.000Z"
+ },
+ {
+  "the_geom": {
+   "type": "Point",
+   "coordinates": [
+    -90.068437237933,
+    29.953389702604
+   ]
+  },
+  "objectid": "53",
+  "addr": "115 Exchange Place",
+  "name": "Bank of America-Allison Building",
+  "architect": "Gallier & Esterbrokke",
+  "nom_des": "Designated",
+  "no_cbd": "CBD",
+  "date": "1866",
+  "hyperlink": "https://nola.gov/nola/media/HDLC/Designation%20Reports/115exchange-report_001.pdf",
+  "editdate": "2025-10-07T20:48:52.000Z"
+ },
+ {
+  "the_geom": {
+   "type": "Point",
+   "coordinates": [
+    -90.080454315941,
+    29.93610634029
+   ]
+  },
+  "objectid": "118",
+  "addr": "2027 Carondelet Street",
+  "name": "Leathers Buck House",
+  "architect": "Henry Thiberge",
+  "nom_des": "Designated",
+  "no_cbd": "New Orleans",
+  "date": "1859",
+  "hyperlink": "https://nola.gov/nola/media/HDLC/Designation%20Reports/2027-carondelet-report.pdf",
+  "editdate": "2026-06-16T19:25:25.000Z"
+ }
+]

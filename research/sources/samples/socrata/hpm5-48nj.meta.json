@@ -1,0 +1,98 @@
+{
+ "id": "hpm5-48nj",
+ "name": "NORA Sold Properties",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Housing, Land Use, and Blight",
+ "attribution": "New Orleans Redevelopment Authority (NORA)",
+ "attributionLink": null,
+ "licenseId": "CC0_10",
+ "license": {
+  "name": "Creative Commons 1.0 Universal (Public Domain Dedication)",
+  "logoUrl": "images/licenses/ccZero.png",
+  "termsLink": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+ },
+ "rowsUpdatedAt": "2026-08-11 21:34",
+ "createdAt": 1360173102,
+ "viewLastModified": 1786484077,
+ "publicationDate": 1538767798,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "redevelopment",
+  "sold",
+  "properties"
+ ],
+ "metadata": {
+  "rdfSubject": "0",
+  "jsonQuery": {
+   "order": [
+    {
+     "columnFieldName": "sale_date",
+     "ascending": true
+    }
+   ]
+  },
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "data@nola.gov",
+    "Public Access Level": "public"
+   },
+   "Source Information": {
+    "Source Department": "New Orleans Redevelopment Authority (NORA)"
+   }
+  },
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ],
+  "renderTypeConfig": {
+   "visible": {
+    "table": true
+   }
+  }
+ },
+ "description": "This data set is a listing of all property sales by NORA through the following disposition channels.\n- Auction: Properties put up for auction and sold to the highest bidder.\n- Development: Properties offered to development partners at a discounted rate to support the development of affordable housing.\n- Lot Next Door: Properties sold to adjacent parcel owners, with discount opportunities for eligible participants.\n- Alternative Land Use: Properties sold for development of green space and community gardens.\n\nNote: this dataset contains duplicate addresses, which likely represent reversions or quitclaims that NORA sold again.",
+ "columns": [
+  {
+   "f": "identifier",
+   "n": "Identifier",
+   "t": "text"
+  },
+  {
+   "f": "property_address",
+   "n": "Property Address",
+   "t": "text"
+  },
+  {
+   "f": "zip_code",
+   "n": "Zip Code",
+   "t": "text"
+  },
+  {
+   "f": "geopin",
+   "n": "Geopin",
+   "t": "text"
+  },
+  {
+   "f": "council_district",
+   "n": "Council District",
+   "t": "text"
+  },
+  {
+   "f": "disposition_channel",
+   "n": "Disposition Channel",
+   "t": "text"
+  },
+  {
+   "f": "sale_date",
+   "n": "Sale Date",
+   "t": "calendar_date"
+  },
+  {
+   "f": "geocoded_column",
+   "n": "New Georeferenced Column",
+   "t": "location"
+  }
+ ]
+}

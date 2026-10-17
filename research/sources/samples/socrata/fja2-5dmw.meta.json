@@ -1,0 +1,90 @@
+{
+ "id": "fja2-5dmw",
+ "name": "Buildings",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": null,
+ "attribution": null,
+ "attributionLink": null,
+ "licenseId": null,
+ "license": null,
+ "rowsUpdatedAt": "2026-08-08 20:21",
+ "createdAt": 1783608403,
+ "viewLastModified": 1783608405,
+ "publicationDate": 1783608405,
+ "rowIdentifierColumnId": null,
+ "tags": null,
+ "metadata": {
+  "arcgis_connection": {
+   "url": "https://maps.nola.gov/server/rest/services/Basemap/Vector_Basemap/MapServer/16"
+  }
+ },
+ "description": "",
+ "columns": [
+  {
+   "f": "the_geom",
+   "n": "the_geom",
+   "t": "multipolygon"
+  },
+  {
+   "f": "objectid",
+   "n": "OBJECTID",
+   "t": "number"
+  },
+  {
+   "f": "geopin",
+   "n": "GEOPIN",
+   "t": "number"
+  },
+  {
+   "f": "buildingid",
+   "n": "BUILDINGID",
+   "t": "text"
+  },
+  {
+   "f": "shape_starea",
+   "n": "Shape.STArea()",
+   "t": "number"
+  },
+  {
+   "f": "shape_stlength",
+   "n": "Shape.STLength()",
+   "t": "number"
+  },
+  {
+   "f": "activestatus",
+   "n": "ActiveStatus",
+   "t": "number"
+  },
+  {
+   "f": "created_user",
+   "n": "created_user",
+   "t": "text"
+  },
+  {
+   "f": "created_date",
+   "n": "created_date",
+   "t": "date"
+  },
+  {
+   "f": "last_edited_user",
+   "n": "last_edited_user",
+   "t": "text"
+  },
+  {
+   "f": "last_edited_date",
+   "n": "last_edited_date",
+   "t": "date"
+  },
+  {
+   "f": "structureid",
+   "n": "StructureID",
+   "t": "number"
+  },
+  {
+   "f": "globalid",
+   "n": "GlobalID",
+   "t": "text"
+  }
+ ]
+}

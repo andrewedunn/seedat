@@ -1,0 +1,45 @@
+{
+ "id": "fdhh-psg3",
+ "name": "NOLA Permits - LAMA (Historic Data: 2004-2011)",
+ "assetType": "file",
+ "viewType": "blobby",
+ "category": "Housing, Land Use, and Blight",
+ "attribution": "",
+ "attributionLink": null,
+ "licenseId": "CC0_10",
+ "license": {
+  "name": "Creative Commons 1.0 Universal (Public Domain Dedication)",
+  "logoUrl": "images/licenses/ccZero.png",
+  "termsLink": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+ },
+ "rowsUpdatedAt": "2012-12-14 19:58",
+ "createdAt": 1355515105,
+ "viewLastModified": 1485207668,
+ "publicationDate": 1355515105,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "new orleans",
+  "permits",
+  "legacy"
+ ],
+ "metadata": {
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "data@nola.gov"
+   },
+   "Source Information": {
+    "Source Department": "Safety and Permits"
+   }
+  },
+  "availableDisplayTypes": [
+   "blob"
+  ],
+  "renderTypeConfig": {
+   "visible": {
+    "blob": true
+   }
+  }
+ },
+ "description": "City of New Orleans Permits (March 2004 thru December 2011).   Tabular data (DBF), Large dataset - 300,000+ records. Historic permit data transferred from Acella system to LAMA (Municipal Land Management Solution Framework)",
+ "columns": []
+}

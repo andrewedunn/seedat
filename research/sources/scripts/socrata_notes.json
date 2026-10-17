@@ -1,0 +1,616 @@
+{
+ "rcm3-fn58": {
+  "cadence": "Nightly full replace (every row :updated_at = refresh time)",
+  "geo": "address text + location_1 (lat/lon, 100% filled) + pin",
+  "keys": "numstring (permit # e.g. 26-28966-FGAS), pin (assessor-style ID like 513840022 or 37W104909, NOT the 8-digit GEOPIN), address",
+  "note": "Main OneStop permit feed from 1/1/2012 (filingdate min 2002 = outliers). Same permit # space as 72f9-bi28 and aib5-en5t (all three are Safety and Permits exports; expect heavy overlap, 349k vs 466k vs 229k rows). Has fees, inspections count, contractors, zoning, historic district, council district. 90% rows have pin."
+ },
+ "72f9-bi28": {
+  "cadence": "Refreshed ~nightly/every 1-2 days (last 2026-10-15)",
+  "geo": "originaladdress1 + city/state/zip, pin (90% filled); location column is declared but empty (0 rows)",
+  "keys": "permitnum, pin, originaladdress1",
+  "note": "\"Permits - BLDS\" = Building & Land Development Specification (Open Permit/BLDS schema) with mapped enums (permittypemapped, workclassmapped) and contractor trade/license fields; more rows than rcm3-fn58. No lat/lon, so geocoding is on us (address or pin). issuedate min 2001 are outliers. Link column gives OneStop deep link."
+ },
+ "aib5-en5t": {
+  "cadence": "Nightly full replace (every row :updated_at = refresh time)",
+  "geo": "address + x/y (state plane) + lat/lon + location point",
+  "keys": "permitnumber, prmtid, address",
+  "note": "Workflow-timestamp view of permits (application, plan review, zoning review, approval, first inspection, CO date) with days_to_* metrics. Useful for turnaround analytics. Other class of types: includes \"Municipal Change of Address\"."
+ },
+ "nbcf-m6c2": {
+  "cadence": "STALE/frozen",
+  "geo": "see fields",
+  "keys": "n/a",
+  "note": "Building permits 2018-2024-12 only; superseded by rcm3-fn58/72f9-bi28. Ignore.",
+  "why": "superseded permits snapshot"
+ },
+ "fja2-5dmw": {
+  "cadence": "Periodic GIS refresh (last 2026-08-08)",
+  "geo": "polygons (the_geom)",
+  "keys": "geopin, structureid",
+  "note": "Same 162,486 rows as Building Footprint prh5-qsuf (this one is the table view with dates). Footprints have GEOPIN so can anchor structure-to-parcel."
+ },
+ "f7tt-z5vu": {
+  "cadence": "Frozen",
+  "geo": "address",
+  "keys": "permit number",
+  "note": "Historical permits 1995-2009 (85,899 rows). Fills the pre-2012 gap; static.",
+  "why": "history only, needed for full history"
+ },
+ "rw6e-a9x3": {
+  "cadence": "Frozen",
+  "geo": "n/a",
+  "keys": "n/a",
+  "note": "File attachment (not a table): Accela permits 3/2004-3/2012 as downloadable file; no SODA rows.",
+  "why": "file download only, no API rows"
+ },
+ "fdhh-psg3": {
+  "cadence": "Frozen",
+  "geo": "n/a",
+  "keys": "n/a",
+  "note": "File attachment (not a table): LAMA permits 2004-2011.",
+  "why": "file download only, no API rows"
+ },
+ "aj8a-ghih": {
+  "cadence": "Frozen since 2025-08",
+  "geo": "see fields",
+  "keys": "n/a",
+  "note": "Live entertainment permits, 149 rows.",
+  "why": "tiny, not updated"
+ },
+ "68qb-xc34": {
+  "cadence": "Derived filter view",
+  "geo": "n/a",
+  "keys": "n/a",
+  "note": "Filter view of rcm3-fn58; SODA count returned 0 rows. Ignore."
+ },
+ "u6yx-v2tw": {
+  "cadence": "Nightly full replace (every row :updated_at = refresh time)",
+  "geo": "location = address text; geopin filled for only ~93% (169,523 of 183,007); xpos/ypos state plane, -1 when unknown (174,636 have >0)",
+  "keys": "caseno (e.g. 26-11902-MPM), caseid (numeric, links cases to inspections/violations/hearings), geopin (cases & hearings only)",
+  "note": "Anchor for BlightStatus-style code enforcement. Dates contain garbage: initinspection min 1905-03-23, max 2026-11-08 (scheduled?), recordationdate max year 5015. Must clean. Replaces c3as-66tn/6ha4-bwyc (stale copies)."
+ },
+ "8pqz-ftzc": {
+  "cadence": "Nightly full replace (every row :updated_at = refresh time)",
+  "geo": "see fields",
+  "keys": "caseno (e.g. 26-11902-MPM), caseid (numeric, links cases to inspections/violations/hearings), geopin (cases & hearings only)",
+  "note": "Open cases subset (active pipeline) of u6yx-v2tw. Redundant if we load All Cases."
+ },
+ "uh5a-f7uw": {
+  "cadence": "Nightly full replace (every row :updated_at = refresh time)",
+  "geo": "location = address text only",
+  "keys": "caseid, caseno",
+  "note": "Inspection events per case (246k). Date min 1905 and max 2026-11-08 include scheduled/bad dates. Child of u6yx-v2tw."
+ },
+ "3ehi-je3s": {
+  "cadence": "Nightly full replace (every row :updated_at = refresh time)",
+  "geo": "location = address text only",
+  "keys": "caseid, violationid, caseno",
+  "note": "Violation rows per case (273k), with code section and text. Child of cases."
+ },
+ "44ct-56tr": {
+  "cadence": "Nightly full replace (every row :updated_at = refresh time)",
+  "geo": "propertyaddress text, geoaddress, geopin (95,560 of 103,309), xpos/ypos",
+  "keys": "casenumber (=caseno), caseid, geopin",
+  "note": "All code-enforcement hearings 2008-future (hearingdate max 2026-12-15 = scheduled). mrcm-dtu5 is a view with the same 103,309 rows."
+ },
+ "mrcm-dtu5": {
+  "cadence": "Nightly full replace (every row :updated_at = refresh time)",
+  "geo": "same as 44ct-56tr",
+  "keys": "casenumber, caseid",
+  "note": "Filter view duplicate of 44ct-56tr (identical row count). Ignore."
+ },
+ "w6gf-dnv6": {
+  "cadence": "Nightly full replace (every row :updated_at = refresh time)",
+  "geo": "see fields",
+  "keys": "case number",
+  "note": "Upcoming hearings only (5,014 rows; hearingdatetime min 1900 = placeholder). Not history."
+ },
+ "c8uq-kxp3": {
+  "cadence": "Nightly full replace (every row :updated_at = refresh time)",
+  "geo": "see fields",
+  "keys": "case number",
+  "note": "OneStop-sourced hearings (5,006 rows, upcoming/recent). Not full history."
+ },
+ "xhih-vxs6": {
+  "cadence": "Nightly full replace (every row :updated_at = refresh time)",
+  "geo": "address + x/y + lat/lon",
+  "keys": "caseno",
+  "note": "Grass cutting/lot abatement (Chapter 66) cases; work-order milestones. Date columns have garbage (year 3202)."
+ },
+ "xv8z-gn8b": {
+  "cadence": "Nightly",
+  "geo": "address + xpos/ypos",
+  "keys": "caseno, caseid",
+  "note": "Abatement events (7,240): only ~31 rows touched in last 2 days, so closer to true incremental, uses lastupload."
+ },
+ "a2w6-xuk2": {
+  "cadence": "Nightly full replace (every row :updated_at = refresh time)",
+  "geo": "address text",
+  "keys": "caseno?",
+  "note": "Filter view of rodent-harborage violations (30,957)."
+ },
+ "wy29-i338": {
+  "cadence": "Nightly full replace (every row :updated_at = refresh time)",
+  "geo": "address + x/y + lat/lon + location",
+  "keys": "codeincidid, numstring (case number), address",
+  "note": "Office of Business & External Services (new Accela/OneStop) code enforcement cases; 114k rows. Newer system than u6yx-v2tw (legacy Hansen/BlightStatus). Date garbage: lastinspection max 2915, nextstatusdate 2031, many 1753/1900 placeholders. Overlap with u6yx-v2tw unclear: check numstring vs caseno formats before dedup."
+ },
+ "uzyk-jrck": {
+  "cadence": "Nightly full replace (every row :updated_at = refresh time)",
+  "geo": "see fields",
+  "keys": "case number",
+  "note": "Detailed hearings for wy29-i338 (52,563 rows)."
+ },
+ "f5zm-xkyr": {
+  "cadence": "Nightly full replace (every row :updated_at = refresh time)",
+  "geo": "see fields",
+  "keys": "case number",
+  "note": "Fines and fees ledger (224,946 rows), d_due max year 7201 (garbage)."
+ },
+ "6ha4-bwyc": {
+  "cadence": "STALE",
+  "geo": "n/a",
+  "keys": "caseno",
+  "note": "Old copy of All Cases (171,089 rows, 2024-07-09). Superseded by u6yx-v2tw.",
+  "why": "superseded duplicate of code enforcement cases"
+ },
+ "d4d6-yab5": {
+  "cadence": "STALE",
+  "geo": "n/a",
+  "keys": "caseno",
+  "note": "Old copy of Active Pipeline.",
+  "why": "superseded duplicate"
+ },
+ "c3as-66tn": {
+  "cadence": "STALE",
+  "geo": "n/a",
+  "keys": "caseno",
+  "note": "Old copy of All Cases (2025-02-24).",
+  "why": "superseded duplicate"
+ },
+ "gjzc-adg8": {
+  "cadence": "STALE",
+  "geo": "n/a",
+  "keys": "caseno",
+  "note": "Old copy of Active Pipeline (2025-02-24).",
+  "why": "superseded duplicate"
+ },
+ "d2is-2r79": {
+  "cadence": "Frozen 2013",
+  "geo": "n/a",
+  "keys": "n/a",
+  "note": "Accela-era legacy hearings 2011-2012 (2,957 rows).",
+  "why": "history only (2011-2012)"
+ },
+ "grqp-bvwk": {
+  "cadence": "Frozen 2015",
+  "geo": "n/a",
+  "keys": "n/a",
+  "note": "Historical inspection requests 1984-2005 (19,020).",
+  "why": "history only"
+ },
+ "e3wd-h7q2": {
+  "cadence": "Frozen 2019-11",
+  "geo": "full_address, geopin",
+  "keys": "caseid, geopin",
+  "note": "BlightStatus demolitions 2009-2019, 3,940 rows. Nothing newer on Socrata. Current demolition activity must come from code enforcement (abatement/stage fields) or Permits (demolition permit types).",
+  "why": "demolitions data ends 2019-09; no replacement dataset"
+ },
+ "fcuq-eeca": {
+  "cadence": "Frozen",
+  "geo": "GPS",
+  "keys": "n/a",
+  "note": "Post-Katrina FEMA demolition requests 2005-2009 (9,334). Historical only.",
+  "why": "historical 2005-2009"
+ },
+ "2jgv-pqrq": {
+  "cadence": "Nightly ~07:10 UTC, true upsert (about 2,300 rows touched per 2 days), date_created has 1-day lag",
+  "geo": "final_address text (1,026,296 non-null), lat/lon (0.0 when ungeocoded; 998,565 non-zero of 1.04M; 2025+: 99.9%), geocoded_column",
+  "keys": "service_request (e.g. 2021-847416), rowid, final_address",
+  "note": "Includes historic 311 re-keyed, but date_created min is 2019-01-01 (pre-2019 rows only in case_close_date; true 2012-2018 history is in 3iz8-nghx). So full history = this + 3iz8-nghx. Only dataset where :updated_at is a usable delta key. No resident PII; no contact fields."
+ },
+ "ezfk-aiyx": {
+  "cadence": "Nightly",
+  "geo": "same as 2jgv-pqrq",
+  "keys": "service_request",
+  "note": "Filter view of 311 from 2024-09-09 (Francine onward), 199k rows; subset of 2jgv-pqrq. Ignore."
+ },
+ "3dnv-gjst": {
+  "cadence": "Filter view",
+  "geo": "same",
+  "keys": "service_request",
+  "note": "Missed trash pickup Dec 2022-Jan 2023 filter view. Subset. Ignore."
+ },
+ "3iz8-nghx": {
+  "cadence": "Frozen 2019-01",
+  "geo": "see fields",
+  "keys": "ticket id",
+  "note": "311 2012-2018 (303,735 rows) with ticket_created_date_time. Needed for full history. Static; also :updated_at 2019-09-17.",
+  "why": "historical 2012-2018, needed once"
+ },
+ "i57e-74kx": {
+  "cadence": "Frozen 2019-01",
+  "geo": "see fields",
+  "keys": "ticket id",
+  "note": "Residential recycling requests 2012-2018 (27,501); subset of 3iz8-nghx.",
+  "why": "subset of historic 311"
+ },
+ "es9j-6y5d": {
+  "cadence": "Nightly ~08:00 UTC full replace; created through previous day 23:59",
+  "geo": "block_address (\"011XX Gravier St\", \"Terpsichore St & Baronne St\" for intersections), location Point (lat/lon already block-snapped), mapx/mapy state plane, zip, beat, policedistrict",
+  "keys": "nopd_item (e.g. J1676526) only; no join to permits/cases except via block/geo",
+  "note": "Current-year calls for service. All text-typed timestamps (timecreate etc.). Rows can be reclassified for 36 hours, so a nightly full pull or rolling 3-day re-pull is required. NOPD terms: block-level addresses only; do not derive specific addresses; no commercial use (see Terms of use)"
+ },
+ "4xwx-sfte": {
+  "cadence": "Closed year (final refresh 2026-01-01)",
+  "geo": "same as 2026",
+  "keys": "nopd_item",
+  "note": "2025 calls for service, 329,770 rows, frozen. NOPD terms: block-level addresses only; do not derive specific addresses; no commercial use (see Terms of use)",
+  "why": "annual archive; frozen by design (2025 closed)"
+ },
+ "2zcj-b6ts": {
+  "cadence": "Closed year, final refresh at year-end (2024)",
+  "geo": "block_address / location (older years may differ in field names)",
+  "keys": "nopd_item",
+  "note": "2024 calls for service, frozen archive. NOPD terms: block-level addresses only; do not derive specific addresses; no commercial use (see Terms of use)",
+  "why": "annual archive; frozen by design (not a failure)"
+ },
+ "pc5d-tvaw": {
+  "cadence": "Closed year, final refresh at year-end (2023)",
+  "geo": "block_address / location (older years may differ in field names)",
+  "keys": "nopd_item",
+  "note": "2023 calls for service, frozen archive. NOPD terms: block-level addresses only; do not derive specific addresses; no commercial use (see Terms of use)",
+  "why": "annual archive; frozen by design (not a failure)"
+ },
+ "nci8-thrr": {
+  "cadence": "Closed year, final refresh at year-end (2022)",
+  "geo": "block_address / location (older years may differ in field names)",
+  "keys": "nopd_item",
+  "note": "2022 calls for service, frozen archive. NOPD terms: block-level addresses only; do not derive specific addresses; no commercial use (see Terms of use)",
+  "why": "annual archive; frozen by design (not a failure)"
+ },
+ "3pha-hum9": {
+  "cadence": "Closed year, final refresh at year-end (2021)",
+  "geo": "block_address / location (older years may differ in field names)",
+  "keys": "nopd_item",
+  "note": "2021 calls for service, frozen archive. NOPD terms: block-level addresses only; do not derive specific addresses; no commercial use (see Terms of use)",
+  "why": "annual archive; frozen by design (not a failure)"
+ },
+ "hp7u-i9hf": {
+  "cadence": "Closed year, final refresh at year-end (2020)",
+  "geo": "block_address / location (older years may differ in field names)",
+  "keys": "nopd_item",
+  "note": "2020 calls for service, frozen archive. NOPD terms: block-level addresses only; do not derive specific addresses; no commercial use (see Terms of use)",
+  "why": "annual archive; frozen by design (not a failure)"
+ },
+ "qf6q-pp4b": {
+  "cadence": "Closed year, final refresh at year-end (2019)",
+  "geo": "block_address / location (older years may differ in field names)",
+  "keys": "nopd_item",
+  "note": "2019 calls for service, frozen archive. NOPD terms: block-level addresses only; do not derive specific addresses; no commercial use (see Terms of use)",
+  "why": "annual archive; frozen by design (not a failure)"
+ },
+ "9san-ivhk": {
+  "cadence": "Closed year, final refresh at year-end (2018)",
+  "geo": "block_address / location (older years may differ in field names)",
+  "keys": "nopd_item",
+  "note": "2018 calls for service, frozen archive. NOPD terms: block-level addresses only; do not derive specific addresses; no commercial use (see Terms of use)",
+  "why": "annual archive; frozen by design (not a failure)"
+ },
+ "bqmt-f3jk": {
+  "cadence": "Closed year, final refresh at year-end (2017)",
+  "geo": "block_address / location (older years may differ in field names)",
+  "keys": "nopd_item",
+  "note": "2017 calls for service, frozen archive. NOPD terms: block-level addresses only; do not derive specific addresses; no commercial use (see Terms of use)",
+  "why": "annual archive; frozen by design (not a failure)"
+ },
+ "wgrp-d3ma": {
+  "cadence": "Closed year, final refresh at year-end (2016)",
+  "geo": "block_address / location (older years may differ in field names)",
+  "keys": "nopd_item",
+  "note": "2016 calls for service, frozen archive. NOPD terms: block-level addresses only; do not derive specific addresses; no commercial use (see Terms of use)",
+  "why": "annual archive; frozen by design (not a failure)"
+ },
+ "w68y-xmk6": {
+  "cadence": "Closed year, final refresh at year-end (2015)",
+  "geo": "block_address / location (older years may differ in field names)",
+  "keys": "nopd_item",
+  "note": "2015 calls for service, frozen archive. NOPD terms: block-level addresses only; do not derive specific addresses; no commercial use (see Terms of use)",
+  "why": "annual archive; frozen by design (not a failure)"
+ },
+ "jsyu-nz5r": {
+  "cadence": "Closed year, final refresh at year-end (2014)",
+  "geo": "block_address / location (older years may differ in field names)",
+  "keys": "nopd_item",
+  "note": "2014 calls for service, frozen archive. NOPD terms: block-level addresses only; do not derive specific addresses; no commercial use (see Terms of use)",
+  "why": "annual archive; frozen by design (not a failure)"
+ },
+ "5fn8-vtui": {
+  "cadence": "Closed year, final refresh at year-end (2013)",
+  "geo": "block_address / location (older years may differ in field names)",
+  "keys": "nopd_item",
+  "note": "2013 calls for service, frozen archive. NOPD terms: block-level addresses only; do not derive specific addresses; no commercial use (see Terms of use)",
+  "why": "annual archive; frozen by design (not a failure)"
+ },
+ "rv3g-ypg7": {
+  "cadence": "Closed year, final refresh at year-end (2012)",
+  "geo": "block_address / location (older years may differ in field names)",
+  "keys": "nopd_item",
+  "note": "2012 calls for service, frozen archive. NOPD terms: block-level addresses only; do not derive specific addresses; no commercial use (see Terms of use)",
+  "why": "annual archive; frozen by design (not a failure)"
+ },
+ "28ec-c8d6": {
+  "cadence": "Closed year, final refresh at year-end (2011)",
+  "geo": "block_address / location (older years may differ in field names)",
+  "keys": "nopd_item",
+  "note": "2011 calls for service, frozen archive. NOPD terms: block-level addresses only; do not derive specific addresses; no commercial use (see Terms of use)",
+  "why": "annual archive; frozen by design (not a failure)"
+ },
+ "em4n-zidu": {
+  "cadence": "Frozen",
+  "geo": "same",
+  "keys": "nopd_item",
+  "note": "Francine event subset, 72 rows; subset of 2024. Ignore.",
+  "why": "event subset"
+ },
+ "agqi-9adb": {
+  "cadence": "Appears monthly/irregular (2025 last refresh 2026-07-06; 2024 on 2026-06-30)",
+  "geo": "location = text block address (no lat/lon)",
+  "keys": "item_number (NOPD item, same series as nopd_item in CFS)",
+  "note": "Electronic Police Reports (incident reports): one row per offender/victim/charge; 2024 has 690k rows for far fewer incidents. Includes victim demographics. Not in our stated domains but joins to CFS via item number. Out of scope, flag only.",
+  "why": "out-of-scope EPR; refreshes monthly-ish, not nightly"
+ },
+ "c5iy-ew8n": {
+  "cadence": "Monthly-ish",
+  "geo": "text block address",
+  "keys": "item_number",
+  "note": "EPR 2024 (690k rows). Out of scope; see EPR 2025.",
+  "why": "out-of-scope EPR"
+ },
+ "ufdg-ajws": {
+  "cadence": "Nightly full replace (every row :updated_at = refresh time)",
+  "geo": "address text, x/y, lat/lon, location point (100%)",
+  "keys": "license_number (e.g. 25-XSTR-45204), reference_code (OneStop deep-link code), address",
+  "note": "All active STR licenses including commercial, non-commercial, operator licenses and exempt lodging. Contains operator/license holder name, phone and email (PII). Active only: no history of lapsed licenses; use en36-xvxg for history."
+ },
+ "2ei9-wqw2": {
+  "cadence": "Nightly full replace (every row :updated_at = refresh time)",
+  "geo": "address, x/y, location point",
+  "keys": "license_number, licid, reference_code",
+  "note": "Non-commercial STR licenses (1,235; applications only since 2026-03, new regime). Owner and operator PII columns."
+ },
+ "en36-xvxg": {
+  "cadence": "Nightly full replace (every row :updated_at = refresh time)",
+  "geo": "address text, x/y, location",
+  "keys": "license_number, reference_code, operator_permit_number",
+  "note": "All STR license applications back to 2017 (39,027), with status/expired flag. Best historical STR source. Contact name/phone/email columns (PII; do not publish)."
+ },
+ "rbhq-zbz9": {
+  "cadence": "STALE (2025-01-04)",
+  "geo": "see fields",
+  "keys": "n/a",
+  "note": "Older vacation rental list (hotels/B&B/STR), 1,393 rows; superseded by ufdg-ajws.",
+  "why": "superseded STR list"
+ },
+ "ns2v-hzec": {
+  "cadence": "STALE (2024-07)",
+  "geo": "see fields",
+  "keys": "n/a",
+  "note": "Hotels/motels/BBs list, 391 rows.",
+  "why": "static lodging list"
+ },
+ "iqay-p646": {
+  "cadence": "Nightly",
+  "geo": "address components + locationx/locationy + the_geom point",
+  "keys": "businesslicensenumber",
+  "note": "Active occupational licenses only (16,655); no history. businessstartdate text type."
+ },
+ "hjcd-grvu": {
+  "cadence": "Daily (per metadata)",
+  "geo": "address components, lat/lon (0.0 for 24% = ungeocoded, many out-of-town addresses)",
+  "keys": "businesslicensenumber",
+  "note": "Occupational licenses of record (38,077) incl. owner name, mailing address, phone (PII). businessstartdate ranges 1900 to 2027 (garbage at the edges). Includes non-New-Orleans addresses (e.g., Madisonville)."
+ },
+ "abc4-h3u3": {
+  "cadence": "Nightly full replace (every row :updated_at = refresh time)",
+  "geo": "address + x/y + lat/lon + location point",
+  "keys": "numstring (license app number), licid, address",
+  "note": "Business license application workflow (21,115 rows, since 2018) with review timestamps, NAICS. Pair with hjcd-grvu for issued license data."
+ },
+ "c77v-v89q": {
+  "cadence": "Frozen 2018",
+  "geo": "address components",
+  "keys": "businesslicensenumber",
+  "note": "Annual historical occupational license list (one dataset per year 2012-2017, 12-14k rows each). One-time backfill only.",
+  "why": "annual historical snapshots, one-time load"
+ },
+ "tc3j-b7gd": {
+  "cadence": "Frozen 2018",
+  "geo": "address components",
+  "keys": "businesslicensenumber",
+  "note": "Annual historical occupational license list (one dataset per year 2012-2017, 12-14k rows each). One-time backfill only.",
+  "why": "annual historical snapshots, one-time load"
+ },
+ "xw7z-p5m2": {
+  "cadence": "Frozen 2018",
+  "geo": "address components",
+  "keys": "businesslicensenumber",
+  "note": "Annual historical occupational license list (one dataset per year 2012-2017, 12-14k rows each). One-time backfill only.",
+  "why": "annual historical snapshots, one-time load"
+ },
+ "yc4x-fza2": {
+  "cadence": "Frozen 2018",
+  "geo": "address components",
+  "keys": "businesslicensenumber",
+  "note": "Annual historical occupational license list (one dataset per year 2012-2017, 12-14k rows each). One-time backfill only.",
+  "why": "annual historical snapshots, one-time load"
+ },
+ "xy7w-r8a6": {
+  "cadence": "Frozen 2018",
+  "geo": "address components",
+  "keys": "businesslicensenumber",
+  "note": "Annual historical occupational license list (one dataset per year 2012-2017, 12-14k rows each). One-time backfill only.",
+  "why": "annual historical snapshots, one-time load"
+ },
+ "sbc5-uppx": {
+  "cadence": "Frozen 2018",
+  "geo": "address components",
+  "keys": "businesslicensenumber",
+  "note": "Annual historical occupational license list (one dataset per year 2012-2017, 12-14k rows each). One-time backfill only.",
+  "why": "annual historical snapshots, one-time load"
+ },
+ "v9q5-fz7t": {
+  "cadence": "Weekly-ish GIS refresh (2026-10-15)",
+  "geo": "MultiPolygon geometry; situs_number/street/type/dir (no city/zip)",
+  "keys": "geopin (8-digit numeric, e.g. 41027259), situs_*",
+  "note": "THE parcel layer: 151,255 rows, geometry + situs address only. No owner, assessed value, land use, zoning or sale data. Other parcels table m5br-772y (Lots, 190,009 rows) has lot/square only, no GEOPIN. Assessor data is not on Socrata; it must come from Orleans Parish Assessor / Land Records elsewhere."
+ },
+ "pzqp-4ri7": {
+  "cadence": "Updated 2026-09-25",
+  "geo": "geopin + parid",
+  "keys": "geopin, parid (address-like string e.g. 1718-GENOGDENST)",
+  "note": "\"Parcels To Join\": 162,773 rows geopin to parid text. parid is an address-based string, not the assessor PIN used in permits (pin e.g. 513840022). No direct crosswalk to permit pin found yet."
+ },
+ "m5br-772y": {
+  "cadence": "Updated 2026-10-15",
+  "geo": "MultiPolygon",
+  "keys": "lot + square (text)",
+  "note": "Legal lots (square/lot) polygons, 190,009; no GEOPIN. Match to parcels spatially."
+ },
+ "hfvu-md72": {
+  "cadence": "Weekly (metadata)",
+  "geo": "Point geometry, fulladdr \"721 Robert Street\", addrnum, fullname (street full name), pointtype; lat/long fields here are STATE PLANE not degrees",
+  "keys": "siteaddid, fulladdr (no GEOPIN column)",
+  "note": "Master Site Address Points (268,595; city-maintained by Safety and Permits). Best geocoder seed for >=98% address match: join normalized address to point, then point-in-polygon to parcels for GEOPIN. Includes unit ids. Pair with fdkj-rjrv Street Name table for abbreviations."
+ },
+ "cym7-cw5z": {
+  "cadence": "Frozen 2018",
+  "geo": "address table",
+  "keys": "address",
+  "note": "Older tabular address points (225,956). Superseded by hfvu-md72.",
+  "why": "superseded by Site Address Point"
+ },
+ "prh5-qsuf": {
+  "cadence": "Updated 2026-08-08",
+  "geo": "MultiPolygon",
+  "keys": "geopin, structureid",
+  "note": "Building footprints, 162,486."
+ },
+ "hpm5-48nj": {
+  "cadence": "Periodic (2026-08-11)",
+  "geo": "address, geopin (100%), lat/lon",
+  "keys": "geopin, identifier",
+  "note": "NORA sold properties 1980-2026 (5,618). Only property-sales-like dataset on the portal; covers only NORA dispositions, not market sales."
+ },
+ "5ktx-e9wc": {
+  "cadence": "Periodic",
+  "geo": "address, geopin_2",
+  "keys": "geopin_2",
+  "note": "NORA inventory (189)."
+ },
+ "d52w-8nva": {
+  "cadence": "STALE (2018-11)",
+  "geo": "see fields",
+  "keys": "n/a",
+  "note": "Sheriff sales lien foreclosures to 2018-11 (1,771 rows). Frozen.",
+  "why": "sheriff sales end 2018"
+ },
+ "9a4m-i64z": {
+  "cadence": "Static",
+  "geo": "polygons",
+  "keys": "n/a",
+  "note": "18 assessment areas. Not assessor roll data.",
+  "why": "GIS/reference layer, changes rarely (not a failure)"
+ },
+ "bsqt-btyi": {
+  "cadence": "2025-11",
+  "geo": "polygons",
+  "keys": "n/a",
+  "note": "Public land parcels, 2,149.",
+  "why": "GIS/reference layer, changes rarely (not a failure)"
+ },
+ "aned-jbk9": {
+  "cadence": "Frozen 2013",
+  "geo": "points",
+  "keys": "n/a",
+  "note": "Post-Katrina damage assessment 165k points. Historical.",
+  "why": "archived 2013"
+ },
+ "bizp-xi7c": {
+  "cadence": "GIS refresh (2026)",
+  "geo": "polygons",
+  "keys": "spatial only",
+  "note": "Zoning districts polygons (1,494); join spatially to parcels"
+ },
+ "kb74-hpue": {
+  "cadence": "GIS refresh (2026)",
+  "geo": "polygons",
+  "keys": "spatial only",
+  "note": "Overlay and interim zoning polygons"
+ },
+ "ecst-qwxv": {
+  "cadence": "GIS refresh (2026)",
+  "geo": "polygons",
+  "keys": "spatial only",
+  "note": "Conditional use areas"
+ },
+ "hea7-kccz": {
+  "cadence": "GIS refresh (2026)",
+  "geo": "polygons",
+  "keys": "spatial only",
+  "note": "Local historic district polygons (22)",
+  "why": "GIS/reference layer, changes rarely (not a failure)"
+ },
+ "jcvy-gbgr": {
+  "cadence": "GIS refresh (2026)",
+  "geo": "polygons",
+  "keys": "spatial only",
+  "note": "Mandatory inclusionary zoning (3)",
+  "why": "GIS/reference layer, changes rarely (not a failure)"
+ },
+ "xxb5-5azv": {
+  "cadence": "Nightly full replace (every row :updated_at = refresh time)",
+  "geo": "address + x/y + lat/lon",
+  "keys": "case_num, address",
+  "note": "City Planning Commission cases/projects (zoning changes, conditional uses, subdivisions) filing 2003-2026, 15,611 rows. Good for development pipeline."
+ },
+ "25e8-s5xx": {
+  "cadence": "2026-10-07",
+  "geo": "points",
+  "keys": "address?",
+  "note": "HDLC landmarks (342)."
+ },
+ "bsnu-de3a": {
+  "cadence": "Nightly full replace (every row :updated_at = refresh time)",
+  "geo": "geometry (road work)",
+  "keys": "project id",
+  "note": "Sewerage & Water Board roadwork projects (8,416). The ONLY SWB dataset on Socrata; no SWB billing, shutoff or leak data."
+ },
+ "u5mk-y9z4": {
+  "cadence": "Nightly full replace (every row :updated_at = refresh time)",
+  "geo": "geometry",
+  "keys": "project id",
+  "note": "DPW roadwork projects (14,297)."
+ },
+ "2zer-6wpb": {
+  "cadence": "Nightly metadata refresh but mdate max 2025-01-02",
+  "geo": "catch basin id",
+  "keys": "catch basin id",
+  "note": "Catch basin cleaning events (103,767); events appear to stop 2025-01-02 despite nightly refresh."
+ },
+ "se4p-ierc": {
+  "cadence": "2026-04-29",
+  "geo": "points",
+  "keys": "n/a",
+  "note": "Catch basins asset (80,553).",
+  "why": "asset layer, not event data"
+ },
+ "fdkj-rjrv": {
+  "cadence": "2026-07-06",
+  "geo": "table",
+  "keys": "street name",
+  "note": "Street Name table (28,526): use for address normalization (prefix/suffix/type).",
+  "why": "GIS/reference layer, changes rarely (not a failure)"
+ }
+}

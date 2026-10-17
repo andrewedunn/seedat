@@ -1,0 +1,141 @@
+{
+ "id": "ezfk-aiyx",
+ "name": "311 OPCD Francine Calls",
+ "assetType": "filter",
+ "viewType": "tabular",
+ "category": "Public Safety and Preparedness",
+ "attribution": "Orleans Parish Communications District",
+ "attributionLink": null,
+ "licenseId": "CC0_10",
+ "license": {
+  "name": "Creative Commons 1.0 Universal (Public Domain Dedication)",
+  "logoUrl": "images/licenses/ccZero.png",
+  "termsLink": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+ },
+ "rowsUpdatedAt": "2026-10-17 07:10",
+ "createdAt": 1726500432,
+ "viewLastModified": 1726675333,
+ "publicationDate": 1726500573,
+ "rowIdentifierColumnId": null,
+ "tags": null,
+ "metadata": {
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "jrpadgett@nola.gov",
+    "Contact Name": "Jonathan Padgett",
+    "Public Access Level": "public"
+   },
+   "Source Information": {
+    "Source Department": "311"
+   }
+  },
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ],
+  "renderTypeConfig": {
+   "visible": {
+    "table": true
+   }
+  }
+ },
+ "description": "311 OPCD Hurricane Francine Related Calls.",
+ "columns": [
+  {
+   "f": "service_request",
+   "n": "Service Request #",
+   "t": "text"
+  },
+  {
+   "f": "request_type",
+   "n": "Request Type",
+   "t": "text"
+  },
+  {
+   "f": "request_reason",
+   "n": "Request Reason",
+   "t": "text"
+  },
+  {
+   "f": "date_created",
+   "n": "Date Created",
+   "t": "calendar_date"
+  },
+  {
+   "f": "date_modified",
+   "n": "Date Modified",
+   "t": "calendar_date"
+  },
+  {
+   "f": "case_close_date",
+   "n": "Date Closed",
+   "t": "calendar_date"
+  },
+  {
+   "f": "request_status",
+   "n": "Request Status",
+   "t": "text"
+  },
+  {
+   "f": "responsible_agency",
+   "n": "Responsible Agency",
+   "t": "text"
+  },
+  {
+   "f": "final_address",
+   "n": "Address",
+   "t": "text"
+  },
+  {
+   "f": "address_councildis",
+   "n": "Council District",
+   "t": "text"
+  },
+  {
+   "f": "status",
+   "n": "Status",
+   "t": "text"
+  },
+  {
+   "f": "contractor",
+   "n": "Contractor",
+   "t": "text"
+  },
+  {
+   "f": "contractor_action",
+   "n": "Contractor Action",
+   "t": "text"
+  },
+  {
+   "f": "rowid",
+   "n": "RowID",
+   "t": "number"
+  },
+  {
+   "f": "final_x",
+   "n": "X",
+   "t": "number"
+  },
+  {
+   "f": "final_y",
+   "n": "Y",
+   "t": "number"
+  },
+  {
+   "f": "longitude",
+   "n": "Longitude",
+   "t": "number"
+  },
+  {
+   "f": "latitude",
+   "n": "Latitude",
+   "t": "number"
+  },
+  {
+   "f": "geocoded_column",
+   "n": "Location",
+   "t": "point"
+  }
+ ]
+}

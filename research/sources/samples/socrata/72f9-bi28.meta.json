@@ -1,0 +1,222 @@
+{
+ "id": "72f9-bi28",
+ "name": "Permits - BLDS",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Housing, Land Use, and Blight",
+ "attribution": "Safety and Permits",
+ "attributionLink": null,
+ "licenseId": "CC0_10",
+ "license": {
+  "name": "Creative Commons 1.0 Universal (Public Domain Dedication)",
+  "logoUrl": "images/licenses/ccZero.png",
+  "termsLink": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+ },
+ "rowsUpdatedAt": "2026-10-15 06:16",
+ "createdAt": 1466091126,
+ "viewLastModified": 1740526752,
+ "publicationDate": 1467131131,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "permits",
+  "blds"
+ ],
+ "metadata": {
+  "rdfSubject": "0",
+  "rdfClass": "",
+  "attachments": [
+   {
+    "filename": "Safety and Permits - Data Dictionary for Permits - BLDS.xlsx",
+    "assetId": "e4751d69-9a6e-49a2-92f6-52459af9ac73",
+    "name": "Safety and Permits - Data Dictionary for Permits - BLDS.xlsx"
+   }
+  ],
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "data@nola.gov"
+   },
+   "Source Information": {
+    "Source Department": "Safety and Permits"
+   }
+  },
+  "rowLabel": "Row",
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ],
+  "renderTypeConfig": {
+   "visible": {
+    "table": true
+   }
+  }
+ },
+ "description": "City of New Orleans permit data starting from 1/01/2012. This dataset has been transformed to meet the standards outlined by the Building and Land Development Specification (BLDS).",
+ "columns": [
+  {
+   "f": "permitnum",
+   "n": "PermitNum",
+   "t": "text"
+  },
+  {
+   "f": "description",
+   "n": "Description",
+   "t": "text"
+  },
+  {
+   "f": "applieddate",
+   "n": "AppliedDate",
+   "t": "calendar_date"
+  },
+  {
+   "f": "issuedate",
+   "n": "IssueDate",
+   "t": "calendar_date"
+  },
+  {
+   "f": "completedate",
+   "n": "CompleteDate",
+   "t": "calendar_date"
+  },
+  {
+   "f": "statuscurrent",
+   "n": "StatusCurrent",
+   "t": "text"
+  },
+  {
+   "f": "originaladdress1",
+   "n": "OriginalAddress1",
+   "t": "text"
+  },
+  {
+   "f": "originalcity",
+   "n": "OriginalCity",
+   "t": "text"
+  },
+  {
+   "f": "originalstate",
+   "n": "OriginalState",
+   "t": "text"
+  },
+  {
+   "f": "originalzip",
+   "n": "OriginalZip",
+   "t": "text"
+  },
+  {
+   "f": "permitclass",
+   "n": "PermitClass",
+   "t": "text"
+  },
+  {
+   "f": "workclass",
+   "n": "WorkClass",
+   "t": "text"
+  },
+  {
+   "f": "permittype",
+   "n": "PermitType",
+   "t": "text"
+  },
+  {
+   "f": "permittypedesc",
+   "n": "PermitTypeDesc",
+   "t": "text"
+  },
+  {
+   "f": "statusdate",
+   "n": "StatusDate",
+   "t": "calendar_date"
+  },
+  {
+   "f": "totalsqft",
+   "n": "TotalSqFt",
+   "t": "number"
+  },
+  {
+   "f": "link",
+   "n": "Link",
+   "t": "url"
+  },
+  {
+   "f": "location",
+   "n": "Location",
+   "t": "location"
+  },
+  {
+   "f": "estprojectcost",
+   "n": "EstProjectCost",
+   "t": "number"
+  },
+  {
+   "f": "pin",
+   "n": "PIN",
+   "t": "text"
+  },
+  {
+   "f": "contractorcompanyname",
+   "n": "ContractorCompanyName",
+   "t": "text"
+  },
+  {
+   "f": "contractortrade",
+   "n": "ContractorTrade",
+   "t": "text"
+  },
+  {
+   "f": "contractortrademapped",
+   "n": "ContractorTradeMapped",
+   "t": "text"
+  },
+  {
+   "f": "contractorlicnum",
+   "n": "ContractorLicNum",
+   "t": "text"
+  },
+  {
+   "f": "contractorstatelic",
+   "n": "ContractorStateLic",
+   "t": "text"
+  },
+  {
+   "f": "expiresdate",
+   "n": "ExpiresDate",
+   "t": "calendar_date"
+  },
+  {
+   "f": "coissueddate",
+   "n": "COIssuedDate",
+   "t": "calendar_date"
+  },
+  {
+   "f": "publisher",
+   "n": "Publisher",
+   "t": "text"
+  },
+  {
+   "f": "fee",
+   "n": "Fee",
+   "t": "number"
+  },
+  {
+   "f": "workclassmapped",
+   "n": "WorkClassMapped",
+   "t": "text"
+  },
+  {
+   "f": "permitclassmapped",
+   "n": "PermitClassMapped",
+   "t": "text"
+  },
+  {
+   "f": "permittypemapped",
+   "n": "PermitTypeMapped",
+   "t": "text"
+  },
+  {
+   "f": "statuscurrentmapped",
+   "n": "StatusCurrentMapped",
+   "t": "text"
+  }
+ ]
+}

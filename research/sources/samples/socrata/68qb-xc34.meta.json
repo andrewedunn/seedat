@@ -1,0 +1,269 @@
+{
+ "id": "68qb-xc34",
+ "name": "CBD multi-family permits",
+ "assetType": "filter",
+ "viewType": "tabular",
+ "category": "Housing, Land Use, and Blight",
+ "attribution": "Safety and Permits",
+ "attributionLink": null,
+ "licenseId": "CC0_10",
+ "license": {
+  "name": "Creative Commons 1.0 Universal (Public Domain Dedication)",
+  "logoUrl": "images/licenses/ccZero.png",
+  "termsLink": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+ },
+ "rowsUpdatedAt": "2026-10-17 04:53",
+ "createdAt": 1520887895,
+ "viewLastModified": 1738120740,
+ "publicationDate": 1520887895,
+ "rowIdentifierColumnId": 349392901,
+ "tags": [
+  "city of new orleans",
+  "permits"
+ ],
+ "metadata": {
+  "rdfClass": "",
+  "rdfSubject": "0",
+  "attachments": [
+   {
+    "filename": "Safety & Permits - Data Dictionary for NOLA Permits.xlsx",
+    "assetId": "6faf82bc-fea7-4b87-a3a7-eab635b842f1",
+    "blobId": "",
+    "name": "Safety & Permits - Data Dictionary for NOLA Permits.xlsx"
+   }
+  ],
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "data@nola.gov"
+   },
+   "Source Information": {
+    "Source Department": "Safety and Permits"
+   }
+  },
+  "rowIdentifier": 349392901,
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ],
+  "rowLabel": "Row",
+  "renderTypeConfig": {
+   "visible": {
+    "table": true
+   }
+  }
+ },
+ "description": "City of New Orleans permit data starting from 1/01/2012; Updated nightly.Note: For download of entire dataset, export as .csv",
+ "columns": [
+  {
+   "f": "address",
+   "n": "Address",
+   "t": "text"
+  },
+  {
+   "f": "owner",
+   "n": "Owner",
+   "t": "text"
+  },
+  {
+   "f": "description",
+   "n": "Description",
+   "t": "text"
+  },
+  {
+   "f": "numstring",
+   "n": "NumString",
+   "t": "text"
+  },
+  {
+   "f": "isclosed",
+   "n": "IsClosed",
+   "t": "text"
+  },
+  {
+   "f": "type",
+   "n": "Type",
+   "t": "text"
+  },
+  {
+   "f": "code",
+   "n": "Code",
+   "t": "text"
+  },
+  {
+   "f": "division",
+   "n": "Division",
+   "t": "text"
+  },
+  {
+   "f": "m_s",
+   "n": "M_S",
+   "t": "text"
+  },
+  {
+   "f": "filingdate",
+   "n": "FilingDate",
+   "t": "calendar_date"
+  },
+  {
+   "f": "issuedate",
+   "n": "IssueDate",
+   "t": "calendar_date"
+  },
+  {
+   "f": "currentstatus",
+   "n": "CurrentStatus",
+   "t": "text"
+  },
+  {
+   "f": "nextstatus",
+   "n": "NextStatus",
+   "t": "text"
+  },
+  {
+   "f": "currentstatusdate",
+   "n": "CurrentStatusDate",
+   "t": "calendar_date"
+  },
+  {
+   "f": "nextstatusdate",
+   "n": "NextStatusDate",
+   "t": "calendar_date"
+  },
+  {
+   "f": "landuse",
+   "n": "LandUse",
+   "t": "text"
+  },
+  {
+   "f": "landuseshort",
+   "n": "LandUseShort",
+   "t": "text"
+  },
+  {
+   "f": "projectname",
+   "n": "ProjectName",
+   "t": "text"
+  },
+  {
+   "f": "unpaidfees",
+   "n": "UnpaidFees",
+   "t": "number"
+  },
+  {
+   "f": "totalfees",
+   "n": "TotalFees",
+   "t": "number"
+  },
+  {
+   "f": "bldgarea",
+   "n": "BldgArea",
+   "t": "number"
+  },
+  {
+   "f": "constrval",
+   "n": "ConstrVal",
+   "t": "number"
+  },
+  {
+   "f": "bondamount",
+   "n": "BondAmount",
+   "t": "number"
+  },
+  {
+   "f": "opencomments",
+   "n": "OpenComments",
+   "t": "number"
+  },
+  {
+   "f": "applicant",
+   "n": "Applicant",
+   "t": "text"
+  },
+  {
+   "f": "totalinspections",
+   "n": "TotalInspections",
+   "t": "number"
+  },
+  {
+   "f": "contractors",
+   "n": "Contractors",
+   "t": "text"
+  },
+  {
+   "f": "pin",
+   "n": "PIN",
+   "t": "text"
+  },
+  {
+   "f": "beds",
+   "n": "Beds",
+   "t": "number"
+  },
+  {
+   "f": "baths",
+   "n": "Baths",
+   "t": "number"
+  },
+  {
+   "f": "heattype",
+   "n": "HeatType",
+   "t": "text"
+  },
+  {
+   "f": "secondfloo",
+   "n": "SecondFloo",
+   "t": "number"
+  },
+  {
+   "f": "basementar",
+   "n": "BasementAr",
+   "t": "number"
+  },
+  {
+   "f": "daysopen",
+   "n": "DaysOpen",
+   "t": "number"
+  },
+  {
+   "f": "daysissued",
+   "n": "DaysIssued",
+   "t": "number"
+  },
+  {
+   "f": "leadagency",
+   "n": "LeadAgency",
+   "t": "text"
+  },
+  {
+   "f": "exitreason",
+   "n": "ExitReason",
+   "t": "text"
+  },
+  {
+   "f": "subdivision",
+   "n": "Subdivision",
+   "t": "text"
+  },
+  {
+   "f": "councildist",
+   "n": "CouncilDist",
+   "t": "text"
+  },
+  {
+   "f": "zoning",
+   "n": "Zoning",
+   "t": "text"
+  },
+  {
+   "f": "historicdistrict",
+   "n": "HistoricDistrict",
+   "t": "text"
+  },
+  {
+   "f": "location_1",
+   "n": "Location 1",
+   "t": "point"
+  }
+ ]
+}

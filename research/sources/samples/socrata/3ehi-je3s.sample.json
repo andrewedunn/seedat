@@ -1,0 +1,32 @@
+[
+ {
+  "caseid": "171833",
+  "violationid": "547585",
+  "caseno": "09-002855",
+  "location": "6218-6220 Wainwright Dr",
+  "violationdate": "2013-03-06T10:53:03.000",
+  "codesection": "28-11",
+  "violation": "28-11 Floor Joists",
+  "description": "Structural members including floor joists must be maintained structurally sound."
+ },
+ {
+  "caseid": "171833",
+  "violationid": "547592",
+  "caseno": "09-002855",
+  "location": "6218-6220 Wainwright Dr",
+  "violationdate": "2013-03-06T10:54:20.000",
+  "codesection": "28-11",
+  "violation": "28-11 Rafters",
+  "description": "Structural members including rafters must be maintained structurally sound."
+ },
+ {
+  "caseid": "171833",
+  "violationid": "547590",
+  "caseno": "09-002855",
+  "location": "6218-6220 Wainwright Dr",
+  "violationdate": "2013-03-06T10:53:55.000",
+  "codesection": "28-11",
+  "violation": "28-11 Studs",
+  "description": "Structural members including studs must be maintained structurally sound."
+ }
+]

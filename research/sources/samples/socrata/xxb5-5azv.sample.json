@@ -1,0 +1,40 @@
+[
+ {
+  "case_type": "Minor Subdivision",
+  "case_num": "SD032-06",
+  "address": "10301 Patterson Rd",
+  "filing_date": "2006-06-29T00:00:00.000",
+  "current_status": "Submit Application - Docketed, Certification Only",
+  "open_closed": "Open",
+  "description": "Historical Import Type: Planning Subdivision Minor Subdivision NA\r\nUser: ABRUNSON\r\nTracking: \r\n\r\nOwner: Leopoldo Hirsch\r\nOwner Address: 10301 Patterson Rd, New Orleans, LA\r\nOwner Edited By: 6/29/2006 by ABRUNSON",
+  "x": "3723861.0",
+  "y": "518268.0",
+  "longitude": "-89.9348221298239",
+  "latitude": "29.917703410175378"
+ },
+ {
+  "case_type": "Minor Subdivision",
+  "case_num": "SD082-06",
+  "address": "2521 Piety St",
+  "filing_date": "2006-10-16T00:00:00.000",
+  "current_status": "Certification - Completed",
+  "open_closed": "Open",
+  "description": "Historical Import Type: Planning Subdivision Minor Subdivision NA\r\nUser: ABRUNSON\r\nTracking: \r\n\r\nOwner: Robert M Legier\r\nOwner Address: 2521 Piety St, New Orleans, LA 70117\r\nOwner Edited By: 10/16/2006 by ABRUNSON",
+  "x": "3691259.0",
+  "y": "541216.0",
+  "longitude": "-90.03690862855542",
+  "latitude": "29.981856350844325"
+ },
+ {
+  "case_type": "Minor Subdivision",
+  "case_num": "SD067-06",
+  "filing_date": "2006-10-03T00:00:00.000",
+  "current_status": "Certification - Completed",
+  "open_closed": "Open",
+  "description": "Historical Import Type: Planning Subdivision Minor Subdivision NA\r\nUser: YRODRIGUEZ\r\nTracking: \r\n\r\nOwner: Maryanne And Timothy Gilthorpe, New Orleans, LA\r\nOwner Edited By: 10/3/2006 by YRODRIGUEZ",
+  "x": "-1.0",
+  "y": "-1.0",
+  "longitude": "-101.51779913517808",
+  "latitude": "28.098890706811357"
+ }
+]

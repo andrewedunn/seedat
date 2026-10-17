@@ -1,0 +1,50 @@
+[
+ {
+  "objectid": "1",
+  "casenumber": "CEHB-11-0089",
+  "propertyaddress": "10 KRISTEN CT",
+  "councildistrict": "E",
+  "geopin": "41103239",
+  "inspectiondate": "2011-04-01T00:00:00.000",
+  "noticedate": "2011-08-11T00:00:00.000",
+  "postingstatusdate": "2011-09-20T00:00:00.000",
+  "prevhearingdate": "2011-11-30T00:00:00.000",
+  "prevhearingtime": "9:30:00 AM",
+  "casehistory": "Reset Hearing",
+  "hearingdate": "2012-01-19T00:00:00.000",
+  "hearingtime": "1:30:00 PM",
+  "judgment": "Guilty: Public Nuisance",
+  "x": "3713655.5219069999",
+  "y": "567263.65824699996"
+ },
+ {
+  "objectid": "2",
+  "casenumber": "CEHB-11-3625",
+  "propertyaddress": "100 BELLAIRE DR",
+  "councildistrict": "A",
+  "geopin": "41023796",
+  "inspectiondate": "2011-03-20T00:00:00.000",
+  "noticedate": "2011-06-02T00:00:00.000",
+  "postingstatusdate": "2011-07-12T00:00:00.000",
+  "casehistory": "Initial Hearing",
+  "hearingdate": "2011-07-13T00:00:00.000",
+  "hearingtime": "9:00:00 AM",
+  "judgment": "Guilty: Public Nuisance Blight",
+  "x": "3663860.7606540001",
+  "y": "540143.08377200004"
+ },
+ {
+  "objectid": "3",
+  "casenumber": "CEHB-11-1146",
+  "propertyaddress": "100 PORTAGE PL",
+  "councildistrict": "A",
+  "geopin": "41079584",
+  "inspectiondate": "2009-10-01T00:00:00.000",
+  "casehistory": "Initial Hearing",
+  "hearingdate": "2011-03-16T00:00:00.000",
+  "hearingtime": "1:00:00 PM",
+  "judgment": "Closed In Compliance",
+  "x": "3677887.6207690001",
+  "y": "544283.35279200005"
+ }
+]

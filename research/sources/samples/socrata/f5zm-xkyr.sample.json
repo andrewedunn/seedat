@@ -1,0 +1,77 @@
+[
+ {
+  "incident_number": "26-07448-CH66",
+  "codeincidid": "333662",
+  "codefeeid": "230913",
+  "o_c": "Open",
+  "address": "3220 Thalia St",
+  "case_established": "2026-07-10T00:00:00.000",
+  "amount": "305.55",
+  "type": "Grass Abatement Estimate",
+  "ispaid": false,
+  "d_due": "2026-07-14T00:00:00.000",
+  "d_create": "2026-07-14T00:00:00.000",
+  "d_mod": "2026-07-14T00:00:00.000",
+  "x": "-1.0",
+  "y": "-1.0",
+  "longitude": "-101.51779913517808",
+  "latitude": "28.098890706810742",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -101.51779913517808,
+    28.098890706810742
+   ]
+  }
+ },
+ {
+  "incident_number": "26-06176-HHI",
+  "codeincidid": "332389",
+  "codefeeid": "231558",
+  "o_c": "Open",
+  "address": "2104 Pace Blvd",
+  "case_established": "2026-06-17T00:00:00.000",
+  "amount": "125.0",
+  "type": "Court Costs",
+  "ispaid": false,
+  "d_due": "2026-08-12T00:00:00.000",
+  "d_create": "2026-08-12T00:00:00.000",
+  "d_mod": "2026-08-12T00:00:00.000",
+  "x": "-1.0",
+  "y": "-1.0",
+  "longitude": "-101.51779913517808",
+  "latitude": "28.098890706810742",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -101.51779913517808,
+    28.098890706810742
+   ]
+  }
+ },
+ {
+  "incident_number": "24-01408-CH66",
+  "codeincidid": "294160",
+  "codefeeid": "217171",
+  "o_c": "Closed ",
+  "address": "2831 St Roch Ave",
+  "case_established": "2024-02-27T00:00:00.000",
+  "amount": "70.0",
+  "type": "Administrative",
+  "ispaid": false,
+  "d_due": "2025-05-21T00:00:00.000",
+  "d_create": "2025-05-21T00:00:00.000",
+  "d_mod": "2025-05-21T00:00:00.000",
+  "x": "-1.0",
+  "y": "-1.0",
+  "longitude": "-101.51779913517808",
+  "latitude": "28.098890706810742",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -101.51779913517808,
+    28.098890706810742
+   ]
+  }
+ }
+]

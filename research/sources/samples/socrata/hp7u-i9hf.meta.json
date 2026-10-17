@@ -1,0 +1,162 @@
+{
+ "id": "hp7u-i9hf",
+ "name": "Call for Service 2020",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Public Safety and Preparedness",
+ "attribution": "Orleans Parish Communications District",
+ "attributionLink": null,
+ "licenseId": null,
+ "license": null,
+ "rowsUpdatedAt": "2021-01-05 04:56",
+ "createdAt": 1585333872,
+ "viewLastModified": 1641243827,
+ "publicationDate": 1585597998,
+ "rowIdentifierColumnId": 458153692,
+ "tags": [
+  "crime",
+  "police",
+  "calls for service",
+  "2020"
+ ],
+ "metadata": {
+  "jsonQuery": {
+   "order": [
+    {
+     "columnFieldName": "nopd_item",
+     "ascending": true
+    }
+   ]
+  },
+  "attachments": [
+   {
+    "filename": "NOPD_-_Data_dictionary_for_Calls_For_Service_Open_Data.xlsx",
+    "assetId": "722e7c76-1176-4976-b4be-6df24399f545",
+    "name": "NOPD_-_Data_dictionary_for_Calls_For_Service_Open_Data.xlsx"
+   }
+  ],
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "data@nola.gov"
+   },
+   "Source Information": {
+    "Source Department": "Police Department (NOPD)"
+   }
+  },
+  "rowIdentifier": 458153692,
+  "rowLabel": "Row",
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ]
+ },
+ "description": "This dataset reflects incidents that have been reported to the New Orleans Police Department in 2020. Data is provided by Orleans Parish Communication District (OPCD), the administrative office of 9-1-1 for the City of New Orleans. Please request 911 audio via our public records request system here: https://nola.nextrequest.com.\n\nIn the OPCD system, NOPD may reclassify or change the signal type for up to 36 hours after the incident is marked up. For information about an incident after this time period, citizens may request police reports from the NOPD Public Records Division. In order to protect the privacy of victims, addresses are shown at the block level and the call types cruelty to juveniles, juvenile attachment and missing juvenile have been removed in accordance with the Louisiana Public Records Act, L.R.S. 44:1. Map coordinates (X,Y) have been removed for the following call types: Aggravated Rape, Aggravated Rape - MA, Crime Against Nature, Mental Patient, Oral Sexual Battery, Prostitution, Sexual Battery, Simple Rape, Simple Rape - Male V, and Soliciting for Prost.\n\nDisclaimer: These incidents may be based upon preliminary information supplied to the Police Department by the reporting parties that have not been verified. The preliminary crime classifications may be changed at a later date based upon additional investigation and there is always the possibility of mechanical or human error. Therefore, the New Orleans Police Department does not guarantee (either expressed or implied) the accuracy, completeness, timeliness, or correct sequencing of the information and the information should not be used for comparison purposes over time. The New Orleans Police Department will not be responsible for any error or omission, or for the use of, or the results obtained from the use of this information. All data visualizations on maps should be considered approximate and attempts to derive specific addresses are strictly prohibited. The New Orleans Police Department is not responsible for the content of any off-site pages that are referenced by or that reference this web page other than an official City of New Orleans or New Orleans Police Department web page. The user specifically acknowledges that the New Orleans Police Department is not responsible for any defamatory, offensive, misleading, or illegal conduct of other users, links, or third parties and that the risk of injury from the foregoing rests entirely with the user. Any use of the information for commercial purposes is strictly prohibited. The unauthorized use of the words \"New Orleans Police Department,\" \"NOPD,\" or any colorable imitation of these words or the unauthorized use of the New Orleans Police Department logo is unlawful. This web page does not, in any way, authorize such use.",
+ "columns": [
+  {
+   "f": "nopd_item",
+   "n": "NOPD_Item",
+   "t": "text"
+  },
+  {
+   "f": "type_",
+   "n": "Type",
+   "t": "text"
+  },
+  {
+   "f": "typetext",
+   "n": "TypeText",
+   "t": "text"
+  },
+  {
+   "f": "priority",
+   "n": "Priority",
+   "t": "text"
+  },
+  {
+   "f": "initialtype",
+   "n": "InitialType",
+   "t": "text"
+  },
+  {
+   "f": "initialtypetext",
+   "n": "InitialTypeText",
+   "t": "text"
+  },
+  {
+   "f": "initialpriority",
+   "n": "InitialPriority",
+   "t": "text"
+  },
+  {
+   "f": "mapx",
+   "n": "MapX",
+   "t": "text"
+  },
+  {
+   "f": "mapy",
+   "n": "MapY",
+   "t": "text"
+  },
+  {
+   "f": "timecreate",
+   "n": "TimeCreate",
+   "t": "calendar_date"
+  },
+  {
+   "f": "timedispatch",
+   "n": "TimeDispatch",
+   "t": "calendar_date"
+  },
+  {
+   "f": "timearrive",
+   "n": "TimeArrive",
+   "t": "calendar_date"
+  },
+  {
+   "f": "timeclosed",
+   "n": "TimeClosed",
+   "t": "calendar_date"
+  },
+  {
+   "f": "disposition",
+   "n": "Disposition",
+   "t": "text"
+  },
+  {
+   "f": "dispositiontext",
+   "n": "DispositionText",
+   "t": "text"
+  },
+  {
+   "f": "selfinitiated",
+   "n": "SelfInitiated",
+   "t": "text"
+  },
+  {
+   "f": "beat",
+   "n": "Beat",
+   "t": "text"
+  },
+  {
+   "f": "block_address",
+   "n": "BLOCK_ADDRESS",
+   "t": "text"
+  },
+  {
+   "f": "zip",
+   "n": "Zip",
+   "t": "text"
+  },
+  {
+   "f": "policedistrict",
+   "n": "PoliceDistrict",
+   "t": "number"
+  },
+  {
+   "f": "location",
+   "n": "Location",
+   "t": "point"
+  }
+ ]
+}

@@ -1,0 +1,153 @@
+{
+ "id": "w6gf-dnv6",
+ "name": "Code Enforcement Hearings",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Housing, Land Use, and Blight",
+ "attribution": null,
+ "attributionLink": null,
+ "licenseId": null,
+ "license": null,
+ "rowsUpdatedAt": "2026-10-17 04:55",
+ "createdAt": 1600119101,
+ "viewLastModified": 1632342382,
+ "publicationDate": 1632340218,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "hearing"
+ ],
+ "metadata": {
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "data@nola.gov"
+   },
+   "Source Information": {
+    "Source Department": "Code Enforcement"
+   }
+  },
+  "rowLabel": "Hearing",
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ]
+ },
+ "description": "",
+ "columns": [
+  {
+   "f": "o_c",
+   "n": "O/C",
+   "t": "text"
+  },
+  {
+   "f": "casenumber",
+   "n": "Case Number",
+   "t": "text"
+  },
+  {
+   "f": "propertyaddress",
+   "n": "Property Address",
+   "t": "text"
+  },
+  {
+   "f": "casehistory",
+   "n": "Case History",
+   "t": "text"
+  },
+  {
+   "f": "hearingdatetime",
+   "n": "HearingDateTime",
+   "t": "calendar_date"
+  },
+  {
+   "f": "videoconferencelink",
+   "n": "Link",
+   "t": "url"
+  },
+  {
+   "f": "teleconferenceaccesscode",
+   "n": "Access Code",
+   "t": "text"
+  },
+  {
+   "f": "videoconferencepassword",
+   "n": "Password",
+   "t": "text"
+  },
+  {
+   "f": "prevhearing",
+   "n": "PrevHearing",
+   "t": "calendar_date"
+  },
+  {
+   "f": "prevhearingstat",
+   "n": "PrevHearingStat",
+   "t": "text"
+  },
+  {
+   "f": "caseestablished",
+   "n": "CaseEstablished",
+   "t": "calendar_date"
+  },
+  {
+   "f": "inspected",
+   "n": "Inspected",
+   "t": "calendar_date"
+  },
+  {
+   "f": "inspectionresult",
+   "n": "InspectionResult",
+   "t": "text"
+  },
+  {
+   "f": "councildistrict",
+   "n": "CouncilDistrict",
+   "t": "text"
+  },
+  {
+   "f": "geoaddress",
+   "n": "GeoAddress",
+   "t": "text"
+  },
+  {
+   "f": "city",
+   "n": "City",
+   "t": "text"
+  },
+  {
+   "f": "state",
+   "n": "State",
+   "t": "text"
+  },
+  {
+   "f": "zip",
+   "n": "Zip",
+   "t": "number"
+  },
+  {
+   "f": "xpos",
+   "n": "XPos",
+   "t": "number"
+  },
+  {
+   "f": "ypos",
+   "n": "YPos",
+   "t": "number"
+  },
+  {
+   "f": "longitude",
+   "n": "Longitude",
+   "t": "number"
+  },
+  {
+   "f": "latitude",
+   "n": "Latitude",
+   "t": "number"
+  },
+  {
+   "f": "location",
+   "n": "Location",
+   "t": "point"
+  }
+ ]
+}

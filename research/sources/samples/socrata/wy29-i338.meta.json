@@ -1,0 +1,220 @@
+{
+ "id": "wy29-i338",
+ "name": "Adjudication Enforcement Cases for the Office of Business and External Services",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Housing, Land Use, and Blight",
+ "attribution": "Office of Performance and Accountability",
+ "attributionLink": null,
+ "licenseId": null,
+ "license": null,
+ "rowsUpdatedAt": "2026-10-17 04:24",
+ "createdAt": 1660686139,
+ "viewLastModified": 1669845501,
+ "publicationDate": 1660686767,
+ "rowIdentifierColumnId": 564693693,
+ "tags": [
+  "code enforcement",
+  "zoning",
+  "str",
+  "abo",
+  "vcc",
+  "hdlc",
+  "adjudication",
+  "obes",
+  "mpm",
+  "blight",
+  "alcohol",
+  "historic district",
+  "landmarks"
+ ],
+ "metadata": {
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "data@nola.gov"
+   },
+   "Source Information": {
+    "Source Department": "Performance and Accountability (OPA)"
+   }
+  },
+  "rowIdentifier": 564693693,
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ]
+ },
+ "description": "A dataset of all enforcement cases against parcels within six adjudication departments - Code Enforcement, Alcohol Beverage Outlets (ABO), Historic District and Landmarks Commission (HDLC), Vieux Carre Commission (VCC), Short Term Rentals (STR) and Zoning - from January 1st, 2018 to current day.",
+ "columns": [
+  {
+   "f": "codeincidid",
+   "n": "CodeIncidID",
+   "t": "text"
+  },
+  {
+   "f": "isclosed",
+   "n": "IsClosed",
+   "t": "checkbox"
+  },
+  {
+   "f": "isdeleted",
+   "n": "IsDeleted",
+   "t": "checkbox"
+  },
+  {
+   "f": "exitcode",
+   "n": "ExitCode",
+   "t": "text"
+  },
+  {
+   "f": "numstring",
+   "n": "NumString",
+   "t": "text"
+  },
+  {
+   "f": "address",
+   "n": "Address",
+   "t": "text"
+  },
+  {
+   "f": "name",
+   "n": "Name",
+   "t": "text"
+  },
+  {
+   "f": "type",
+   "n": "Type",
+   "t": "text"
+  },
+  {
+   "f": "updatedtype",
+   "n": "UpdatedType",
+   "t": "text"
+  },
+  {
+   "f": "d_filed",
+   "n": "D_Filed",
+   "t": "calendar_date"
+  },
+  {
+   "f": "d_create",
+   "n": "D_Create",
+   "t": "calendar_date"
+  },
+  {
+   "f": "d_closed",
+   "n": "D_Closed",
+   "t": "calendar_date"
+  },
+  {
+   "f": "reason",
+   "n": "Reason",
+   "t": "text"
+  },
+  {
+   "f": "currentstatus",
+   "n": "CurrentStatus",
+   "t": "text"
+  },
+  {
+   "f": "currentstatusdate",
+   "n": "CurrentStatusDate",
+   "t": "calendar_date"
+  },
+  {
+   "f": "stage",
+   "n": "Stage",
+   "t": "text"
+  },
+  {
+   "f": "nextstatus",
+   "n": "NextStatus",
+   "t": "text"
+  },
+  {
+   "f": "nextstatusdate",
+   "n": "NextStatusDate",
+   "t": "calendar_date"
+  },
+  {
+   "f": "prevhearingstatus",
+   "n": "PrevHearingStatus",
+   "t": "text"
+  },
+  {
+   "f": "initinspectionstatus",
+   "n": "InitInspectionStatus",
+   "t": "text"
+  },
+  {
+   "f": "unpaidfees",
+   "n": "UnpaidFees",
+   "t": "number"
+  },
+  {
+   "f": "feecount",
+   "n": "FeeCount",
+   "t": "number"
+  },
+  {
+   "f": "nextinspection",
+   "n": "NextInspection",
+   "t": "calendar_date"
+  },
+  {
+   "f": "lastinspection",
+   "n": "LastInspection",
+   "t": "calendar_date"
+  },
+  {
+   "f": "initinspection",
+   "n": "InitInspection",
+   "t": "calendar_date"
+  },
+  {
+   "f": "keystatusdate",
+   "n": "KeyStatusDate",
+   "t": "calendar_date"
+  },
+  {
+   "f": "dateresearched",
+   "n": "DateResearched",
+   "t": "calendar_date"
+  },
+  {
+   "f": "supervisor_review",
+   "n": "Supervisor Review",
+   "t": "calendar_date"
+  },
+  {
+   "f": "agency",
+   "n": "Agency",
+   "t": "text"
+  },
+  {
+   "f": "x",
+   "n": "X",
+   "t": "number"
+  },
+  {
+   "f": "y",
+   "n": "Y",
+   "t": "number"
+  },
+  {
+   "f": "longitude",
+   "n": "Longitude",
+   "t": "number"
+  },
+  {
+   "f": "latitude",
+   "n": "Latitude",
+   "t": "number"
+  },
+  {
+   "f": "location",
+   "n": "Location",
+   "t": "point"
+  }
+ ]
+}

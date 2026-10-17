@@ -1,0 +1,20 @@
+[
+ {
+  "address": "3210 Gravier Street",
+  "zoningclassification": "MU-2",
+  "zoningdescription": "High Intensity Mixed-Use District",
+  "geopin": "41036019"
+ },
+ {
+  "address": "417 South Solomon Street",
+  "zoningclassification": "HU-RD2",
+  "zoningdescription": "Historic Urban Two-Family Residential District",
+  "geopin": "41033863"
+ },
+ {
+  "address": "3917 Cleveland Avenue",
+  "zoningclassification": "HU-RD2",
+  "zoningdescription": "Historic Urban Two-Family Residential District",
+  "geopin": "41035230"
+ }
+]

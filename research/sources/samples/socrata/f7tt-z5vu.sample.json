@@ -1,0 +1,52 @@
+[
+ {
+  "permitnumber": "B00000007",
+  "applicationdate": "2000-01-04T00:00:00.000",
+  "issuedate": "2000-01-04T00:00:00.000",
+  "housenum": "600",
+  "streetname": "MAZANT",
+  "streetsuffix": "ST",
+  "matchaddress": "600 MAZANT ST, NEW ORLEANS, LA 70150",
+  "applicantname": "MICHAEL GANGI",
+  "parcelowner": "REUTHER SEAFOOD, O INC",
+  "planningdist": "3",
+  "zoning": "LI",
+  "description": "BUILDING DEMOLITION AND DEBRIS REMOVAL VACANT LOT DEMOLISH VACANT COMMERCIAL BUILDING TO GRADE AS PER HDLC C/A #10564. ANY FURTHER USE SHALL REQUIRE A SEPARATE PERMIT.",
+  "propertykey": "39W10560400001",
+  "x": "3691627.45562",
+  "y": "533396.775842"
+ },
+ {
+  "permitnumber": "B00000013",
+  "applicationdate": "2000-01-04T00:00:00.000",
+  "issuedate": "2000-02-04T00:00:00.000",
+  "housenum": "4016",
+  "streetname": "DUMAINE",
+  "streetsuffix": "ST",
+  "matchaddress": "4016 DUMAINE ST, NEW ORLEANS, LA 70122",
+  "applicantname": "P.E. ODENDAHL",
+  "parcelowner": "MC QUITTY, MARTHA A",
+  "planningdist": "2",
+  "zoning": "RD3",
+  "description": "CHANGE OF USE DOUBLE RESIDENCE CONVERT VACANT MFD TO DOF ON MAIN FLOOR AS PER PLANS. WORK TO INCL SHORING, PNT, ELEC, PLMB, HVAC     ATTIC WILL BECOME LIVABLE AREA, BASEMENT WILL BE STORAGE",
+  "propertykey": "20720580300004",
+  "x": "3673272.00677",
+  "y": "540368.93447"
+ },
+ {
+  "permitnumber": "B00000034",
+  "applicationdate": "2000-01-05T00:00:00.000",
+  "housenum": "1735",
+  "streetname": "BENTON",
+  "streetsuffix": "ST",
+  "matchaddress": "1735 BENTON ST, NEW ORLEANS, LA 70117",
+  "applicantname": "DIANNE COLLINS & DAVID LEE",
+  "parcelowner": "COLLINS, DIANNE",
+  "planningdist": "3",
+  "zoning": "RD3",
+  "description": "HOME BASED BUSINESS HOME BASED BUSINESS CERTIFICATE OF OCCUPANCY FOR HOME BASED BUSINESS \"STINGRAY SERVICES\"CASE #D9934. HOME USED FOR OFFICE SPACE ONLY. MAIL ADD:PO BOX 3552 NO,LA 70177.",
+  "propertykey": "39W41070200003",
+  "x": "3699869.32431",
+  "y": "535969.909803"
+ }
+]

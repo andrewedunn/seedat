@@ -1,0 +1,156 @@
+{
+ "id": "en36-xvxg",
+ "name": "Short-Term Rental Permit Applications",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Housing, Land Use, and Blight",
+ "attribution": "Department of Safety and Permits",
+ "attributionLink": null,
+ "licenseId": "CC0_10",
+ "license": {
+  "name": "Creative Commons 1.0 Universal (Public Domain Dedication)",
+  "logoUrl": "images/licenses/ccZero.png",
+  "termsLink": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+ },
+ "rowsUpdatedAt": "2026-10-17 03:58",
+ "createdAt": 1490818323,
+ "viewLastModified": 1597699205,
+ "publicationDate": 1597699205,
+ "rowIdentifierColumnId": 488821370,
+ "tags": [
+  "str",
+  "short term rental",
+  "airbnb",
+  "license"
+ ],
+ "metadata": {
+  "rdfSubject": "0",
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "data@nola.gov"
+   },
+   "Source Information": {
+    "Source Department": "Safety and Permits"
+   }
+  },
+  "rowIdentifier": 488821370,
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ],
+  "renderTypeConfig": {
+   "visible": {
+    "table": true
+   }
+  }
+ },
+ "description": "All permit applications for properties to be used as short-term rentals.",
+ "columns": [
+  {
+   "f": "license_number",
+   "n": "Permit Number",
+   "t": "text"
+  },
+  {
+   "f": "address",
+   "n": "Address",
+   "t": "text"
+  },
+  {
+   "f": "license_type",
+   "n": "Permit Type",
+   "t": "text"
+  },
+  {
+   "f": "residential_subtype",
+   "n": "Residential Subtype",
+   "t": "text"
+  },
+  {
+   "f": "current_status",
+   "n": "Current Status",
+   "t": "text"
+  },
+  {
+   "f": "expired",
+   "n": "Expired",
+   "t": "text"
+  },
+  {
+   "f": "expiration_date",
+   "n": "Expiration Date",
+   "t": "calendar_date"
+  },
+  {
+   "f": "bedroom_limit",
+   "n": "Bedroom Limit",
+   "t": "number"
+  },
+  {
+   "f": "guest_occupancy_limit",
+   "n": "Guest Occupancy Limit",
+   "t": "number"
+  },
+  {
+   "f": "link",
+   "n": "Link",
+   "t": "text"
+  },
+  {
+   "f": "contact_name",
+   "n": "Operator Name",
+   "t": "text"
+  },
+  {
+   "f": "contact_phone",
+   "n": "Operator Phone",
+   "t": "text"
+  },
+  {
+   "f": "contact_email",
+   "n": "Operator Email",
+   "t": "text"
+  },
+  {
+   "f": "operator_permit_number",
+   "n": "Operator Permit Number",
+   "t": "text"
+  },
+  {
+   "f": "license_holder_name",
+   "n": "License Holder Name",
+   "t": "text"
+  },
+  {
+   "f": "application_date",
+   "n": "Application Date",
+   "t": "calendar_date"
+  },
+  {
+   "f": "issue_date",
+   "n": "Issue_Date",
+   "t": "calendar_date"
+  },
+  {
+   "f": "reference_code",
+   "n": "Reference Code",
+   "t": "text"
+  },
+  {
+   "f": "x",
+   "n": "X",
+   "t": "number"
+  },
+  {
+   "f": "y",
+   "n": "Y",
+   "t": "number"
+  },
+  {
+   "f": "location",
+   "n": "Location",
+   "t": "location"
+  }
+ ]
+}

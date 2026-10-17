@@ -1,0 +1,38 @@
+[
+ {
+  "o_c": "Open",
+  "caseno": "26-11902-MPM",
+  "location": "1931 St Claude Ave",
+  "stage": "1 - Inspection",
+  "keystatus": "The case was filed on 10/16/2026 and the property is awaiting inspection to proceed further.",
+  "statdate": "2026-10-16T14:19:28.000",
+  "casefiled": "2026-10-16T14:19:28.000",
+  "xpos": "-1.0",
+  "ypos": "-1.0",
+  "caseid": "338131"
+ },
+ {
+  "o_c": "Open",
+  "caseno": "26-11886-MPM",
+  "location": "3046 St Peter St",
+  "stage": "1 - Inspection",
+  "keystatus": "The case was filed on 10/16/2026 and the property is awaiting inspection to proceed further.",
+  "statdate": "2026-10-16T10:42:48.000",
+  "casefiled": "2026-10-16T10:42:48.000",
+  "xpos": "-1.0",
+  "ypos": "-1.0",
+  "caseid": "338115"
+ },
+ {
+  "o_c": "Open",
+  "caseno": "26-11870-MPM",
+  "location": "1773 N Dorgenois St",
+  "stage": "1 - Inspection",
+  "keystatus": "The case was filed on 10/15/2026 and the property is awaiting inspection to proceed further.",
+  "statdate": "2026-10-15T15:55:18.000",
+  "casefiled": "2026-10-15T15:55:18.000",
+  "xpos": "-1.0",
+  "ypos": "-1.0",
+  "caseid": "338099"
+ }
+]

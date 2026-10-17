@@ -1,0 +1,127 @@
+{
+ "id": "xxb5-5azv",
+ "name": "CPC Projects",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Housing, Land Use, and Blight",
+ "attribution": null,
+ "attributionLink": null,
+ "licenseId": null,
+ "license": null,
+ "rowsUpdatedAt": "2026-10-17 05:01",
+ "createdAt": 1704756137,
+ "viewLastModified": 1704820270,
+ "publicationDate": 1704757166,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "cpc"
+ ],
+ "metadata": {
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "data@nola.gov"
+   },
+   "Source Information": {
+    "Source Department": "City Planning Commission"
+   }
+  },
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ]
+ },
+ "description": "A listing of City Planning Commission Projects, specifically those pertaining to: Minor Subdivisions, Major Subdivisions, Conditional Uses, Zoning Changes, Text Amendments, Master Plan Amendments, Street Name Changes, Property Acquisitions, Property Dispositions, Variances, Appeals of the Director of the Department of Safety & Permits, Neighborhood Participation Program Notifications, Design Review, IZD Appeals, Moratorium Appeals, CBD Demolitions, and Change of Non-Conforming Uses.\n\nYou can read more about each of these case types here: https://nola.gov/next/city-planning/resources/cpc-open-project-viewer/",
+ "columns": [
+  {
+   "f": "case_type",
+   "n": "Case Type",
+   "t": "text"
+  },
+  {
+   "f": "case_num",
+   "n": "Case Num",
+   "t": "text"
+  },
+  {
+   "f": "address",
+   "n": "Address",
+   "t": "text"
+  },
+  {
+   "f": "filing_date",
+   "n": "Filing Date",
+   "t": "calendar_date"
+  },
+  {
+   "f": "current_status",
+   "n": "Current Status",
+   "t": "text"
+  },
+  {
+   "f": "open_closed",
+   "n": "Open / Closed",
+   "t": "text"
+  },
+  {
+   "f": "previous_meeting",
+   "n": "Previous Meeting",
+   "t": "text"
+  },
+  {
+   "f": "previous_meeting_date",
+   "n": "Previous Meeting Date",
+   "t": "calendar_date"
+  },
+  {
+   "f": "previous_meeting_status",
+   "n": "Previous Meeting Status",
+   "t": "text"
+  },
+  {
+   "f": "next_meeting",
+   "n": "Next Meeting",
+   "t": "text"
+  },
+  {
+   "f": "next_meeting_date",
+   "n": "Next Meeting Date",
+   "t": "calendar_date"
+  },
+  {
+   "f": "lead_staff",
+   "n": "Lead Staff",
+   "t": "text"
+  },
+  {
+   "f": "description",
+   "n": "Description",
+   "t": "text"
+  },
+  {
+   "f": "x",
+   "n": "X",
+   "t": "number"
+  },
+  {
+   "f": "y",
+   "n": "Y",
+   "t": "number"
+  },
+  {
+   "f": "longitude",
+   "n": "Longitude",
+   "t": "number"
+  },
+  {
+   "f": "latitude",
+   "n": "Latitude",
+   "t": "number"
+  },
+  {
+   "f": "location",
+   "n": "Location",
+   "t": "point"
+  }
+ ]
+}

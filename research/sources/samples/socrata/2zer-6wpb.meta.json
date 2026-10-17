@@ -1,0 +1,105 @@
+{
+ "id": "2zer-6wpb",
+ "name": "Catch Basin Cleanings / Inspections",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": null,
+ "attribution": null,
+ "attributionLink": null,
+ "licenseId": null,
+ "license": null,
+ "rowsUpdatedAt": "2026-10-17 04:45",
+ "createdAt": 1538586051,
+ "viewLastModified": 1547503797,
+ "publicationDate": 1547490174,
+ "rowIdentifierColumnId": null,
+ "tags": null,
+ "metadata": {
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "data@nola.gov"
+   },
+   "Source Information": {
+    "Source Department": "Public Works (DPW)"
+   }
+  },
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ]
+ },
+ "description": "Catch Basins cleaned and inspected.  This data is updated nightly.",
+ "columns": [
+  {
+   "f": "nearestfu",
+   "n": "Closest Address",
+   "t": "text"
+  },
+  {
+   "f": "mdate",
+   "n": "Maintenance Date",
+   "t": "calendar_date"
+  },
+  {
+   "f": "neighborhood",
+   "n": "Neighborhood",
+   "t": "text"
+  },
+  {
+   "f": "segmentid",
+   "n": "Segment ID",
+   "t": "number"
+  },
+  {
+   "f": "councildistrict",
+   "n": "Council District",
+   "t": "text"
+  },
+  {
+   "f": "crewname",
+   "n": "Crew Name",
+   "t": "text"
+  },
+  {
+   "f": "reason",
+   "n": "Maintenance Reason",
+   "t": "text"
+  },
+  {
+   "f": "lineflushed",
+   "n": "Line Flushed",
+   "t": "number"
+  },
+  {
+   "f": "gisid",
+   "n": "GIS ID",
+   "t": "text"
+  },
+  {
+   "f": "cbmaintid",
+   "n": "Maintenance ID",
+   "t": "number"
+  },
+  {
+   "f": "y",
+   "n": "Latitude",
+   "t": "number"
+  },
+  {
+   "f": "x",
+   "n": "Longitude",
+   "t": "number"
+  },
+  {
+   "f": "worktype",
+   "n": "Work Type",
+   "t": "text"
+  },
+  {
+   "f": "location",
+   "n": "Location",
+   "t": "location"
+  }
+ ]
+}

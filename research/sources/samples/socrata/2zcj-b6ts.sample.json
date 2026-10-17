@@ -1,0 +1,88 @@
+[
+ {
+  "nopd_item": "J2775724",
+  "type_": "24",
+  "typetext": "MEDICAL",
+  "priority": "2D",
+  "initialtype": "24",
+  "initialtypetext": "MEDICAL",
+  "initialpriority": "2D",
+  "mapx": "37369000",
+  "mapy": "3513814",
+  "timecreate": "2024-10-28T00:06:24.883",
+  "timedispatch": "2024-10-28T00:06:38.130",
+  "timearrive": "2024-10-28T00:06:57.563",
+  "timeclosed": "2024-10-28T01:17:46.210",
+  "disposition": "NAT",
+  "dispositiontext": "Necessary Action Taken",
+  "selfinitiated": "N",
+  "beat": "1F01",
+  "block_address": "N Rampart St & St Ann St",
+  "zip": "70116",
+  "policedistrict": "1",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    0,
+    0
+   ]
+  }
+ },
+ {
+  "nopd_item": "I0437624",
+  "type_": "43",
+  "typetext": "SIMPLE RAPE",
+  "priority": "2F",
+  "initialtype": "42",
+  "initialtypetext": "AGGRAVATED RAPE",
+  "initialpriority": "2C",
+  "mapx": "37369000",
+  "mapy": "3513814",
+  "timecreate": "2024-09-05T08:11:09.010",
+  "timedispatch": "2024-09-05T08:12:19.850",
+  "timearrive": "2024-09-05T08:19:58.773",
+  "timeclosed": "2024-09-05T19:10:12.240",
+  "disposition": "RTF",
+  "dispositiontext": "REPORT TO FOLLOW",
+  "selfinitiated": "N",
+  "beat": "1G02",
+  "block_address": "022XX Blk Tulane Av",
+  "zip": "70119",
+  "policedistrict": "1",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    0,
+    0
+   ]
+  }
+ },
+ {
+  "nopd_item": "J1875124",
+  "type_": "22A",
+  "typetext": "AREA CHECK",
+  "priority": "1K",
+  "initialtype": "22A",
+  "initialtypetext": "AREA CHECK",
+  "initialpriority": "1K",
+  "mapx": "0",
+  "mapy": "0",
+  "timecreate": "2024-10-19T08:24:14.380",
+  "timearrive": "2024-10-19T08:24:14.380",
+  "timeclosed": "2024-10-19T08:40:13.860",
+  "disposition": "NAT",
+  "dispositiontext": "Necessary Action Taken",
+  "selfinitiated": "Y",
+  "beat": "None",
+  "block_address": "015XX Duffosat Street",
+  "zip": "None",
+  "policedistrict": "0",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    0,
+    0
+   ]
+  }
+ }
+]

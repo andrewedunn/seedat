@@ -1,0 +1,83 @@
+[
+ {
+  "nopd_item": "A0000111",
+  "type": "17M",
+  "typetext": "MUNICIPAL  ATTTACHME",
+  "priority": "1F",
+  "mapx": "3673089.00000000",
+  "mapy": "533629.00000000",
+  "timecreate": "2011-01-01T00:00:02.000",
+  "timeclosed": "2011-01-01T00:00:03.000",
+  "disposition": "NAT",
+  "dispositiontext": "NECESSARY ACTION TAKEN",
+  "block_address": "007XX S Dupre St",
+  "zip": "70119",
+  "policedistrict": "1",
+  "location": {
+   "latitude": "29.961547427695",
+   "longitude": "-90.094557283621"
+  },
+  ":@computed_region_evki_aju8": "6",
+  ":@computed_region_u4yh_3wk9": "11739",
+  ":@computed_region_7fw3_kdpf": "47",
+  ":@computed_region_spev_d8jm": "3768",
+  ":@computed_region_m56f_hbma": "109",
+  ":@computed_region_sikx_bdeb": "109",
+  ":@computed_region_ewbu_t8bu": "11739",
+  ":@computed_region_k37d_then": "2"
+ },
+ {
+  "nopd_item": "A0000211",
+  "type": "17M",
+  "typetext": "MUNICIPAL  ATTTACHME",
+  "priority": "1F",
+  "mapx": "3673089.00000000",
+  "mapy": "533629.00000000",
+  "timecreate": "2011-01-01T00:00:02.000",
+  "timeclosed": "2011-01-01T00:00:04.000",
+  "disposition": "NAT",
+  "dispositiontext": "NECESSARY ACTION TAKEN",
+  "block_address": "007XX S Dupre St",
+  "zip": "70119",
+  "policedistrict": "1",
+  "location": {
+   "latitude": "29.961547427695",
+   "longitude": "-90.094557283621"
+  },
+  ":@computed_region_evki_aju8": "6",
+  ":@computed_region_u4yh_3wk9": "11739",
+  ":@computed_region_7fw3_kdpf": "47",
+  ":@computed_region_spev_d8jm": "3768",
+  ":@computed_region_m56f_hbma": "109",
+  ":@computed_region_sikx_bdeb": "109",
+  ":@computed_region_ewbu_t8bu": "11739",
+  ":@computed_region_k37d_then": "2"
+ },
+ {
+  "nopd_item": "A0000311",
+  "type": "17M",
+  "typetext": "MUNICIPAL  ATTTACHME",
+  "priority": "1F",
+  "mapx": "3673089.00000000",
+  "mapy": "533629.00000000",
+  "timecreate": "2011-01-01T00:00:02.000",
+  "timeclosed": "2011-01-01T00:00:04.000",
+  "disposition": "NAT",
+  "dispositiontext": "NECESSARY ACTION TAKEN",
+  "block_address": "007XX S Dupre St",
+  "zip": "70119",
+  "policedistrict": "1",
+  "location": {
+   "latitude": "29.961547427695",
+   "longitude": "-90.094557283621"
+  },
+  ":@computed_region_evki_aju8": "6",
+  ":@computed_region_u4yh_3wk9": "11739",
+  ":@computed_region_7fw3_kdpf": "47",
+  ":@computed_region_spev_d8jm": "3768",
+  ":@computed_region_m56f_hbma": "109",
+  ":@computed_region_sikx_bdeb": "109",
+  ":@computed_region_ewbu_t8bu": "11739",
+  ":@computed_region_k37d_then": "2"
+ }
+]

@@ -1,0 +1,62 @@
+{
+ "id": "bsnu-de3a",
+ "name": "RoadWork SWB Projects",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Transportation and Infrastructure",
+ "attribution": null,
+ "attributionLink": null,
+ "licenseId": null,
+ "license": null,
+ "rowsUpdatedAt": "2026-10-17 03:26",
+ "createdAt": 1699308994,
+ "viewLastModified": 1751915561,
+ "publicationDate": 1699384320,
+ "rowIdentifierColumnId": 584455599,
+ "tags": null,
+ "metadata": {
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "data@nola.gov"
+   },
+   "Source Information": {
+    "Source Department": "Public Works (DPW)"
+   }
+  },
+  "rowIdentifier": 584455599,
+  "rowLabel": "Project",
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ]
+ },
+ "description": "The City and Sewerage and Water Board of New Orleans are working together to implement an unprecedented capital improvement program to restore the City\u2019s damaged infrastructure. Using a combination of local and Federal funds, the two-billion dollar program will be the most comprehensive that our region has seen in a generation. Work will include more than 200 individual projects and consist of repairing all or portions of about 400 miles of roadway. For more information please visit http://roadwork.nola.gov/.",
+ "columns": [
+  {
+   "f": "segmentid",
+   "n": "SEGMENTID",
+   "t": "number"
+  },
+  {
+   "f": "projid",
+   "n": "PROJID",
+   "t": "text"
+  },
+  {
+   "f": "ssstat",
+   "n": "SSSTAT",
+   "t": "text"
+  },
+  {
+   "f": "sstype",
+   "n": "SSTYPE",
+   "t": "text"
+  },
+  {
+   "f": "location",
+   "n": "Location",
+   "t": "point"
+  }
+ ]
+}

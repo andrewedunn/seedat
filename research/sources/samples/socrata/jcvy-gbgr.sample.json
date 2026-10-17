@@ -1,0 +1,32 @@
+[
+ {
+  "objectid": "2",
+  "name": "MIZ Mandatory Inclusionary Zoning Sub-Districts; Core Sub-District",
+  "docket": "031/20",
+  "ordinance": "2020",
+  "description": "MIZ Mandatory Inclusionary Zoning Sub-Districts; Core Sub-District",
+  "weblink": "https://czo.nola.gov/article-28/",
+  "shape_starea": "56962521.466403387",
+  "shape_stlength": "44300.022299485157"
+ },
+ {
+  "objectid": "1",
+  "name": "MIZ Mandatory Inclusionary Zoning Sub-Districts; Strong Sub-District 2",
+  "docket": "031/20",
+  "ordinance": "2020",
+  "description": "MIZ Mandatory Inclusionary Zoning Sub-Districts; Strong Sub-District 2",
+  "weblink": "https://czo.nola.gov/article-28/",
+  "shape_starea": "95803726.192020163",
+  "shape_stlength": "86920.444533945119"
+ },
+ {
+  "objectid": "3",
+  "name": "MIZ Mandatory Inclusionary Zoning Sub-Districts; Strong Sub-District 1",
+  "docket": "031/20",
+  "ordinance": "2020",
+  "description": "MIZ Mandatory Inclusionary Zoning Sub-Districts; Strong Sub-District 1",
+  "weblink": "https://czo.nola.gov/article-28/",
+  "shape_starea": "32803457.984073061",
+  "shape_stlength": "29621.967489346069"
+ }
+]

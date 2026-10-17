@@ -1,0 +1,96 @@
+{
+ "id": "a2w6-xuk2",
+ "name": "Code Enforcement Rodent Harborage",
+ "assetType": "filter",
+ "viewType": "tabular",
+ "category": "Housing, Land Use, and Blight",
+ "attribution": null,
+ "attributionLink": null,
+ "licenseId": "CC0_10",
+ "license": {
+  "name": "Creative Commons 1.0 Universal (Public Domain Dedication)",
+  "logoUrl": "images/licenses/ccZero.png",
+  "termsLink": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+ },
+ "rowsUpdatedAt": "2026-10-17 04:10",
+ "createdAt": 1598035118,
+ "viewLastModified": 1736893359,
+ "publicationDate": 1598035163,
+ "rowIdentifierColumnId": 489705205,
+ "tags": [
+  "blightstatus",
+  "violation"
+ ],
+ "metadata": {
+  "rdfSubject": "0",
+  "rdfClass": "",
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "data@nola.gov"
+   },
+   "Source Information": {
+    "Source Department": "Code Enforcement"
+   }
+  },
+  "rowIdentifier": 489705205,
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ],
+  "renderTypeConfig": {
+   "visible": {
+    "table": true
+   }
+  },
+  "inDatasetSearch": true
+ },
+ "description": "Code Enforcement All Violations.",
+ "columns": [
+  {
+   "f": "caseid",
+   "n": "CaseID",
+   "t": "number"
+  },
+  {
+   "f": "violationid",
+   "n": "ViolationID",
+   "t": "number"
+  },
+  {
+   "f": "caseno",
+   "n": "CaseNo",
+   "t": "text"
+  },
+  {
+   "f": "location",
+   "n": "Location",
+   "t": "text"
+  },
+  {
+   "f": "violationdate",
+   "n": "ViolationDate",
+   "t": "calendar_date"
+  },
+  {
+   "f": "codesection",
+   "n": "CodeSection",
+   "t": "text"
+  },
+  {
+   "f": "violation",
+   "n": "Violation",
+   "t": "text"
+  },
+  {
+   "f": "description",
+   "n": "Description",
+   "t": "text"
+  },
+  {
+   "f": "lastupload",
+   "n": "LastUpload",
+   "t": "calendar_date"
+  }
+ ]
+}

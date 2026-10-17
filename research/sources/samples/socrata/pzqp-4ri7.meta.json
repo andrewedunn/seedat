@@ -1,0 +1,64 @@
+{
+ "id": "pzqp-4ri7",
+ "name": "Parcels To Join",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Real Estate, Land Records",
+ "attribution": "eGIS team",
+ "attributionLink": null,
+ "licenseId": null,
+ "license": null,
+ "rowsUpdatedAt": "2026-09-25 11:15",
+ "createdAt": 1678734363,
+ "viewLastModified": 1678895179,
+ "publicationDate": 1678734363,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "assessor",
+  "parcels"
+ ],
+ "metadata": {
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "gis@nola.gov",
+    "Public Access Level": "public"
+   },
+   "Source Information": {
+    "Source Department": "Assessor's Office",
+    "Format": "ESRI geodatabase or shapefile, CSV",
+    "Frequency of Data Change": "monthly"
+   }
+  },
+  "arcgis_connection": {
+   "url": "https://maps.nola.gov/server/rest/services/Assessor/Parcels_To_Join/MapServer/0"
+  },
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ]
+ },
+ "description": "This dataset is updated monthly based on the Assessor data of GEOPIN and TAXBILL. It is a full polygon dataset of the parcels with both GEOPIN and TAXBILL attached. This allows users to join to tabular data based on either field.",
+ "columns": [
+  {
+   "f": "the_geom",
+   "n": "the_geom",
+   "t": "multipolygon"
+  },
+  {
+   "f": "objectid",
+   "n": "OBJECTID",
+   "t": "number"
+  },
+  {
+   "f": "geopin",
+   "n": "GEOPIN",
+   "t": "number"
+  },
+  {
+   "f": "parid",
+   "n": "PARID",
+   "t": "text"
+  }
+ ]
+}

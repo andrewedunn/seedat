@@ -1,0 +1,87 @@
+[
+ {
+  "nopd_item": "I1118124",
+  "type_": "18A",
+  "typetext": "ABANDONED VEHICLE",
+  "priority": "1J",
+  "initialtype": "18S",
+  "initialtypetext": "DISABLED/STRANDED MOTORIST",
+  "initialpriority": "2F",
+  "mapx": "3692016",
+  "mapy": "536831",
+  "timecreate": "2024-09-11T23:38:37.797",
+  "timedispatch": "2024-09-11T23:38:52.760",
+  "timearrive": "2024-09-11T23:46:15.503",
+  "timeclosed": "2024-09-12T01:11:44.110",
+  "disposition": "RTF",
+  "dispositiontext": "REPORT TO FOLLOW",
+  "selfinitiated": "N",
+  "beat": "5D03",
+  "block_address": "039XX Blk N Robertson St",
+  "zip": "70117",
+  "policedistrict": "5",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -90.03467203,
+    29.96977729
+   ]
+  }
+ },
+ {
+  "nopd_item": "I1082624",
+  "type_": "21F",
+  "typetext": "FLOOD EVENT",
+  "priority": "1",
+  "initialtype": "21F",
+  "initialtypetext": "FLOOD EVENT",
+  "initialpriority": "1C",
+  "mapx": "3666867",
+  "mapy": "534517",
+  "timecreate": "2024-09-11T17:31:07.430",
+  "timearrive": "2024-09-12T00:10:02.117",
+  "timeclosed": "2024-09-12T08:15:23.573",
+  "disposition": "NAT",
+  "dispositiontext": "Necessary Action Taken",
+  "selfinitiated": "N",
+  "beat": "2T03",
+  "block_address": "081XX Blk Olive St",
+  "zip": "70118",
+  "policedistrict": "2",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -90.11417536,
+    29.96417424
+   ]
+  }
+ },
+ {
+  "nopd_item": "I1035824",
+  "type_": "18A",
+  "typetext": "ABANDONED VEHICLE",
+  "priority": "1J",
+  "initialtype": "18A",
+  "initialtypetext": "ABANDONED VEHICLE",
+  "initialpriority": "1J",
+  "mapx": "3696736",
+  "mapy": "535934",
+  "timecreate": "2024-09-11T09:11:12.923",
+  "timearrive": "2024-09-11T09:11:12.923",
+  "timeclosed": "2024-09-11T10:30:14.777",
+  "disposition": "NAT",
+  "dispositiontext": "Necessary Action Taken",
+  "selfinitiated": "Y",
+  "beat": "5E02",
+  "block_address": "Forstall St & N Claiborne Av",
+  "zip": "70117",
+  "policedistrict": "5",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -90.01980044,
+    29.96716323
+   ]
+  }
+ }
+]

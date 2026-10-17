@@ -1,0 +1,263 @@
+{
+ "id": "aib5-en5t",
+ "name": "Permit Application Data for the Office of Business and External Services",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Housing, Land Use, and Blight",
+ "attribution": "City of New Orleans Code Enforcement",
+ "attributionLink": null,
+ "licenseId": null,
+ "license": null,
+ "rowsUpdatedAt": "2026-10-17 04:48",
+ "createdAt": 1667412649,
+ "viewLastModified": 1784582223,
+ "publicationDate": 1784582223,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "permit",
+  "permits",
+  "construction",
+  "renovation",
+  "repair",
+  "mechanical",
+  "hvac",
+  "structure",
+  "electrical",
+  "gas",
+  "water"
+ ],
+ "metadata": {
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "data@nola.gov",
+    "Contact Name": "Cameron MacPhee"
+   },
+   "Source Information": {
+    "Source Department": "Performance and Accountability (OPA)"
+   }
+  },
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ]
+ },
+ "description": "A dataset of commercial and residential building permit applications and their statuses from January 1st, 2018 to current day. Specific permit types in this dataset are limited to Accessory Structure, Construction Loop, Demolition, Mechanical Fuel Gas, Mechanical HVAC, New Construction, Renovation (Non-Structural), Renovation (Structural), Repair/Replacement/Addition, Service/Circuit/Feeder.",
+ "columns": [
+  {
+   "f": "prmtid",
+   "n": "PrmtID",
+   "t": "text"
+  },
+  {
+   "f": "permitnumber",
+   "n": "PermitNumber",
+   "t": "text"
+  },
+  {
+   "f": "address",
+   "n": "Address",
+   "t": "text"
+  },
+  {
+   "f": "isclosed",
+   "n": "IsClosed",
+   "t": "text"
+  },
+  {
+   "f": "exitcode",
+   "n": "ExitCode",
+   "t": "number"
+  },
+  {
+   "f": "submittaltype",
+   "n": "SubmittalType",
+   "t": "number"
+  },
+  {
+   "f": "reason",
+   "n": "Reason",
+   "t": "text"
+  },
+  {
+   "f": "currentstatus",
+   "n": "CurrentStatus",
+   "t": "text"
+  },
+  {
+   "f": "landuse",
+   "n": "LandUse",
+   "t": "text"
+  },
+  {
+   "f": "status",
+   "n": "Status",
+   "t": "text"
+  },
+  {
+   "f": "certificate_of_occupancy",
+   "n": "Certificate of Occupancy",
+   "t": "calendar_date"
+  },
+  {
+   "f": "descr",
+   "n": "Descr",
+   "t": "text"
+  },
+  {
+   "f": "isdeleted",
+   "n": "IsDeleted",
+   "t": "text"
+  },
+  {
+   "f": "lu_divisionid",
+   "n": "LU_DivisionID",
+   "t": "number"
+  },
+  {
+   "f": "class",
+   "n": "Class",
+   "t": "text"
+  },
+  {
+   "f": "type",
+   "n": "Type",
+   "t": "text"
+  },
+  {
+   "f": "constrval",
+   "n": "ConstrVal",
+   "t": "number"
+  },
+  {
+   "f": "journalcount",
+   "n": "JournalCount",
+   "t": "number"
+  },
+  {
+   "f": "commentcount",
+   "n": "CommentCount",
+   "t": "number"
+  },
+  {
+   "f": "use",
+   "n": "Use",
+   "t": "text"
+  },
+  {
+   "f": "currentstatusdate",
+   "n": "CurrentStatusDate",
+   "t": "calendar_date"
+  },
+  {
+   "f": "d_create",
+   "n": "D_Create",
+   "t": "calendar_date"
+  },
+  {
+   "f": "lastcomment",
+   "n": "LastComment",
+   "t": "calendar_date"
+  },
+  {
+   "f": "application_submitted",
+   "n": "Application submitted",
+   "t": "calendar_date"
+  },
+  {
+   "f": "application_review",
+   "n": "Application review",
+   "t": "calendar_date"
+  },
+  {
+   "f": "permit_approved",
+   "n": "Permit approved",
+   "t": "calendar_date"
+  },
+  {
+   "f": "plan_review",
+   "n": "Plan review",
+   "t": "calendar_date"
+  },
+  {
+   "f": "zoning_review",
+   "n": "Zoning review",
+   "t": "calendar_date"
+  },
+  {
+   "f": "firstcomment",
+   "n": "FirstComment",
+   "t": "calendar_date"
+  },
+  {
+   "f": "issue_date",
+   "n": "Issue Date",
+   "t": "calendar_date"
+  },
+  {
+   "f": "date_of_first_inspection",
+   "n": "Date of first inspection",
+   "t": "calendar_date"
+  },
+  {
+   "f": "days_to_application_review",
+   "n": "Days to Application Review",
+   "t": "number"
+  },
+  {
+   "f": "days_to_approved",
+   "n": "Days to Approved",
+   "t": "number"
+  },
+  {
+   "f": "days_to_plan_review",
+   "n": "Days to Plan Review",
+   "t": "number"
+  },
+  {
+   "f": "days_to_zoning_review",
+   "n": "Days to Zoning Review",
+   "t": "number"
+  },
+  {
+   "f": "days_to_first_comment",
+   "n": "Days to first comment",
+   "t": "number"
+  },
+  {
+   "f": "days_to_issue_date",
+   "n": "Days to Issue Date",
+   "t": "number"
+  },
+  {
+   "f": "days_to_first_inspection",
+   "n": "Days to first inspection",
+   "t": "number"
+  },
+  {
+   "f": "x",
+   "n": "X",
+   "t": "number"
+  },
+  {
+   "f": "y",
+   "n": "Y",
+   "t": "number"
+  },
+  {
+   "f": "longitude",
+   "n": "Longitude",
+   "t": "number"
+  },
+  {
+   "f": "latitude",
+   "n": "Latitude",
+   "t": "number"
+  },
+  {
+   "f": "location",
+   "n": "Location",
+   "t": "point"
+  }
+ ]
+}

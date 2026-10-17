@@ -1,0 +1,155 @@
+{
+ "id": "d4d6-yab5",
+ "name": "Code Enforcement Active Pipeline",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Housing, Land Use, and Blight",
+ "attribution": "Code Enforcement",
+ "attributionLink": null,
+ "licenseId": "CC0_10",
+ "license": {
+  "name": "Creative Commons 1.0 Universal (Public Domain Dedication)",
+  "logoUrl": "images/licenses/ccZero.png",
+  "termsLink": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+ },
+ "rowsUpdatedAt": "2024-07-09 22:05",
+ "createdAt": 1639428468,
+ "viewLastModified": 1639521424,
+ "publicationDate": 1639428470,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "code enforcement",
+  "blight",
+  "active"
+ ],
+ "metadata": {
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "gis@nola.gov",
+    "Public Access Level": "public"
+   },
+   "Source Information": {
+    "Source Department": "Code Enforcement",
+    "Frequency of Data Change": "Updated frequently"
+   }
+  },
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ]
+ },
+ "description": "<DIV STYLE=\"text-align:Left;\"><DIV><P><SPAN>Point dataset showing blighted properties reported via citizens. Updated weekly based on LAMA database. Also available via data.nola.gov as tabular dataset.</SPAN></P></DIV></DIV>",
+ "columns": [
+  {
+   "f": "the_geom",
+   "n": "the_geom",
+   "t": "point"
+  },
+  {
+   "f": "objectid",
+   "n": "OBJECTID",
+   "t": "number"
+  },
+  {
+   "f": "casefiled",
+   "n": "Date Case Filed",
+   "t": "text"
+  },
+  {
+   "f": "caseid",
+   "n": "Case ID",
+   "t": "text"
+  },
+  {
+   "f": "caseno",
+   "n": "Case Number",
+   "t": "text"
+  },
+  {
+   "f": "geoaddress",
+   "n": "GeoAddress",
+   "t": "text"
+  },
+  {
+   "f": "geopin",
+   "n": "GeoPIN",
+   "t": "text"
+  },
+  {
+   "f": "initinspection",
+   "n": "Initial Inspection",
+   "t": "text"
+  },
+  {
+   "f": "initinspresult",
+   "n": "Initial Result",
+   "t": "text"
+  },
+  {
+   "f": "keystatus",
+   "n": "Key Status",
+   "t": "text"
+  },
+  {
+   "f": "lastpermit",
+   "n": "Last Permit",
+   "t": "text"
+  },
+  {
+   "f": "location",
+   "n": "Location",
+   "t": "text"
+  },
+  {
+   "f": "nexthearingdate",
+   "n": "Next Hearing Date",
+   "t": "text"
+  },
+  {
+   "f": "o_c",
+   "n": "Open/Closed",
+   "t": "text"
+  },
+  {
+   "f": "permitfiling",
+   "n": "Permit Filing Date",
+   "t": "text"
+  },
+  {
+   "f": "permitstatus",
+   "n": "Permit Status",
+   "t": "text"
+  },
+  {
+   "f": "permittype",
+   "n": "Permit Type",
+   "t": "text"
+  },
+  {
+   "f": "prevhearingdate",
+   "n": "Previous Hearing Date",
+   "t": "text"
+  },
+  {
+   "f": "prevhearingresult",
+   "n": "Prev Hearing Result",
+   "t": "text"
+  },
+  {
+   "f": "stage",
+   "n": "Stage",
+   "t": "text"
+  },
+  {
+   "f": "statdate",
+   "n": "Status Date",
+   "t": "text"
+  },
+  {
+   "f": "zipcode",
+   "n": "Zipcode",
+   "t": "text"
+  }
+ ]
+}

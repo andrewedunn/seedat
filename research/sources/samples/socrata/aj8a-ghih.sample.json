@@ -1,0 +1,62 @@
+[
+ {
+  "the_geom": {
+   "type": "Point",
+   "coordinates": [
+    -90.062597130366,
+    29.965418479468
+   ]
+  },
+  "objectid": "16",
+  "businessaddress": "1001 ESPLANADE AVE",
+  "businessname": "BUFFA'S BAR & LOUNGE",
+  "city": "NEW ORLEANS",
+  "ownername": "KS VENTURES INC",
+  "permittype": "8255 - Music for Entertainment,Dancing/No Admission Charged",
+  "state": "LA",
+  "zip": "70116",
+  "locationx": "3683194.88892",
+  "locationy": "535145.523846",
+  "globalid": "{C3502E63-67E5-4FEB-B7BD-2187B6DB128E}"
+ },
+ {
+  "the_geom": {
+   "type": "Point",
+   "coordinates": [
+    -90.065903472564,
+    29.953582884153
+   ]
+  },
+  "objectid": "22",
+  "businessaddress": "239 DECATUR ST",
+  "businessname": "CARRE RESTAURANT AND BAR",
+  "city": "NEW ORLEANS",
+  "ownername": "THE MUSE GROUP,LLC",
+  "permittype": "8255 - Music for Entertainment,Dancing/No Admission Charged",
+  "state": "LA",
+  "zip": "70130",
+  "locationx": "3682195.63317",
+  "locationy": "530830.069826",
+  "globalid": "{CB79D156-8468-4F64-8151-0F986C646576}"
+ },
+ {
+  "the_geom": {
+   "type": "Point",
+   "coordinates": [
+    -90.097472158957,
+    29.952206548176
+   ]
+  },
+  "objectid": "149",
+  "businessaddress": "3940 THALIA ST",
+  "businessname": "ZONY MASH BEER PROJECT",
+  "city": "NEW ORLEANS",
+  "ownername": "IKE N TINA, LLC",
+  "permittype": "8255 - Music for Entertainment,Dancing/No Admission Charged",
+  "state": "LA",
+  "zip": "70125",
+  "locationx": "3672204.48315",
+  "locationy": "530220.386049",
+  "globalid": "{D9559314-8AC0-428F-B666-C6B39ACA5C9A}"
+ }
+]

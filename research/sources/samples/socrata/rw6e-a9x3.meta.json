@@ -1,0 +1,53 @@
+{
+ "id": "rw6e-a9x3",
+ "name": "NOLA Permits - Accela (Historic Data: 3/2004 - 3/2012)",
+ "assetType": "file",
+ "viewType": "blobby",
+ "category": "Housing, Land Use, and Blight",
+ "attribution": "",
+ "attributionLink": null,
+ "licenseId": "CC0_10",
+ "license": {
+  "name": "Creative Commons 1.0 Universal (Public Domain Dedication)",
+  "logoUrl": "images/licenses/ccZero.png",
+  "termsLink": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+ },
+ "rowsUpdatedAt": "2011-08-26 17:19",
+ "createdAt": 1314379151,
+ "viewLastModified": 1485207663,
+ "publicationDate": 1314379151,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "new orleans",
+  "permits",
+  "legacy"
+ ],
+ "metadata": {
+  "attachments": [
+   {
+    "filename": "Permits_3PrimeDomain.xls",
+    "assetId": "",
+    "blobId": "B1AC4322-16C8-4EF6-8E53-565DFED2C9BF",
+    "name": "Permits_3PrimeDomain.xls"
+   }
+  ],
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "data@nola.gov"
+   },
+   "Source Information": {
+    "Source Department": "Safety and Permits"
+   }
+  },
+  "availableDisplayTypes": [
+   "blob"
+  ],
+  "renderTypeConfig": {
+   "visible": {
+    "blob": true
+   }
+  }
+ },
+ "description": "City of New Orleans Permits (March 2004 to March 2012).  ESRI shapefile format, GIS software required for viewing geometry (http://www.esri.com/software/arcgis/arcreader/).  Tabular data (DBF), included as part of the shapefile, are viewable in Excel.  Large dataset - 400,000+ records. Associated spreadsheet 'Permits_3PrimeDomain' lists domains for three of the primary permit fields.",
+ "columns": []
+}

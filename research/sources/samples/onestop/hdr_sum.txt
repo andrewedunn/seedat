@@ -1,0 +1,16 @@
+HTTP/2 200 
+cache-control: private,no-store, no-cache, must-revalidate, private
+pragma: no-cache
+content-type: text/html; charset=utf-8
+expires: -1
+x-aspnet-version: 4.0.30319
+strict-transport-security: max-age=31536000
+referrer-policy: strict-origin
+permissions-policy: camera=*,geolocation=*,microphone=*,autoplay=*,fullscreen=*,picture-in-picture=*,syncxhr=*,encrypted-media=*,oversized-images=*
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+content-security-policy: script-src https: 'unsafe-inline' 'unsafe-eval'; style-src https: 'unsafe-inline' 'unsafeeval'; img-src https: data:; font-src https: data:;
+date: Sat, 17 Oct 2026 16:50:58 GMT
+content-length: 7596
+

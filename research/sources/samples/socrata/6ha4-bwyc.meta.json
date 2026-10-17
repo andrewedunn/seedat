@@ -1,0 +1,98 @@
+{
+ "id": "6ha4-bwyc",
+ "name": "Code Enforcement All Cases",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Housing, Land Use, and Blight",
+ "attribution": "Code Enforcement",
+ "attributionLink": null,
+ "licenseId": "CC0_10",
+ "license": {
+  "name": "Creative Commons 1.0 Universal (Public Domain Dedication)",
+  "logoUrl": "images/licenses/ccZero.png",
+  "termsLink": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+ },
+ "rowsUpdatedAt": "2024-07-09 22:15",
+ "createdAt": 1639429029,
+ "viewLastModified": 1639521615,
+ "publicationDate": 1639429030,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "code enforcement",
+  "blight",
+  "blightstatus"
+ ],
+ "metadata": {
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "gis@nola.gov"
+   },
+   "Source Information": {
+    "Source Department": "Code Enforcement"
+   }
+  },
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ]
+ },
+ "description": "<DIV STYLE=\"text-align:Left;\"><DIV><P><SPAN>Code Enforcement All Cases. Comes directly from LAMA database and is updated weekly, Also available on data.nola.gov as tabular data.</SPAN></P></DIV></DIV>",
+ "columns": [
+  {
+   "f": "the_geom",
+   "n": "the_geom",
+   "t": "point"
+  },
+  {
+   "f": "objectid",
+   "n": "OBJECTID",
+   "t": "number"
+  },
+  {
+   "f": "caseno",
+   "n": "Case Number",
+   "t": "text"
+  },
+  {
+   "f": "geopin",
+   "n": "GeoPIN",
+   "t": "text"
+  },
+  {
+   "f": "nexthearingdate",
+   "n": "NextHearingDate",
+   "t": "text"
+  },
+  {
+   "f": "o_c",
+   "n": "Open/Closed",
+   "t": "text"
+  },
+  {
+   "f": "permitstatus",
+   "n": "Permit Status",
+   "t": "text"
+  },
+  {
+   "f": "prevhearingresult",
+   "n": "Previous Hearing Result",
+   "t": "text"
+  },
+  {
+   "f": "stage",
+   "n": "Stage",
+   "t": "text"
+  },
+  {
+   "f": "statdate",
+   "n": "Status Date",
+   "t": "text"
+  },
+  {
+   "f": "zipcode",
+   "n": "Zipcode",
+   "t": "text"
+  }
+ ]
+}

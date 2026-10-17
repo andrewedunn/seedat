@@ -1,0 +1,83 @@
+[
+ {
+  "service_request": "2023-971750",
+  "request_type": "Trash/Recycling",
+  "request_reason": "MIssed Recycling Pick-Up",
+  "date_created": "2023-01-31T11:27:17.000",
+  "date_modified": "2023-02-01T15:20:25.000",
+  "case_close_date": "2023-02-01T09:20:25.000",
+  "request_status": "Closed",
+  "responsible_agency": "Department of Sanitation",
+  "final_address": "4910 Dauphine St",
+  "address_councildis": "E",
+  "status": "Assigned to Contractor",
+  "contractor": "Waste Pro",
+  "contractor_action": "Completed",
+  "rowid": "971750",
+  "final_x": "3695174.76982",
+  "final_y": "533223.825348",
+  "longitude": "-90.02482909663982",
+  "latitude": "29.959758320453872",
+  "geocoded_column": {
+   "type": "Point",
+   "coordinates": [
+    -90.02482909663982,
+    29.959758320453872
+   ]
+  }
+ },
+ {
+  "service_request": "2023-971746",
+  "request_type": "Trash/Recycling",
+  "request_reason": "Missed Trash Pick-Up",
+  "date_created": "2023-01-31T11:23:50.000",
+  "date_modified": "2023-02-01T12:13:13.000",
+  "case_close_date": "2023-02-01T06:13:13.000",
+  "request_status": "Closed",
+  "responsible_agency": "Department of Sanitation",
+  "final_address": "5031 St Anthony Ave",
+  "address_councildis": "D",
+  "status": "Assigned to Contractor",
+  "contractor": "IV Waste",
+  "contractor_action": "Completed",
+  "rowid": "971746",
+  "final_x": "3682384.22108",
+  "final_y": "551249.069653",
+  "longitude": "-90.0645884790084",
+  "latitude": "30.00971683026275",
+  "geocoded_column": {
+   "type": "Point",
+   "coordinates": [
+    -90.0645884790084,
+    30.00971683026275
+   ]
+  }
+ },
+ {
+  "service_request": "2023-971730",
+  "request_type": "Trash/Recycling",
+  "request_reason": "MIssed Recycling Pick-Up",
+  "date_created": "2023-01-31T10:48:40.000",
+  "date_modified": "2023-02-01T11:54:49.000",
+  "case_close_date": "2023-02-01T05:54:49.000",
+  "request_status": "Closed",
+  "responsible_agency": "Department of Sanitation",
+  "final_address": "4910 Coronado Dr",
+  "address_councildis": "E",
+  "status": "Assigned to Contractor",
+  "contractor": "Waste Pro",
+  "contractor_action": "Completed",
+  "rowid": "971730",
+  "final_x": "3713967.08171",
+  "final_y": "557386.093659",
+  "longitude": "-89.96457644052258",
+  "latitude": "30.02559186482469",
+  "geocoded_column": {
+   "type": "Point",
+   "coordinates": [
+    -89.96457644052258,
+    30.02559186482469
+   ]
+  }
+ }
+]

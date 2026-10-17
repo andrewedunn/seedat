@@ -1,0 +1,105 @@
+{
+ "id": "bsqt-btyi",
+ "name": "Public Land",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": null,
+ "attribution": null,
+ "attributionLink": null,
+ "licenseId": null,
+ "license": null,
+ "rowsUpdatedAt": "2025-11-10 00:33",
+ "createdAt": 1730235760,
+ "viewLastModified": 1730235762,
+ "publicationDate": 1730235762,
+ "rowIdentifierColumnId": null,
+ "tags": null,
+ "metadata": {
+  "arcgis_connection": {
+   "url": "https://maps.nola.gov/server/rest/services/Facilities/PublicLandFacilities/MapServer/1"
+  }
+ },
+ "description": "",
+ "columns": [
+  {
+   "f": "the_geom",
+   "n": "the_geom",
+   "t": "multipolygon"
+  },
+  {
+   "f": "objectid",
+   "n": "OBJECTID",
+   "t": "number"
+  },
+  {
+   "f": "site_name",
+   "n": "Site Name",
+   "t": "text"
+  },
+  {
+   "f": "secondary_name",
+   "n": "Secondary Name",
+   "t": "text"
+  },
+  {
+   "f": "managing_department",
+   "n": "Managing Department",
+   "t": "text"
+  },
+  {
+   "f": "type",
+   "n": "Type",
+   "t": "text"
+  },
+  {
+   "f": "notes",
+   "n": "Notes",
+   "t": "text"
+  },
+  {
+   "f": "site_address",
+   "n": "Site Address",
+   "t": "text"
+  },
+  {
+   "f": "owned_by",
+   "n": "Owned by",
+   "t": "text"
+  },
+  {
+   "f": "used_by",
+   "n": "Used By",
+   "t": "text"
+  },
+  {
+   "f": "leased_by",
+   "n": "Leased by",
+   "t": "text"
+  },
+  {
+   "f": "council_district",
+   "n": "Council District",
+   "t": "text"
+  },
+  {
+   "f": "geopin",
+   "n": "GEOPIN",
+   "t": "text"
+  },
+  {
+   "f": "acerage",
+   "n": "Acerage",
+   "t": "number"
+  },
+  {
+   "f": "shape_starea",
+   "n": "Shape.STArea()",
+   "t": "number"
+  },
+  {
+   "f": "shape_stlength",
+   "n": "Shape.STLength()",
+   "t": "number"
+  }
+ ]
+}

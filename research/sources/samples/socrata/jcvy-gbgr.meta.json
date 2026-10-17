@@ -1,0 +1,89 @@
+{
+ "id": "jcvy-gbgr",
+ "name": "Mandatory Inclusionary Zoning",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Planning, Zoning",
+ "attribution": "City Planning Commission",
+ "attributionLink": null,
+ "licenseId": "CC0_10",
+ "license": {
+  "name": "Creative Commons 1.0 Universal (Public Domain Dedication)",
+  "logoUrl": "images/licenses/ccZero.png",
+  "termsLink": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+ },
+ "rowsUpdatedAt": "2026-06-06 06:30",
+ "createdAt": 1639521430,
+ "viewLastModified": 1725903746,
+ "publicationDate": 1639521432,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "zoning",
+  "boundaries"
+ ],
+ "metadata": {
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "gis@nola.gov",
+    "Public Access Level": "public"
+   },
+   "Source Information": {
+    "Source Department": "City Planning Commission",
+    "Frequency of Data Change": "Doesn't change often"
+   }
+  },
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ]
+ },
+ "description": "Mandatory Inclusionary Zoning Sub-Districts are intended to promote the public health, safety, and welfare throughout the City by providing for a full range of housing choices for households of all incomes. The Sub-districts require the inclusion of Affordable Housing Units as a portion of new residential development \u2013 an Affordable Housing Development.For a detailed explanation of the applicabilitiy and standards of this district, see https://czo.nola.gov/article-28/",
+ "columns": [
+  {
+   "f": "the_geom",
+   "n": "the_geom",
+   "t": "multipolygon"
+  },
+  {
+   "f": "objectid",
+   "n": "OBJECTID",
+   "t": "number"
+  },
+  {
+   "f": "name",
+   "n": "Name",
+   "t": "text"
+  },
+  {
+   "f": "docket",
+   "n": "DOCKET",
+   "t": "text"
+  },
+  {
+   "f": "ordinance",
+   "n": "ORDINANCE",
+   "t": "text"
+  },
+  {
+   "f": "description",
+   "n": "DESCRIPTION",
+   "t": "text"
+  },
+  {
+   "f": "weblink",
+   "n": "WEBLINK",
+   "t": "text"
+  },
+  {
+   "f": "shape_starea",
+   "n": "Shape.STArea()",
+   "t": "number"
+  },
+  {
+   "f": "shape_stlength",
+   "n": "Shape.STLength()",
+   "t": "number"
+  }
+ ]
+}

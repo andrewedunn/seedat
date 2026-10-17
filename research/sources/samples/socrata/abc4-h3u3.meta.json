@@ -1,0 +1,265 @@
+{
+ "id": "abc4-h3u3",
+ "name": "Occupational Business License Data for the Office of Business and External Services",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Economy and Workforce",
+ "attribution": "City of New Orleans Code Enforcement",
+ "attributionLink": null,
+ "licenseId": null,
+ "license": null,
+ "rowsUpdatedAt": "2026-10-17 04:50",
+ "createdAt": 1667251940,
+ "viewLastModified": 1669845611,
+ "publicationDate": 1667323994,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "business",
+  "businesses",
+  "license",
+  "occupational",
+  "economic development",
+  "permits",
+  "permit",
+  "licenses"
+ ],
+ "metadata": {
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "data@nola.gov",
+    "Contact Name": "Cameron MacPhee"
+   },
+   "Source Information": {
+    "Source Department": "Performance and Accountability (OPA)"
+   }
+  },
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ]
+ },
+ "description": "A dataset of business license applications and their statuses from January 1st, 2018 to current day.",
+ "columns": [
+  {
+   "f": "isclosed",
+   "n": "IsClosed",
+   "t": "checkbox"
+  },
+  {
+   "f": "isdeleted",
+   "n": "IsDeleted",
+   "t": "checkbox"
+  },
+  {
+   "f": "licid",
+   "n": "LicID",
+   "t": "text"
+  },
+  {
+   "f": "numstring",
+   "n": "NumString",
+   "t": "text"
+  },
+  {
+   "f": "address",
+   "n": "Address",
+   "t": "text"
+  },
+  {
+   "f": "descr",
+   "n": "Descr",
+   "t": "text"
+  },
+  {
+   "f": "submittaltype",
+   "n": "SubmittalType",
+   "t": "number"
+  },
+  {
+   "f": "class",
+   "n": "Class",
+   "t": "text"
+  },
+  {
+   "f": "type",
+   "n": "Type",
+   "t": "text"
+  },
+  {
+   "f": "exitcode",
+   "n": "ExitCode",
+   "t": "number"
+  },
+  {
+   "f": "reason",
+   "n": "Reason",
+   "t": "text"
+  },
+  {
+   "f": "occnum",
+   "n": "OccNum",
+   "t": "text"
+  },
+  {
+   "f": "ishome",
+   "n": "IsHome",
+   "t": "text"
+  },
+  {
+   "f": "businesstype",
+   "n": "BusinessType",
+   "t": "text"
+  },
+  {
+   "f": "status",
+   "n": "Status",
+   "t": "text"
+  },
+  {
+   "f": "category",
+   "n": "Category",
+   "t": "text"
+  },
+  {
+   "f": "naics",
+   "n": "NAICS",
+   "t": "text"
+  },
+  {
+   "f": "commentcount",
+   "n": "CommentCount",
+   "t": "number"
+  },
+  {
+   "f": "currentstatus",
+   "n": "CurrentStatus",
+   "t": "text"
+  },
+  {
+   "f": "sumfee",
+   "n": "SumFee",
+   "t": "number"
+  },
+  {
+   "f": "journalcount",
+   "n": "JournalCount",
+   "t": "number"
+  },
+  {
+   "f": "currentstatusdate",
+   "n": "CurrentStatusDate",
+   "t": "calendar_date"
+  },
+  {
+   "f": "d_create",
+   "n": "D_Create",
+   "t": "calendar_date"
+  },
+  {
+   "f": "lastcomment",
+   "n": "LastComment",
+   "t": "calendar_date"
+  },
+  {
+   "f": "application_filed",
+   "n": "Application Filed",
+   "t": "calendar_date"
+  },
+  {
+   "f": "application_review",
+   "n": "Application Review",
+   "t": "calendar_date"
+  },
+  {
+   "f": "approved",
+   "n": "Approved",
+   "t": "calendar_date"
+  },
+  {
+   "f": "plan_review",
+   "n": "Plan Review",
+   "t": "calendar_date"
+  },
+  {
+   "f": "zoning_application_review",
+   "n": "Zoning Application Review",
+   "t": "calendar_date"
+  },
+  {
+   "f": "firstcomment",
+   "n": "FirstComment",
+   "t": "calendar_date"
+  },
+  {
+   "f": "issuedate",
+   "n": "IssueDate",
+   "t": "calendar_date"
+  },
+  {
+   "f": "first_inspection",
+   "n": "First Inspection",
+   "t": "calendar_date"
+  },
+  {
+   "f": "days_to_application_review",
+   "n": "Days to Application Review",
+   "t": "number"
+  },
+  {
+   "f": "days_to_approved",
+   "n": "Days to Approved",
+   "t": "number"
+  },
+  {
+   "f": "days_to_plan_review",
+   "n": "Days to Plan Review",
+   "t": "number"
+  },
+  {
+   "f": "days_to_zoning_review",
+   "n": "Days to Zoning Review",
+   "t": "number"
+  },
+  {
+   "f": "days_to_comment",
+   "n": "Days to comment",
+   "t": "number"
+  },
+  {
+   "f": "days_to_issue_date",
+   "n": "Days to Issue Date",
+   "t": "number"
+  },
+  {
+   "f": "days_to_first_inspection",
+   "n": "Days to first inspection",
+   "t": "number"
+  },
+  {
+   "f": "x",
+   "n": "X",
+   "t": "number"
+  },
+  {
+   "f": "y",
+   "n": "Y",
+   "t": "number"
+  },
+  {
+   "f": "longitude",
+   "n": "Longitude",
+   "t": "number"
+  },
+  {
+   "f": "latitude",
+   "n": "Latitude",
+   "t": "number"
+  },
+  {
+   "f": "location",
+   "n": "Location",
+   "t": "point"
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+[
+ {
+  "o_c": "Closed",
+  "casenumber": "16-12397-PARK",
+  "casesummary": {
+   "url": "https://onestopapp.nola.gov/SummaryContent.aspx?type=Code%20Incident&id=219758"
+  },
+  "propertyaddress": "6161 Milne Blvd",
+  "casetype": "Zoning - Paving/Parking",
+  "department": "Safety and Permits",
+  "casehistory": "Initial Hearing",
+  "hearingdatetime": "2017-04-05T10:30:00.000",
+  "caseestablished": "2016-11-21T11:05:58.000",
+  "inspected": "2017-03-02T08:45:00.000",
+  "inspectionresult": "Violation: No WIP",
+  "councildistrict": "A",
+  "geoaddress": "6161 Milne Blvd",
+  "city": "New Orleans",
+  "state": "LA",
+  "zip": "70124",
+  "xpos": "3667257.27",
+  "ypos": "548528.73",
+  "longitude": "-90.11247165414115",
+  "latitude": "30.002688719698085"
+ },
+ {
+  "o_c": "Closed",
+  "casenumber": "15-00159-ZONG",
+  "casesummary": {
+   "url": "https://onestopapp.nola.gov/SummaryContent.aspx?type=Code%20Incident&id=196363"
+  },
+  "propertyaddress": "4572 San Marco Rd",
+  "casetype": "Zoning General",
+  "department": "Safety and Permits",
+  "casehistory": "Initial Hearing",
+  "hearingdatetime": "2015-11-18T10:00:00.000",
+  "caseestablished": "2015-01-08T16:12:07.000",
+  "inspected": "2015-01-09T12:00:00.000",
+  "inspectionresult": "Violation: WIP",
+  "councildistrict": "E",
+  "geoaddress": "4572 San Marco Rd",
+  "city": "New Orleans",
+  "state": "LA",
+  "zip": "70129",
+  "xpos": "3762931.71",
+  "ypos": "573173.32",
+  "longitude": "-89.8091958577414",
+  "latitude": "30.067300439713044"
+ },
+ {
+  "o_c": "Closed",
+  "casenumber": "17-08964-ILGUS",
+  "casesummary": {
+   "url": "https://onestopapp.nola.gov/SummaryContent.aspx?type=Code%20Incident&id=230703"
+  },
+  "propertyaddress": "1953 N Rocheblave St",
+  "casetype": "Illegal Use",
+  "department": "Safety and Permits",
+  "casehistory": "Reset Hearing",
+  "hearingdatetime": "2017-09-13T09:00:00.000",
+  "prevhearing": "2017-09-06T10:30:00.000",
+  "prevhearingstat": "Complete",
+  "caseestablished": "2017-07-12T08:24:47.000",
+  "inspected": "2017-07-11T08:28:00.000",
+  "inspectionresult": "Violation: WIP",
+  "councildistrict": "D",
+  "geoaddress": "1953 N Rocheblave St",
+  "city": "New Orleans",
+  "state": "LA",
+  "zip": "70119",
+  "xpos": "3682110.05",
+  "ypos": "540931.04",
+  "longitude": "-90.0658152820885",
+  "latitude": "29.981354262723986"
+ }
+]

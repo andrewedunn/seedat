@@ -1,0 +1,162 @@
+{
+ "id": "tc3j-b7gd",
+ "name": "Historical Occupational Business Licenses 2013",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Economy and Workforce",
+ "attribution": "City of New Orleans \u2013 Bureau of Revenue",
+ "attributionLink": null,
+ "licenseId": null,
+ "license": null,
+ "rowsUpdatedAt": "2018-03-22 16:21",
+ "createdAt": 1521735658,
+ "viewLastModified": 1522161772,
+ "publicationDate": 1521735872,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "business",
+  "license"
+ ],
+ "metadata": {
+  "rdfClass": "",
+  "rdfSubject": "0",
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "data@nola.gov"
+   },
+   "Source Information": {
+    "Source Department": "Revenue"
+   }
+  },
+  "rowIdentifier": "0",
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ],
+  "rowLabel": "",
+  "renderTypeConfig": {
+   "visible": {
+    "table": true
+   }
+  }
+ },
+ "description": "Historical list of businesses operating in New Orleans with valid occupational licenses during calendar year 2013.",
+ "columns": [
+  {
+   "f": "businessname",
+   "n": "BusinessName",
+   "t": "text"
+  },
+  {
+   "f": "ownername",
+   "n": "OwnerName",
+   "t": "text"
+  },
+  {
+   "f": "businesstype",
+   "n": "BusinessType",
+   "t": "text"
+  },
+  {
+   "f": "businessstartdate",
+   "n": "BusinessStartDate",
+   "t": "calendar_date"
+  },
+  {
+   "f": "businessclosedate",
+   "n": "BusinessCloseDate",
+   "t": "calendar_date"
+  },
+  {
+   "f": "address",
+   "n": "Address",
+   "t": "text"
+  },
+  {
+   "f": "streetnumber",
+   "n": "StreetNumber",
+   "t": "text"
+  },
+  {
+   "f": "streetdirection",
+   "n": "StreetDirection",
+   "t": "text"
+  },
+  {
+   "f": "streetname",
+   "n": "StreetName",
+   "t": "text"
+  },
+  {
+   "f": "streetsuffix",
+   "n": "StreetSuffix",
+   "t": "text"
+  },
+  {
+   "f": "suite",
+   "n": "Suite",
+   "t": "text"
+  },
+  {
+   "f": "city",
+   "n": "City",
+   "t": "text"
+  },
+  {
+   "f": "state",
+   "n": "State",
+   "t": "text"
+  },
+  {
+   "f": "zip",
+   "n": "Zip",
+   "t": "text"
+  },
+  {
+   "f": "phonenumber",
+   "n": "PhoneNumber",
+   "t": "text"
+  },
+  {
+   "f": "mailaddress",
+   "n": "MailAddress",
+   "t": "text"
+  },
+  {
+   "f": "mailsuite",
+   "n": "MailSuite",
+   "t": "text"
+  },
+  {
+   "f": "mailcity",
+   "n": "MailCity",
+   "t": "text"
+  },
+  {
+   "f": "mailstate",
+   "n": "MailState",
+   "t": "text"
+  },
+  {
+   "f": "mailzip",
+   "n": "MailZip",
+   "t": "text"
+  },
+  {
+   "f": "latitude",
+   "n": "Latitude",
+   "t": "number"
+  },
+  {
+   "f": "longitude",
+   "n": "Longitude",
+   "t": "number"
+  },
+  {
+   "f": "location",
+   "n": "Location",
+   "t": "text"
+  }
+ ]
+}

@@ -1,0 +1,147 @@
+[
+ {
+  "the_geom": {
+   "type": "MultiPolygon",
+   "coordinates": [
+    [
+     [
+      [
+       -89.966170887705,
+       30.025563636616
+      ],
+      [
+       -89.96646282007,
+       30.025544163043
+      ],
+      [
+       -89.96647924248,
+       30.025708741087
+      ],
+      [
+       -89.966186598747,
+       30.02572758207
+      ],
+      [
+       -89.966170887705,
+       30.025563636616
+      ]
+     ]
+    ]
+   ]
+  },
+  "objectid": "6867",
+  "managing_department": "NORA",
+  "type": "Public Facility",
+  "site_address": "4943 Warren Drive",
+  "owned_by": "NORA",
+  "used_by": "NORA",
+  "council_district": "Council District E",
+  "geopin": "41104143",
+  "acerage": "0.12767443",
+  "shape_starea": "5560.6731569283156",
+  "shape_stlength": "305.41744566363553"
+ },
+ {
+  "the_geom": {
+   "type": "MultiPolygon",
+   "coordinates": [
+    [
+     [
+      [
+       -90.065923669265,
+       29.942483227766
+      ],
+      [
+       -90.065913741946,
+       29.942360608411
+      ],
+      [
+       -90.066630944532,
+       29.94251942026
+      ],
+      [
+       -90.067396114966,
+       29.942688067502
+      ],
+      [
+       -90.067413906516,
+       29.942813264273
+      ],
+      [
+       -90.066647315296,
+       29.942643352978
+      ],
+      [
+       -90.065923669265,
+       29.942483227766
+      ]
+     ]
+    ]
+   ]
+  },
+  "objectid": "7492",
+  "managing_department": "Parks & Parkways",
+  "type": "Vacant Land",
+  "owned_by": "City of New Orleans",
+  "used_by": "Parks & Parkways",
+  "council_district": "Council District B",
+  "geopin": "41135921",
+  "acerage": "0.47395193",
+  "shape_starea": "20642.302487532932",
+  "shape_stlength": "1061.9340808781851"
+ },
+ {
+  "the_geom": {
+   "type": "MultiPolygon",
+   "coordinates": [
+    [
+     [
+      [
+       -90.041267726249,
+       29.989665417312
+      ],
+      [
+       -90.041363833901,
+       29.98939755774
+      ],
+      [
+       -90.041414676906,
+       29.98940868318
+      ],
+      [
+       -90.041567913957,
+       29.98944269428
+      ],
+      [
+       -90.041634505036,
+       29.989457725634
+      ],
+      [
+       -90.041375606801,
+       29.989708359344
+      ],
+      [
+       -90.041322877354,
+       29.989676585976
+      ],
+      [
+       -90.041267726249,
+       29.989665417312
+      ]
+     ]
+    ]
+   ]
+  },
+  "objectid": "8181",
+  "site_name": "Gordon Plaza property acquisition project",
+  "managing_department": "Property Management",
+  "type": "Vacant Land",
+  "notes": "NA 2023-38596",
+  "site_address": "36 Gordon Plaza Drive",
+  "owned_by": "City of New Orleans",
+  "council_district": "Council District D",
+  "geopin": "41091049",
+  "shape_starea": "6640.4541685512086",
+  "shape_stlength": "351.287261102922"
+ }
+]

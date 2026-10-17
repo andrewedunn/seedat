@@ -1,0 +1,86 @@
+{
+ "id": "prh5-qsuf",
+ "name": "Building Footprint",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": "Real Estate, Land Records",
+ "attribution": "eGIS Team",
+ "attributionLink": "https://maps.nola.gov/server/rest/services/Basemap/BuildingFootprints/MapServer",
+ "licenseId": "USGOV_WORKS",
+ "license": {
+  "name": "Public Domain U.S. Government",
+  "termsLink": "https://www.usa.gov/government-works"
+ },
+ "rowsUpdatedAt": "2026-08-08 20:17",
+ "createdAt": 1686677192,
+ "viewLastModified": 1742238269,
+ "publicationDate": 1742238269,
+ "rowIdentifierColumnId": null,
+ "tags": [
+  "buildings",
+  "footprint"
+ ],
+ "metadata": {
+  "custom_fields": {
+   "Common Core": {
+    "Contact Email": "gis@nola.gov",
+    "Public Access Level": "public"
+   },
+   "Source Information": {
+    "Source Department": "Information Technology and Innovation - Enterprise GIS",
+    "Frequency of Data Change": "Quarterly"
+   }
+  },
+  "arcgis_connection": {
+   "url": "https://maps.nola.gov/server/rest/services/Basemap/BuildingFootprints/MapServer/0"
+  },
+  "availableDisplayTypes": [
+   "table",
+   "fatrow",
+   "page"
+  ]
+ },
+ "description": "The shape and orientation of the ground floor of all structures in a local government. This information is typically compiled from orthoimagery or other aerial photography sources. This representation of the building footprints support the local government basemaps. It also serves as a source for public works, public safety, planning and other agencies that are responsible for the active management of site addresses, facilities, and land use information.",
+ "columns": [
+  {
+   "f": "the_geom",
+   "n": "the_geom",
+   "t": "multipolygon"
+  },
+  {
+   "f": "objectid",
+   "n": "OBJECTID",
+   "t": "number"
+  },
+  {
+   "f": "geopin",
+   "n": "GEOPIN",
+   "t": "number"
+  },
+  {
+   "f": "activestatus",
+   "n": "ActiveStatus",
+   "t": "number"
+  },
+  {
+   "f": "shape_starea",
+   "n": "Shape.STArea()",
+   "t": "number"
+  },
+  {
+   "f": "shape_stlength",
+   "n": "Shape.STLength()",
+   "t": "number"
+  },
+  {
+   "f": "structureid",
+   "n": "StructureID",
+   "t": "number"
+  },
+  {
+   "f": "globalid",
+   "n": "GlobalID",
+   "t": "text"
+  }
+ ]
+}

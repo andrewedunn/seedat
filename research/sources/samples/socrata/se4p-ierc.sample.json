@@ -1,0 +1,48 @@
+[
+ {
+  "the_geom": {
+   "type": "Point",
+   "coordinates": [
+    -90.097675913799,
+    29.928719476518
+   ]
+  },
+  "objectid": "28829",
+  "gisid": "CB130338",
+  "loc": "Eastbank",
+  "cbtype": "Vertical",
+  "stname": "CONSTANTINOPLE ST",
+  "neighborhood": "MILAN",
+  "globalid": "{02B842CE-A959-472A-BD3B-D5045DD82357}"
+ },
+ {
+  "the_geom": {
+   "type": "Point",
+   "coordinates": [
+    -90.08702066177,
+    29.948116651681
+   ]
+  },
+  "objectid": "80416",
+  "gisid": "CB141005",
+  "cbtype": "Vertical",
+  "stname": "S CLAIBORNE AV OVERPAS",
+  "neighborhood": "B. W. COOPER",
+  "globalid": "{CCA69022-E77D-40E9-BE75-24CEE319E9D2}"
+ },
+ {
+  "the_geom": {
+   "type": "Point",
+   "coordinates": [
+    -89.98614854139,
+    30.03021220151
+   ]
+  },
+  "objectid": "45601",
+  "gisid": "CB146431",
+  "cbtype": "Rollover",
+  "stname": "CINDY PL",
+  "neighborhood": "WEST LAKE FOREST",
+  "globalid": "{6A5B4332-45BE-4886-91F0-512A002233D3}"
+ }
+]

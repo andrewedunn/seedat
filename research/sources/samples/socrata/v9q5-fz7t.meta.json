@@ -1,0 +1,80 @@
+{
+ "id": "v9q5-fz7t",
+ "name": "Parcels",
+ "assetType": "dataset",
+ "viewType": "tabular",
+ "category": null,
+ "attribution": null,
+ "attributionLink": null,
+ "licenseId": null,
+ "license": null,
+ "rowsUpdatedAt": "2026-10-15 08:35",
+ "createdAt": 1641934652,
+ "viewLastModified": 1783386616,
+ "publicationDate": 1783386616,
+ "rowIdentifierColumnId": null,
+ "tags": null,
+ "metadata": {
+  "arcgis_connection": {
+   "url": "https://maps.nola.gov/server/rest/services/Assessor/Landbase_Layers/MapServer/0"
+  }
+ },
+ "description": "",
+ "columns": [
+  {
+   "f": "the_geom",
+   "n": "the_geom",
+   "t": "multipolygon"
+  },
+  {
+   "f": "objectid",
+   "n": "OBJECTID",
+   "t": "number"
+  },
+  {
+   "f": "perimeter",
+   "n": "PERIMETER",
+   "t": "number"
+  },
+  {
+   "f": "acres",
+   "n": "ACRES",
+   "t": "number"
+  },
+  {
+   "f": "situs_dir",
+   "n": "SITUS_DIR",
+   "t": "text"
+  },
+  {
+   "f": "situs_street",
+   "n": "SITUS_STREET",
+   "t": "text"
+  },
+  {
+   "f": "situs_type",
+   "n": "SITUS_TYPE",
+   "t": "text"
+  },
+  {
+   "f": "situs_number",
+   "n": "SITUS_NUMBER",
+   "t": "number"
+  },
+  {
+   "f": "geopin",
+   "n": "GEOPIN",
+   "t": "number"
+  },
+  {
+   "f": "shape_area",
+   "n": "Shape.STArea()",
+   "t": "number"
+  },
+  {
+   "f": "shape_length",
+   "n": "Shape.STLength()",
+   "t": "number"
+  }
+ ]
+}
