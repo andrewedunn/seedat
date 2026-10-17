@@ -5,7 +5,8 @@
 
 ## Decisions
 
-- **2026-10-17** — Project slug `seedat`, per `~/dev/stack.md` naming table. Local repo at `~/dev/seedat` (git initialized locally; GitHub repo `andrewdunn/seedat` not yet created — outward-facing, waiting on Andrew).
+- **2026-10-17** — Project slug `seedat`, per `~/dev/stack.md` naming table. Repo is **`andrewedunn/seedat`** (Andrew's actual GitHub account; the stack doc's `andrewdunn/` is a typo for this). Created private; flip to public at launch.
+- **2026-10-17** — Cloudflare account is on Workers Paid (Andrew confirmed), so cron/Workflows CPU limits and D1's 10 GB cap apply. Benchmark Worker and `seedat-bench-db` deleted after the test.
 - **2026-10-17** — Crawler identity for all source pulls: `User-Agent: seedat-research/0.1 (+https://seedat.dunn.us; seedat@dunn.us)`. Uses the project address rather than a personal one. **Open:** `seedat@dunn.us` needs Cloudflare Email Routing set up so the contact actually reaches someone.
 - **2026-10-17** — Permits spine = BLDS `72f9-bi28`, unioned with `rcm3-fn58` and `aib5-en5t` on permit number. Validator showed rcm3 holds only about half of recent permits (no PLMB/HDLC).
 - **2026-10-17** — Canonical address table = maps.nola.gov `Site_Address_Point_LAMA` (275k points, 98.2% carry GEOPIN). Canonical parcel key = GEOPIN. Assessor tax-bill number (`pin` on permits) is a secondary key we learn by matching. No public crosswalk exists.
