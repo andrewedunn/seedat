@@ -1,0 +1,32 @@
+[
+ {
+  "caseid": "171833",
+  "caseno": "09-002855",
+  "location": "6218-6220 Wainwright Dr",
+  "inspectiondate": "2013-03-01T00:00:00.000",
+  "inspectiontype": "Inspection",
+  "inspectionresult": "Violation: No WIP",
+  "inspector": "Alexander Smith",
+  "check": "1"
+ },
+ {
+  "caseid": "166455",
+  "caseno": "12-06545-BLGHT",
+  "location": "1121 Charbonnet St",
+  "inspectiondate": "2004-03-31T00:00:00.000",
+  "inspectiontype": "Posted Hearing Notice (CE)",
+  "inspectionresult": "Violation Exists",
+  "inspector": "Mark Smyth",
+  "check": "1"
+ },
+ {
+  "caseid": "166455",
+  "caseno": "12-06545-BLGHT",
+  "location": "1121 Charbonnet St",
+  "inspectiondate": "2012-06-21T17:00:00.000",
+  "inspectiontype": "Inspection",
+  "inspectionresult": "No Violations Found",
+  "inspector": "Karl Seyler",
+  "check": "1"
+ }
+]

@@ -1,0 +1,85 @@
+[
+ {
+  "nopd_item": "A0000126",
+  "type_": "TOW",
+  "typetext": "TOW IMPOUNDED VEHICLE (PRIVATE)",
+  "priority": "0C",
+  "initialtype": "TOW",
+  "initialtypetext": "TOW IMPOUNDED VEHICLE (PRIVATE)",
+  "initialpriority": "0C",
+  "mapx": "3682104",
+  "mapy": "529667",
+  "timecreate": "2026-01-01T00:00:54.023000",
+  "timeclosed": "2026-01-01T00:01:48.617000",
+  "disposition": "NAT",
+  "dispositiontext": "Necessary Action Taken",
+  "selfinitiated": "N",
+  "beat": "8G02",
+  "block_address": "003XX Canal St",
+  "zip": "70130",
+  "policedistrict": "8",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -90.06622494,
+    29.95038397
+   ]
+  }
+ },
+ {
+  "nopd_item": "A0000226",
+  "type_": "22A",
+  "typetext": "AREA CHECK",
+  "priority": "1K",
+  "initialtype": "22A",
+  "initialtypetext": "AREA CHECK",
+  "initialpriority": "1K",
+  "mapx": "3665233",
+  "mapy": "535142",
+  "timecreate": "2026-01-01T00:02:06.083000",
+  "timearrive": "2026-01-01T00:02:06.083000",
+  "timeclosed": "2026-01-01T00:11:56.147000",
+  "disposition": "NAT",
+  "dispositiontext": "Necessary Action Taken",
+  "selfinitiated": "Y",
+  "beat": "2S02",
+  "block_address": "064XX Blk Pontchartrain Blvd",
+  "zip": "70118",
+  "policedistrict": "2",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -90.11931244,
+    29.9659392
+   ]
+  }
+ },
+ {
+  "nopd_item": "A0000326",
+  "type_": "94F",
+  "typetext": "FIREWORKS",
+  "priority": "1B",
+  "initialtype": "94",
+  "initialtypetext": "DISCHARGING FIREARM",
+  "initialpriority": "2C",
+  "mapx": "3682003",
+  "mapy": "536082",
+  "timecreate": "2026-01-01T00:02:51.077000",
+  "timedispatch": "2026-01-01T00:52:19.923000",
+  "timeclosed": "2026-01-01T01:07:24.523000",
+  "disposition": "GOA",
+  "dispositiontext": "GONE ON ARRIVAL",
+  "selfinitiated": "N",
+  "beat": "1A01",
+  "block_address": "013XX Esplanade Av",
+  "zip": "70116",
+  "policedistrict": "1",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -90.06632001,
+    29.96802696
+   ]
+  }
+ }
+]

@@ -1,0 +1,99 @@
+[
+ {
+  "licid": "406065",
+  "license_number": "23-NSTR-15998",
+  "reference_code": "2YZFYP",
+  "address": "4120 Paris Ave",
+  "type": "Non-Commercial Short Term Rental",
+  "application_date": "2026-04-29T19:28:15.000",
+  "issue_date": "2026-05-27T14:30:12.000",
+  "expiration_date": "2027-06-30T23:59:00.000",
+  "current_status": "Issued",
+  "current_status_date": "2026-05-27T14:30:12.000",
+  "owner": "Andrew Fink",
+  "owner_permit_documents": {
+   "url": "https://onestopapp.nola.gov/Redirect.aspx?SearchString=2YZFYP"
+  },
+  "type_of_building": "Single Family Home",
+  "bedrooms_rented": "3",
+  "max_occupancy": "6",
+  "partial_whole": "Partial Unit",
+  "operator": "Leah Grabert",
+  "operator_type": "Owner",
+  "x": "3679369.56",
+  "y": "547525.52",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -90.07424213495804,
+    29.999569837659013
+   ]
+  }
+ },
+ {
+  "licid": "404861",
+  "license_number": "23-NSTR-17676",
+  "reference_code": "7YYXFP",
+  "address": "8006 Nelson St",
+  "type": "Non-Commercial Short Term Rental",
+  "application_date": "2026-04-28T14:27:07.000",
+  "issue_date": "2026-06-29T10:33:53.000",
+  "expiration_date": "2027-06-30T23:59:00.000",
+  "current_status": "Issued",
+  "current_status_date": "2026-06-29T10:33:53.000",
+  "owner": "Daya Naef",
+  "owner_permit_documents": {
+   "url": "https://onestopapp.nola.gov/Redirect.aspx?SearchString=7YYXFP"
+  },
+  "type_of_building": "Single Family Home",
+  "bedrooms_rented": "3",
+  "max_occupancy": "6",
+  "partial_whole": "Partial Unit",
+  "operator": "Daya Naef",
+  "operator_type": "Owner",
+  "x": "3665367.33",
+  "y": "531563.21",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -90.11901024931674,
+    29.956094462489528
+   ]
+  }
+ },
+ {
+  "licid": "418291",
+  "license_number": "26-NSTR-20931",
+  "reference_code": "WYYLA2",
+  "address": "2816 Allen St",
+  "type": "Non-Commercial Short Term Rental",
+  "application_date": "2026-09-22T16:15:15.000",
+  "issue_date": "2026-10-06T15:17:54.000",
+  "expiration_date": "2027-06-30T23:59:00.000",
+  "current_status": "Issued",
+  "current_status_date": "2026-10-06T15:17:54.000",
+  "owner": "Stefanie Davis",
+  "owner_permit_documents": {
+   "url": "https://onestopapp.nola.gov/Redirect.aspx?SearchString=WYYLA2"
+  },
+  "operator_permit": "26-OSTR-20921",
+  "operator_permit_documents": {
+   "url": "https://onestopapp.nola.gov/Redirect.aspx?SearchString=F1318R"
+  },
+  "type_of_building": "Two-Family (Double)",
+  "bedrooms_rented": "2",
+  "max_occupancy": "4",
+  "partial_whole": "Whole Unit",
+  "operator": "stefanie davis ",
+  "operator_type": "Owner",
+  "x": "3682224.87",
+  "y": "542512.13",
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    -90.0653973690165,
+    29.985698212728185
+   ]
+  }
+ }
+]

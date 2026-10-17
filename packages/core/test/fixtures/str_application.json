@@ -1,0 +1,43 @@
+[
+ {
+  "license_number": "17STR-03654",
+  "address": "1823 N Rampart St",
+  "license_type": "Short Term Rental",
+  "residential_subtype": "Accessory STR",
+  "current_status": "Expired",
+  "expired": "Yes",
+  "expiration_date": "2018-04-05T10:27:04.000",
+  "guest_occupancy_limit": "4",
+  "link": "https://onestopapp.nola.gov/Redirect.aspx?SearchString=G5G1Z1",
+  "contact_name": "Corbett Scott",
+  "license_holder_name": "Andrew \"Corbett\" Scott",
+  "application_date": "2017-03-13T10:03:23.000",
+  "issue_date": "2017-04-06T10:27:04.000",
+  "reference_code": "G5G1Z1",
+  "x": "3683735.13717",
+  "y": "535923.02183",
+  "location": {
+   "latitude": "29.967534427202207",
+   "longitude": "-90.0608581762254"
+  }
+ },
+ {
+  "address": "7543 Plum St",
+  "license_type": "Short Term Rental",
+  "residential_subtype": "Accessory STR",
+  "current_status": "Denied",
+  "expired": "Yes",
+  "guest_occupancy_limit": "2",
+  "link": "https://onestopapp.nola.gov/Redirect.aspx?SearchString=1AUYGY",
+  "contact_name": "Amanda Mester",
+  "license_holder_name": "Amanda Mester",
+  "application_date": "2017-05-05T09:17:04.000",
+  "reference_code": "1AUYGY",
+  "x": "3663674.71591",
+  "y": "527389.74701",
+  "location": {
+   "latitude": "29.944667998954227",
+   "longitude": "-90.12449400134004"
+  }
+ }
+]

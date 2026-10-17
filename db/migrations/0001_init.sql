@@ -71,7 +71,7 @@ CREATE INDEX parcel_council ON parcel(council_district);
 
 -- Canonical address points (city LAMA site address points). Many per parcel (units, doubles, corners).
 CREATE TABLE address (
-  address_id   INTEGER PRIMARY KEY,            -- SITEADDID
+  address_id   INTEGER PRIMARY KEY,            -- stable hash of SITEADDID + address + unit (see 0002)
   geopin       INTEGER REFERENCES parcel(geopin),
   full_address TEXT NOT NULL,                  -- as published, e.g. '3210 Gravier Street'
   number       INTEGER, number_suffix TEXT,    -- '1/2', 'A'

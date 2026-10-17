@@ -74,6 +74,9 @@ export class MemoryIndex implements AddressIndex {
 
   hasParcel(geopin: number) { return this.parcels.has(geopin); }
 
+  /** Every canonical street key, for writing the street dictionary. */
+  canonicalStreets(): string[] { return [...this.streets].sort(); }
+
   resolveStreet(street: string) {
     if (this.streets.has(street)) return { street, via: "canonical" as const };
     const to = this.aliases.get(street);

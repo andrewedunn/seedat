@@ -14,17 +14,23 @@ export function sqlValue(v: unknown): string {
 
 export function insertSql(
   table: string, columns: string[], rows: Record<string, unknown>[],
-  opts: { chunk?: number; upsertKey?: string[] } = {},
+  opts: { chunk?: number; upsertKey?: string[]; maxBytes?: number } = {},
 ): string[] {
   const chunk = opts.chunk ?? 500;
+  const maxBytes = opts.maxBytes ?? 90_000; // D1 rejects statements over 100 KB
   const head = `INSERT INTO ${table} (${columns.join(", ")}) VALUES `;
   const tail = opts.upsertKey
     ? ` ON CONFLICT (${opts.upsertKey.join(", ")}) DO UPDATE SET ${columns.filter((c) => !opts.upsertKey!.includes(c)).map((c) => `${c} = excluded.${c}`).join(", ")}`
     : "";
   const out: string[] = [];
-  for (let i = 0; i < rows.length; i += chunk) {
-    const values = rows.slice(i, i + chunk).map((r) => `(${columns.map((c) => sqlValue(r[c])).join(", ")})`);
-    out.push(`${head}${values.join(", ")}${tail};`);
+  let values: string[] = [], size = head.length + tail.length + 1;
+  const flush = () => { if (values.length) out.push(`${head}${values.join(", ")}${tail};`); values = []; size = head.length + tail.length + 1; };
+  for (const r of rows) {
+    const v = `(${columns.map((c) => sqlValue(r[c])).join(", ")})`;
+    if (values.length && (values.length >= chunk || size + v.length + 2 > maxBytes)) flush();
+    values.push(v);
+    size += v.length + 2;
   }
+  flush();
   return out;
 }

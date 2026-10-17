@@ -32,6 +32,14 @@ describe("insertSql", () => {
       "INSERT INTO t (a, b) VALUES (3, 'z');",
     ]);
   });
+  it("starts a new statement before exceeding maxBytes (D1 rejects statements over 100 KB)", () => {
+    const rows = Array.from({ length: 10 }, (_, i) => ({ a: i, b: "x".repeat(100) }));
+    const out = insertSql("t", ["a", "b"], rows, { chunk: 1000, maxBytes: 300 });
+    expect(out.length).toBeGreaterThan(1);
+    for (const s of out) expect(s.length).toBeLessThanOrEqual(300);
+    expect(out.join(" ").match(/\(\d+, 'x+'\)/g)).toHaveLength(10);
+  });
+
   it("supports upsert on a key", () => {
     expect(insertSql("t", ["k", "v"], [{ k: "a", v: 1 }], { upsertKey: ["k"] })).toEqual([
       "INSERT INTO t (k, v) VALUES ('a', 1) ON CONFLICT (k) DO UPDATE SET v = excluded.v;",
