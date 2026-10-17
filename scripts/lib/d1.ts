@@ -28,10 +28,12 @@ export function writeSqlFiles(name: string, statements: string[]): string[] {
   return files;
 }
 
+/** Load files in order and stop at the first failure. Wrangler can print ERROR yet exit 0, so check the output too. */
 export function loadSqlFiles(files: string[], log = console.log) {
   for (const f of files) {
     log(`loading ${f}`);
-    execFileSync("npx", ["wrangler", "d1", "execute", "seedat-db", "--remote", "--file", f, "-y"],
-      { cwd: join(DATA, "..", "workers", "ingest"), stdio: ["ignore", "ignore", "inherit"] });
+    const out = execFileSync("npx", ["wrangler", "d1", "execute", "seedat-db", "--remote", "--file", f, "-y"],
+      { cwd: join(DATA, "..", "workers", "ingest"), stdio: ["ignore", "pipe", "pipe"], maxBuffer: 64 * 1024 * 1024 }).toString();
+    if (/\bERROR\b/.test(out)) throw new Error(`D1 load failed on ${f}:\n${out.split("\n").filter((l) => /ERROR/.test(l)).join("\n")}`);
   }
 }

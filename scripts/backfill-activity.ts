@@ -1,6 +1,7 @@
 // ABOUTME: Backfills every activity table in seedat-db from data/raw/src/<id>/: permits, events, code cases, STR,
 // ABOUTME: 311, business licences and NOPD block-month counts; also writes per-source hash manifests for nightly diffs.
-// Usage: npx tsx scripts/backfill-activity.ts [--load]   (run scripts/download-all.sh first)
+// Usage: npx tsx scripts/backfill-activity.ts [--load] [--tables=permit,code_case,...] [--police]
+//   (run scripts/download-all.sh first; with no --tables/--police flags, everything is backfilled)
 import { execFileSync } from "node:child_process";
 import { mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
@@ -12,6 +13,9 @@ import { loadSqlFiles, writeSqlFiles } from "./lib/d1";
 import { DATA, RAW, buildFullIndex } from "./lib/raw";
 
 const now = new Date().toISOString();
+const tablesArg = process.argv.find((a) => a.startsWith("--tables="))?.slice(9).split(",");
+const doPolice = process.argv.includes("--police") || !tablesArg;
+const wantTable = (t: string) => !tablesArg || tablesArg.includes(t);
 const STATE = join(DATA, "state");
 mkdirSync(STATE, { recursive: true });
 
@@ -60,6 +64,7 @@ const byTable = new Map<string, AnySource[]>();
 for (const s of recordSources) byTable.set(s.table, [...(byTable.get(s.table) ?? []), s]);
 
 for (const [table, sources] of byTable) {
+  if (!wantTable(table)) continue;
   const pieces = new Map<string, Piece[]>();
   const events: Record<string, unknown>[] = [];
   const srcRows: Record<string, unknown>[] = [];
@@ -116,7 +121,7 @@ for (const [table, sources] of byTable) {
 
 // ── NOPD calls for service → block × month × category counts only ──
 const police = new Map<string, number>();
-for (const src of policeSources) {
+for (const src of doPolice ? policeSources : []) {
   let used = 0, skipped = 0;
   const seen = new Set<string>();   // the 2019 file overlaps 2020: dedupe on the NOPD item number
   for (const raw of rawRows(src.sourceId)) {
@@ -131,19 +136,21 @@ for (const src of policeSources) {
   }
   stats[src.sourceId] = { used, skipped };
 }
-const policeRows = [...police].map(([k, n]) => { const [block_id, month, category] = k.split("|"); return { block_id, month, category, n }; });
-writeTable("police_call_month", policeRows);
-console.log("police_call_month", policeRows.length);
+if (doPolice) {
+  const policeRows = [...police].map(([k, n]) => { const [block_id, month, category] = k.split("|"); return { block_id, month, category, n }; });
+  writeTable("police_call_month", policeRows);
+  console.log("police_call_month", policeRows.length);
+}
 
 // ── provenance ──
-const sourceRows = [...recordSources, ...policeSources].map((s) => ({
+const sourceRows = [...recordSources.filter((s) => wantTable(s.table)), ...(doPolice ? policeSources : [])].map((s) => ({
   source_id: s.sourceId, name: s.name, url: s.url, license: s.license, cadence: "nightly",
   last_pulled_at: now, last_success_at: now, last_row_count: (stats[s.sourceId] as { mapped?: number; used?: number })?.mapped ?? (stats[s.sourceId] as { used?: number })?.used ?? null,
 }));
 statements.push(...insertSql("source", Object.keys(sourceRows[0]!), sourceRows, { upsertKey: ["source_id"] }));
-statements.push("INSERT INTO permit_fts(permit_fts) VALUES('rebuild');");
+if (wantTable("permit")) statements.push("INSERT INTO permit_fts(permit_fts) VALUES('rebuild');");
 
 writeFileSync(join(STATE, "backfill-stats.json"), JSON.stringify(stats, null, 2));
-const files = writeSqlFiles("activity", statements);
+const files = writeSqlFiles(`activity-${tablesArg?.join("+") ?? "all"}${doPolice && tablesArg ? "+police" : ""}`, statements);
 console.log(`wrote ${files.length} SQL files`);
 if (process.argv.includes("--load")) loadSqlFiles(files);

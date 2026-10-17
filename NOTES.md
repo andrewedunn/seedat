@@ -19,6 +19,15 @@
   
   PostGIS would only help at ingest (spatial joins). Those run as a batch step that precomputes zoning, historic district and so on onto each parcel row, so the serving path never needs spatial SQL. Cache API on top will make repeat views faster still.
 - **2026-10-17** — Publish our learned tax-bill ↔ GEOPIN crosswalk as an open dataset (CSV + API, with evidence counts). Andrew's idea; nobody publishes one.
+- **2026-10-17** — **One Stop detail crawl is scoped to about the last four months** (IDs 1,122,450 down to 1,112,400), newest first. This is Andrew's call: load everything else first, then decide how far back to go or whether to ask the city. Measured limit: bursts of about 11 requests trigger a 429. One request per minute has held with no throttling, so about 1,440 pages a day. The full 1.12M-ID history would take about 2 years at that rate.
+- **2026-10-17** — Nightly ingest is a Cloudflare Workflow (`seedat-nightly`), run by cron at 09:00 UTC:
+  - **Sources pulled:** only datasets whose catalog `data_updated_at` changed.
+  - **Window:** rows touched in the last 60 days by each dataset's own date columns (`workers/ingest/src/windows.ts`). Sundays pull everything, to catch status changes on old records.
+  - **Raw pages** are snapshotted to R2 under `snapshots/<id>/<day>/`.
+  - **Change detection:** per-source row hashes in `src_row`. Only changed keys are re-merged and re-matched, so D1 writes stay proportional to real changes.
+  - **Matching in the Worker:** each batch prefetches only the D1 rows it could match into a small in-memory index, so the same matcher code runs in the backfill and in the Worker.
+- **2026-10-17** — `src_row` holds a hash for every source row. It holds the mapped row JSON only for tables with several sources (permits ×3, STR ×3), which keeps it small.
+- **2026-10-17** — D1 limits hit and handled: 100 KB per statement (byte-capped batches), 100 bound parameters (literal-SQL upserts and JSON-array parameters through `json_each`), and enforced foreign keys (load parcels before their children).
 - **2026-10-17** — Phase 0 runs before any build code, per the brief. Research outputs live in `research/`, final deliverables (`PRIOR_ART.md`, `SOURCES.md`) at repo root.
 
 ## Subagent task log (model tier → task)
@@ -34,7 +43,11 @@
 | 2026-10-17 | Source: assessor, GEOPIN, canonical address options, normalizers | sonnet (mid) | |
 | 2026-10-17 | Prior art national, second pass | sonnet (mid), same agent resumed | First pass was ~8 searches and too thin; sent back with a specific list. Lesson: give research briefs a minimum search budget. |
 | 2026-10-17 | Independent validation of 9 key claims | sonnet (mid), fresh agent | Refuted 1 major claim (Parcels To Join is not a tax-bill crosswalk), corrected 9 others. Worth the cost. |
-| 2026-10-17 | Pull real data and build benchmark SQLite | sonnet (mid) | Mechanical but multi-source; haiku likely fine next time. |
+| 2026-10-17 | Pull real data and build benchmark SQLite | sonnet (mid) | Mechanical but multi-source; haiku likely fine next time. Wrongly concluded code cases lack geopin (Socrata omits nulls). |
+| 2026-10-17 | Source adapters for 13 datasets + helpers + 68 tests | sonnet (mid) | Good quality. I replaced its BigInt FNV hash (too slow) with cyrb53. Useful schema notes (STR key, duplicate permit numbers). |
+| 2026-10-17 | Parcel spatial attributes (PIP, representative points) | sonnet (mid) | Excellent: 7 s runtime, 0 representative points outside their polygon, sensible spot checks. |
+| 2026-10-17 | One Stop detail-page parser | sonnet (mid) | Running. |
+| 2026-10-17 | Normalizer, match ladder, alias/crosswalk learning, diff, loader, Worker | me (orchestrator) | Kept in the top tier: matching quality and nightly correctness are expensive to get wrong. |
 
 Tier rationale for this first fan-out: the research tasks need judgment about what is relevant and when to stop, which haiku tends to under-do. Mechanical follow-ups (field inventories, spot checks) will go to haiku.
 
