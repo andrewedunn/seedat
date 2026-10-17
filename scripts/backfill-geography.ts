@@ -52,21 +52,26 @@ const aliasRows = [
     .map((a) => ({ alias_key: a.alias, street_key: a.street, origin: a.origin, votes: a.votes })),
 ];
 const dedupAliases = [...new Map(aliasRows.map((r) => [r.alias_key, r])).values()];
+const situsRows = [...new Map(parcels.flatMap((p) => {
+  const parsed = p.situs ? parseAddress(p.situs) : null;
+  return parsed ? parsed.numbers.map((n) => ({ street_key: parsed.street, number: n, geopin: p.geopin })) : [];
+}).map((r) => [`${r.street_key}|${r.number}|${r.geopin}`, r])).values()];
 const taxRows = taxBills.filter((t) => parcelById.has(t.geopin)).map((t) => ({ tax_bill: t.taxBill, geopin: t.geopin, evidence: t.evidence }));
 
 const statements = [
-  "DELETE FROM tax_bill_geopin;", "DELETE FROM street_alias;", "DELETE FROM block;", "DELETE FROM address;", "DELETE FROM parcel;",
+  "DELETE FROM parcel_situs;", "DELETE FROM tax_bill_geopin;", "DELETE FROM street_alias;", "DELETE FROM block;", "DELETE FROM address;", "DELETE FROM parcel;",
   ...insertSql("parcel", PARCEL_COLS, parcels, { chunk: 200 }),
   ...insertSql("address", Object.keys(addressRows[0]!), addressRows, { chunk: 300 }),
   ...insertSql("block", Object.keys(blockRows[0]!), blockRows, { chunk: 500 }),
   ...insertSql("street_alias", ["alias_key", "street_key", "origin", "votes"], dedupAliases, { chunk: 500 }),
+  ...insertSql("parcel_situs", ["street_key", "number", "geopin"], situsRows, { chunk: 1000 }),
   ...insertSql("tax_bill_geopin", ["tax_bill", "geopin", "evidence"], taxRows, { chunk: 500 }),
   `INSERT INTO source (source_id, name, url, license, cadence, last_pulled_at, last_success_at, last_row_count) VALUES
     ('arcgis:Assessor/Landbase_Layers/0', 'City parcels', 'https://maps.nola.gov/server/rest/services/Assessor/Landbase_Layers/MapServer/0', 'City of New Orleans open data', 'weekly', '${now}', '${now}', ${parcels.length}),
     ('arcgis:Addresses/Site_Address_Point_LAMA/0', 'Site address points (LAMA)', 'https://maps.nola.gov/server/rest/services/Addresses/Site_Address_Point_LAMA/MapServer/0', 'City of New Orleans open data', 'weekly', '${now}', '${now}', ${addressRows.length})
     ON CONFLICT (source_id) DO UPDATE SET last_pulled_at = excluded.last_pulled_at, last_success_at = excluded.last_success_at, last_row_count = excluded.last_row_count;`,
 ];
-console.log(`rows: parcel ${parcels.length}, address ${addressRows.length}, block ${blockRows.length}, street_alias ${dedupAliases.length}, tax_bill_geopin ${taxRows.length}`);
+console.log(`rows: parcel ${parcels.length}, address ${addressRows.length}, block ${blockRows.length}, street_alias ${dedupAliases.length}, parcel_situs ${situsRows.length}, tax_bill_geopin ${taxRows.length}`);
 const files = writeSqlFiles("geo", statements);
 console.log(`wrote ${files.length} SQL files`);
 if (process.argv.includes("--load")) loadSqlFiles(files);

@@ -7,8 +7,11 @@ import { STREET_TYPE_ABBRS, normalizeStreet, parseAddress } from "./normalize";
 export interface AddressPointInput {
   addressId: number; geopin: number | null; fullAddress: string;
   unitType: string | null; unitId: string | null; lat: number | null; lon: number | null;
+  /** Already-normalized street and number (rows prefetched from D1); when present, fullAddress is not parsed. */
+  streetKey?: string; number?: number;
 }
 export interface ParcelInput { geopin: number; situs: string | null }
+export interface SitusInput { streetKey: string; number: number; geopin: number }
 export interface AliasInput { alias: string; street: string; origin: string }
 export interface TaxBillInput { taxBill: string; geopin: number }
 
@@ -32,7 +35,18 @@ export class MemoryIndex implements AddressIndex {
   private taxBills = new Map<string, number[]>();
   private byNameOnly: Map<string, Set<string>> | null = null;
 
-  constructor(input: { addresses: AddressPointInput[]; parcels: ParcelInput[]; aliases?: AliasInput[]; taxBills?: TaxBillInput[] }) {
+  constructor(input: {
+    addresses: AddressPointInput[]; parcels: ParcelInput[]; aliases?: AliasInput[]; taxBills?: TaxBillInput[];
+    /** Prefetch mode: parcels known to exist, pre-normalized situs entries, and the full street dictionary. */
+    knownParcels?: number[]; situs?: SitusInput[]; streets?: string[];
+  }) {
+    for (const g of input.knownParcels ?? []) this.parcels.add(g);
+    for (const st of input.streets ?? []) this.streets.add(st);
+    for (const si of input.situs ?? []) {
+      this.streets.add(si.streetKey);
+      this.push(this.bySitus, key(si.streetKey, si.number), si.geopin);
+      this.noteNumber(si.streetKey, [si.number]);
+    }
     for (const p of input.parcels) {
       this.parcels.add(p.geopin);
       const parsed = p.situs ? parseAddress(p.situs) : null;
@@ -43,7 +57,7 @@ export class MemoryIndex implements AddressIndex {
     }
     for (const a of input.addresses) {
       if (a.geopin == null) continue;
-      const parsed = parseAddress(a.fullAddress);
+      const parsed = a.streetKey && a.number != null ? { street: a.streetKey, numbers: [a.number] } : parseAddress(a.fullAddress);
       if (!parsed) continue;
       const cand: AddressCandidate = {
         addressId: a.addressId, geopin: a.geopin, street: parsed.street,

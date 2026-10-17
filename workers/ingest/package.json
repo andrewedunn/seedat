@@ -1,0 +1,12 @@
+{
+  "name": "@seedat/ingest",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@seedat/core": "*"
+  }
+}

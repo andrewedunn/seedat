@@ -12,5 +12,6 @@
   "d1_databases": [
     { "binding": "DB", "database_name": "seedat-db", "database_id": "c6aa8f43-0488-48ac-b18a-11dc4308dd7f", "migrations_dir": "../../db/migrations" }
   ],
-  "r2_buckets": [{ "binding": "RAW", "bucket_name": "seedat-raw" }]
+  "r2_buckets": [{ "binding": "RAW", "bucket_name": "seedat-raw" }],
+  "workflows": [{ "name": "seedat-nightly", "binding": "NIGHTLY", "class_name": "NightlyIngest" }]
 }

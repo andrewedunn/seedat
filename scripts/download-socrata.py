@@ -1,10 +1,13 @@
 # ABOUTME: Downloads a full Socrata dataset from data.nola.gov into data/raw/<name>/ as 50k-row JSON pages.
-# ABOUTME: Usage: python3 -I scripts/download-socrata.py <dataset-id> <name>   (polite: 1.1 s between pages)
+# ABOUTME: Usage: python3 -I scripts/download-socrata.py <dataset-id> [name]   (name defaults to src/<id>; 1.1 s between pages)
 import json, os, sys, time, urllib.request
 
-ds, name = sys.argv[1], sys.argv[2]
+ds = sys.argv[1]
+name = sys.argv[2] if len(sys.argv) > 2 else os.path.join("src", ds)
 out = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "raw", name)
 os.makedirs(out, exist_ok=True)
+for old in os.listdir(out):
+    os.remove(os.path.join(out, old))
 UA = "seedat-research/0.1 (+https://seedat.dunn.us; seedat@dunn.us)"
 offset, page = 0, 50000
 while True:

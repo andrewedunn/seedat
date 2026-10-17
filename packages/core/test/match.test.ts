@@ -28,6 +28,22 @@ const index = new MemoryIndex({
   taxBills: [{ taxBill: "39W401319", geopin: 41036020 }],
 });
 
+describe("MemoryIndex from pre-normalized rows (as prefetched from D1)", () => {
+  const prefetched = new MemoryIndex({
+    addresses: [{ addressId: 1, geopin: 41036019, fullAddress: "", streetKey: "GRAVIER ST", number: 3210, unitType: null, unitId: null, lat: 29.96308, lon: -90.09739 }],
+    parcels: [],
+    knownParcels: [41036019, 41600001],
+    situs: [{ streetKey: "ROYAL ST", number: 832, geopin: 41600001 }],
+    streets: ["GRAVIER ST", "ROYAL ST", "TCHOUPITOULAS ST"],
+  });
+  it("matches exactly, by situs, and knows the full street dictionary", () => {
+    expect(matchRecord({ address: "3210 Gravier St" }, prefetched)).toMatchObject({ geopin: 41036019, matchType: "exact" });
+    expect(matchRecord({ address: "832 Royal St" }, prefetched)).toMatchObject({ geopin: 41600001, matchType: "parcel_situs" });
+    expect(matchRecord({ address: "1 Tchoupitoulas St" }, prefetched)).toMatchObject({ matchType: "unmatched", reason: "number_not_found" });
+    expect(matchRecord({ address: "", geopin: "41600001" }, prefetched)).toMatchObject({ matchType: "source_geopin" });
+  });
+});
+
 describe("matchRecord", () => {
   it("rung 0: trusts a GEOPIN the source already carries, if it exists", () => {
     expect(matchRecord({ address: "anything", geopin: "41036019" }, index)).toMatchObject({ geopin: 41036019, matchType: "source_geopin", score: 1 });
