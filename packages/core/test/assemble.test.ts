@@ -22,6 +22,11 @@ describe("assemble", () => {
     expect(typeof row.row_hash).toBe("string");
   });
 
+  it("marks an STR licence inactive unless the active list says otherwise", () => {
+    const { row } = assemble("str_license", [{ sourceId: "socrata:en36-xvxg", priority: 1, row: { str_id: "Q1" } }], null);
+    expect(row.is_active).toBe(0);
+  });
+
   it("leaves match columns off unmatched tables", () => {
     const { row } = assemble("service_request", [{ sourceId: "s", priority: 1, row: { request_id: "1" } }], null);
     expect(row).not.toHaveProperty("geopin");

@@ -111,8 +111,10 @@ for (const [table, sources] of byTable) {
     stats.permit_event = ev.length;
   }
   if (srcRows.length) {
+    // Keys can repeat within one source (e.g. 245 BLDS permit numbers); the last row wins, as in the merge above.
+    const unique = [...new Map(srcRows.map((r) => [`${r.source_id}|${r.key}`, r])).values()];
     statements.push(`DELETE FROM src_row WHERE source_id IN (${sources.map((s) => `'${s.sourceId}'`).join(", ")});`,
-      ...insertSql("src_row", Object.keys(srcRows[0]!), srcRows));
+      ...insertSql("src_row", Object.keys(unique[0]!), unique));
   }
   const matched = Object.entries(matchCounts).filter(([k]) => k !== "unmatched").reduce((s, [, n]) => s + n, 0);
   stats[table] = { rows: rows.length, ...(MATCHED.has(table) ? { matchRate: `${(100 * matched / rows.length).toFixed(2)}%`, byType: matchCounts } : {}) };

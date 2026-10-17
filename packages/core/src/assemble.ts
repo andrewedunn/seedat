@@ -42,6 +42,8 @@ export function assemble(table: string, pieces: Piece[], index: AddressIndex | n
     row.match_type = m?.matchType ?? "unmatched";
     row.match_score = m?.score ?? 0;
   }
+  // Only the active-licences list says a licence is active; absence from it means not active.
+  if (table === "str_license") row.is_active = row.is_active ?? 0;
   if (table === "permit") {
     row.days_to_issue = daysBetween(row.applied_date, row.issued_date);
     row.sources = JSON.stringify(sources);
