@@ -2,7 +2,7 @@
 // ABOUTME: re-assembles and re-matches only those keys, logs field-level changes, upserts, and handles removals.
 import { assemble, type Piece } from "@seedat/core/src/assemble";
 import { fieldChanges } from "@seedat/core/src/diff";
-import { recordSources, rowHash, type AnySource } from "@seedat/core/src/sources";
+import { preferRow, recordSources, rowHash, type AnySource } from "@seedat/core/src/sources";
 import { insertSql } from "@seedat/core/src/sql";
 import { allChunks, prefetchIndex } from "./prefetch";
 
@@ -38,8 +38,8 @@ async function upsert(db: D1Database, table: string, rows: Record<string, unknow
 interface Mapped { raw: Record<string, unknown>; row: Record<string, unknown>; match: Piece["match"]; hash: string }
 
 /**
- * Map, key and hash raw rows. When a key repeats (e.g. 245 BLDS permit numbers name two permits), the version
- * with the greater hash wins: deterministic regardless of page order, and the same rule the backfill uses.
+ * Map, key and hash raw rows. When a key repeats (e.g. 245 BLDS permit numbers name two permits), `preferRow`
+ * picks the version: deterministic regardless of page order, and the same rule the backfill uses.
  */
 export function mapRows(src: AnySource, raws: Record<string, unknown>[]): Map<string, Mapped> {
   const out = new Map<string, Mapped>();
@@ -50,7 +50,7 @@ export function mapRows(src: AnySource, raws: Record<string, unknown>[]): Map<st
     const hash = rowHash({ ...row, __match: match ?? null });
     const key = src.key(row as never);
     const seen = out.get(key);
-    if (!seen || hash > seen.hash) out.set(key, { raw, row, match, hash });
+    if (!seen || preferRow({ row, hash }, seen)) out.set(key, { raw, row, match, hash });
   }
   return out;
 }
@@ -128,14 +128,18 @@ export async function applyPage(db: D1Database, src: AnySource, raws: Record<str
 
   // Compare with the hashes stored last time for this source. A key already written earlier in this same run
   // (a duplicate on another page) keeps whichever version has the greater hash.
-  const prev = new Map((await allChunks<{ key: string; row_hash: string; last_seen_at: string; removed_at: string | null }>(db,
-    `SELECT key, row_hash, last_seen_at, removed_at FROM src_row WHERE source_id = '${src.sourceId}' AND key IN (SELECT value FROM json_each(?))`, [...page.keys()]))
+  const prev = new Map((await allChunks<{ key: string; row_hash: string; row_json: string; last_seen_at: string; removed_at: string | null }>(db,
+    `SELECT key, row_hash, row_json, last_seen_at, removed_at FROM src_row WHERE source_id = '${src.sourceId}' AND key IN (SELECT value FROM json_each(?))`, [...page.keys()]))
     .map((r) => [r.key, r]));
   const changed = [...page].filter(([k, v]) => {
     const p = prev.get(k);
     if (!p) return true;
     if (p.row_hash === v.hash) return p.removed_at !== null;   // unchanged, unless it is coming back after removal
-    return !(p.last_seen_at === now && p.row_hash > v.hash);
+    // Written earlier in this run from another page: keep the stored version unless this one is preferred.
+    // Single-source tables store only the hash, so there the tiebreak falls back to the hash.
+    if (p.last_seen_at !== now) return true;
+    const stored = { row: p.row_json ? JSON.parse(p.row_json) as Record<string, unknown> : {}, hash: p.row_hash };
+    return preferRow({ row: v.row, hash: v.hash }, stored);
   });
   if (!changed.length) return { rows: page.size, changed: 0, inserted: 0, updated: 0, geopins: [] };
 

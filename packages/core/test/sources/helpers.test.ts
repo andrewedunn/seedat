@@ -115,3 +115,14 @@ describe("cleanPermitNum", () => {
     expect(cleanPermitNum(undefined)).toBeNull();
   });
 });
+
+describe("preferRow", () => {
+  it("prefers a live record over a voided duplicate, then the greater hash", async () => {
+    const { preferRow } = await import("../../src/sources/helpers");
+    const live = { row: { status: "Permit Issued" }, hash: "0001" };
+    const voided = { row: { status: "VOIDED - Duplicate Permit" }, hash: "ffff" };
+    expect(preferRow(live, voided)).toBe(true);
+    expect(preferRow(voided, live)).toBe(false);
+    expect(preferRow({ row: {}, hash: "b" }, { row: {}, hash: "a" })).toBe(true);
+  });
+});

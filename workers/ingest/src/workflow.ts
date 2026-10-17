@@ -32,8 +32,9 @@ async function readSnapshotKeys(bucket: R2Bucket, prefix: string, src: Parameter
   return keys;
 }
 
-async function gzipJson(value: unknown): Promise<ReadableStream> {
-  return new Blob([JSON.stringify(value)]).stream().pipeThrough(new CompressionStream("gzip"));
+/** Gzipped JSON, buffered: R2 put needs a known length, which a compression stream does not have. */
+async function gzipJson(value: unknown): Promise<ArrayBuffer> {
+  return new Response(new Blob([JSON.stringify(value)]).stream().pipeThrough(new CompressionStream("gzip"))).arrayBuffer();
 }
 
 export class NightlyIngest extends WorkflowEntrypoint<Env, NightlyParams> {

@@ -100,3 +100,17 @@ export function pointFrom(lat: unknown, lon: unknown): { lat: number; lon: numbe
 }
 
 export const socrataUrl = (id: string): string => `https://data.nola.gov/resource/${id}.json`;
+
+const DEAD_STATUS = /\b(VOID|VOIDED|CANCEL+ED|WITHDRAWN|DUPLICATE)\b/i;
+
+/**
+ * When one source repeats a key (e.g. a permit number reused by a voided duplicate), pick one version
+ * deterministically: a live record beats a voided/cancelled/duplicate one, then the greater hash wins.
+ * Used by both the backfill and the nightly Worker so they always agree.
+ */
+export function preferRow(a: { row: Record<string, unknown>; hash: string }, b: { row: Record<string, unknown>; hash: string }): boolean {
+  const dead = (r: Record<string, unknown>) => DEAD_STATUS.test(`${r.status ?? ""} ${r.status_mapped ?? ""}`);
+  const da = dead(a.row), db = dead(b.row);
+  if (da !== db) return !da;
+  return a.hash > b.hash;
+}

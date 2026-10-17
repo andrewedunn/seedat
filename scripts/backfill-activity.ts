@@ -10,7 +10,7 @@ import { join } from "node:path";
 import { gzipSync } from "node:zlib";
 import { assemble, type Piece } from "../packages/core/src/assemble";
 import { insertSql } from "../packages/core/src/sql";
-import { policeSources, recordSources, rowHash, type AnySource } from "../packages/core/src/sources";
+import { policeSources, preferRow, recordSources, rowHash, type AnySource } from "../packages/core/src/sources";
 import { loadSqlFiles, writeSqlFiles } from "./lib/d1";
 import { DATA, RAW, buildFullIndex } from "./lib/raw";
 
@@ -71,7 +71,7 @@ for (const [table, sources] of byTable) {
   const events: Record<string, unknown>[] = [];
   const srcRows: Record<string, unknown>[] = [];
   for (const src of sources) {
-    // Duplicate keys within one source (e.g. 245 BLDS permit numbers): the greater hash wins, the same
+    // Duplicate keys within one source (e.g. 245 BLDS permit numbers): `preferRow` picks, the same
     // deterministic rule the nightly Worker uses (workers/ingest/src/apply.ts mapRows).
     const best = new Map<string, { row: Record<string, unknown>; match: ReturnType<NonNullable<typeof src.matchInput>> | undefined; h: string; raw: Record<string, unknown> }>();
     let mapped = 0, dropped = 0;
@@ -83,7 +83,7 @@ for (const [table, sources] of byTable) {
       const match = src.matchInput?.(raw);
       const h = rowHash({ ...row, __match: match ?? null });
       const seen = best.get(key);
-      if (!seen || h > seen.h) best.set(key, { row, match, h, raw });
+      if (!seen || preferRow({ row, hash: h }, { row: seen.row, hash: seen.h })) best.set(key, { row, match, h, raw });
     }
     const multi = MULTI_SOURCE.has(table);
     const hashes = new Map<string, string>();
