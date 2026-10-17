@@ -5,6 +5,17 @@
 
 ## Decisions
 
+- **2026-10-17** — **Backfill loaded and the nightly Workflow verified:**
+  - **Loaded into D1:** 151,255 parcels; 275,110 addresses; 493,625 permits; 1.0M permit timeline events; 183,007 code cases; 622,269 code events; 40,820 STR records; 1.04M 311 requests; 38,067 business licences; 2.26M NOPD block-month counts; 151,255 parcel summaries.
+  - **Raw snapshots** of every source are in R2 under `snapshots/<id>/2026-10-17/`.
+  - **First Workflow runs:**
+    - A small dataset, full pull: 0 changed, which confirms backfill and Worker hashes agree.
+    - BLDS, full pull: 466k rows in 7 minutes.
+    - 200 permits forced back through the Worker's D1-prefetch matcher: 0 field differences from the backfill's full in-memory matcher.
+    - The run's 318 updates were the one-time duplicate-permit-number flips, which settled on the new live-over-voided rule.
+- **2026-10-17** — Parcel summary query: SQLite chose the `is_open` index (every open case in the city) over the GEOPIN index, so 500 parcels took 11 s. `+is_open` disables that index, bringing it to 0.04 s locally.
+- **2026-10-17** — One Stop crawler moved from the laptop to the `seedat-ingest` minute cron at about 19:05 UTC. First hour: 38 pages, 0 throttles from Cloudflare's network. Order: new ids above the frontier first, then the 4-month backfill.
+
 - **2026-10-17** — Independent code review of the ingest path (feature-dev:code-reviewer) found 10 issues. Fixed:
   - A retried step could silently drop target writes. `src_row` is now written last.
   - The crawler could wedge or skip ids. Only a 200 with the blank template counts as empty; 5xx and throttle pages back off; save errors no longer block; rechecks always advance.
