@@ -88,6 +88,28 @@ describe("parseAddress", () => {
     expect(parseAddress("Near 6401 St Claude Ave")).toMatchObject({ numbers: [6401], street: "SAINT CLAUDE AVE", notes: ["near"] });
   });
 
+  it("treats anything after the street type as unit text", () => {
+    expect(parseAddress("3042 Saint Claude Ave A")).toMatchObject({ street: "SAINT CLAUDE AVE", unit: "A" });
+    expect(parseAddress("3443 Esplanade Ave 155")).toMatchObject({ street: "ESPLANADE AVE", unit: "155" });
+    expect(parseAddress("824 Chartres St 2nd Floor Front")).toMatchObject({ street: "CHARTRES ST", unit: "2ND FLOOR FRONT" });
+    expect(parseAddress("13707 Chef Menteur Hwy FIRE PUMP")).toMatchObject({ street: "CHEF MENTEUR HWY", unit: "FIRE PUMP" });
+    expect(parseAddress("3300 Garden Oaks Dr Apt E-8A-Apt E-8B")).toMatchObject({ street: "GARDEN OAKS DR", unit: "E-8A-APT E-8B" });
+    expect(parseAddress("1500 Canal S   # 19th floor")).toMatchObject({ street: "CANAL S", unit: "19TH FLOOR" });
+    expect(parseAddress("1501 Canal St {Apt 1007 Floor10}")).toMatchObject({ street: "CANAL ST", notes: ["Apt 1007 Floor10"] });
+    expect(parseAddress("Louisiana Ave Pkwy 12")).toBeNull();
+    expect(parseAddress("100 Louisiana Ave Pkwy")).toMatchObject({ street: "LOUISIANA AVE PKWY", unit: null });
+    expect(parseAddress("100 Avenue A")).toMatchObject({ street: "AVENUE A", unit: null });
+  });
+
+  it("knows common misspellings of street types", () => {
+    expect(normalizeStreet("S Jefferson Davis Prkwy")).toBe("S JEFFERSON DAVIS PKWY");
+    expect(normalizeStreet("Elysian Fields Avn")).toBe("ELYSIAN FIELDS AVE");
+  });
+
+  it("parses NOPD-style and code-enforcement block addresses", () => {
+    expect(parseAddress("3100 Blk St Bernard")).toMatchObject({ numbers: [3100], street: "SAINT BERNARD", notes: ["block"] });
+  });
+
   it("treats NOPD block addresses as a hundred-block", () => {
     expect(parseAddress("011XX Gravier St")).toMatchObject({ numbers: [1100], street: "GRAVIER ST", notes: ["block"] });
   });

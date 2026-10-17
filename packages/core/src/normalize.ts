@@ -11,14 +11,14 @@ export interface ParsedAddress {
 
 const STREET_TYPES: Record<string, string> = {
   STREET: "ST", ST: "ST", STR: "ST",
-  AVENUE: "AVE", AVE: "AVE", AV: "AVE",
+  AVENUE: "AVE", AVE: "AVE", AV: "AVE", AVN: "AVE",
   BOULEVARD: "BLVD", BLVD: "BLVD",
   DRIVE: "DR", DR: "DR",
   ROAD: "RD", RD: "RD",
   PLACE: "PL", PL: "PL",
   COURT: "CT", CT: "CT",
   LANE: "LN", LN: "LN",
-  PARKWAY: "PKWY", PKWY: "PKWY",
+  PARKWAY: "PKWY", PKWY: "PKWY", PRKWY: "PKWY", PKY: "PKWY",
   HIGHWAY: "HWY", HWY: "HWY",
   PLAZA: "PLZ", PLZ: "PLZ",
   TERRACE: "TER", TER: "TER",
@@ -32,6 +32,9 @@ const STREET_TYPES: Record<string, string> = {
   CROSSING: "XING", XING: "XING",
   WAY: "WAY", WALK: "WALK", ROW: "ROW", LOOP: "LOOP", MALL: "MALL",
 };
+
+/** Canonical street-type abbreviations ("ST", "AVE", ...), for callers that compare names without the type. */
+export const STREET_TYPE_ABBRS = new Set(Object.values(STREET_TYPES));
 
 const DIRECTIONS: Record<string, string> = { NORTH: "N", SOUTH: "S", EAST: "E", WEST: "W", N: "N", S: "S", E: "E", W: "W" };
 
@@ -51,7 +54,7 @@ function ordinalWord(n: number): string | null {
 /** Uppercase, strip accents and apostrophes, turn punctuation into spaces, collapse whitespace. */
 function clean(input: string): string {
   return input
-    .normalize("NFD").replace(/[̀-ͯ]/g, "")
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
     .toUpperCase()
     .replace(/['’`]/g, "")
     .replace(/[.,;:]/g, " ")
@@ -96,7 +99,7 @@ export function normalizeStreet(input: string): string {
 }
 
 const UNIT_WORDS = "APT|APARTMENT|UNIT|STE|SUITE|BLDG|BUILDING|FL|FLOOR|RM|ROOM|LOT|SPACE";
-const UNIT_RE = new RegExp(`(?:^|\\s|-)(?:(?:${UNIT_WORDS})\\b\\.?|#)\\s*([A-Z0-9][A-Z0-9-]*)?\\s*$`);
+const UNIT_RE = new RegExp(`(?:^|\\s|-)(?:(?:${UNIT_WORDS})\\b\\.?|#)\\s*(.*)$`);
 const POSITION_UNIT_RE = /\s(REAR|UPPER|LOWER|FRONT|BACK|SIDE)\s*$/;
 const CITY_RE = /^(NEW ORLEANS|NOLA|LA|LOUISIANA|LA \d{5}(-\d{4})?|\d{5}(-\d{4})?|NEW ORLEANS LA( \d{5})?)$/;
 
@@ -121,23 +124,47 @@ function parseHead(seg: string): Head | null {
 
 /** Remove a trailing unit designator; returns the street text and the unit. */
 function splitUnit(text: string): { street: string; unit: string | null } {
+  const { street, tail } = cutAfterType(text);
+  if (tail !== null) return { street, unit: stripUnitWord(tail) };
   const m = UNIT_RE.exec(text);
-  if (m) return { street: text.slice(0, m.index).replace(/[\s-]+$/, ""), unit: m[1] ?? "" };
+  if (m) return { street: text.slice(0, m.index).replace(/[\s-]+$/, ""), unit: m[1]!.trim() };
   const p = POSITION_UNIT_RE.exec(text);
   if (p) return { street: text.slice(0, p.index), unit: p[1]! };
   return { street: text, unit: null };
 }
 
+const LEADING_UNIT_RE = new RegExp(`^-?\\s*(?:(?:${UNIT_WORDS})\\b|#)\\s*`);
+const stripUnitWord = (tail: string) => tail.replace(LEADING_UNIT_RE, "").trim() || tail;
+
+/**
+ * Anything after the last street type is unit text: "SAINT CLAUDE AVE A", "CHARTRES ST 2ND FLOOR FRONT".
+ * Exceptions: a trailing direction ("SERVICE RD NORTH"), a type that starts the name ("AVENUE A"),
+ * and a highway number ("US HWY 90").
+ */
+function cutAfterType(text: string): { street: string; tail: string | null } {
+  const tokens = text.split(" ").filter(Boolean);
+  for (let i = tokens.length - 2; i >= 1; i--) {
+    const type = STREET_TYPES[tokens[i]!];
+    if (!type) continue;
+    const tail = tokens.slice(i + 1);
+    if (tail.length === 1 && (DIRECTIONS[tail[0]!] || (type === "HWY" && /^\d+$/.test(tail[0]!)))) break;
+    if (tail.some((t) => STREET_TYPES[t])) continue;
+    return { street: tokens.slice(0, i + 1).join(" "), tail: tail.join(" ") };
+  }
+  return { street: text, tail: null };
+}
+
 export function parseAddress(input: string): ParsedAddress | null {
   if (!input) return null;
   const notes: string[] = [];
-  let s = input.normalize("NFD").replace(/[̀-ͯ]/g, "");
-  s = s.replace(/\[([^\]]*)\]/g, (_, note: string) => { notes.push(note.trim()); return " "; });
+  let s = input.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  s = s.replace(/\[([^\]]*)\]|\{([^}]*)\}/g, (_, a?: string, b?: string) => { notes.push((a ?? b ?? "").trim()); return " "; });
   s = s.toUpperCase().replace(/['’`]/g, "").replace(/\./g, " ").replace(/\s+/g, " ").trim();
 
   if (/^NEAR\s+/.test(s)) { notes.push("near"); s = s.replace(/^NEAR\s+/, ""); }
 
-  const block = /^0*(\d+)XX\s+(.*)$/.exec(s);
+  // "011XX GRAVIER ST" (NOPD) and "3100 BLK ST BERNARD" (code enforcement) both mean a hundred-block.
+  const block = /^0*(\d+)XX\s+(.*)$/.exec(s) ?? /^(\d+)00\s+BLK\s+(.*)$/.exec(s);
   if (block) {
     const street = normalizeStreet(block[2]!);
     return street ? { numbers: [Number(block[1]) * 100], suffix: null, street, unit: null, notes: [...notes, "block"] } : null;

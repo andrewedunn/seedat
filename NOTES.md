@@ -49,6 +49,20 @@ Tier rationale for this first fan-out: the research tasks need judgment about wh
 
 ## Data quality problems
 
+- **2026-10-17** — **Match ladder measured on 20k random records per source** (`scripts/measure-match.ts`):
+  - **Permits (BLDS, coordinates from rcm3/aib5): 98.3%.** 84.5% exact address; 3.4% range members; 0.9% via our learned tax-bill crosswalk; 0.6% nearest point.
+  - **STR applications: 98.4%.**
+  - **Code cases: 96.3%.** 92.4% carry their own GEOPIN. Two-thirds of the cases with no GEOPIN come from a single 2009 legacy import, and some have glued house numbers ("3385701 Paris Ave").
+  - Report match rates by era in the validation report.
+- **2026-10-17** — Street renames are learned from coordinates, with no hand-made list. For records whose street is unknown, the nearest address point's street votes on what the name means:
+  - Caffin Ave → Fats Domino Ave (421 votes)
+  - S Jefferson Davis Pkwy → S Norman C Francis Pkwy (76)
+  - Cadillac St → Roneagle Way (69)
+  - Gov Nicholls → Governor Nicholls (137)
+  - M L King → Martin Luther King
+- **2026-10-17** — The learned tax-bill → GEOPIN crosswalk covers **76,544 tax bills**. 1,533 more were seen with conflicting parcels and dropped (condos, splits). This is the dataset to publish.
+- **2026-10-17** — City address points use accents (Villeré, Dupré, Sài Gòn, De Boré); city permits never do.
+
 - **2026-10-17** — Good news: `aib5-en5t` already publishes permit milestones for 2018+ construction permits: application_submitted, application_review, zoning_review, plan_review, permit_approved, issue_date, date_of_first_inspection, plus `days_to_*`. Much of the permit timeline needs no crawling. Detail pages are still the only source for inspection *results*, review comments and fee lines.
 
 - **2026-10-17** — Two parcel keyspaces: permits use the assessor tax-bill number, everything else uses GEOPIN, and the city publishes no crosswalk. `pzqp-4ri7.parid` looks like a crosswalk but is an address slug (`3655-FLORENCEAV`); 0/500 permit pins matched.
