@@ -1,0 +1,16 @@
+// ABOUTME: Wrangler config for seedat-ingest: nightly source pulls (cron) into seedat-db, raw snapshots into seedat-raw.
+// ABOUTME: Migrations live in db/migrations and are applied with: npx wrangler d1 migrations apply seedat-db --remote
+{
+  "name": "seedat-ingest",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": false,
+  "triggers": { "crons": ["0 9 * * *"] },
+  "limits": { "cpu_ms": 300000 },
+  "observability": { "enabled": true },
+  "d1_databases": [
+    { "binding": "DB", "database_name": "seedat-db", "database_id": "c6aa8f43-0488-48ac-b18a-11dc4308dd7f", "migrations_dir": "../../db/migrations" }
+  ],
+  "r2_buckets": [{ "binding": "RAW", "bucket_name": "seedat-raw" }]
+}

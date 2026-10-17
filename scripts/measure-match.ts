@@ -2,10 +2,9 @@
 // ABOUTME: Usage: npx tsx scripts/measure-match.ts [sampleSize]
 import { readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
-import { learnStreetAliases } from "../packages/core/src/aliases";
+import { aliasesFromCoordinates, aliasesFromSitus, learnTaxBills } from "../packages/core/src/learn";
 import { matchRecord, type MatchInput } from "../packages/core/src/match";
 import { MemoryIndex } from "../packages/core/src/memory-index";
-import { parseAddress } from "../packages/core/src/normalize";
 import { statePlaneToLatLon } from "../packages/core/src/projection";
 
 const RAW = join(import.meta.dirname, "..", "data", "raw");
@@ -18,11 +17,7 @@ const parcels = pages("parcels").map((f) => f.attributes ?? f);
 const situs = (p: any) => [p.SITUS_NUMBER, p.SITUS_DIR, p.SITUS_STREET, p.SITUS_TYPE].filter(Boolean).join(" ");
 
 const situsByGeopin = new Map(parcels.map((p) => [Number(p.GEOPIN), situs(p)]));
-const aliases = learnStreetAliases(
-  lama.filter((a) => a.GEOPIN && a.FULLNAME && situsByGeopin.has(Number(a.GEOPIN)))
-    .map((a) => ({ geopin: Number(a.GEOPIN), addressStreet: a.FULLNAME, situs: situsByGeopin.get(Number(a.GEOPIN))! })),
-  { minVotes: 3, minShare: 0.8 },
-);
+const aliases = aliasesFromSitus(lama.map((a) => ({ geopin: a.GEOPIN ? Number(a.GEOPIN) : null, streetName: a.FULLNAME })), situsByGeopin);
 console.log(`learned ${aliases.length} aliases; top:`, aliases.slice(0, 8).map((a) => `${a.alias} → ${a.street} (${a.votes})`).join("; "));
 
 const addresses = lama.map((a) => ({ addressId: Number(a.SITEADDID), geopin: a.GEOPIN ? Number(a.GEOPIN) : null, fullAddress: a.FULLADDR ?? "",
@@ -33,38 +28,19 @@ const firstPass = new MemoryIndex({ addresses, parcels: parcelInputs, aliases })
 // Second alias source: records with coordinates. The nearest address point's street says what an unknown name means.
 const strAll = pages("str");
 const codeAll = pages("code");
-const coordRows = [
-  ...strAll.map((r) => ({ address: r.address, lat: Number(r.latitude), lon: Number(r.longitude) })),
-  ...codeAll.map((r) => ({ address: r.location, ...(statePlaneToLatLon(r.xpos, r.ypos) ?? { lat: NaN, lon: NaN }) })),
-].flatMap((r, i) => {
-  const p = r.address ? parseAddress(r.address) : null;
-  if (!p || !Number.isFinite(r.lat) || firstPass.resolveStreet(p.street)) return [];
-  const near = firstPass.nearestAddress(r.lat, r.lon, 25);
-  return near ? [{ geopin: i, addressStreet: near.street, situs: r.address }] : [];
-});
-const coordAliases = learnStreetAliases(coordRows, { minVotes: 3, minShare: 0.8 });
+const coordAliases = aliasesFromCoordinates(firstPass, [
+  ...strAll.map((r) => ({ address: r.address, lat: Number(r.latitude) || null, lon: Number(r.longitude) || null })),
+  ...codeAll.map((r) => ({ address: r.location, ...(statePlaneToLatLon(r.xpos, r.ypos) ?? { lat: null, lon: null }) })),
+]);
 console.log(`learned ${coordAliases.length} aliases from coordinates; top:`, coordAliases.slice(0, 12).map((a) => `${a.alias} → ${a.street} (${a.votes})`).join("; "));
 
 const textIndex = new MemoryIndex({ addresses, parcels: parcelInputs, aliases: [...aliases, ...coordAliases] });
 
 // Learn the tax-bill -> GEOPIN crosswalk from every permit we can place without it.
 const permitAll = pages("permits");
-const votes = new Map<string, Map<number, number>>();
-for (const r of permitAll) {
-  const bills = String(r.pin ?? "").split(",").map((b: string) => b.trim()).filter((b: string) => b && !/^\d{8}$/.test(b));
-  if (bills.length !== 1) continue;
-  const m = matchRecord({ address: r.originaladdress1 }, textIndex);
-  if (!m.geopin || m.otherGeopins) continue;
-  const byGeopin = votes.get(bills[0]!) ?? new Map<number, number>();
-  byGeopin.set(m.geopin, (byGeopin.get(m.geopin) ?? 0) + 1);
-  votes.set(bills[0]!, byGeopin);
-}
-const taxBills = [...votes].flatMap(([taxBill, byGeopin]) => {
-  const ranked = [...byGeopin].sort((a, b) => b[1] - a[1]);
-  const total = ranked.reduce((s, [, n]) => s + n, 0);
-  return ranked[0]![1] / total >= 0.8 ? [{ taxBill, geopin: ranked[0]![0], evidence: ranked[0]![1] }] : [];
-});
-console.log(`learned tax-bill crosswalk: ${taxBills.length} tax bills -> GEOPIN (from ${votes.size} seen; ${votes.size - taxBills.length} conflicting)`);
+const crosswalk = learnTaxBills(textIndex, permitAll.map((r) => ({ address: r.originaladdress1, taxBill: r.pin ?? null })));
+const taxBills = crosswalk.links;
+console.log(`learned tax-bill crosswalk: ${taxBills.length} tax bills -> GEOPIN (from ${crosswalk.seen} seen; ${crosswalk.conflicting} conflicting)`);
 
 const index = new MemoryIndex({ addresses, parcels: parcelInputs, aliases: [...aliases, ...coordAliases], taxBills });
 

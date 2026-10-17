@@ -3,9 +3,12 @@
 import { normalizeStreet, parseAddress } from "./normalize";
 
 export interface AliasEvidenceRow { geopin: number; addressStreet: string; situs: string }
-export interface LearnedAlias { alias: string; street: string; origin: "parcel-situs"; votes: number }
+export type AliasOrigin = "parcel-situs" | "coordinates";
+export interface LearnedAlias { alias: string; street: string; origin: AliasOrigin; votes: number }
 
-export function learnStreetAliases(rows: AliasEvidenceRow[], opts: { minVotes: number; minShare: number }): LearnedAlias[] {
+export function learnStreetAliases(
+  rows: AliasEvidenceRow[], opts: { minVotes: number; minShare: number; origin?: AliasOrigin },
+): LearnedAlias[] {
   const canonical = new Set<string>();
   // variant -> canonical street -> set of agreeing GEOPINs
   const votes = new Map<string, Map<string, Set<number>>>();
@@ -29,7 +32,7 @@ export function learnStreetAliases(rows: AliasEvidenceRow[], opts: { minVotes: n
     const total = ranked.reduce((sum, r) => sum + r.n, 0);
     const top = ranked[0]!;
     if (top.n >= opts.minVotes && top.n / total >= opts.minShare) {
-      out.push({ alias: variant, street: top.street, origin: "parcel-situs", votes: top.n });
+      out.push({ alias: variant, street: top.street, origin: opts.origin ?? "parcel-situs", votes: top.n });
     }
   }
   return out.sort((a, b) => b.votes - a.votes);
