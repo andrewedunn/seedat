@@ -8,5 +8,5 @@
   "workers_dev": true,
   "observability": { "enabled": true },
   "d1_databases": [{ "binding": "DB", "database_name": "seedat-db", "database_id": "c6aa8f43-0488-48ac-b18a-11dc4308dd7f" }],
-  "vars": { "SITE_ORIGIN": "https://seedat-web.andrewdunn.workers.dev" }
+  "vars": { "SITE_ORIGIN": "https://seedat.dunn.us" }
 }

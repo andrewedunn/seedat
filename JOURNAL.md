@@ -42,3 +42,15 @@ The bigger surprise was what those pages hold. One Stop's ID sequence covers far
 - Statements over 100 KB are rejected, so batches are capped by bytes, not rows.
 - Wrangler can print an ERROR and still exit 0. Our first geography load "succeeded" into empty tables.
 - Rehearse every load in local SQLite first. Two constraint bugs that would have each cost an hour-long remote load were found in about three minutes locally.
+
+## 2026-10-18 — Launch
+
+See Dat went live at seedat.dunn.us: every New Orleans parcel has a page, and any MCP-speaking agent can query the same data at /mcp.
+
+The most useful agent in the whole project was the one that checked the work. Given 50 random addresses and told to find where the site was wrong, it found four things the builder had missed:
+- lists silently capped at 200 permits;
+- 2025's bulk "Closed" status not being recognised;
+- parade permits attached to whichever house was nearest the route;
+- permits for "1835-1839 Louisa St" showing on only one of the two houses.
+
+Fixing those moved record recall from 87% to 99%. The cheapest quality step is still a second pair of eyes that didn't write the code.

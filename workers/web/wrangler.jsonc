@@ -6,6 +6,8 @@
   "compatibility_date": "2026-10-01",
   "compatibility_flags": ["nodejs_compat"],
   "workers_dev": true,
+  "routes": [{ "pattern": "seedat.dunn.us", "custom_domain": true }],
+  "services": [{ "binding": "API", "service": "seedat-api" }],
   "assets": { "directory": "./public", "binding": "ASSETS" },
   "observability": { "enabled": true },
   "d1_databases": [{ "binding": "DB", "database_name": "seedat-db", "database_id": "c6aa8f43-0488-48ac-b18a-11dc4308dd7f" }],

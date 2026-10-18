@@ -5,6 +5,11 @@
 
 ## Decisions
 
+- **2026-10-18** — **Launched publicly at https://seedat.dunn.us** (Andrew approved). `seedat-web` is on the custom domain, and `noindex` is removed.
+  - `robots.txt` allows everything except `/api/` and `/search`.
+  - The MCP server answers at `seedat.dunn.us/mcp` through a service binding from `seedat-web` to `seedat-api`, so there is one public origin.
+  - Still to do: Umami (waiting on the site ID), Google Search Console and OpenSEO per the stack doc (Andrew's accounts), and a sitemap.
+
 - **2026-10-18** — **Address page, map and MCP server are live on workers.dev** (noindex): `seedat-web` and `seedat-api`.
   - Server render p50 20 ms. Parcel tiles are PMTiles in the `seedat-assets` R2 bucket.
   - The MCP server is hand-written stateless JSON-RPC (Streamable HTTP, JSON responses), with no SDK and no Durable Objects.

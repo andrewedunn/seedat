@@ -1,7 +1,7 @@
 // ABOUTME: HTML helpers for seedat-web: escaping, the page shell (fonts, styles, analytics), the tiled address,
 // ABOUTME: and small formatters for dates, money and status shared by every page.
 
-export interface Env { DB: D1Database; ASSETS: Fetcher; ASSETS_BUCKET: R2Bucket; UMAMI_SRC: string; UMAMI_WEBSITE_ID: string }
+export interface Env { DB: D1Database; ASSETS: Fetcher; ASSETS_BUCKET: R2Bucket; API: Fetcher; UMAMI_SRC: string; UMAMI_WEBSITE_ID: string }
 
 const ESC: Record<string, string> = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" };
 export const esc = (v: unknown): string => (v === null || v === undefined ? "" : String(v).replace(/[&<>"']/g, (c) => ESC[c]!));
@@ -44,7 +44,6 @@ export function page(env: Env, opts: { title: string; description: string; body:
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${opts.title}</title>
 <meta name="description" content="${opts.description}">
-<meta name="robots" content="noindex">
 ${opts.canonical ? html`<link rel="canonical" href="${opts.canonical}">` : ""}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

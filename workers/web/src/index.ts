@@ -113,6 +113,8 @@ async function route(req: Request, env: Env, url: URL): Promise<Response> {
 export default {
   async fetch(req: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(req.url);
+    // The MCP server (seedat-api) answers at seedat.dunn.us/mcp through a service binding.
+    if (url.pathname === "/mcp") return env.API.fetch(req);
     if (req.method !== "GET" && req.method !== "HEAD") return new Response("Method not allowed", { status: 405 });
     const cacheable = req.method === "GET" && !url.pathname.startsWith("/tiles/") && !url.pathname.startsWith("/search");
     const cache = caches.default;

@@ -14,14 +14,14 @@ A free, read-only [Model Context Protocol](https://modelcontextprotocol.io) serv
 
 Every record is matched to a parcel, so agents never write SQL or learn dataset IDs.
 
-**Endpoint:** `https://seedat-api.andrewdunn.workers.dev/mcp` (Streamable HTTP, stateless, no auth). This moves to `seedat.dunn.us` at launch.
+**Endpoint:** `https://seedat.dunn.us/mcp` (Streamable HTTP, stateless, no auth).
 
 ## Connect
 
 Claude Code:
 
 ```bash
-claude mcp add --transport http seedat https://seedat-api.andrewdunn.workers.dev/mcp
+claude mcp add --transport http seedat https://seedat.dunn.us/mcp
 ```
 
 Any client that speaks Streamable HTTP can use the URL above. The server answers `initialize`, `tools/list` and `tools/call` with plain JSON, without sessions or streaming.
