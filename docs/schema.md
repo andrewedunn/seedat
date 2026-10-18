@@ -31,6 +31,11 @@ The schema lives in [`db/migrations/0001_init.sql`](../db/migrations/0001_init.s
 | | `business_license` | Occupational licences. |
 | | `service_request` | 311, block level only. |
 | | `police_call_month` | NOPD calls aggregated to block × month × category. Raw rows stay in R2 (terms forbid deriving addresses; 6M rows would also crowd D1). |
+| Crawled | `onestop_record` | Every One Stop record read from its public detail page, matched to a parcel (migration 0005). The ID space covers far more than permits: HDLC and VCC reviews, special events, film, dumpsters, curb cuts. Parsed detail is in `detail_json`; staff reviewer names are dropped. |
+| | `crawl_state` | One row: the crawler's frontier, backfill position, counters and cooldown (0006). |
+| Links | `record_parcel` | Extra parcels a multi-address record names ("1835-1839 Louisa St"); the primary parcel stays on the record (0009). |
+| Ingest | `src_row` | Per-source row hash (and, for permits and STR, the source's own mapped row), the baseline for nightly diffs (0003). |
+| | `parcel_situs` | Parcel situs addresses by street and number, which the Worker's matcher prefetches (0004). |
 | Read path | `parcel_summary` | Precomputed counts and the plain-English summary per parcel, so the page and MCP filters read one row. |
 | | `permit_fts` | Full-text search over permit descriptions. |
 | | `unmatched` (view) | Everything we couldn't place, for the public list and the city feedback loop. |

@@ -5,6 +5,14 @@
 
 ## Decisions
 
+- **2026-10-18** — **Address page, map and MCP server are live on workers.dev** (noindex): `seedat-web` and `seedat-api`.
+  - Server render p50 20 ms. Parcel tiles are PMTiles in the `seedat-assets` R2 bucket.
+  - The MCP server is hand-written stateless JSON-RPC (Streamable HTTP, JSON responses), with no SDK and no Durable Objects.
+  - The `seedat.dunn.us` domain and Umami are waiting on Andrew.
+- **2026-10-18** — Event permits (SPMA special events, parades, floats; 22,061 of them) are not placed on parcels by proximity and are excluded from match rates. They describe an event at a place, not work on a property. The spot check flagged proximity placement of events as the main precision problem.
+- **2026-10-18** — "Open permit" means: no completion date, not closed, and no Finaled/Cancelled/Occupancy/VOID/EXPIRED/CLOSED status. A March 2025 bulk administrative closure set status "Closed" (mapped by the city to "Other"), which the first definition missed.
+- **2026-10-18** — Matcher improvements roll out with `scripts/rematch.ts`. It updates only match columns and `record_parcel` links; it never wipes data. Rehearse in local SQLite with `PRAGMA foreign_keys=ON`, since D1 enforces foreign keys and plain SQLite does not.
+
 - **2026-10-17** — **Backfill loaded and the nightly Workflow verified:**
   - **Loaded into D1:** 151,255 parcels; 275,110 addresses; 493,625 permits; 1.0M permit timeline events; 183,007 code cases; 622,269 code events; 40,820 STR records; 1.04M 311 requests; 38,067 business licences; 2.26M NOPD block-month counts; 151,255 parcel summaries.
   - **Raw snapshots** of every source are in R2 under `snapshots/<id>/2026-10-17/`.
@@ -70,7 +78,11 @@
 | 2026-10-17 | Pull real data and build benchmark SQLite | sonnet (mid) | Mechanical but multi-source; haiku likely fine next time. Wrongly concluded code cases lack geopin (Socrata omits nulls). |
 | 2026-10-17 | Source adapters for 13 datasets + helpers + 68 tests | sonnet (mid) | Good quality. I replaced its BigInt FNV hash (too slow) with cyrb53. Useful schema notes (STR key, duplicate permit numbers). |
 | 2026-10-17 | Parcel spatial attributes (PIP, representative points) | sonnet (mid) | Excellent: 7 s runtime, 0 representative points outside their polygon, sensible spot checks. |
-| 2026-10-17 | One Stop detail-page parser | sonnet (mid) | Running. |
+| 2026-10-17 | One Stop detail-page parser | sonnet (mid) | Good. Found the honeypot document appended to pages. |
+| 2026-10-17 | HDLC/VCC/zoning rules research + rules.ts | sonnet (mid) | Valuable correction: partial control means demolition review only. Marks unverified items. |
+| 2026-10-17 | Code review: ingest path | feature-dev:code-reviewer | 10 real issues, incl. retry data loss. |
+| 2026-10-18 | Code review: web + MCP | feature-dev:code-reviewer | No security issues; caps-as-totals, races, a11y. |
+| 2026-10-18 | 50-address spot check (independent) | sonnet (mid) | The best-value agent of the project: found caps, the closed-status gap, and proximity placement of events. Recall went from 86.9% to 99.2% after fixes. |
 | 2026-10-17 | Normalizer, match ladder, alias/crosswalk learning, diff, loader, Worker | me (orchestrator) | Kept in the top tier: matching quality and nightly correctness are expensive to get wrong. |
 
 Tier rationale for this first fan-out: the research tasks need judgment about what is relevant and when to stop, which haiku tends to under-do. Mechanical follow-ups (field inventories, spot checks) will go to haiku.
