@@ -12,11 +12,11 @@ const index = new MemoryIndex({
 describe("assemble", () => {
   it("merges sources, matches, and derives days_to_issue", () => {
     const { row } = assemble("permit", [
-      { sourceId: "socrata:72f9-bi28", priority: 1, row: { permit_num: "26-1", applied_date: "2026-01-01", issued_date: "2026-01-31" }, match: { address: "Bad address", taxBill: null } },
+      { sourceId: "socrata:72f9-bi28", priority: 1, row: { permit_num: "26-1", applied_date: "2026-01-01", issued_date: "2026-01-31" }, match: { address: null, taxBill: null } },
       { sourceId: "socrata:rcm3-fn58", priority: 2, row: { permit_num: "26-1", lat: 29.96308 }, match: { address: "3210 Gravier St", lat: 29.96308, lon: -90.09739 } },
     ], index);
     expect(row).toMatchObject({
-      permit_num: "26-1", geopin: 41036019, match_type: "nearest_point", days_to_issue: 30,
+      permit_num: "26-1", geopin: 41036019, match_type: "exact", days_to_issue: 30,
       sources: '["socrata:72f9-bi28","socrata:rcm3-fn58"]',
     });
     expect(typeof row.row_hash).toBe("string");

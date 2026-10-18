@@ -26,7 +26,7 @@ const daysBetween = (a: unknown, b: unknown): number | null => {
   return Number.isFinite(d) && d >= 0 ? Math.round(d) : null;
 };
 
-export interface Assembled { row: Record<string, unknown>; sources: string[] }
+export interface Assembled { row: Record<string, unknown>; sources: string[]; otherGeopins: number[] }
 
 /**
  * Build the final row. `matched` tables get geopin/address_id/match_type/match_score; permits also get
@@ -34,9 +34,11 @@ export interface Assembled { row: Record<string, unknown>; sources: string[] }
  */
 export function assemble(table: string, pieces: Piece[], index: AddressIndex | null): Assembled {
   const { row, sources } = mergeRows(pieces);
+  let otherGeopins: number[] = [];
   if (index) {
     const input = mergeMatchInputs(pieces);
     const m = input ? matchRecord(input, index) : null;
+    otherGeopins = m?.otherGeopins ?? [];
     row.geopin = m?.geopin ?? null;
     row.address_id = m?.addressId ?? null;
     row.match_type = m?.matchType ?? "unmatched";
@@ -49,5 +51,5 @@ export function assemble(table: string, pieces: Piece[], index: AddressIndex | n
     row.sources = JSON.stringify(sources);
   }
   row.row_hash = rowHash(row);
-  return { row, sources };
+  return { row, sources, otherGeopins };
 }

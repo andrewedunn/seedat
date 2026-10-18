@@ -1,0 +1,1701 @@
+{
+ "generated": "2026-10-17",
+ "note": "Expected IDs found independently on data.nola.gov (BLDS 72f9-bi28 + rcm3-fn58 permit numbers, u6yx-v2tw case numbers, en36-xvxg reference codes). truth_geopins from the city parcel and address-point layers.",
+ "addresses": [
+  {
+   "address": "810 Union St",
+   "neighborhood": "CENTRAL BUSINESS DISTRICT",
+   "source": "blds",
+   "truth_geopins": [
+    41192951
+   ],
+   "expected": {
+    "permits": [
+     "12-28647-MECH",
+     "13-18229-SATT",
+     "22-35877-RNVN",
+     "23-26343-ERPR"
+    ],
+    "code_cases": [],
+    "str": []
+   },
+   "accepted_extras": [
+    "13-31892-RNVS",
+    "13-40176-ESGN",
+    "20-01163-RNVS",
+    "20-03702-ERPR",
+    "21-03323-RSTC",
+    "24-10441-PLMB",
+    "25-09966-MPM"
+   ],
+   "doubtful_extras": [
+    "19-14331-SPMA"
+   ],
+   "known_misses": {}
+  },
+  {
+   "address": "3012 Mandeville St",
+   "neighborhood": "ST. ROCH",
+   "source": "blds",
+   "truth_geopins": [
+    41078544
+   ],
+   "expected": {
+    "permits": [
+     "22-35322-NEWC",
+     "22-35549-ECOA",
+     "23-05191-SERV",
+     "23-05194-LOOP",
+     "23-10359-HVAC",
+     "23-15744-FGAS"
+    ],
+    "code_cases": [
+     "14-10354-MPM",
+     "16-11140-MPM",
+     "26-03608-MPM",
+     "CEHB-11-3498",
+     "ENVHADJ-20093P",
+     "HCES-11-04350",
+     "HCES-11-04726"
+    ],
+    "str": []
+   },
+   "accepted_extras": [
+    "23-05193-SERV",
+    "23-10360-HVAC",
+    "23-15741-FGAS"
+   ],
+   "doubtful_extras": [],
+   "known_misses": {}
+  },
+  {
+   "address": "153 Roosevelt Way",
+   "neighborhood": "CENTRAL BUSINESS DISTRICT",
+   "source": "blds",
+   "truth_geopins": [
+    41223017
+   ],
+   "expected": {
+    "permits": [
+     "15-32378-RNVN",
+     "25-29251-HDLC",
+     "25-29251-RNVN"
+    ],
+    "code_cases": [],
+    "str": []
+   },
+   "accepted_extras": [
+    "12-23937-RNVS",
+    "12-24454-DEMI",
+    "13-03401-ESGN",
+    "13-05466-SERV",
+    "13-07619-HOOD",
+    "13-07635-HOOD",
+    "13-08197-MECH",
+    "13-11121-MECH",
+    "13-11475-MECH",
+    "13-15961-SBNR",
+    "13-42904-RNVN",
+    "14-05057-SATT",
+    "14-05422-RNVN",
+    "14-05933-ESGN",
+    "14-10993-SATT",
+    "14-21031-RNVN",
+    "14-30617-SERV",
+    "16-01860-RSTC",
+    "23-09054-MPM",
+    "25-28043-RNVS",
+    "26-01588-RNVS",
+    "26-03571-RCZD",
+    "26-05115-RDRV",
+    "26-13471-RCZD",
+    "26-15093-RSWR",
+    "26-17506-SERV",
+    "26-26308-RCZD"
+   ],
+   "doubtful_extras": [
+    "18-35027-SPMA",
+    "23-05849-SPMA",
+    "23-06186-SPMA"
+   ],
+   "known_misses": {
+    "15-32378-RNVN": "M2"
+   }
+  },
+  {
+   "address": "1007 Ursulines Ave",
+   "neighborhood": "FRENCH QUARTER",
+   "source": "blds",
+   "truth_geopins": [
+    41023031
+   ],
+   "expected": {
+    "permits": [
+     "15-29196-VCPNT",
+     "16-18544-RNVS",
+     "16-18544-VCGEN",
+     "16-28510-RNVN",
+     "16-28510-VCGEN",
+     "16-28512-RCZD",
+     "23-30764-VCPNT"
+    ],
+    "code_cases": [],
+    "str": []
+   },
+   "accepted_extras": [
+    "16-36203-VCPNT",
+    "17-16889-RCZD"
+   ],
+   "doubtful_extras": [],
+   "known_misses": {}
+  },
+  {
+   "address": "1339 Harrison Ave",
+   "neighborhood": "FILMORE",
+   "source": "blds",
+   "truth_geopins": [
+    41132909
+   ],
+   "expected": {
+    "permits": [
+     "25-33631-EVAC",
+     "25-37391-PLMB"
+    ],
+    "code_cases": [],
+    "str": []
+   },
+   "accepted_extras": [],
+   "doubtful_extras": [],
+   "known_misses": {}
+  },
+  {
+   "address": "235 N Peters St",
+   "neighborhood": "FRENCH QUARTER",
+   "source": "blds",
+   "truth_geopins": [
+    41021718
+   ],
+   "expected": {
+    "permits": [
+     "14-23597-RNVN",
+     "14-25682-VCSGN",
+     "18-19895-RNVN",
+     "18-19895-VCGEN",
+     "19-17247-RCZD",
+     "19-29984-RSTC",
+     "19-31132-RNVS",
+     "19-31132-VCGEN",
+     "19-33570-RCZD",
+     "23-26490-RNVN",
+     "23-26490-VCGEN",
+     "24-04613-DEMI",
+     "26-14192-ROOF",
+     "26-14192-VCGEN",
+     "26-17179-RNVN",
+     "26-17179-VCGEN"
+    ],
+    "code_cases": [
+     "23-04728-MPM",
+     "24-01995-MPM",
+     "26-11706-MPM"
+    ],
+    "str": []
+   },
+   "accepted_extras": [],
+   "doubtful_extras": [
+    "15-33808-RSTC",
+    "15-33813-RSTC",
+    "19-36961-SPMA"
+   ],
+   "known_misses": {}
+  },
+  {
+   "address": "3414 S Robertson St",
+   "neighborhood": "MILAN",
+   "source": "blds",
+   "truth_geopins": [
+    41052143
+   ],
+   "expected": {
+    "permits": [
+     "23-30736-EVAC",
+     "24-00035-RNVN",
+     "24-27153-EVAC"
+    ],
+    "code_cases": [
+     "22-00720-MPM",
+     "25-01511-MPM"
+    ],
+    "str": []
+   },
+   "accepted_extras": [],
+   "doubtful_extras": [],
+   "known_misses": {}
+  },
+  {
+   "address": "436 Bouny St",
+   "neighborhood": "ALGIERS POINT",
+   "source": "blds",
+   "truth_geopins": [
+    41144629
+   ],
+   "expected": {
+    "permits": [
+     "21-13981-HDLC",
+     "21-13981-RNVN",
+     "22-20344-HDLC"
+    ],
+    "code_cases": [],
+    "str": []
+   },
+   "accepted_extras": [
+    "17-03456-ACCS",
+    "17-03456-HDLC",
+    "21-35936-ACCS",
+    "21-35936-HDLC",
+    "22-04156-EGEN",
+    "22-04654-FGAS"
+   ],
+   "doubtful_extras": [],
+   "known_misses": {}
+  },
+  {
+   "address": "2640 Comet St",
+   "neighborhood": "OLD AURORA",
+   "source": "blds",
+   "truth_geopins": [
+    41139289
+   ],
+   "expected": {
+    "permits": [
+     "24-28617-RNVS",
+     "25-07404-RNVN",
+     "25-09989-PLMB",
+     "25-10395-SERV",
+     "25-11533-LOOP",
+     "25-11534-SERV",
+     "25-14594-HVAC",
+     "25-16015-FGAS"
+    ],
+    "code_cases": [],
+    "str": []
+   },
+   "accepted_extras": [],
+   "doubtful_extras": [],
+   "known_misses": {}
+  },
+  {
+   "address": "6210 Chef Menteur Hwy",
+   "neighborhood": "VIAVANT - VENETIAN ISLES",
+   "source": "blds",
+   "truth_geopins": [
+    41131837
+   ],
+   "expected": {
+    "permits": [
+     "22-04578-SATT",
+     "23-26163-SERV",
+     "23-29457-PLMB",
+     "23-30614-PLMB",
+     "24-10755-MOVG",
+     "24-15197-RSTC",
+     "24-30777-FGAS",
+     "24-30784-FGAS",
+     "24-31069-HVAC",
+     "24-31081-HVAC"
+    ],
+    "code_cases": [],
+    "str": []
+   },
+   "accepted_extras": [
+    "21-31194-NEWC",
+    "21-31195-NEWC",
+    "23-27958-NEWC",
+    "23-30015-ECOA",
+    "23-31014-LOOP",
+    "23-31020-SERV",
+    "23-31023-SERV",
+    "25-30325-SATT",
+    "26-02360-SATT",
+    "26-02362-SATT"
+   ],
+   "doubtful_extras": [],
+   "known_misses": {}
+  },
+  {
+   "address": "251 Bellaire Dr",
+   "neighborhood": "LAKEWOOD",
+   "source": "blds",
+   "truth_geopins": [
+    41024113
+   ],
+   "expected": {
+    "permits": [
+     "15-11585-ERPR",
+     "17-34930-ACCS",
+     "17-34933-FGAS",
+     "17-34936-EGEN",
+     "22-15613-DEMO",
+     "22-27384-NEWC",
+     "22-30317-RDRV",
+     "22-35788-LOOP",
+     "23-04483-SERV",
+     "23-07956-FGAS",
+     "23-08113-HVAC"
+    ],
+    "code_cases": [],
+    "str": []
+   },
+   "accepted_extras": [],
+   "doubtful_extras": [],
+   "known_misses": {}
+  },
+  {
+   "address": "1823 Benton St",
+   "neighborhood": "LOWER NINTH WARD",
+   "source": "blds",
+   "truth_geopins": [
+    41120652
+   ],
+   "expected": {
+    "permits": [
+     "21-00109-RNVN",
+     "21-33502-RNVN",
+     "22-05281-RNVN",
+     "24-14085-SERV",
+     "25-24368-SERV"
+    ],
+    "code_cases": [
+     "14-10834-MPM"
+    ],
+    "str": []
+   },
+   "accepted_extras": [
+    "15-31576-DEMO",
+    "21-10716-RNVN",
+    "24-14084-SERV",
+    "24-17036-PLMB",
+    "25-24346-SERV",
+    "CEHB-11-5064",
+    "HCES-11-04504",
+    "HCES-11-04576"
+   ],
+   "doubtful_extras": [],
+   "known_misses": {}
+  },
+  {
+   "address": "4827 Saint Charles Ave",
+   "neighborhood": "UPTOWN",
+   "source": "blds",
+   "truth_geopins": [
+    41049401
+   ],
+   "expected": {
+    "permits": [
+     "22-26823-HDLC",
+     "22-26823-RNVN",
+     "23-12845-RNVN",
+     "26-30221-HDLC"
+    ],
+    "code_cases": [],
+    "str": []
+   },
+   "accepted_extras": [],
+   "doubtful_extras": [],
+   "known_misses": {}
+  },
+  {
+   "address": "27 McAlister Dr",
+   "neighborhood": "AUDUBON",
+   "source": "blds",
+   "truth_geopins": [
+    41222765
+   ],
+   "expected": {
+    "permits": [
+     "20-20993-RNVS",
+     "23-08999-DEMO",
+     "23-09273-DEMO",
+     "23-15933-RNVN",
+     "23-26918-NEWC",
+     "24-00142-HVAC",
+     "24-00233-FGAS",
+     "24-00821-PLMB",
+     "24-00844-HVAC",
+     "24-00981-FGAS",
+     "24-01167-SERV",
+     "24-16053-SERV",
+     "24-19349-MOVG",
+     "24-26783-RSTC",
+     "26-11598-RNVN",
+     "26-16882-RNVN",
+     "26-21762-SERV"
+    ],
+    "code_cases": [],
+    "str": []
+   },
+   "accepted_extras": [
+    "21-25063-EVCH",
+    "21-26572-FGAS",
+    "21-26577-FGAS",
+    "21-26591-HVAC",
+    "21-27974-ECOA",
+    "21-28656-FGAS",
+    "21-29774-ACCS",
+    "21-31675-HVAC",
+    "21-32026-NEWC",
+    "21-32876-RNVN",
+    "21-33103-RCZD",
+    "22-00894-HDLC",
+    "22-00894-RNVS",
+    "22-01545-NEWC",
+    "22-05635-SERV",
+    "22-06270-MOVG",
+    "22-07657-HVAC",
+    "22-07659-FGAS",
+    "22-09235-ERPR",
+    "22-10901-FGAS",
+    "22-11091-EGEN",
+    "22-17849-DEMI",
+    "22-17852-RNVS",
+    "22-18079-NEWC",
+    "22-18469-FGAS",
+    "22-19264-ACCS",
+    "22-20619-RNVS",
+    "22-20630-RNVS",
+    "22-20644-RNVS",
+    "22-21734-MOVG",
+    "22-22403-MOVG",
+    "22-23677-RNVS",
+    "22-29055-LOOP",
+    "22-29064-ERPR",
+    "22-29552-SMCL",
+    "22-31424-SERV",
+    "23-04515-DEMI",
+    "23-04704-RNVN",
+    "23-06058-NEWC",
+    "23-06294-HVAC",
+    "23-06324-RNVN",
+    "23-08564-FGAS",
+    "23-08838-DEMO",
+    "23-09011-DEMO",
+    "23-09133-RNVN",
+    "23-09156-DEMO",
+    "23-10417-ACCS",
+    "23-11399-RCZD",
+    "23-11418-RNVN",
+    "23-11711-ERPR",
+    "23-13010-LOOP",
+    "23-14556-RNVN",
+    "23-14781-HVAC",
+    "23-14924-RNVN",
+    "23-15942-RNVN",
+    "23-17565-NEWC",
+    "23-17614-NEWC",
+    "23-19179-FGAS",
+    "23-21188-HVAC",
+    "23-25799-FGAS",
+    "23-25810-HVAC",
+    "23-27569-ERPR",
+    "23-28803-ACCS",
+    "23-29670-MOVG",
+    "23-34009-ERPR",
+    "23-34014-DEMI",
+    "23-34315-RNVN",
+    "23-34849-PLMB",
+    "24-00003-PLMB",
+    "24-00412-HVAC",
+    "24-00841-PLMB",
+    "24-00848-HVAC",
+    "24-00900-FGAS",
+    "24-01171-SERV",
+    "24-01502-RNVN",
+    "24-02037-HDLC",
+    "24-02037-RNVN",
+    "24-03297-HDLC",
+    "24-03297-RNVN",
+    "24-04258-RCZD",
+    "24-09903-SERV",
+    "24-10766-ERPR",
+    "24-10775-PLMB",
+    "24-11846-HVAC",
+    "24-13042-PLMB",
+    "24-16061-SERV",
+    "24-16200-RSTC",
+    "24-16368-RSTC",
+    "24-16369-RSTC",
+    "24-17256-NEWC",
+    "24-18897-RNVN",
+    "24-22438-NEWC",
+    "24-23986-RNVN",
+    "24-26671-ERPR",
+    "24-27586-RSTC",
+    "24-27689-PLMB",
+    "24-27691-HVAC",
+    "24-27693-FGAS",
+    "24-28342-SERV",
+    "24-28485-RNVN",
+    "24-29373-ACCS",
+    "24-29377-PLMB",
+    "24-29883-PLMB",
+    "24-31009-RNVN",
+    "24-32167-RNVN",
+    "24-33635-HOOD",
+    "24-36757-RSTC",
+    "25-02853-NEWC",
+    "25-07622-ERPR",
+    "25-10200-SPMA",
+    "25-12233-SPMA",
+    "25-15226-RNVN",
+    "25-17923-RNVN",
+    "25-20245-ERPR",
+    "25-20754-HVAC",
+    "25-20767-PLMB",
+    "25-22077-ECOA",
+    "25-22092-SERV",
+    "25-23049-SPMA",
+    "25-23444-RCZD",
+    "25-23662-ERPR",
+    "25-24149-SPMA",
+    "25-25829-HVAC",
+    "25-25847-FGAS",
+    "25-26049-HVAC",
+    "25-27322-SERV",
+    "25-28737-SATT",
+    "25-30189-SERV",
+    "25-31617-RNVN",
+    "25-32382-RNVN",
+    "25-33537-SERV",
+    "25-34546-SERV",
+    "25-35267-RNVN",
+    "25-35350-PLMB",
+    "25-35853-RNVN",
+    "25-36931-SERV",
+    "25-37540-RNVN",
+    "25-38660-HVAC",
+    "26-00204-SLBN",
+    "26-03070-HVAC",
+    "26-03095-RNVS",
+    "26-06394-SERV",
+    "26-08758-RNVN",
+    "26-09949-SPMA",
+    "26-12521-SERV",
+    "26-16484-PLMB",
+    "26-16590-HVAC",
+    "26-16592-FGAS",
+    "26-16898-SERV",
+    "26-18300-RNVN",
+    "26-22294-HVAC",
+    "26-22454-RNVN",
+    "26-23591-SERV",
+    "ENVHADJ-20005908F",
+    "ENVHADJ-200699F",
+    "ENVHADJ-931407HP",
+    "ENVHADJ-98478SZ"
+   ],
+   "doubtful_extras": [
+    "21-26513-SPMA",
+    "21-31634-SPMA",
+    "22-25881-SPMA",
+    "22-26287-SPMA",
+    "22-27348-SPMA",
+    "22-28291-SPMA",
+    "22-28320-SPMA",
+    "22-28330-SPMA",
+    "22-28338-SPMA",
+    "22-28343-SPMA",
+    "22-28344-SPMA",
+    "22-29211-SPMA",
+    "22-34306-SPMA",
+    "22-34463-SPMA",
+    "22-35721-SPMA",
+    "23-10267-SPMA",
+    "23-13372-SPMA",
+    "23-21718-SPMA",
+    "23-21763-SPMA",
+    "23-21846-SPMA",
+    "23-21867-SPMA",
+    "23-21896-SPMA",
+    "23-21912-SPMA",
+    "23-21914-SPMA",
+    "23-32564-SPMA",
+    "23-32743-SPMA",
+    "24-11105-SPMA",
+    "24-13123-SPMA",
+    "24-13712-SPMA",
+    "24-25572-SPMA",
+    "24-25716-SPMA"
+   ],
+   "known_misses": {
+    "20-20993-RNVS": "M3"
+   }
+  },
+  {
+   "address": "5580 Woodlawn Pl",
+   "neighborhood": "NAVARRE",
+   "source": "blds",
+   "truth_geopins": [
+    41014613
+   ],
+   "expected": {
+    "permits": [
+     "23-14737-SERV",
+     "25-03244-POOL",
+     "25-20700-ERPR"
+    ],
+    "code_cases": [],
+    "str": []
+   },
+   "accepted_extras": [],
+   "doubtful_extras": [],
+   "known_misses": {}
+  },
+  {
+   "address": "2137 S Carrollton Ave, 8030 Sycamore St, 8034 Sycamore St",
+   "neighborhood": "MARLYVILLE - FONTAINEBLEAU",
+   "source": "blds",
+   "truth_geopins": [
+    41136530
+   ],
+   "expected": {
+    "permits": [
+     "17-37474-HDLC",
+     "17-37474-RNVN",
+     "25-02650-HDLC",
+     "25-02650-RNVN",
+     "25-19118-ACCS",
+     "25-19118-HDLC"
+    ],
+    "code_cases": [
+     "16-10555-MPM",
+     "18-02723-MPM",
+     "ENVHADJ-20031430SN",
+     "ENVHADJ-20042917SN"
+    ],
+    "str": []
+   },
+   "accepted_extras": [
+    "24-13570-MPM",
+    "25-19078-FGAS",
+    "ENVHADJ-20004846SN",
+    "ENVHADJ-91510"
+   ],
+   "doubtful_extras": [
+    "20-28878-SMCL"
+   ],
+   "known_misses": {}
+  },
+  {
+   "address": "1305 Saint Roch Ave Apt B",
+   "neighborhood": "ST. ROCH",
+   "source": "blds",
+   "truth_geopins": [
+    41068928
+   ],
+   "expected": {
+    "permits": [
+     "15-09035-MECH",
+     "23-14740-DEMI",
+     "23-24782-RNVN",
+     "23-29521-ECOA",
+     "24-01232-PLMB",
+     "24-03225-SERV",
+     "24-03247-SERV",
+     "24-04891-HVAC",
+     "24-18960-FGAS"
+    ],
+    "code_cases": [
+     "13-04712-PNBL"
+    ],
+    "str": [
+     "5P1XVU",
+     "6EAAB6",
+     "VASL44",
+     "Y1X2M5"
+    ]
+   },
+   "accepted_extras": [
+    "24-04896-HVAC",
+    "24-05056-ERPR",
+    "24-18961-FGAS",
+    "4J545E",
+    "CLJU2K"
+   ],
+   "doubtful_extras": [],
+   "known_misses": {}
+  },
+  {
+   "address": "3777 Preston Pl",
+   "neighborhood": "NEW AURORA - ENGLISH TURN",
+   "source": "blds",
+   "truth_geopins": [
+    41138064
+   ],
+   "expected": {
+    "permits": [
+     "23-15240-RNVN"
+    ],
+    "code_cases": [
+     "16-01099-MPM"
+    ],
+    "str": []
+   },
+   "accepted_extras": [],
+   "doubtful_extras": [],
+   "known_misses": {}
+  },
+  {
+   "address": "5701 Argonne Blvd",
+   "neighborhood": "LAKEVIEW",
+   "source": "blds",
+   "truth_geopins": [
+    41014332
+   ],
+   "expected": {
+    "permits": [
+     "23-30669-NEWC",
+     "24-14204-RDRV",
+     "24-26433-PLMB",
+     "25-09137-SERV",
+     "25-09937-RSTC",
+     "25-09978-PLMB",
+     "25-12149-RSWR",
+     "25-13349-HVAC",
+     "25-39089-FGAS"
+    ],
+    "code_cases": [
+     "14-07749-MPM"
+    ],
+    "str": []
+   },
+   "accepted_extras": [],
+   "doubtful_extras": [],
+   "known_misses": {}
+  },
+  {
+   "address": "4650 Lurline St",
+   "neighborhood": "READ BLVD WEST",
+   "source": "blds",
+   "truth_geopins": [
+    41101160
+   ],
+   "expected": {
+    "permits": [
+     "13-14055-EVAC",
+     "13-14127-MECH",
+     "24-08915-HVAC",
+     "24-23953-RNVN",
+     "24-32323-ERPR",
+     "24-36121-SOLR"
+    ],
+    "code_cases": [],
+    "str": []
+   },
+   "accepted_extras": [],
+   "doubtful_extras": [],
+   "known_misses": {}
+  },
+  {
+   "address": "3040 Hudson St",
+   "neighborhood": "TALL TIMBERS - BRECHTEL",
+   "source": "rcm3",
+   "truth_geopins": [
+    41007300,
+    41133559
+   ],
+   "expected": {
+    "permits": [
+     "24-21540-POOL",
+     "24-23995-ERPR",
+     "24-33024-FGAS",
+     "25-05444-RSTC",
+     "26-16748-FGAS"
+    ],
+    "code_cases": [
+     "20-21497-MPM"
+    ],
+    "str": []
+   },
+   "accepted_extras": [],
+   "doubtful_extras": [],
+   "known_misses": {}
+  },
+  {
+   "address": "6975 Marshal Foch St",
+   "neighborhood": "LAKEVIEW",
+   "source": "rcm3",
+   "truth_geopins": [
+    41013960
+   ],
+   "expected": {
+    "permits": [
+     "23-27545-NEWC",
+     "23-30201-RDRV",
+     "24-05719-SERV",
+     "24-05720-LOOP",
+     "24-06573-PLMB",
+     "24-15511-HVAC",
+     "24-36568-FGAS",
+     "24-37118-FGAS",
+     "25-11223-ACCS",
+     "25-15212-EGEN",
+     "25-15213-SERV",
+     "25-17606-FGAS"
+    ],
+    "code_cases": [],
+    "str": []
+   },
+   "accepted_extras": [],
+   "doubtful_extras": [],
+   "known_misses": {}
+  },
+  {
+   "address": "1808 Prytania St",
+   "neighborhood": "LOWER GARDEN DISTRICT",
+   "source": "rcm3",
+   "truth_geopins": [
+    41036967
+   ],
+   "expected": {
+    "permits": [
+     "19-21402-RSTC",
+     "19-24996-HDLC",
+     "19-24996-RNVN",
+     "22-32640-HDLC",
+     "22-32640-RNVN",
+     "24-03994-HDLC",
+     "24-26730-HDLC",
+     "24-26730-RNVS",
+     "24-34457-RCZD",
+     "24-38528-LOOP",
+     "25-26798-ECOA",
+     "26-21660-RSTC",
+     "26-25521-PLMB",
+     "26-30369-SERV",
+     "26-30381-SERV",
+     "26-30384-SERV",
+     "26-30389-SERV",
+     "26-30393-SERV",
+     "26-30394-SERV",
+     "26-30397-SERV",
+     "26-30398-SERV",
+     "26-30400-SERV"
+    ],
+    "code_cases": [
+     "14-05538-MPM",
+     "18-03276-MPM"
+    ],
+    "str": []
+   },
+   "accepted_extras": [
+    "24-03994-RNVS"
+   ],
+   "doubtful_extras": [],
+   "known_misses": {
+    "26-21660-RSTC": "M1"
+   }
+  },
+  {
+   "address": "2913 Amelia St",
+   "neighborhood": "MILAN",
+   "source": "rcm3",
+   "truth_geopins": [
+    41052886
+   ],
+   "expected": {
+    "permits": [
+     "21-15827-HDLC",
+     "21-15827-RNVS",
+     "22-15291-LOOP",
+     "22-15292-SERV",
+     "22-15399-HDLC",
+     "22-15796-FGAS",
+     "22-23354-NEWC",
+     "22-31103-SERV",
+     "22-37874-HVAC",
+     "23-02594-FGAS"
+    ],
+    "code_cases": [
+     "16-04909-MPM"
+    ],
+    "str": []
+   },
+   "accepted_extras": [
+    "22-15293-SERV",
+    "22-15805-FGAS",
+    "22-34164-SERV",
+    "22-37875-HVAC",
+    "23-02595-FGAS",
+    "24-00736-MPM"
+   ],
+   "doubtful_extras": [],
+   "known_misses": {}
+  },
+  {
+   "address": "15 Hawk St",
+   "neighborhood": "LAKESHORE - LAKE VISTA",
+   "source": "rcm3",
+   "truth_geopins": [
+    41011285
+   ],
+   "expected": {
+    "permits": [
+     "23-17964-HVAC",
+     "25-15130-ACCS",
+     "25-19576-FGAS",
+     "25-19578-EGEN"
+    ],
+    "code_cases": [],
+    "str": []
+   },
+   "accepted_extras": [],
+   "doubtful_extras": [],
+   "known_misses": {}
+  },
+  {
+   "address": "3116 Jackson Ave",
+   "neighborhood": "CENTRAL CITY",
+   "source": "rcm3",
+   "truth_geopins": [
+    41040600
+   ],
+   "expected": {
+    "permits": [
+     "21-31286-NEWC",
+     "22-06972-LOOP",
+     "22-17754-SERV",
+     "22-19324-HVAC",
+     "23-04840-RDRV"
+    ],
+    "code_cases": [
+     "14-00597-MPM",
+     "17-09988-MPM",
+     "19-01687-MPM",
+     "CEHB-11-2438",
+     "ENVHADJ-922088",
+     "HCES-11-03670"
+    ],
+    "str": []
+   },
+   "accepted_extras": [],
+   "doubtful_extras": [],
+   "known_misses": {}
+  },
+  {
+   "address": "2226 Barracks St",
+   "neighborhood": "TREME - LAFITTE",
+   "source": "code",
+   "truth_geopins": [
+    41017002
+   ],
+   "expected": {
+    "permits": [
+     "18-35691-FGAS"
+    ],
+    "code_cases": [
+     "26-01669-MPM",
+     "ENVHADJ-20024392SN",
+     "ENVHADJ-20051323EH",
+     "ENVHADJ-964072"
+    ],
+    "str": []
+   },
+   "accepted_extras": [
+    "18-33104-FGAS"
+   ],
+   "doubtful_extras": [],
+   "known_misses": {}
+  },
+  {
+   "address": "1921 Jourdan Ave",
+   "neighborhood": "LOWER NINTH WARD",
+   "source": "code",
+   "truth_geopins": [
+    41122922
+   ],
+   "expected": {
+    "permits": [],
+    "code_cases": [
+     "14-01241-MPM",
+     "21-05733-MPM"
+    ],
+    "str": []
+   },
+   "accepted_extras": [],
+   "doubtful_extras": [],
+   "known_misses": {}
+  },
+  {
+   "address": "3831 Piedmont Dr",
+   "neighborhood": "GENTILLY TERRACE",
+   "source": "code",
+   "truth_geopins": [
+    41072423
+   ],
+   "expected": {
+    "permits": [],
+    "code_cases": [
+     "16-01985-MPM",
+     "24-11095-MPM"
+    ],
+    "str": []
+   },
+   "accepted_extras": [],
+   "doubtful_extras": [],
+   "known_misses": {}
+  },
+  {
+   "address": "1810 Louisa St",
+   "neighborhood": "ST. CLAUDE",
+   "source": "code",
+   "truth_geopins": [
+    41070775
+   ],
+   "expected": {
+    "permits": [],
+    "code_cases": [
+     "13-03916-PNBL",
+     "17-11351-MPM",
+     "23-02040-MPM",
+     "23-02057-MPM"
+    ],
+    "str": []
+   },
+   "accepted_extras": [
+    "23-02045-MPM"
+   ],
+   "doubtful_extras": [],
+   "known_misses": {}
+  },
+  {
+   "address": "3515- 3517 Second St",
+   "neighborhood": "CENTRAL CITY",
+   "source": "code",
+   "truth_geopins": [
+    41039979
+   ],
+   "expected": {
+    "permits": [
+     "22-25434-RNVS"
+    ],
+    "code_cases": [
+     "24-01557-MPM",
+     "24-14018-MPM",
+     "26-00427-MPM"
+    ],
+    "str": []
+   },
+   "accepted_extras": [],
+   "doubtful_extras": [],
+   "known_misses": {}
+  },
+  {
+   "address": "915 Lamanche St",
+   "neighborhood": "HOLY CROSS",
+   "source": "code",
+   "truth_geopins": [
+    41125936
+   ],
+   "expected": {
+    "permits": [],
+    "code_cases": [
+     "18-04889-MPM",
+     "21-05365-MPM",
+     "25-07129-MPM"
+    ],
+    "str": []
+   },
+   "accepted_extras": [],
+   "doubtful_extras": [],
+   "known_misses": {}
+  },
+  {
+   "address": "803 Seventh St",
+   "neighborhood": "IRISH CHANNEL",
+   "source": "code",
+   "truth_geopins": [
+    41042111
+   ],
+   "expected": {
+    "permits": [
+     "25-33418-FGAS",
+     "26-04333-DEMI",
+     "26-06493-HDLC",
+     "26-06493-RNVS",
+     "26-06976-ECOA",
+     "26-14220-HDLC",
+     "26-14220-RNVN",
+     "26-16326-RNVN",
+     "26-18981-HDLC",
+     "26-18981-RNVN",
+     "26-23029-HDLC",
+     "26-23029-ROOF",
+     "26-25879-HDLC",
+     "26-25879-RENO",
+     "26-26353-HDLC",
+     "26-28555-HDLC"
+    ],
+    "code_cases": [
+     "23-01335-MPM",
+     "24-02943-MPM",
+     "ENVHADJ-20033213HD"
+    ],
+    "str": []
+   },
+   "accepted_extras": [],
+   "doubtful_extras": [],
+   "known_misses": {}
+  },
+  {
+   "address": "1053 Constance St",
+   "neighborhood": "LOWER GARDEN DISTRICT",
+   "source": "str",
+   "truth_geopins": [
+    41181650
+   ],
+   "expected": {
+    "permits": [],
+    "code_cases": [],
+    "str": [
+     "3YYYD1",
+     "5E4ULC",
+     "5XSAJA",
+     "67PFCJ",
+     "72CHGD",
+     "7WJUCL",
+     "87GXFM",
+     "A6CY12",
+     "AUMA2E",
+     "BLFPGS",
+     "BQPXEB",
+     "D27YDU",
+     "DKV11X",
+     "DXNY1N",
+     "E4EN8N",
+     "EK5YQQ",
+     "EQ8J6V",
+     "EYH38D",
+     "FD67RN",
+     "FDZF2N",
+     "FUC1MY",
+     "GEPPEM",
+     "HE1467",
+     "HXXJUK",
+     "JX15Q8",
+     "KCYG5F",
+     "KY3CYM",
+     "L6ABMN",
+     "LGV8YM",
+     "LN4UB2",
+     "LR5YZK",
+     "LVDH1V",
+     "MB1V6V",
+     "NQU8ZT",
+     "QHB5YB",
+     "R74HB7",
+     "RJDUDK",
+     "TDP3C7",
+     "TTYBS7",
+     "TZQUQV",
+     "USTZLY",
+     "UTDHBC",
+     "X1FMF1",
+     "X1SGBN",
+     "YDE8EW",
+     "YE1TRG",
+     "YGNEWQ",
+     "Z1B5A7"
+    ]
+   },
+   "accepted_extras": [
+    "19-11185-RCZD",
+    "1YKGMR",
+    "21-16014-ERPR",
+    "2PNPDN",
+    "4XTRWY",
+    "56FJS2",
+    "5N3K25",
+    "5YPNM4",
+    "6H1NUJ",
+    "745REB",
+    "7R3RA8",
+    "7VU1ZX",
+    "8773YY",
+    "8UD31Z",
+    "8UUWS1",
+    "ANFQYW",
+    "ANMKS5",
+    "ARL15H",
+    "AYTH7F",
+    "BRZ6BJ",
+    "BX3QLP",
+    "D26AZJ",
+    "DQKF82",
+    "E834U1",
+    "E8A1UP",
+    "F24UT8",
+    "HTY81N",
+    "JL6B3J",
+    "MLS1H1",
+    "MMGQUU",
+    "MPB1AS",
+    "MYZQXB",
+    "NM6ZHE",
+    "NUPQMN",
+    "NVDNF1",
+    "NVNPDY",
+    "QRSYEW",
+    "TZC62Q",
+    "UVWLXW",
+    "V3BCBS",
+    "VT4GQ7",
+    "WBU11W",
+    "WCGMDT",
+    "Y7L546",
+    "YWH6QR",
+    "Z1NQCU",
+    "ZKPJJU",
+    "ZWNXRU"
+   ],
+   "doubtful_extras": [],
+   "known_misses": {
+    "3YYYD1": "M5",
+    "5E4ULC": "M5",
+    "5XSAJA": "M5",
+    "67PFCJ": "M5",
+    "72CHGD": "M5",
+    "7WJUCL": "M5",
+    "87GXFM": "M5",
+    "A6CY12": "M5",
+    "AUMA2E": "M5",
+    "BLFPGS": "M5",
+    "BQPXEB": "M5",
+    "D27YDU": "M5",
+    "DKV11X": "M5",
+    "DXNY1N": "M5",
+    "E4EN8N": "M5",
+    "EK5YQQ": "M5",
+    "EQ8J6V": "M5",
+    "EYH38D": "M5",
+    "FD67RN": "M5",
+    "FDZF2N": "M5",
+    "FUC1MY": "M5",
+    "GEPPEM": "M5",
+    "HE1467": "M5",
+    "HXXJUK": "M5",
+    "KCYG5F": "M5",
+    "KY3CYM": "M5",
+    "LGV8YM": "M5",
+    "LN4UB2": "M5",
+    "LR5YZK": "M5",
+    "LVDH1V": "M5",
+    "MB1V6V": "M5",
+    "NQU8ZT": "M5",
+    "QHB5YB": "M5",
+    "R74HB7": "M5",
+    "RJDUDK": "M5",
+    "TDP3C7": "M5",
+    "TTYBS7": "M5",
+    "USTZLY": "M5",
+    "UTDHBC": "M5",
+    "X1FMF1": "M5",
+    "X1SGBN": "M5",
+    "YDE8EW": "M5",
+    "YE1TRG": "M5",
+    "YGNEWQ": "M5"
+   }
+  },
+  {
+   "address": "2635 Wisteria St",
+   "neighborhood": "GENTILLY TERRACE",
+   "source": "str",
+   "truth_geopins": [
+    41192265
+   ],
+   "expected": {
+    "permits": [],
+    "code_cases": [],
+    "str": [
+     "C4M27W"
+    ]
+   },
+   "accepted_extras": [
+    "14-28064-MECH",
+    "14-29801-MECH",
+    "25-14983-ROOF",
+    "3C3U6W",
+    "4GSWDQ",
+    "JBFVMS",
+    "Q5NJWE"
+   ],
+   "doubtful_extras": [],
+   "known_misses": {}
+  },
+  {
+   "address": "1930 Robert St",
+   "neighborhood": "UPTOWN",
+   "source": "str",
+   "truth_geopins": [
+    41056996
+   ],
+   "expected": {
+    "permits": [
+     "22-33146-RNVN",
+     "22-33307-SOLR"
+    ],
+    "code_cases": [],
+    "str": [
+     "15WN14",
+     "FY1QGS",
+     "KPANX1",
+     "SYRY7Y",
+     "UDJXZP",
+     "X2KD8N",
+     "Z8DB1U",
+     "ZL42LZ"
+    ]
+   },
+   "accepted_extras": [],
+   "doubtful_extras": [],
+   "known_misses": {}
+  },
+  {
+   "address": "3026 Napoleon Ave",
+   "neighborhood": "BROADMOOR",
+   "source": "str",
+   "truth_geopins": [
+    41054257
+   ],
+   "expected": {
+    "permits": [
+     "18-32525-RNVN"
+    ],
+    "code_cases": [],
+    "str": [
+     "1Y7VJC",
+     "73B4P7",
+     "EBE1TG",
+     "L27S5F",
+     "MMT8ZH"
+    ]
+   },
+   "accepted_extras": [
+    "17-07465-RNVN",
+    "17-12564-SERV",
+    "17-25958-FGAS",
+    "18-32570-ECOA",
+    "18-33208-SERV",
+    "1SCNQY",
+    "7E5GNB",
+    "ADMVW6",
+    "H43M2F",
+    "HJX72U",
+    "LQNQYD",
+    "RY4A2N",
+    "UXZMNY"
+   ],
+   "doubtful_extras": [],
+   "known_misses": {}
+  },
+  {
+   "address": "1632 Audubon St",
+   "neighborhood": "AUDUBON",
+   "source": "str",
+   "truth_geopins": [
+    41043928
+   ],
+   "expected": {
+    "permits": [
+     "24-24783-RNVN",
+     "24-24785-RNVS",
+     "24-27205-ECOA"
+    ],
+    "code_cases": [],
+    "str": [
+     "6PH14P",
+     "MSY4H5",
+     "YA487Z",
+     "YQXNEK",
+     "Z82JSE"
+    ]
+   },
+   "accepted_extras": [
+    "1E1JYQ",
+    "1VY4V4",
+    "L3EVSA",
+    "LHPH18",
+    "P4VAV7",
+    "WYANQD"
+   ],
+   "doubtful_extras": [],
+   "known_misses": {}
+  },
+  {
+   "address": "7022 Colapissa St",
+   "neighborhood": "MARLYVILLE - FONTAINEBLEAU",
+   "source": "str",
+   "truth_geopins": [
+    41059515
+   ],
+   "expected": {
+    "permits": [
+     "21-01281-RNVN",
+     "21-05759-ERPR",
+     "21-19528-HVAC",
+     "21-19930-FGAS",
+     "21-19931-FGAS",
+     "22-17363-ERPR"
+    ],
+    "code_cases": [],
+    "str": [
+     "G34MUY",
+     "TNYMJC",
+     "Z1SJ6F"
+    ]
+   },
+   "accepted_extras": [
+    "21-06350-ERPR",
+    "21-19547-HVAC",
+    "21-19932-FGAS",
+    "22-17364-ERPR"
+   ],
+   "doubtful_extras": [],
+   "known_misses": {}
+  },
+  {
+   "address": "1839 Louisa St",
+   "neighborhood": "ST. CLAUDE",
+   "source": "str",
+   "truth_geopins": [
+    41067236
+   ],
+   "expected": {
+    "permits": [
+     "20-36701-RNVN",
+     "21-05328-LOOP",
+     "21-09844-HVAC",
+     "21-10812-SERV",
+     "21-10813-LOOP",
+     "21-16157-FGAS",
+     "22-15936-ECOA",
+     "26-18515-EVAC"
+    ],
+    "code_cases": [],
+    "str": [
+     "1FCM1H",
+     "MXNJLL",
+     "ZCE2XR"
+    ]
+   },
+   "accepted_extras": [],
+   "doubtful_extras": [],
+   "known_misses": {
+    "22-15936-ECOA": "M1"
+   }
+  },
+  {
+   "address": "724 Hagan Street",
+   "neighborhood": "BAYOU ST. JOHN",
+   "source": "none",
+   "truth_geopins": [
+    41021419
+   ],
+   "expected": {
+    "permits": [
+     "12BLD-01952",
+     "12ELC-06019",
+     "12MCH-04195",
+     "13-09473-MECH",
+     "13-10008-SERV"
+    ],
+    "code_cases": [
+     "12-10867-PNBL",
+     "HCEC-09-00082",
+     "HCEVU-09-00130"
+    ],
+    "str": []
+   },
+   "accepted_extras": [],
+   "doubtful_extras": [],
+   "known_misses": {}
+  },
+  {
+   "address": "812 Peniston Street",
+   "neighborhood": "EAST RIVERSIDE",
+   "source": "none",
+   "truth_geopins": [
+    41046395
+   ],
+   "expected": {
+    "permits": [
+     "19-34967-RNVS",
+     "19-35071-DEMO",
+     "20-00897-RNVS",
+     "20-04410-SERV",
+     "20-23709-SERV",
+     "20-24443-HVAC",
+     "22-11586-HVAC"
+    ],
+    "code_cases": [],
+    "str": []
+   },
+   "accepted_extras": [],
+   "doubtful_extras": [],
+   "known_misses": {}
+  },
+  {
+   "address": "435 Wiltz Lane",
+   "neighborhood": "U.S. NAVAL BASE",
+   "source": "none",
+   "truth_geopins": [
+    41180318
+   ],
+   "expected": {
+    "permits": [],
+    "code_cases": [
+     "12-09392-PNBL",
+     "13-09185-MPM",
+     "18-10427-MPM",
+     "19-04559-MPM",
+     "ENVHADJ-20002164EH",
+     "ENVHADJ-20012276EH",
+     "ENVHADJ-992690HB"
+    ],
+    "str": []
+   },
+   "accepted_extras": [
+    "12-09393-PNBL"
+   ],
+   "doubtful_extras": [],
+   "known_misses": {
+    "12-09392-PNBL": "M4"
+   }
+  },
+  {
+   "address": "202 Westpark Court",
+   "neighborhood": "BEHRMAN",
+   "source": "none",
+   "truth_geopins": [
+    41138918
+   ],
+   "expected": {
+    "permits": [
+     "20-41425-RSTC"
+    ],
+    "code_cases": [
+     "26-10617-MPM"
+    ],
+    "str": []
+   },
+   "accepted_extras": [],
+   "doubtful_extras": [],
+   "known_misses": {}
+  },
+  {
+   "address": "734 Ninth Street",
+   "neighborhood": "IRISH CHANNEL",
+   "source": "none",
+   "truth_geopins": [
+    52001039
+   ],
+   "expected": {
+    "permits": [
+     "BZA022-25"
+    ],
+    "code_cases": [],
+    "str": []
+   },
+   "accepted_extras": [],
+   "doubtful_extras": [],
+   "known_misses": {
+    "BZA022-25": "M1"
+   }
+  },
+  {
+   "address": "511 Constantinople Street",
+   "neighborhood": "EAST RIVERSIDE",
+   "source": "none",
+   "truth_geopins": [
+    41048121
+   ],
+   "expected": {
+    "permits": [],
+    "code_cases": [
+     "14-00638-MPM"
+    ],
+    "str": []
+   },
+   "accepted_extras": [],
+   "doubtful_extras": [],
+   "known_misses": {}
+  },
+  {
+   "address": "319 Virginia Street",
+   "neighborhood": "NAVARRE",
+   "source": "none",
+   "truth_geopins": [
+    41014954
+   ],
+   "expected": {
+    "permits": [],
+    "code_cases": [],
+    "str": []
+   },
+   "accepted_extras": [
+    "21-16455-FGAS",
+    "22-23840-SERV"
+   ],
+   "doubtful_extras": [],
+   "known_misses": {}
+  },
+  {
+   "address": "711 Bolivar Street",
+   "neighborhood": "TULANE - GRAVIER",
+   "source": "none",
+   "truth_geopins": [
+    41031469
+   ],
+   "expected": {
+    "permits": [],
+    "code_cases": [],
+    "str": []
+   },
+   "accepted_extras": [],
+   "doubtful_extras": [],
+   "known_misses": {}
+  },
+  {
+   "address": "601 Aurora Oaks Drive",
+   "neighborhood": "OLD AURORA",
+   "source": "none",
+   "truth_geopins": [
+    41138092,
+    41138147
+   ],
+   "expected": {
+    "permits": [],
+    "code_cases": [],
+    "str": []
+   },
+   "accepted_extras": [],
+   "doubtful_extras": [],
+   "known_misses": {}
+  },
+  {
+   "address": "525 Guadal Canal Street",
+   "neighborhood": "U.S. NAVAL BASE",
+   "source": "none",
+   "truth_geopins": [
+    41203485
+   ],
+   "expected": {
+    "permits": [],
+    "code_cases": [],
+    "str": []
+   },
+   "accepted_extras": [],
+   "doubtful_extras": [],
+   "known_misses": {}
+  }
+ ]
+}

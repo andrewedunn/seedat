@@ -123,21 +123,27 @@ export const TOOLS: Tool[] = [
         kinds: { type: "array", items: { type: "string", enum: ["permit", "code_case", "onestop", "str"] }, description: "Default: all" },
         since: { type: "string", description: "Only records dated on or after this date (YYYY-MM-DD)" },
         include_timeline: { type: "boolean", description: "Include each permit's and case's event timeline (default true)" },
-        limit: { type: "integer", description: "Max records per kind (default 50, max 200)" },
+        limit: { type: "integer", description: "Max records per kind (default 50, max 1000)" },
+        offset: { type: "integer", description: "Skip this many records per kind (for paging; see totals and next_offset)" },
       },
     },
     async run(env, a) {
       const geopin = await parcelFrom(env, a);
-      const p = await loadProperty(env.DB, geopin);
+      const limit = clampInt(num(a, "limit"), 1, 1000, 50);
+      const offset = clampInt(num(a, "offset"), 0, 1_000_000, 0);
+      const p = await loadProperty(env.DB, geopin, undefined, { limit, offset });
       if (!p) throw new ToolError(`No parcel ${geopin}.`);
       const since = isoDate(a, "since") ?? "";
       const kinds = new Set(Array.isArray(a.kinds) && a.kinds.length ? (a.kinds as string[]) : ["permit", "code_case", "onestop", "str"]);
-      const limit = clampInt(num(a, "limit"), 1, 200, 50);
       const timeline = bool(a, "include_timeline") ?? true;
       const after = (d: string | null) => !since || (d ?? "") >= since;
       const permitNums = new Set(p.permits.map((x) => x.permit_num));
+      const more = offset + limit < Math.max(p.totals.permits, p.totals.code_cases, p.totals.strs);
       return {
         address: p.addresses.find((x) => !x.unit_id)?.full_address ?? p.parcel.situs, geopin, page_url: pageUrl(env, geopin),
+        totals: { permits: p.totals.permits, code_cases: p.totals.code_cases, str_licenses: p.totals.strs },
+        offset, next_offset: more ? offset + limit : null,
+        note: since ? "The since filter applies within this page of results; page through with offset for older records." : undefined,
         permits: kinds.has("permit") ? p.permits.filter((x) => after(x.applied_date ?? x.issued_date)).slice(0, limit)
           .map(({ events, match_score: _s, ...x }) => ({ ...x, is_open: isPermitOpen(x), ...(timeline ? { timeline: events } : {}) })) : undefined,
         code_cases: kinds.has("code_case") ? p.codeCases.filter((x) => after(x.filed_date)).slice(0, limit)

@@ -51,7 +51,7 @@ export interface Property {
   block: { block_id: string | null; requests12m: { request_type: string; n: number }[]; police12m: { category: string; n: number }[] };
   freshness: Freshness[];
   /** True totals; the lists above are capped at SHOWN. */
-  totals: { permits: number; code_cases: number; code_cases_open: number; units: number };
+  totals: { permits: number; code_cases: number; code_cases_open: number; units: number; strs: number };
 }
 
 const PERMIT_COLS = `permit_num, address_raw, permit_type, permit_type_desc, work_class, description, status, status_mapped, status_date,
@@ -79,24 +79,33 @@ export function activityWindow(today: string, months: number): { since: string; 
 /** Rows shown per kind; totals come from separate counts so a capped list never reads as the total. */
 export const SHOWN = { permits: 200, codeCases: 100, onestop: 100, strs: 50, units: 60 } as const;
 
-export async function loadProperty(db: D1Database, geopin: number, today = new Date().toISOString().slice(0, 10)): Promise<Property | null> {
+/**
+ * Everything about one parcel. `page` overrides how many rows of each list to return and from where (the MCP tool
+ * pages through big parcels this way); the page itself uses the SHOWN defaults.
+ */
+export async function loadProperty(
+  db: D1Database, geopin: number, today = new Date().toISOString().slice(0, 10), page: { limit?: number; offset?: number } = {},
+): Promise<Property | null> {
+  const off = Math.max(0, Math.floor(page.offset ?? 0));
+  const lim = (dflt: number) => Math.min(Math.max(1, Math.floor(page.limit ?? dflt)), 1000);
   const { since, sinceMonth } = activityWindow(today, 12);
   const [parcel, summary, addresses, permits, codeCases, onestop, strs, freshness, totals, blockRow] = await db.batch([
     db.prepare("SELECT * FROM parcel WHERE geopin = ?").bind(geopin),
     db.prepare("SELECT * FROM parcel_summary WHERE geopin = ?").bind(geopin),
     db.prepare(`SELECT address_id, full_address, unit_id, block_id FROM address WHERE geopin = ? ORDER BY unit_id IS NOT NULL, number, unit_id LIMIT ${SHOWN.units}`).bind(geopin),
-    db.prepare(`SELECT ${PERMIT_COLS} FROM permit WHERE geopin = ? AND removed_at IS NULL ORDER BY coalesce(applied_date, issued_date) DESC LIMIT ${SHOWN.permits}`).bind(geopin),
+    db.prepare(`SELECT ${PERMIT_COLS} FROM permit WHERE (geopin = ?1 OR permit_num IN (SELECT entity_id FROM record_parcel WHERE entity = 'permit' AND geopin = ?1)) AND removed_at IS NULL ORDER BY coalesce(applied_date, issued_date) DESC LIMIT ${lim(SHOWN.permits)} OFFSET ${off}`).bind(geopin),
     db.prepare(`SELECT case_id, case_no, address_raw, stage, key_status, is_open, filed_date, status_date, next_hearing_date, prev_hearing_result, last_permit_num, match_type
-      FROM code_case WHERE geopin = ? AND removed_at IS NULL ORDER BY filed_date DESC LIMIT ${SHOWN.codeCases}`).bind(geopin),
+      FROM code_case WHERE (geopin = ?1 OR case_id IN (SELECT CAST(entity_id AS INTEGER) FROM record_parcel WHERE entity = 'code_case' AND geopin = ?1)) AND removed_at IS NULL ORDER BY filed_date DESC LIMIT ${lim(SHOWN.codeCases)} OFFSET ${off}`).bind(geopin),
     db.prepare(`SELECT onestop_id, reference_code, permit_num, record_type, description, submitted_date, current_status, detail_json, fetched_at
-      FROM onestop_record WHERE geopin = ? ORDER BY submitted_date DESC LIMIT ${SHOWN.onestop}`).bind(geopin),
+      FROM onestop_record WHERE geopin = ? ORDER BY submitted_date DESC LIMIT ${lim(SHOWN.onestop)} OFFSET ${off}`).bind(geopin),
     db.prepare(`SELECT str_id, license_number, license_type, status, is_active, applied_date, issued_date, expiration_date, operator_name, address_raw
-      FROM str_license WHERE geopin = ? AND removed_at IS NULL ORDER BY is_active DESC, coalesce(issued_date, applied_date) DESC LIMIT ${SHOWN.strs}`).bind(geopin),
+      FROM str_license WHERE (geopin = ?1 OR str_id IN (SELECT entity_id FROM record_parcel WHERE entity = 'str_license' AND geopin = ?1)) AND removed_at IS NULL ORDER BY is_active DESC, coalesce(issued_date, applied_date) DESC LIMIT ${lim(SHOWN.strs)} OFFSET ${off}`).bind(geopin),
     db.prepare("SELECT source_id, name, last_success_at, upstream_updated_at, stale_after_hours FROM source ORDER BY source_id"),
-    db.prepare(`SELECT (SELECT count(*) FROM permit WHERE geopin = ?1 AND removed_at IS NULL) permits,
-      (SELECT count(*) FROM code_case WHERE geopin = ?1 AND removed_at IS NULL) code_cases,
-      (SELECT count(*) FROM code_case WHERE geopin = ?1 AND removed_at IS NULL AND +is_open = 1) code_cases_open,
-      (SELECT count(*) FROM address WHERE geopin = ?1 AND unit_id IS NOT NULL) units`).bind(geopin),
+    db.prepare(`SELECT (SELECT count(*) FROM permit WHERE (geopin = ?1 OR permit_num IN (SELECT entity_id FROM record_parcel WHERE entity = 'permit' AND geopin = ?1)) AND removed_at IS NULL) permits,
+      (SELECT count(*) FROM code_case WHERE (geopin = ?1 OR case_id IN (SELECT CAST(entity_id AS INTEGER) FROM record_parcel WHERE entity = 'code_case' AND geopin = ?1)) AND removed_at IS NULL) code_cases,
+      (SELECT count(*) FROM code_case WHERE (geopin = ?1 OR case_id IN (SELECT CAST(entity_id AS INTEGER) FROM record_parcel WHERE entity = 'code_case' AND geopin = ?1)) AND removed_at IS NULL AND +is_open = 1) code_cases_open,
+      (SELECT count(*) FROM address WHERE geopin = ?1 AND unit_id IS NOT NULL) units,
+      (SELECT count(*) FROM str_license WHERE (geopin = ?1 OR str_id IN (SELECT entity_id FROM record_parcel WHERE entity = 'str_license' AND geopin = ?1)) AND removed_at IS NULL) strs`).bind(geopin),
     db.prepare(BLOCK_FOR_PARCEL_SQL).bind(geopin),
   ]);
   const p = parcel!.results[0] as Parcel | undefined;
@@ -109,7 +118,7 @@ export async function loadProperty(db: D1Database, geopin: number, today = new D
 
   const [permitEvents, caseEvents, requests, police] = await db.batch([
     db.prepare(`SELECT permit_num, kind, name, status, event_date, actor, detail, source_id FROM permit_event
-      WHERE permit_num IN (SELECT value FROM json_each(?)) ORDER BY permit_num, event_date, seq`).bind(jsonChunks(permitRows.map((r) => r.permit_num).slice(0, 200))[0] ?? "[]"),
+      WHERE permit_num IN (SELECT value FROM json_each(?)) ORDER BY permit_num, event_date, seq`).bind(JSON.stringify(permitRows.map((r) => r.permit_num))),
     db.prepare(`SELECT case_id, kind, event_date, type, result FROM code_event
       WHERE case_id IN (SELECT value FROM json_each(?)) ORDER BY case_id, event_date`).bind(JSON.stringify(caseRows.map((r) => r.case_id))),
     db.prepare(`SELECT request_type, count(*) n FROM service_request WHERE block_id = ? AND created_date >= ? GROUP BY 1 ORDER BY 2 DESC`).bind(blockId, since),

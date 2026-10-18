@@ -81,7 +81,23 @@ function matchSitus(p: ParsedAddress, street: string, index: AddressIndex): Matc
     : null;
 }
 
+/**
+ * Match a record. Text in parentheses is an alternate address ("153 University Pl, (153 Roosevelt Way)"): the
+ * address without it is tried first, then each alternate, without coordinates, so an alternate is placed by text alone.
+ */
 export function matchRecord(input: MatchInput, index: AddressIndex): MatchResult {
+  const alternates = input.address ? [...input.address.matchAll(/\(([^)]*\d[^)]*)\)/g)].map((m) => m[1]!.trim()) : [];
+  if (!alternates.length) return matchOnce(input, index);
+  const primary = matchOnce({ ...input, address: input.address!.replace(/\([^)]*\d[^)]*\)/g, " ").replace(/[\s,]+$/, "").trim() }, index);
+  if (primary.geopin !== null) return primary;
+  for (const alt of alternates) {
+    const m = matchOnce({ address: alt }, index);
+    if (m.geopin !== null) return m;
+  }
+  return primary;
+}
+
+function matchOnce(input: MatchInput, index: AddressIndex): MatchResult {
   // Rung 0: a GEOPIN the source already carries (or a permit pin that is really a GEOPIN).
   for (const g of [asGeopin(input.geopin), asGeopin(input.taxBill)]) {
     if (g !== null && index.hasParcel(g)) return { geopin: g, addressId: null, matchType: "source_geopin", score: 1 };
@@ -126,10 +142,12 @@ export function matchRecord(input: MatchInput, index: AddressIndex): MatchResult
     if (g.length === 1) return { geopin: g[0]!, addressId: null, matchType: "tax_bill", score: 0.9 };
   }
 
-  // Rung 8: nearest address point, which must not contradict a street we recognised.
+  // Rung 8: nearest address point. Only for records with no address text, or whose street we recognised and the
+  // point agrees with. Text we can't parse ("Baronne St at Lafayette St", an event venue) describes a place, not a
+  // property, so proximity would attach it to whichever lot happens to be closest.
   if (input.lat != null && input.lon != null && input.lat !== 0 && input.lon !== 0) {
     const near = index.nearestAddress(input.lat, input.lon, NEAREST_METERS);
-    const streetOk = !parsed || (knownStreet !== null && near?.street === knownStreet);
+    const streetOk = !input.address ? true : knownStreet !== null && near?.street === knownStreet;
     if (near && streetOk) {
       return { geopin: near.geopin, addressId: near.addressId, matchType: "nearest_point", score: Math.max(0.5, 0.85 - near.meters / 100) };
     }

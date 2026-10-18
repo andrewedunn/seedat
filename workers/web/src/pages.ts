@@ -79,6 +79,7 @@ export function about(env: Env, sources: { source_id: string; name: string; url:
 <p>See Dat pulls the City of New Orleans’ own published data every night, keeps a copy of every pull, and joins it all to a single parcel so one address shows everything. Nothing here is new information; it is the city’s information, put in one place.</p>
 <h2>How records are matched to parcels</h2>
 <p>City systems describe the same property differently: permits use the assessor’s tax bill number, code enforcement uses the city’s parcel ID, and most records carry only a typed address like “1234 St Claude Ave Apt B”. We clean each address (spelling, abbreviations, accents, units, ranges, renamed streets), match it against the city’s official address points, and record how each match was made. Records we can’t place are <a href="/unplaced">listed openly</a>.</p>
+<p>Event permits (parades, second lines, special events, floats) are not counted here: they describe an event at a place, not work on a property, so we don’t attach them to a parcel by proximity.</p>
 <table class="table"><thead><tr><th>Records</th><th>Placed on a parcel</th></tr></thead><tbody>
 ${[["permit", "Permits"], ["code_case", "Code enforcement cases"], ["str_license", "Short-term rental licenses"]].map(([e, l]) => html`<tr><td>${l}</td><td>${rate(e!)}</td></tr>`)}
 </tbody></table>

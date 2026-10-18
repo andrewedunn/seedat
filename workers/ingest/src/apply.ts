@@ -4,12 +4,12 @@ import { assemble, type Piece } from "@seedat/core/src/assemble";
 import { fieldChanges } from "@seedat/core/src/diff";
 import { preferRow, recordSources, rowHash, type AnySource } from "@seedat/core/src/sources";
 import { insertSql } from "@seedat/core/src/sql";
-import { allChunks, prefetchIndex } from "@seedat/d1/src/prefetch";
+import { allChunks, jsonChunks, prefetchIndex } from "@seedat/d1/src/prefetch";
 
 const PK: Record<string, string[]> = {
   permit: ["permit_num"], code_case: ["case_id"], str_license: ["str_id"], business_license: ["license_id"],
   service_request: ["request_id"], code_event: ["source_id", "source_key"], permit_event: ["permit_num", "seq"],
-  src_row: ["source_id", "key"], change_log: [],
+  src_row: ["source_id", "key"], change_log: [], record_parcel: ["entity", "entity_id", "geopin"],
 };
 const MATCHED = new Set(["permit", "code_case", "str_license", "business_license"]);
 const sourcesFor = (table: string) => recordSources.filter((s) => s.table === table);
@@ -85,6 +85,8 @@ async function reassemble(
 
   const rows: Record<string, unknown>[] = [];
   const log: Record<string, unknown>[] = [];
+  const links: Record<string, unknown>[] = [];
+  const relinked: string[] = [];
   const geopins = new Set<number>();
   let inserted = 0, updated = 0, removed = 0;
   const logRow = (key: string, field: string, o: string | null, n: string | null) =>
@@ -99,8 +101,12 @@ async function reassemble(
       if (before && !before.removed_at) { removed++; rows.push({ [pk]: before[pk], removed_at: now }); logRow(key, "*", "present", "removed"); }
       continue;
     }
-    const { row } = assemble(table, pieces, index);
+    const { row, otherGeopins } = assemble(table, pieces, index);
     row.removed_at = null;
+    if (MATCHED.has(table)) {
+      relinked.push(key);
+      for (const g of otherGeopins) { links.push({ entity: table, entity_id: key, geopin: g }); geopins.add(g); }
+    }
     if (before) {
       const diffs = fieldChanges(before, row);
       if (!diffs.length) continue;
@@ -118,6 +124,11 @@ async function reassemble(
   }
   await upsert(db, table, rows);
   await upsert(db, "change_log", log);
+  // Extra parcels for multi-address records: replace this batch's links wholesale.
+  for (const chunk of jsonChunks(relinked)) {
+    await db.prepare("DELETE FROM record_parcel WHERE entity = ? AND entity_id IN (SELECT value FROM json_each(?))").bind(table, chunk).run();
+  }
+  await upsert(db, "record_parcel", links);
   return { inserted, updated, removed, geopins };
 }
 

@@ -13,5 +13,18 @@ describe("isPermitOpen", () => {
     [{ status_mapped: "Occupancy" }, false],
     [{ status_mapped: "Other", status: "Expired" }, false],
     [{ status_mapped: "Permit Issued", is_closed: 1 }, false],
+    // March 2025 bulk administrative closure: status "Closed", mapped to "Other", with a completion date.
+    [{ status_mapped: "Other", status: "Closed" }, false],
+    [{ status_mapped: "Permit Issued", status: "Permit Issued", completed_date: "2025-03-13" }, false],
   ])("%o -> %s", (p, open) => expect(isPermitOpen(p)).toBe(open));
+});
+
+describe("isEventPermit", () => {
+  it("recognises event permits by their type code", async () => {
+    const { isEventPermit } = await import("../src/status");
+    expect(isEventPermit("18-12345-SPMA")).toBe(true);
+    expect(isEventPermit("19-00012-EFLO")).toBe(true);
+    expect(isEventPermit("26-30446-RENO")).toBe(false);
+    expect(isEventPermit("26-25881-VCGEN")).toBe(false);
+  });
 });

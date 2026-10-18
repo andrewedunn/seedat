@@ -1,5 +1,6 @@
 // ABOUTME: seedat-web router: property pages, address search and typeahead, the parcel map and its data layers,
 // ABOUTME: PMTiles from R2 with range requests, and the about/unplaced pages. HTML is edge-cached for 10 minutes.
+import { eventPermitSql } from "@seedat/core/src/status";
 import { loadProperty } from "@seedat/d1/src/property";
 import { resolveAddress, suggest } from "@seedat/d1/src/search";
 import { type Env, slug } from "./html";
@@ -88,7 +89,7 @@ async function route(req: Request, env: Env, url: URL): Promise<Response> {
   if (path === "/about") {
     const [sources, match] = await env.DB.batch([
       env.DB.prepare("SELECT source_id, name, url, license, last_success_at, last_row_count FROM source WHERE source_id LIKE 'socrata:%' OR source_id LIKE 'arcgis:%' ORDER BY name"),
-      env.DB.prepare(`SELECT 'permit' entity, match_type, count(*) n FROM permit GROUP BY 2
+      env.DB.prepare(`SELECT 'permit' entity, match_type, count(*) n FROM permit WHERE NOT ${eventPermitSql()} GROUP BY 2
         UNION ALL SELECT 'code_case', match_type, count(*) FROM code_case GROUP BY 2
         UNION ALL SELECT 'str_license', match_type, count(*) FROM str_license GROUP BY 2`),
     ]);
@@ -97,10 +98,10 @@ async function route(req: Request, env: Env, url: URL): Promise<Response> {
 
   if (path === "/unplaced") {
     const [rows, counts] = await env.DB.batch([
-      env.DB.prepare(`SELECT 'permit' entity, permit_num entity_id, address_raw, match_type FROM (SELECT * FROM permit WHERE geopin IS NULL ORDER BY applied_date DESC LIMIT 100)
+      env.DB.prepare(`SELECT 'permit' entity, permit_num entity_id, address_raw, match_type FROM (SELECT * FROM permit WHERE geopin IS NULL AND NOT ${eventPermitSql()} ORDER BY applied_date DESC LIMIT 100)
         UNION ALL SELECT 'str_license', str_id, address_raw, match_type FROM (SELECT * FROM str_license WHERE geopin IS NULL ORDER BY applied_date DESC LIMIT 50)
         UNION ALL SELECT 'code_case', CAST(case_id AS TEXT), address_raw, match_type FROM (SELECT * FROM code_case WHERE geopin IS NULL ORDER BY filed_date DESC LIMIT 50)`),
-      env.DB.prepare(`SELECT 'permit' entity, count(*) n FROM permit WHERE geopin IS NULL UNION ALL SELECT 'code_case', count(*) FROM code_case WHERE geopin IS NULL
+      env.DB.prepare(`SELECT 'permit' entity, count(*) n FROM permit WHERE geopin IS NULL AND NOT ${eventPermitSql()} UNION ALL SELECT 'code_case', count(*) FROM code_case WHERE geopin IS NULL
         UNION ALL SELECT 'str_license', count(*) FROM str_license WHERE geopin IS NULL`),
     ]);
     return unplaced(env, rows!.results as never, counts!.results as never);

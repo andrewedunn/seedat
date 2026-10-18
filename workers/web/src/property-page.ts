@@ -139,6 +139,7 @@ export function renderProperty(env: Env, p: Property, url: URL): Response {
   const capped = [
     p.totals.permits > p.permits.length ? `${p.permits.length} of ${p.totals.permits.toLocaleString("en-US")} permits` : null,
     p.totals.code_cases > p.codeCases.length ? `${p.codeCases.length} of ${p.totals.code_cases.toLocaleString("en-US")} code cases` : null,
+    p.totals.strs > p.strs.length ? `${p.strs.length} of ${p.totals.strs.toLocaleString("en-US")} rental licenses and applications` : null,
   ].filter((x): x is string => x !== null);
   const total311 = p.block.requests12m.reduce((n, r) => n + r.n, 0);
   const totalPolice = p.block.police12m.reduce((n, r) => n + r.n, 0);

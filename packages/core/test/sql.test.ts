@@ -47,6 +47,12 @@ describe("insertSql", () => {
     expect(utf8Length("é")).toBe(2);
   });
 
+  it("ignores duplicates when every column is part of the key", () => {
+    expect(insertSql("t", ["a", "b"], [{ a: 1, b: 2 }], { upsertKey: ["a", "b"] })).toEqual([
+      "INSERT INTO t (a, b) VALUES (1, 2) ON CONFLICT (a, b) DO NOTHING;",
+    ]);
+  });
+
   it("supports upsert on a key", () => {
     expect(insertSql("t", ["k", "v"], [{ k: "a", v: 1 }], { upsertKey: ["k"] })).toEqual([
       "INSERT INTO t (k, v) VALUES ('a', 1) ON CONFLICT (k) DO UPDATE SET v = excluded.v;",

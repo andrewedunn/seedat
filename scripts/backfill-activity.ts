@@ -10,9 +10,10 @@ import { join } from "node:path";
 import { gzipSync } from "node:zlib";
 import { assemble, type Piece } from "../packages/core/src/assemble";
 import { insertSql } from "../packages/core/src/sql";
-import { policeSources, preferRow, recordSources, rowHash, type AnySource } from "../packages/core/src/sources";
+import { policeSources, recordSources, type AnySource } from "../packages/core/src/sources";
 import { loadSqlFiles, writeSqlFiles } from "./lib/d1";
-import { DATA, RAW, buildFullIndex } from "./lib/raw";
+import { collectSource, rawRows } from "./lib/pieces";
+import { DATA, buildFullIndex } from "./lib/raw";
 
 const now = new Date().toISOString();
 const tablesArg = process.argv.find((a) => a.startsWith("--tables="))?.slice(9).split(",");
@@ -34,13 +35,6 @@ function tableColumns(): Map<string, string[]> {
     cols.set(t!, [...(cols.get(t!) ?? []), c!]);
   }
   return cols;
-}
-
-function* rawRows(sourceId: string): Generator<Record<string, unknown>> {
-  const dir = join(RAW, "src", sourceId.replace("socrata:", ""));
-  for (const f of readdirSync(dir).filter((x) => x.endsWith(".json")).sort()) {
-    for (const r of JSON.parse(readFileSync(join(dir, f), "utf8"))) yield r;
-  }
 }
 
 const COLUMNS = tableColumns();
@@ -73,18 +67,7 @@ for (const [table, sources] of byTable) {
   for (const src of sources) {
     // Duplicate keys within one source (e.g. 245 BLDS permit numbers): `preferRow` picks, the same
     // deterministic rule the nightly Worker uses (workers/ingest/src/apply.ts mapRows).
-    const best = new Map<string, { row: Record<string, unknown>; match: ReturnType<NonNullable<typeof src.matchInput>> | undefined; h: string; raw: Record<string, unknown> }>();
-    let mapped = 0, dropped = 0;
-    for (const raw of rawRows(src.sourceId)) {
-      const row = src.map(raw) as Record<string, unknown> | null;
-      if (!row) { dropped++; continue; }
-      mapped++;
-      const key = src.key(row as never);
-      const match = src.matchInput?.(raw);
-      const h = rowHash({ ...row, __match: match ?? null });
-      const seen = best.get(key);
-      if (!seen || preferRow({ row, hash: h }, { row: seen.row, hash: seen.h })) best.set(key, { row, match, h, raw });
-    }
+    const { best, mapped, dropped } = collectSource(src);
     const multi = MULTI_SOURCE.has(table);
     const hashes = new Map<string, string>();
     for (const [key, { row, match, h, raw }] of best) {

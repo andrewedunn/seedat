@@ -47,8 +47,8 @@ export function searchPermitsQuery(f: PermitFilters): Query {
   if (f.maxCost !== undefined) add("p.est_cost <= ?", f.maxCost);
   if (f.since) add("coalesce(p.applied_date, p.issued_date) >= ?", f.since);
   if (f.until) add("coalesce(p.applied_date, p.issued_date) < ?", f.until);
-  if (f.open === true) add(`(${PERMIT_OPEN_SQL.replace(/\b(is_closed|status_mapped|status)\b/g, "p.$1")})`);
-  if (f.open === false) add(`NOT (${PERMIT_OPEN_SQL.replace(/\b(is_closed|status_mapped|status)\b/g, "p.$1")})`);
+  if (f.open === true) add(`(${PERMIT_OPEN_SQL.replace(/\b(is_closed|status_mapped|status|completed_date)\b/g, "p.$1")})`);
+  if (f.open === false) add(`NOT (${PERMIT_OPEN_SQL.replace(/\b(is_closed|status_mapped|status|completed_date)\b/g, "p.$1")})`);
   const countSql = `SELECT count(*) n FROM permit p LEFT JOIN parcel pa ON pa.geopin = p.geopin WHERE ${where.join(" AND ")}`;
   const countParams = [...params];
   params.push(limitParam(f.limit));

@@ -113,8 +113,18 @@ describe("matchRecord", () => {
     expect(matchRecord({ address: "Lot 4 Sq 210", taxBill: "39W401319" }, index)).toMatchObject({ geopin: 41036020, matchType: "tax_bill" });
   });
 
-  it("rung 8: nearest address point within 30 m when the text fails", () => {
-    expect(matchRecord({ address: "Gravier near Broad", lat: 29.96309, lon: -90.09741 }, index)).toMatchObject({ geopin: 41036019, matchType: "nearest_point" });
+  it("rung 8: nearest address point within 30 m when there is no address text", () => {
+    expect(matchRecord({ address: null, lat: 29.96309, lon: -90.09741 }, index)).toMatchObject({ geopin: 41036019, matchType: "nearest_point" });
+  });
+
+  it("never places a described location (intersection, event venue) by proximity", () => {
+    // Spot check 2026-10-17: street closures and event permits were attached to whichever parcel was nearest.
+    expect(matchRecord({ address: "Gravier near Broad", lat: 29.96309, lon: -90.09741 }, index)).toMatchObject({ geopin: null, matchType: "unmatched", reason: "unparseable" });
+    expect(matchRecord({ address: "Baronne St at Lafayette St", lat: 29.96309, lon: -90.09741 }, index)).toMatchObject({ geopin: null, matchType: "unmatched" });
+  });
+
+  it("tries an alternate address given in parentheses", () => {
+    expect(matchRecord({ address: "153 Nowhere Pl, (3210 Gravier St)" }, index)).toMatchObject({ geopin: 41036019, matchType: "exact" });
   });
 
   it("rung 8: no point within 30 m is unmatched", () => {
