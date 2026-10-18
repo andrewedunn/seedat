@@ -21,6 +21,11 @@ describe("rulesForParcel", () => {
     expect(find(rs, /HDLC/)).toBeUndefined();
   });
 
+  it("French Quarter parcel flagged in the solar area still gets no HDLC solar rule (the VCC reviews all exterior work)", () => {
+    const rs = rulesForParcel({ ...base, zoning: "VCC-1", local_historic_district: "Vieux Carré", hdlc_control: "Full", hdlc_solar_review: true });
+    expect(find(rs, /HDLC/)).toBeUndefined();
+  });
+
   it("Bywater full-control parcel: HDLC review, paint color exempt", () => {
     const rs = rulesForParcel({ ...base, zoning: "HMR-2", local_historic_district: "Bywater", hdlc_control: "Full" });
     const r = find(rs, /HDLC/)!;

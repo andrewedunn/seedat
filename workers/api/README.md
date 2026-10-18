@@ -44,7 +44,7 @@ Every answer includes `as_of` (the latest successful pull), a `provenance` note,
 
 These were run against the live server on 2026-10-17.
 
-1. **"What's going on at 900 Royal Street?"** `lookup_address {address: "900 royal st"}`, then `get_property_records`. VCC-1 zoning in the Vieux Carré, so all exterior work, including paint, needs Vieux Carré Commission approval. 27 permits, 14 still open in the city's records.
+1. **"What's going on at 900 Royal Street?"** `lookup_address {address: "900 royal st"}`, then `get_property_records`. VCC-1 zoning in the Vieux Carré, so all exterior work, including paint, needs Vieux Carré Commission approval. 27 permits, 17 still open in the city’s records.
 2. **"Demolition permits filed in Bywater since June 2026."** `search_permits {neighborhood: "Bywater", type: "DEMO", since: "2026-06-01"}`. 3 permits, with descriptions and status. Adding `min_cost: 100000` returns 0, because applicants usually leave the estimated cost of a demolition at $0. The tool description tells agents this.
 3. **"Properties in the Seventh Ward with open code cases and no permit activity in two years."** `find_properties {neighborhood: "7th ward", open_code_case: true, no_permit_since: "2024-10-17"}`. 516 properties.
 4. **"Which Tremé properties have an active short-term rental license?"** `find_properties {neighborhood: "Treme", str_active: true}`. 102 properties.

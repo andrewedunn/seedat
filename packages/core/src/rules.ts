@@ -75,7 +75,8 @@ export function rulesForParcel(p: ParcelRuleInput): Rule[] {
       verified: true,
     });
   }
-  if (p.hdlc_solar_review) {
+  // The city's solar review area overlaps the French Quarter, but there the VCC (not HDLC) reviews all exterior work.
+  if (p.hdlc_solar_review && !inVcc) {
     rules.push({
       title: "Solar panels need HDLC review",
       body: "Solar panel permits here need HDLC review before the city issues them. The details of what staff can approve versus the Commission are not confirmed here, so check with the HDLC before you order panels.",
