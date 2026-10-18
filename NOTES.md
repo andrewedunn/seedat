@@ -5,6 +5,15 @@
 
 ## Decisions
 
+- **2026-10-18** — **Frozen historical archives loaded** (311 2012–2018, permits to 2009, Accela and LAMA 2004–2012, BlightStatus demolitions). See VALIDATION.md for ranges and match rates by era.
+  - **Demolitions get their own `demolition` table** (migration 0010), not `permit_event`. The records have no permit number, and `permit_event` rows hang off one. They carry program, units, dates and usually a GEOPIN, and are matched like any record. They are not shown on the address page or through MCP yet.
+  - **Added without wiping:** `backfill-activity.ts --sources=...` re-assembles only the keys the new sources hold, from every source of their table, and upserts them. Existing rows keep `first_seen_at`, `onestop_id` and crawled events. The other sources' `src_row` baselines are refreshed for those keys only, from the same download.
+  - **Per-column override (`wins`):** the live 311 dataset re-published the 2012–2018 tickets with 2019-01-01/02 as `date_created`, and close times truncated to the date. The archive now wins `created_date` and `closed_date`; the live copy keeps type (current taxonomy), status (25,699 tickets closed after the 2018 freeze) and block. Making `service_request` multi-source means the Worker now stores row JSON for changed 311 rows, as it already did for permits.
+  - **Frozen sources are skipped by the nightly Workflow** unless named in `only`. The ingest Worker was redeployed before the load, so nightly merges see the archive pieces.
+  - **The file archives** (Accela shapefile DBF, LAMA xlsx) are converted to Socrata-shaped JSON pages by `scripts/convert-archive.py`, then read like any other source. `download-all.sh` skips them.
+  - **Accela keys:** the public number is `B1_ALT_ID`, not `PERMIT_ID` (an internal id that differs). Kiosk and online post-Katrina repair approvals have no public number. Only 1.75% of them have a numbered building permit on the same parcel within 60 days (12% baseline), so they are separate records, keyed `ACCELA-<id>`.
+  - **Priorities:** live permit datasets 1–3, then LAMA 4, Accela 5, `f7tt` 6. LAMA is the post-migration copy with final statuses; Accela adds GEOPIN, tax bill and owner.
+
 - **2026-10-18** — **Launched publicly at https://seedat.dunn.us** (Andrew approved). `seedat-web` is on the custom domain, and `noindex` is removed.
   - `robots.txt` allows everything except `/api/` and `/search`.
   - The MCP server answers at `seedat.dunn.us/mcp` through a service binding from `seedat-web` to `seedat-api`, so there is one public origin.
@@ -128,6 +137,10 @@ Tier rationale for this first fan-out: the research tasks need judgment about wh
 - **2026-10-17** — HDLC solar review area ArcGIS service is broken (no layers). Rebuild it from its published definition.
 - **2026-10-17** — Socrata JSON **omits null fields per row**. Never infer a dataset's schema from row 1; read `/api/views/{id}.json` columns. (A subagent concluded code cases had no geopin this way.)
 - **2026-10-17** — Naive permit-address match against LAMA: 0.5%; with suffix and unit normalization: about 93%. The remaining 7% is multi-address strings, notes in the address field, and renamed streets.
+
+- **2026-10-18** — **Accela GEOPIN 41021509 is a default**, stamped on 17,347 permits across 1,202 streets (it belongs to 100 St John Ct). The adapter ignores it. Other repeated GEOPINs are real campuses and subdivisions (Tulane, English Turn).
+- **2026-10-18** — LAMA's archive puts filing dates *after* issue dates on 87% of its 2004–2011 permits (exactly 20 or 25 days), an artifact of the migration. Accela's file dates for the same permits look right. The LAMA adapter drops a filing date that falls after the issue date, so Accela's fills in.
+- **2026-10-18** — LAMA `descr` wraps the work description in import boilerplate with the owner's mailing address and seven-digit phone numbers. The adapter keeps only the work text and the owner name.
 
 ## Open questions
 

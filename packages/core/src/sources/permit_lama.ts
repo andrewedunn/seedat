@@ -26,6 +26,15 @@ function ownerName(descr: string | null): string | null {
 
 const point = (raw: RawRow) => statePlaneToLatLon(text(raw.x), text(raw.y));
 
+/**
+ * The migration pushed most filing dates exactly 20 or 25 days past the issue date (87% of rows). A filing date
+ * after the issue date is that artifact, so it is dropped and Accela's file date for the same permit fills in.
+ */
+function filedDate(raw: RawRow): string | null {
+  const filed = cleanDate(raw.filingdate), issued = cleanDate(raw.issuedate);
+  return filed && issued && filed.slice(0, 10) > issued.slice(0, 10) ? null : filed;
+}
+
 export const source: SourceDef<PermitRow> = {
   sourceId: `socrata:${ID}`,
   name: "Permits - LAMA (historic 2004–2011)",
@@ -49,7 +58,7 @@ export const source: SourceDef<PermitRow> = {
       description: workDescription(descr),
       status: text(raw.currentstatus), status_date: cleanDate(raw.currentstatusdate),
       is_closed: yesNo(raw.isclosed),
-      applied_date: cleanDate(raw.filingdate), issued_date: cleanDate(raw.issuedate),
+      applied_date: filedDate(raw), issued_date: cleanDate(raw.issuedate),
       est_cost: num(raw.constrval), fees_total: num(raw.totalfees), fees_unpaid: num(raw.unpaidfees),
       contractor: contractor ? JSON.stringify([{ name: contractor, trade: null, license: null }]) : null,
       owner_name: ownerName(descr),

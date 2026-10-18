@@ -85,11 +85,17 @@ describe("permit_lama (fdhh-psg3)", () => {
       address_raw: "2605 Josephine St", block_id: "2600 JOSEPHINE ST",
       permit_type: "MECH", permit_type_desc: "General Mechanical",
       status: "Inspection - Completed", status_date: "2004-10-13", is_closed: 1,
-      applied_date: "2004-05-16", issued_date: "2004-04-21", est_cost: 0, fees_total: 62, fees_unpaid: 0,
+      applied_date: null, issued_date: "2004-04-21", est_cost: 0, fees_total: 62, fees_unpaid: 0,
       land_use: "Unknown", zoning_filed: "RM-2",
     });
     expect(JSON.parse(r.contractor as string)).toEqual([{ name: "A/C Ambulance Ser", trade: null, license: null }]);
     expect(r.lat).toBeCloseTo(29.93, 1);
+  });
+
+  it("drops a filing date that falls after the issue date, the migration artifact on 87% of rows", () => {
+    expect(lamaSource.map(mech)!.applied_date).toBeNull();            // filed 2004-05-16, issued 2004-04-21
+    expect(lamaSource.map({ ...mech, filingdate: "2004-04-20T00:00:00" })!.applied_date).toBe("2004-04-20");
+    expect(lamaSource.map({ ...mech, filingdate: "2004-04-21T00:00:00" })!.applied_date).toBe("2004-04-21");
   });
 
   it("keeps only the work description, dropping the import boilerplate, owner address and phone numbers", () => {

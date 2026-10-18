@@ -30,6 +30,7 @@ The schema lives in [`db/migrations/0001_init.sql`](../db/migrations/0001_init.s
 | | `str_license` | Applications and licences in one table; `is_active` = present in today's active list. |
 | | `business_license` | Occupational licences. |
 | | `service_request` | 311, block level only. |
+| | `demolition` | BlightStatus demolitions 2009–2019 (NORA, IDC, FEMA, SDER), matched to parcels (migration 0010). No permit number, so not in `permit_event`. |
 | | `police_call_month` | NOPD calls aggregated to block × month × category. Raw rows stay in R2 (terms forbid deriving addresses; 6M rows would also crowd D1). |
 | Crawled | `onestop_record` | Every One Stop record read from its public detail page, matched to a parcel (migration 0005). The ID space covers far more than permits: HDLC and VCC reviews, special events, film, dumpsters, curb cuts. Parsed detail is in `detail_json`; staff reviewer names are dropped. |
 | | `crawl_state` | One row: the crawler's frontier, backfill position, counters and cooldown (0006). |
@@ -53,7 +54,7 @@ The schema lives in [`db/migrations/0001_init.sql`](../db/migrations/0001_init.s
 | **Permit time predictions** | `permit` (type, class, work class, est_cost, historic district, zoning, applied/issued dates, `days_to_issue`) plus `permit_event` (time spent in each review stage) plus `change_log` (exact dates of status changes as we observe them). Training data accumulates nightly from day one, so starting snapshots now matters even before the model exists. |
 | **Neighborhood digests** | `change_log` filtered by `observed_at` and joined to `parcel.neighborhood`: "new permits, new code cases, STR licences issued this week in Bywater". The `change_time` index is there for this. |
 | **Blight early warning** | `code_case` and `code_event` stage progression, `parcel_summary` (open cases, years since last permit), `service_request` per block (illegal dumping, high grass), `police_call_month`, NORA dispositions. Signals stay at parcel and block level, and the schema deliberately has no score column (see PRIOR_ART.md). |
-| **Building histories** | `permit` back to the 1990s eras (historic datasets load into the same table with their own `sources`), `permit_event`, `code_case`, landmark/NR status on `parcel`, and `change_log`. Footprints (`GEOPIN` on the footprint layer) can be added as a `building` table without touching the rest. |
+| **Building histories** | `permit` back to 1995 (the historical archives are loaded into the same table with their own `sources`), `demolition`, `permit_event`, `code_case`, landmark/NR status on `parcel`, and `change_log`. Footprints (`GEOPIN` on the footprint layer) can be added as a `building` table without touching the rest. |
 
 ## Conventions
 

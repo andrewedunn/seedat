@@ -16,7 +16,7 @@ All pulls identify as `seedat-research/0.1 (+https://seedat.dunn.us; seedat@dunn
 | Code enforcement | `u6yx-v2tw` cases, `uh5a-f7uw` inspections, `3ehi-je3s` violations, `44ct-56tr` hearings, `xv8z-gn8b` abatements | 183k / 246k / 273k / 103k / 7k | Nightly full replace | SODA full pull + diff | **GEOPIN** on cases and hearings (~93–95%). Inspections/violations join via `caseid` |
 | Code enforcement (OBES system) | `wy29-i338` cases, `uzyk-jrck` hearings, `f5zm-xkyr` fines | 114k / 53k / 225k | Nightly | SODA | Address + lat/lon |
 | Short-term rentals | `en36-xvxg` applications (2017–), `ufdg-ajws` active licenses, `2ei9-wqw2` non-commercial licenses | 39k / 4.3k / 1.2k | Nightly | SODA | Address + lat/lon |
-| 311 | `2jgv-pqrq` (2012–present), `3iz8-nghx` historic 2012–2018 | 1.04M / 304k | Nightly, true upsert | SODA incremental on `:updated_at` | Address + lat/lon → **block level only** in the UI |
+| 311 | `2jgv-pqrq` (2012–present; 2012–2018 tickets carry a 2019-01 placeholder created date), `3iz8-nghx` historic 2012–2018 (true dates, loaded 2026-10-18) | 1.04M / 304k | Nightly, true upsert | SODA incremental on `:updated_at` | Address + lat/lon → **block level only** in the UI |
 | 911 / NOPD calls for service | One dataset per year: 2026 `es9j-6y5d` … 2011 `28ec-c8d6` | ~300–500k/yr | Current year nightly, past years frozen | SODA | **Block level by design.** Never joined to a parcel (terms) |
 | Business licenses | `hjcd-grvu`, `iqay-p646` | 38k / 17k | Nightly | SODA | Address + lat/lon (24% ungeocoded) |
 | Canonical addresses | maps.nola.gov **`Addresses/Site_Address_Point_LAMA/MapServer/0`** | 275,122 points, 98.2% with GEOPIN | Unknown (no editingInfo); diff weekly | ArcGIS REST paging | **GEOPIN** (string) |
@@ -25,8 +25,8 @@ All pulls identify as `seedat-research/0.1 (+https://seedat.dunn.us; seedat@dunn
 | Building footprints | `Basemap/BuildingFootprints/MapServer/0` | 162k | 2026-08 | ArcGIS REST | GEOPIN |
 | Flood zones | FEMA NFHL (not on city servers) | — | — | ArcGIS REST | Spatial join |
 | Sales / disposition | `hpm5-48nj` NORA sold properties, `5ktx-e9wc` NORA inventory | 5.6k / 189 | Periodic | SODA | GEOPIN |
-| Historic permits | `f7tt-z5vu` historical permits (to 2009), `rw6e-a9x3` Accela 2004–2012, `fdhh-psg3` LAMA 2004–2011 | 86k / file / file | Frozen | One-time load (the latter two are file downloads) | Address only |
-| Demolitions (historic) | `e3wd-h7q2` BlightStatus demolitions | 3,940 | Frozen 2019-09 | One-time | GEOPIN |
+| Historic permits | `f7tt-z5vu` historical permits (1995–2009), `rw6e-a9x3` Accela 2004–2012 (shapefile), `fdhh-psg3` LAMA 2004–2011 (xlsx) | 86k / 418k / 342k | Frozen, loaded 2026-10-18 | One-time load; the zips convert with `scripts/convert-archive.py` | Address + state-plane point; Accela also **GEOPIN** and tax bill; `f7tt` tax bill inside `propertykey` |
+| Demolitions (historic) | `e3wd-h7q2` BlightStatus demolitions | 3,940 | Frozen 2019-09, loaded 2026-10-18 | One-time, into `demolition` | GEOPIN (80%) |
 
 ## The join-key problem, measured
 
