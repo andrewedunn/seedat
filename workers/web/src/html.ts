@@ -56,7 +56,7 @@ ${analytics}
 <body>
 <header class="site">
   <a class="brand" href="/">${tiles("See Dat", "md")}</a>
-  <form class="search search-small" action="/search" role="search">
+  <form class="search search-small" action="/search" role="search" aria-label="Find an address">
     <label class="sr-only" for="q-top">Look up a New Orleans address</label>
     <input id="q-top" name="q" type="search" placeholder="Look up an address" autocomplete="off" data-suggest>
   </form>

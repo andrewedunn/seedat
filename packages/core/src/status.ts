@@ -7,7 +7,8 @@ export const CLOSED_PERMIT_STATUSES = ["Permit Finaled", "Permit Finaled with Co
 export function isPermitOpen(p: { status_mapped?: string | null; status?: string | null; is_closed?: number | null }): boolean {
   if (p.is_closed === 1) return false;
   if (p.status_mapped && (CLOSED_PERMIT_STATUSES as readonly string[]).includes(p.status_mapped)) return false;
-  return !/\b(VOID|CANCEL|WITHDRAWN|EXPIRED|FINAL)/i.test(p.status ?? "");
+  // Substring match, same as PERMIT_OPEN_SQL's LIKE patterns.
+  return !/(VOID|CANCEL|WITHDRAWN|EXPIRED|FINAL)/i.test(p.status ?? "");
 }
 
 /** SQL predicate equivalent to isPermitOpen, for a table aliased or named `permit`. */

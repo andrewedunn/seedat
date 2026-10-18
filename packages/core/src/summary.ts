@@ -23,6 +23,18 @@ export function titleCase(s: string): string {
 
 const plural = (n: number, one: string, many: string) => `${n} ${n === 1 ? one : many}`;
 
+/** "HDLC COA" stays upper case, "Plumbing Permit" becomes "plumbing"; a trailing "permit" is dropped. */
+function permitNoun(type: string): string {
+  return type.replace(/\s+permit$/i, "").split(" ").map((w) => (/^[A-Z]{2,}$/.test(w) ? w : w.toLowerCase())).join(" ");
+}
+
+/** Article by sound: acronyms are read letter by letter ("an HDLC", "a VCC"), words by their first letter. */
+function article(phrase: string): "a" | "an" {
+  const first = phrase.split(" ")[0] ?? "";
+  if (/^[A-Z]{2,}$/.test(first)) return /^[AEFHILMNORSX]/.test(first) ? "an" : "a";
+  return /^[aeiou]/i.test(first) ? "an" : "a";
+}
+
 export function summarizeProperty(f: SummaryFacts): string {
   const out: string[] = [];
 
@@ -39,7 +51,7 @@ export function summarizeProperty(f: SummaryFacts): string {
   if (f.permitsTotal === 0) out.push("The city has no permits on record for this address.");
   else {
     const recent = f.lastPermitType && f.lastPermitDate
-      ? `; the most recent, a ${f.lastPermitType.toLowerCase().replace(/ permit$/, "")} permit, was filed in ${monthYear(f.lastPermitDate)}`
+      ? `; the most recent, ${article(permitNoun(f.lastPermitType))} ${permitNoun(f.lastPermitType)} permit, was filed in ${monthYear(f.lastPermitDate)}`
       : "";
     out.push(`The city has ${plural(f.permitsTotal, "permit", "permits")} on record here${recent}.`);
     if (f.permitsOpen > 0) out.push(`${f.permitsOpen} ${f.permitsOpen === 1 ? "is" : "are"} still open.`);

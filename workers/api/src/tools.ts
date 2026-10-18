@@ -4,7 +4,7 @@ import { findPropertiesQuery, matchNeighborhood, searchPermitsQuery } from "@see
 import { rulesForParcel, zoningPlainEnglish } from "@seedat/core/src/rules";
 import { isPermitOpen } from "@seedat/core/src/status";
 import { summarizeProperty } from "@seedat/core/src/summary";
-import { loadProperty, type Property } from "@seedat/d1/src/property";
+import { BLOCK_FOR_PARCEL_SQL, activityWindow, loadProperty, type Property } from "@seedat/d1/src/property";
 import { resolveAddress, suggest } from "@seedat/d1/src/search";
 
 export interface Env { DB: D1Database; SITE_ORIGIN: string }
@@ -16,12 +16,16 @@ interface Tool { name: string; description: string; inputSchema: object; run(env
 
 const str = (a: Args, k: string) => (typeof a[k] === "string" && (a[k] as string).trim() ? (a[k] as string).trim() : undefined);
 const num = (a: Args, k: string) => (typeof a[k] === "number" && Number.isFinite(a[k]) ? (a[k] as number) : undefined);
+const clampInt = (v: number | undefined, lo: number, hi: number, dflt: number) => Math.min(Math.max(Math.floor(v ?? dflt), lo), hi);
+const parseJson = (s: string): unknown => { try { return JSON.parse(s); } catch { return null; } };
 const bool = (a: Args, k: string) => (typeof a[k] === "boolean" ? (a[k] as boolean) : undefined);
 const isoDate = (a: Args, k: string) => {
   const v = str(a, k);
   if (v && !/^\d{4}-\d{2}-\d{2}$/.test(v)) throw new ToolError(`${k} must be a date like 2026-06-01`);
   return v;
 };
+
+const valuesCache = new Map<string, { at: number; value: unknown }>();
 
 let hoods: Promise<string[]> | null = null;
 function neighborhoods(db: D1Database): Promise<string[]> {
@@ -63,6 +67,8 @@ function propertyFacts(env: Env, p: Property) {
   const overlays: string[] = (() => { try { return JSON.parse(a.overlays ?? "[]"); } catch { return []; } })();
   const zoningPlain = zoningPlainEnglish(a.zoning, a.zoning_desc);
   const openPermits = p.permits.filter(isPermitOpen);
+  // Lists are capped (see SHOWN); totals come from counts so a big parcel never reports its cap as the total.
+  const permitsOpen = p.totals.permits > p.permits.length ? (p.summary?.permits_open ?? openPermits.length) : openPermits.length;
   return {
     address: street, geopin: a.geopin, page_url: pageUrl(env, a.geopin),
     neighborhood: a.neighborhood, ward: a.ward, council_district: a.council_district,
@@ -73,18 +79,18 @@ function propertyFacts(env: Env, p: Property) {
       address: street, neighborhood: a.neighborhood, zoning: a.zoning, zoningPlain,
       historicDistrict: a.local_historic_district, hdlcControl: a.hdlc_control,
       vcc: /^VC/i.test(a.zoning ?? "") || /vieux carr/i.test(a.local_historic_district ?? ""), isLandmark: !!a.is_landmark,
-      permitsTotal: p.permits.length, permitsOpen: openPermits.length,
+      permitsTotal: p.totals.permits, permitsOpen,
       lastPermitType: p.permits[0]?.permit_type_desc ?? null, lastPermitDate: p.permits[0]?.applied_date ?? null,
       demolitionDate: p.summary?.demolition_permit_date ?? null,
-      codeCasesOpen: p.codeCases.filter((c) => c.is_open).length, codeCasesTotal: p.codeCases.length, lastCodeCaseDate: p.codeCases[0]?.filed_date ?? null,
+      codeCasesOpen: p.totals.code_cases_open, codeCasesTotal: p.totals.code_cases, lastCodeCaseDate: p.codeCases[0]?.filed_date ?? null,
       strActiveType: p.strs.find((x) => x.is_active)?.license_type ?? null,
       block311: p.block.requests12m.reduce((n, r) => n + r.n, 0), blockPolice: p.block.police12m.reduce((n, r) => n + r.n, 0),
       today: new Date().toISOString().slice(0, 10),
     }),
     counts: {
-      permits: p.permits.length, permits_open: openPermits.length, code_cases: p.codeCases.length,
-      code_cases_open: p.codeCases.filter((c) => c.is_open).length, onestop_records: p.onestop.length,
-      str_licenses_active: p.strs.filter((s) => s.is_active).length, units: p.addresses.filter((x) => x.unit_id).length,
+      permits: p.totals.permits, permits_open: permitsOpen, code_cases: p.totals.code_cases,
+      code_cases_open: p.totals.code_cases_open, onestop_records: p.onestop.length,
+      str_licenses_active: p.strs.filter((s) => s.is_active).length, units: p.totals.units,
     },
     rules: rulesForParcel({
       zoning: a.zoning, zoning_desc: a.zoning_desc, overlays, local_historic_district: a.local_historic_district,
@@ -126,7 +132,7 @@ export const TOOLS: Tool[] = [
       if (!p) throw new ToolError(`No parcel ${geopin}.`);
       const since = isoDate(a, "since") ?? "";
       const kinds = new Set(Array.isArray(a.kinds) && a.kinds.length ? (a.kinds as string[]) : ["permit", "code_case", "onestop", "str"]);
-      const limit = Math.min(num(a, "limit") ?? 50, 200);
+      const limit = clampInt(num(a, "limit"), 1, 200, 50);
       const timeline = bool(a, "include_timeline") ?? true;
       const after = (d: string | null) => !since || (d ?? "") >= since;
       const permitNums = new Set(p.permits.map((x) => x.permit_num));
@@ -137,7 +143,7 @@ export const TOOLS: Tool[] = [
         code_cases: kinds.has("code_case") ? p.codeCases.filter((x) => after(x.filed_date)).slice(0, limit)
           .map(({ events, ...x }) => ({ ...x, ...(timeline ? { timeline: events } : {}) })) : undefined,
         onestop_records: kinds.has("onestop") ? p.onestop.filter((x) => after(x.submitted_date) && (!x.permit_num || !permitNums.has(x.permit_num))).slice(0, limit)
-          .map(({ detail_json, ...x }) => ({ ...x, ...(timeline ? { detail: JSON.parse(detail_json) } : {}) })) : undefined,
+          .map(({ detail_json, ...x }) => ({ ...x, ...(timeline ? { detail: parseJson(detail_json) } : {}) })) : undefined,
         str_licenses: kinds.has("str") ? p.strs.filter((x) => after(x.issued_date ?? x.applied_date)).slice(0, limit) : undefined,
         as_of: await asOf(env.DB), provenance: PROVENANCE,
       };
@@ -218,16 +224,16 @@ export const TOOLS: Tool[] = [
     },
     async run(env, a) {
       const geopin = await parcelFrom(env, a);
-      const months = Math.min(Math.max(num(a, "months") ?? 12, 1), 60);
-      const block = await env.DB.prepare("SELECT block_id FROM address WHERE geopin = ? ORDER BY unit_id IS NOT NULL LIMIT 1").bind(geopin).first<{ block_id: string }>();
+      const months = clampInt(num(a, "months"), 1, 60, 12);
+      const block = await env.DB.prepare(BLOCK_FOR_PARCEL_SQL).bind(geopin).first<{ block_id: string }>();
       if (!block) throw new ToolError("No block found for that parcel.");
-      const since = new Date(Date.now() - months * 30.44 * 86_400_000).toISOString().slice(0, 10);
+      const { since, sinceMonth } = activityWindow(new Date().toISOString().slice(0, 10), months);
       const [sr, police] = await env.DB.batch([
         env.DB.prepare("SELECT request_type, count(*) n FROM service_request WHERE block_id = ? AND created_date >= ? GROUP BY 1 ORDER BY 2 DESC").bind(block.block_id, since),
-        env.DB.prepare("SELECT category, sum(n) n FROM police_call_month WHERE block_id = ? AND month >= ? GROUP BY 1 ORDER BY 2 DESC").bind(block.block_id, since.slice(0, 7)),
+        env.DB.prepare("SELECT category, sum(n) n FROM police_call_month WHERE block_id = ? AND month >= ? GROUP BY 1 ORDER BY 2 DESC").bind(block.block_id, sinceMonth),
       ]);
       return {
-        block: block.block_id, since, requests_311: sr!.results, police_calls: police!.results,
+        block: block.block_id, since_311: since, since_police_month: sinceMonth, requests_311: sr!.results, police_calls: police!.results,
         note: "Counts are for the hundred-block, not the property. NOPD calls for service are preliminary; source: Orleans Parish Communications District.",
         as_of: await asOf(env.DB),
       };
@@ -266,9 +272,15 @@ export const TOOLS: Tool[] = [
         zoning: "SELECT zoning value, max(zoning_desc) description, count(*) n FROM parcel WHERE zoning IS NOT NULL GROUP BY 1 ORDER BY 1",
         onestop_record_type: "SELECT record_type value, count(*) n FROM onestop_record GROUP BY 1 ORDER BY 2 DESC",
       };
-      const q = sql[str(a, "field") ?? ""];
+      const field = str(a, "field") ?? "";
+      const q = sql[field];
       if (!q) throw new ToolError(`field must be one of: ${Object.keys(sql).join(", ")}`);
-      return { field: a.field, values: (await env.DB.prepare(q).all()).results };
+      // These scan whole tables and change at most nightly: cache per isolate for an hour.
+      const hit = valuesCache.get(field);
+      if (hit && hit.at > Date.now() - 3_600_000) return hit.value;
+      const value = { field, values: (await env.DB.prepare(q).all()).results };
+      valuesCache.set(field, { at: Date.now(), value });
+      return value;
     },
   },
 ];

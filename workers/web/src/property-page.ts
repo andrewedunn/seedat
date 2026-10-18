@@ -4,7 +4,7 @@ import { rulesForParcel, zoningPlainEnglish } from "@seedat/core/src/rules";
 import { isPermitOpen } from "@seedat/core/src/status";
 import { summarizeProperty, titleCase } from "@seedat/core/src/summary";
 import type { CodeCase, OneStopRecord, Permit, Property, StrLicense } from "@seedat/d1/src/property";
-import { type Env, Html, esc, fmtDate, fmtMoney, html, page, raw, slug, tiles } from "./html";
+import { type Env, Html, fmtDate, fmtMoney, html, page, raw, slug, tiles } from "./html";
 
 interface Entry { date: string | null; kind: string; kindClass: string; title: string; status: string | null; open: boolean; body: Html; sortKey: string }
 
@@ -67,7 +67,7 @@ function onestopEntry(r: OneStopRecord): Entry {
     ${r.description ? html`<p class="desc">${r.description}</p>` : ""}
     ${steps.length ? html`<ol class="events">${steps.map((s) => html`<li><time>${fmtDate(s.date)}</time> <span>${s.label}</span>${s.note ? html` <em>${s.note}</em>` : ""}</li>`)}</ol>` : ""}
     ${r.reference_code ? html`<p class="src"><a href="${ONESTOP(r.reference_code)}" rel="noopener">See this record on One Stop</a> · checked ${fmtDate(r.fetched_at)}</p>` : ""}`;
-  const open = !/closed|complete|issued|approved|withdrawn|denied/i.test(r.current_status ?? "");
+  const open = r.current_status !== null && !/closed|complete|issued|approved|withdrawn|denied/i.test(r.current_status);
   return { date: r.submitted_date, kind, kindClass: cls, title: r.record_type ?? "One Stop record", status: r.current_status, open, body, sortKey: String(r.onestop_id) };
 }
 
@@ -114,10 +114,11 @@ export function renderProperty(env: Env, p: Property, url: URL): Response {
   const summary = summarizeProperty({
     address: street, neighborhood: a.neighborhood, zoning: a.zoning, zoningPlain,
     historicDistrict: a.local_historic_district, hdlcControl: a.hdlc_control, vcc, isLandmark: !!a.is_landmark,
-    permitsTotal: p.permits.length, permitsOpen: p.permits.filter(isPermitOpen).length,
+    permitsTotal: p.totals.permits,
+    permitsOpen: p.totals.permits > p.permits.length ? (s?.permits_open ?? p.permits.filter(isPermitOpen).length) : p.permits.filter(isPermitOpen).length,
     lastPermitType: p.permits[0]?.permit_type_desc ?? p.permits[0]?.permit_type ?? null, lastPermitDate: p.permits[0]?.applied_date ?? null,
     demolitionDate: s?.demolition_permit_date ?? null,
-    codeCasesOpen: p.codeCases.filter((c) => c.is_open).length, codeCasesTotal: p.codeCases.length, lastCodeCaseDate: p.codeCases[0]?.filed_date ?? null,
+    codeCasesOpen: p.totals.code_cases_open, codeCasesTotal: p.totals.code_cases, lastCodeCaseDate: p.codeCases[0]?.filed_date ?? null,
     strActiveType: p.strs.find((x) => x.is_active)?.license_type ?? null,
     block311: p.block.requests12m.reduce((n, r) => n + r.n, 0), blockPolice: p.block.police12m.reduce((n, r) => n + r.n, 0),
     today: new Date().toISOString().slice(0, 10),
@@ -135,6 +136,10 @@ export function renderProperty(env: Env, p: Property, url: URL): Response {
     ["Lot size", a.acres ? `${Math.round(a.acres * 43560).toLocaleString("en-US")} sq ft` : null], ["Parcel", String(a.geopin)],
   ];
   const units = p.addresses.filter((x) => x.unit_id);
+  const capped = [
+    p.totals.permits > p.permits.length ? `${p.permits.length} of ${p.totals.permits.toLocaleString("en-US")} permits` : null,
+    p.totals.code_cases > p.codeCases.length ? `${p.codeCases.length} of ${p.totals.code_cases.toLocaleString("en-US")} code cases` : null,
+  ].filter((x): x is string => x !== null);
   const total311 = p.block.requests12m.reduce((n, r) => n + r.n, 0);
   const totalPolice = p.block.police12m.reduce((n, r) => n + r.n, 0);
   const maxBar = Math.max(1, ...p.block.requests12m.map((r) => r.n), ...p.block.police12m.map((r) => r.n));
@@ -153,6 +158,7 @@ export function renderProperty(env: Env, p: Property, url: URL): Response {
     <div class="ledger-head">
       <h2 id="ledger-h">Everything on record here</h2>
       <p>${entries.length} records, newest first${openCount ? html` · <strong class="open-count">${openCount} open</strong>` : ""}</p>
+      ${capped.length ? html`<p class="note">Showing the latest ${capped.join(" and the latest ")}.</p>` : ""}
     </div>
     ${entries.length === 0 ? html`<p class="empty">The city has no permits, code cases, reviews or rental licenses on record for this parcel.</p>` : ""}
     <ol class="entries">${entries.map((e) => html`
@@ -172,12 +178,12 @@ export function renderProperty(env: Env, p: Property, url: URL): Response {
     ${rules.length ? html`<section class="card rules"><h2>Before you build or change anything</h2>
       ${rules.map((r) => html`<div class="rule"><h3>${r.title}</h3><p>${r.body}</p><p class="src"><a href="${r.sourceUrl}" rel="noopener">Source</a>${r.verified ? "" : " · not yet verified"}</p></div>`)}</section>` : ""}
     <section class="card block"><h2>This block, past 12 months</h2>
-      <p class="note">Counted for the ${esc(p.block.block_id ?? "surrounding")} block, never for a single address.</p>
+      <p class="note">Counted for the ${p.block.block_id ?? "surrounding"} block, never for a single address.</p>
       ${total311 ? html`<h3>${total311} requests to 311</h3><ul class="bars">${p.block.requests12m.slice(0, 6).map((r) => html`<li><span>${r.request_type}</span><b style="--w:${(100 * r.n / maxBar).toFixed(0)}%">${r.n}</b></li>`)}</ul>` : html`<p>No 311 requests on this block.</p>`}
       ${totalPolice ? html`<h3>${totalPolice} calls to police</h3><ul class="bars">${p.block.police12m.slice(0, 6).map((r) => html`<li><span>${titleCase(r.category)}</span><b style="--w:${(100 * r.n / maxBar).toFixed(0)}%">${r.n}</b></li>`)}</ul>
         <p class="note">NOPD calls for service are preliminary and block-level by design. Source: Orleans Parish Communications District.</p>` : html`<p>No police calls recorded on this block.</p>`}
     </section>
-    ${units.length ? html`<section class="card"><h2>${units.length} units at this address</h2><p class="units">${units.slice(0, 40).map((u) => html`<span>${u.unit_id}</span>`)}</p></section>` : ""}
+    ${p.totals.units ? html`<section class="card"><h2>${p.totals.units} units at this address</h2><p class="units">${units.slice(0, 40).map((u) => html`<span>${u.unit_id}</span>`)}${p.totals.units > 40 ? html`<span>and ${p.totals.units - 40} more</span>` : ""}</p></section>` : ""}
     <section class="card"><h2>Where this comes from</h2>
       <ul class="fresh">${sourcesUsed(p).map((f) => html`<li><span>${f.name}</span><time>${fmtDate(f.last_success_at)}</time></li>`)}</ul>
       <p class="note"><a href="/map#${a.geopin}">See this parcel on the map</a> · <a href="/about">How records are matched to parcels</a></p>

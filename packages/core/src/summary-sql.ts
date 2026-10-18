@@ -2,7 +2,10 @@
 // ABOUTME: Shared by the backfill (all parcels, in chunks) and the nightly Worker (only parcels that changed).
 import { PERMIT_OPEN_SQL } from "./status";
 
-/** One bound parameter: a JSON array of GEOPINs. `now` is inlined as the computed_at timestamp. */
+/**
+ * One bound parameter: a JSON array of GEOPINs. `now` is inlined as the computed_at timestamp. Block choice and the
+ * 12-month window match packages/d1/src/property.ts (BLOCK_FOR_PARCEL_SQL, activityWindow).
+ */
 export function parcelSummarySql(now: string): string {
   const since5y = `date('${now.slice(0, 10)}', '-5 years')`;
   const since12m = `date('${now.slice(0, 10)}', '-12 months')`;
@@ -22,8 +25,8 @@ SELECT p.geopin,
   (SELECT count(*) > 0 FROM str_license WHERE geopin = p.geopin AND is_active = 1),
   (SELECT license_type FROM str_license WHERE geopin = p.geopin AND is_active = 1 LIMIT 1),
   (SELECT max(coalesce(issued_date, applied_date)) FROM permit WHERE geopin = p.geopin AND (permit_type LIKE '%DEMO%' OR permit_num LIKE '%-DEMO')),
-  (SELECT count(*) FROM service_request WHERE block_id = (SELECT block_id FROM address WHERE geopin = p.geopin LIMIT 1) AND created_date >= ${since12m}),
-  (SELECT coalesce(sum(n), 0) FROM police_call_month WHERE block_id = (SELECT block_id FROM address WHERE geopin = p.geopin LIMIT 1) AND month >= substr(${since12m}, 1, 7)),
+  (SELECT count(*) FROM service_request WHERE block_id = (SELECT block_id FROM address WHERE geopin = p.geopin ORDER BY unit_id IS NOT NULL, number, address_id LIMIT 1) AND created_date >= ${since12m}),
+  (SELECT coalesce(sum(n), 0) FROM police_call_month WHERE block_id = (SELECT block_id FROM address WHERE geopin = p.geopin ORDER BY unit_id IS NOT NULL, number, address_id LIMIT 1) AND month >= strftime('%Y-%m', date(${since12m}, 'start of month', '+1 month'))),
   NULL, '${now}'
 FROM parcel p WHERE p.geopin IN (SELECT value FROM json_each(?))
 ON CONFLICT (geopin) DO UPDATE SET permits_total = excluded.permits_total, permits_open = excluded.permits_open,

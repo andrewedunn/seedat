@@ -50,38 +50,60 @@ export interface Property {
   permits: Permit[]; codeCases: CodeCase[]; onestop: OneStopRecord[]; strs: StrLicense[];
   block: { block_id: string | null; requests12m: { request_type: string; n: number }[]; police12m: { category: string; n: number }[] };
   freshness: Freshness[];
+  /** True totals; the lists above are capped at SHOWN. */
+  totals: { permits: number; code_cases: number; code_cases_open: number; units: number };
 }
 
 const PERMIT_COLS = `permit_num, address_raw, permit_type, permit_type_desc, work_class, description, status, status_mapped, status_date,
   applied_date, issued_date, completed_date, expires_date, est_cost, fees_total, contractor, days_to_issue, onestop_ref, match_type, match_score`;
 
-/** Twelve months back from `today` as YYYY-MM-DD. */
-const yearAgo = (today: string) => {
+/**
+ * The hundred-block a parcel's block-level activity is counted on: its lowest-numbered building address.
+ * One definition for the page, the MCP server and parcel_summary, so corner lots always report the same block.
+ */
+export const BLOCK_FOR_PARCEL_SQL =
+  "SELECT block_id FROM address WHERE geopin = ? ORDER BY unit_id IS NOT NULL, number, address_id LIMIT 1";
+
+/**
+ * Window for "the past N months" of block activity: 311 counts from the exact start date; police counts are monthly,
+ * so they start at the first whole month after it (never more than N months).
+ */
+export function activityWindow(today: string, months: number): { since: string; sinceMonth: string } {
   const d = new Date(`${today}T00:00:00Z`);
-  d.setUTCFullYear(d.getUTCFullYear() - 1);
-  return d.toISOString().slice(0, 10);
-};
+  d.setUTCMonth(d.getUTCMonth() - months);
+  const since = d.toISOString().slice(0, 10);
+  const m = new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth() + 1, 1));
+  return { since, sinceMonth: m.toISOString().slice(0, 7) };
+}
+
+/** Rows shown per kind; totals come from separate counts so a capped list never reads as the total. */
+export const SHOWN = { permits: 200, codeCases: 100, onestop: 100, strs: 50, units: 60 } as const;
 
 export async function loadProperty(db: D1Database, geopin: number, today = new Date().toISOString().slice(0, 10)): Promise<Property | null> {
-  const since = yearAgo(today);
-  const [parcel, summary, addresses, permits, codeCases, onestop, strs, freshness] = await db.batch([
+  const { since, sinceMonth } = activityWindow(today, 12);
+  const [parcel, summary, addresses, permits, codeCases, onestop, strs, freshness, totals, blockRow] = await db.batch([
     db.prepare("SELECT * FROM parcel WHERE geopin = ?").bind(geopin),
     db.prepare("SELECT * FROM parcel_summary WHERE geopin = ?").bind(geopin),
-    db.prepare("SELECT address_id, full_address, unit_id, block_id FROM address WHERE geopin = ? ORDER BY unit_id IS NOT NULL, number, unit_id LIMIT 60").bind(geopin),
-    db.prepare(`SELECT ${PERMIT_COLS} FROM permit WHERE geopin = ? AND removed_at IS NULL ORDER BY coalesce(applied_date, issued_date) DESC LIMIT 200`).bind(geopin),
+    db.prepare(`SELECT address_id, full_address, unit_id, block_id FROM address WHERE geopin = ? ORDER BY unit_id IS NOT NULL, number, unit_id LIMIT ${SHOWN.units}`).bind(geopin),
+    db.prepare(`SELECT ${PERMIT_COLS} FROM permit WHERE geopin = ? AND removed_at IS NULL ORDER BY coalesce(applied_date, issued_date) DESC LIMIT ${SHOWN.permits}`).bind(geopin),
     db.prepare(`SELECT case_id, case_no, address_raw, stage, key_status, is_open, filed_date, status_date, next_hearing_date, prev_hearing_result, last_permit_num, match_type
-      FROM code_case WHERE geopin = ? AND removed_at IS NULL ORDER BY filed_date DESC LIMIT 100`).bind(geopin),
+      FROM code_case WHERE geopin = ? AND removed_at IS NULL ORDER BY filed_date DESC LIMIT ${SHOWN.codeCases}`).bind(geopin),
     db.prepare(`SELECT onestop_id, reference_code, permit_num, record_type, description, submitted_date, current_status, detail_json, fetched_at
-      FROM onestop_record WHERE geopin = ? ORDER BY submitted_date DESC LIMIT 100`).bind(geopin),
+      FROM onestop_record WHERE geopin = ? ORDER BY submitted_date DESC LIMIT ${SHOWN.onestop}`).bind(geopin),
     db.prepare(`SELECT str_id, license_number, license_type, status, is_active, applied_date, issued_date, expiration_date, operator_name, address_raw
-      FROM str_license WHERE geopin = ? AND removed_at IS NULL ORDER BY is_active DESC, coalesce(issued_date, applied_date) DESC LIMIT 50`).bind(geopin),
+      FROM str_license WHERE geopin = ? AND removed_at IS NULL ORDER BY is_active DESC, coalesce(issued_date, applied_date) DESC LIMIT ${SHOWN.strs}`).bind(geopin),
     db.prepare("SELECT source_id, name, last_success_at, upstream_updated_at, stale_after_hours FROM source ORDER BY source_id"),
+    db.prepare(`SELECT (SELECT count(*) FROM permit WHERE geopin = ?1 AND removed_at IS NULL) permits,
+      (SELECT count(*) FROM code_case WHERE geopin = ?1 AND removed_at IS NULL) code_cases,
+      (SELECT count(*) FROM code_case WHERE geopin = ?1 AND removed_at IS NULL AND +is_open = 1) code_cases_open,
+      (SELECT count(*) FROM address WHERE geopin = ?1 AND unit_id IS NOT NULL) units`).bind(geopin),
+    db.prepare(BLOCK_FOR_PARCEL_SQL).bind(geopin),
   ]);
   const p = parcel!.results[0] as Parcel | undefined;
   if (!p) return null;
 
   const addrs = addresses!.results as Property["addresses"];
-  const blockId = addrs.find((a) => !a.unit_id)?.block_id ?? addrs[0]?.block_id ?? null;
+  const blockId = (blockRow!.results[0] as { block_id: string } | undefined)?.block_id ?? null;
   const permitRows = permits!.results as Omit<Permit, "events">[];
   const caseRows = codeCases!.results as Omit<CodeCase, "events">[];
 
@@ -91,7 +113,7 @@ export async function loadProperty(db: D1Database, geopin: number, today = new D
     db.prepare(`SELECT case_id, kind, event_date, type, result FROM code_event
       WHERE case_id IN (SELECT value FROM json_each(?)) ORDER BY case_id, event_date`).bind(JSON.stringify(caseRows.map((r) => r.case_id))),
     db.prepare(`SELECT request_type, count(*) n FROM service_request WHERE block_id = ? AND created_date >= ? GROUP BY 1 ORDER BY 2 DESC`).bind(blockId, since),
-    db.prepare(`SELECT category, sum(n) n FROM police_call_month WHERE block_id = ? AND month >= ? GROUP BY 1 ORDER BY 2 DESC`).bind(blockId, since.slice(0, 7)),
+    db.prepare(`SELECT category, sum(n) n FROM police_call_month WHERE block_id = ? AND month >= ? GROUP BY 1 ORDER BY 2 DESC`).bind(blockId, sinceMonth),
   ]);
 
   const evByPermit = new Map<string, Event[]>();
@@ -117,5 +139,6 @@ export async function loadProperty(db: D1Database, geopin: number, today = new D
     strs: strs!.results as StrLicense[],
     block: { block_id: blockId, requests12m: requests!.results as Property["block"]["requests12m"], police12m: police!.results as Property["block"]["police12m"] },
     freshness: freshness!.results as Freshness[],
+    totals: totals!.results[0] as Property["totals"],
   };
 }

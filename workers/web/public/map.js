@@ -20,10 +20,22 @@
   const card = document.querySelector(".map-card");
 
   // Zoomed out, small parcels are dropped from the tiles, so highlighted parcels also draw as dots until z15.
+  // Each request gets a sequence number; a slower, older response never overwrites a newer choice.
+  let layerSeq = 0;
   async function showLayer(name) {
+    const mine = ++layerSeq;
     countEl.textContent = "Loading…";
+    let rows;
+    try {
+      const res = await fetch(`/api/layer?name=${name}`);
+      if (!res.ok) throw new Error(String(res.status));
+      rows = await res.json();
+    } catch {
+      if (mine === layerSeq) countEl.textContent = "Couldn’t load this layer. Choose it again to retry.";
+      return;
+    }
+    if (mine !== layerSeq) return;
     for (const id of highlighted) map.setFeatureState({ source: "parcels", sourceLayer: "parcels", id }, { on: false });
-    const rows = await (await fetch(`/api/layer?name=${name}`)).json();
     for (const [id] of rows) map.setFeatureState({ source: "parcels", sourceLayer: "parcels", id }, { on: true });
     highlighted = rows.map((r) => r[0]);
     map.getSource("dots").setData({
@@ -64,13 +76,19 @@
     window.addEventListener("hashchange", fromHash);
   });
 
-  let selected = null;
+  let selected = null, cardSeq = 0;
   async function openCard(geopin, fly) {
+    const mine = ++cardSeq;
+    let r;
+    try {
+      const res = await fetch(`/api/parcel/${geopin}`);
+      if (!res.ok) return;
+      r = await res.json();
+    } catch { return; }
+    if (mine !== cardSeq) return;   // a newer click is already loading
     if (selected !== null) map.setFeatureState({ source: "parcels", sourceLayer: "parcels", id: selected }, { sel: false });
     selected = geopin;
     map.setFeatureState({ source: "parcels", sourceLayer: "parcels", id: geopin }, { sel: true });
-    const r = await (await fetch(`/api/parcel/${geopin}`)).json();
-    if (r.error) return;
     const h = document.createElement("div");
     const title = document.createElement("h2");
     title.textContent = r.address || r.situs || `Parcel ${geopin}`;

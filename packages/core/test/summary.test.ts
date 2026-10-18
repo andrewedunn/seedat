@@ -37,6 +37,13 @@ describe("summarizeProperty", () => {
     expect(s).toContain("The city has 7 permits on record here; the most recent, a renovation permit, was filed in August 2026. 2 are still open.");
   });
 
+  it("keeps acronyms and picks a/an by sound", () => {
+    expect(summarizeProperty({ ...base, permitsTotal: 2, lastPermitType: "HDLC COA", lastPermitDate: "2024-05-01" })).toContain("the most recent, an HDLC COA permit,");
+    expect(summarizeProperty({ ...base, permitsTotal: 2, lastPermitType: "Electrical Service / Circuit / Feeder", lastPermitDate: "2024-05-01" })).toContain("the most recent, an electrical service / circuit / feeder permit,");
+    expect(summarizeProperty({ ...base, permitsTotal: 2, lastPermitType: "VCC General Work", lastPermitDate: "2024-05-01" })).toContain("the most recent, a VCC general work permit,");
+    expect(summarizeProperty({ ...base, permitsTotal: 2, lastPermitType: "Plumbing Permit", lastPermitDate: "2024-05-01" })).toContain("the most recent, a plumbing permit,");
+  });
+
   it("uses the singular for one of anything", () => {
     const s = summarizeProperty({ ...base, permitsTotal: 1, permitsOpen: 1, lastPermitType: "Plumbing", lastPermitDate: "2026-01-09", codeCasesOpen: 1, codeCasesTotal: 1 });
     expect(s).toContain("The city has 1 permit on record here");

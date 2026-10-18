@@ -23,6 +23,7 @@ const LAYERS: Record<string, string> = {
 async function serveTiles(env: Env, req: Request, key: string): Promise<Response> {
   const range = req.headers.get("range");
   const m = range ? /bytes=(\d+)-(\d*)/.exec(range) : null;
+  if (m && m[2] && Number(m[2]) < Number(m[1])) return new Response("Range not satisfiable", { status: 416 });
   const obj = await env.ASSETS_BUCKET.get(key, m ? { range: { offset: Number(m[1]), ...(m[2] ? { length: Number(m[2]) - Number(m[1]) + 1 } : {}) } } : {});
   if (!obj) return new Response("Not found", { status: 404 });
   const headers = new Headers({ "content-type": "application/octet-stream", "accept-ranges": "bytes", "cache-control": "public, max-age=86400", etag: obj.httpEtag });
@@ -70,7 +71,7 @@ async function route(req: Request, env: Env, url: URL): Promise<Response> {
       s.permits_total, s.permits_open, s.code_cases_open, s.str_active, s.last_permit_date,
       (SELECT full_address FROM address WHERE geopin = p.geopin AND unit_id IS NULL LIMIT 1) address
       FROM parcel p LEFT JOIN parcel_summary s ON s.geopin = p.geopin WHERE p.geopin = ?`).bind(Number(parcelApi[1])).first();
-    return r ? json(r) : json({ error: "not found" });
+    return r ? json(r) : new Response(JSON.stringify({ error: "not found" }), { status: 404, headers: { "content-type": "application/json" } });
   }
 
   if (path === "/api/layer") {
@@ -112,7 +113,7 @@ export default {
   async fetch(req: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(req.url);
     if (req.method !== "GET" && req.method !== "HEAD") return new Response("Method not allowed", { status: 405 });
-    const cacheable = !url.pathname.startsWith("/tiles/") && !url.pathname.startsWith("/search");
+    const cacheable = req.method === "GET" && !url.pathname.startsWith("/tiles/") && !url.pathname.startsWith("/search");
     const cache = caches.default;
     if (cacheable) {
       const hit = await cache.match(req);

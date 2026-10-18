@@ -12,7 +12,7 @@ export function home(env: Env, stats: { parcels: number; permits: number; update
 <section class="hero">
   <h1>${tiles("See Dat")}</h1>
   <p class="lede">Every public record about a New Orleans property, on one page: permits and inspections, code enforcement, short-term rental licenses, zoning and historic district rules, and what’s happening on the block.</p>
-  <form class="search search-big" action="/search" role="search">
+  <form class="search search-big" action="/search" role="search" aria-label="Look up an address">
     <label for="q">Address</label>
     <input id="q" name="q" type="search" placeholder="e.g. 3300 Dauphine St" autocomplete="off" autofocus data-suggest>
     <button type="submit">Look up</button>
@@ -37,7 +37,7 @@ export function searchResults(env: Env, q: string, suggestions: Suggestion[], re
       <h1 class="plain">No exact match for “${q}”</h1>
       ${reason && why[reason] ? html`<p>${why[reason]}</p>` : ""}
       ${suggestions.length ? html`<h2>Did you mean</h2><ul class="suggest-list">${suggestions.map((s) => html`<li><a href="/p/${s.geopin}/${slug(s.full_address)}">${s.full_address}</a>${s.neighborhood ? html` <span>${titleCase(s.neighborhood)}</span>` : ""}</li>`)}</ul>` : ""}
-      <form class="search search-big" action="/search" role="search"><label for="q2">Try another address</label><input id="q2" name="q" type="search" value="${q}" autocomplete="off" data-suggest><button type="submit">Look up</button></form>
+      <form class="search search-big" action="/search" role="search" aria-label="Look up an address"><label for="q2">Try another address</label><input id="q2" name="q" type="search" value="${q}" autocomplete="off" data-suggest><button type="submit">Look up</button></form>
     </section>`,
   });
 }
@@ -57,8 +57,8 @@ export function mapPage(env: Env): Response {
       .map(([v, l], i) => html`<label class="chip"><input type="radio" name="layer" value="${v}"${i === 0 ? raw(" checked") : ""}> ${l}</label>`)}
     <p class="map-count" aria-live="polite"></p>
   </div>
-  <div id="map" aria-label="Map of New Orleans parcels"></div>
-  <div class="map-card" hidden></div>
+  <div id="map" role="region" aria-label="Map of New Orleans parcels"></div>
+  <div class="map-card" aria-live="polite" hidden></div>
 </section>`,
   });
 }

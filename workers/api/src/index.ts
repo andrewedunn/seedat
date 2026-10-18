@@ -3,6 +3,8 @@
 import { TOOLS, ToolError, type Env } from "./tools";
 
 const PROTOCOL_VERSIONS = ["2025-06-18", "2025-03-26", "2024-11-05"];
+const MAX_BODY_BYTES = 64 * 1024;
+const MAX_BATCH = 10;
 const SERVER_INFO = { name: "seedat", title: "See Dat: New Orleans property and permit records", version: "0.1.0" };
 const INSTRUCTIONS = `See Dat joins the City of New Orleans' public property data to parcels: permits (with timelines and inspections),
 code enforcement, One Stop reviews (HDLC/VCC), short-term rental licenses, zoning, historic district rules, and block-level
@@ -62,10 +64,13 @@ export default {
     // Stateless server: no server-initiated stream, no sessions to delete.
     if (request.method !== "POST") return new Response("Method not allowed", { status: 405, headers: { allow: "POST", ...CORS } });
 
+    const text = await request.text();
+    if (text.length > MAX_BODY_BYTES) return Response.json(rpcError(null, -32600, `Request too large (max ${MAX_BODY_BYTES} bytes)`), { status: 413, headers: CORS });
     let body: unknown;
-    try { body = await request.json(); } catch { return Response.json(rpcError(null, -32700, "Parse error"), { status: 400, headers: CORS }); }
+    try { body = JSON.parse(text); } catch { return Response.json(rpcError(null, -32700, "Parse error"), { status: 400, headers: CORS }); }
     const batch = Array.isArray(body);
     const reqs = (batch ? body : [body]) as RpcRequest[];
+    if (reqs.length > MAX_BATCH) return Response.json(rpcError(null, -32600, `Batch too large (max ${MAX_BATCH})`), { status: 400, headers: CORS });
     if (!reqs.length || reqs.some((r) => !r || r.jsonrpc !== "2.0" || typeof r.method !== "string")) {
       return Response.json(rpcError(null, -32600, "Invalid request"), { status: 400, headers: CORS });
     }
