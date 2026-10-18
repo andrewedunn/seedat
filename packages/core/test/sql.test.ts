@@ -58,4 +58,10 @@ describe("insertSql", () => {
       "INSERT INTO t (k, v) VALUES ('a', 1) ON CONFLICT (k) DO UPDATE SET v = excluded.v;",
     ]);
   });
+
+  it("leaves `keepOnConflict` columns as they were when the key already exists", () => {
+    expect(insertSql("t", ["k", "v", "first_seen_at"], [{ k: "a", v: 1, first_seen_at: "2026-10-17" }], { upsertKey: ["k"], keepOnConflict: ["first_seen_at"] })).toEqual([
+      "INSERT INTO t (k, v, first_seen_at) VALUES ('a', 1, '2026-10-17') ON CONFLICT (k) DO UPDATE SET v = excluded.v;",
+    ]);
+  });
 });

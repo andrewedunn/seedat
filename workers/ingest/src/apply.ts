@@ -8,10 +8,10 @@ import { allChunks, jsonChunks, prefetchIndex } from "@seedat/d1/src/prefetch";
 
 const PK: Record<string, string[]> = {
   permit: ["permit_num"], code_case: ["case_id"], str_license: ["str_id"], business_license: ["license_id"],
-  service_request: ["request_id"], code_event: ["source_id", "source_key"], permit_event: ["permit_num", "seq"],
+  service_request: ["request_id"], demolition: ["demolition_id"], code_event: ["source_id", "source_key"], permit_event: ["permit_num", "seq"],
   src_row: ["source_id", "key"], change_log: [], record_parcel: ["entity", "entity_id", "geopin"],
 };
-const MATCHED = new Set(["permit", "code_case", "str_license", "business_license"]);
+const MATCHED = new Set(["permit", "code_case", "str_license", "business_license", "demolition"]);
 const sourcesFor = (table: string) => recordSources.filter((s) => s.table === table);
 /** Tables whose rows are merged from several sources keep each source's row JSON in src_row. */
 export const isMultiSource = (table: string) => table !== "code_event" && sourcesFor(table).length > 1;
@@ -63,14 +63,15 @@ async function reassemble(
 ): Promise<{ inserted: number; updated: number; removed: number; geopins: Set<number> }> {
   const piecesByKey = new Map<string, Piece[]>();
   if (isMultiSource(table)) {
-    const priorities = new Map(sourcesFor(table).map((s) => [s.sourceId, s.priority]));
+    const defs = new Map(sourcesFor(table).map((s) => [s.sourceId, s]));
     const stored = await allChunks<{ source_id: string; key: string; row_json: string; match_json: string | null }>(db,
       `SELECT source_id, key, row_json, match_json FROM src_row WHERE key IN (SELECT value FROM json_each(?))
-       AND removed_at IS NULL AND source_id IN (${[...priorities.keys()].map((s) => `'${s}'`).join(",")})`, keys);
+       AND removed_at IS NULL AND source_id IN (${[...defs.keys()].map((s) => `'${s}'`).join(",")})`, keys);
     for (const s of stored) {
       if (fresh.get(s.key)?.sourceId === s.source_id) continue;   // the fresh piece replaces its stored copy
       const list = piecesByKey.get(s.key) ?? [];
-      list.push({ sourceId: s.source_id, priority: priorities.get(s.source_id)!, row: JSON.parse(s.row_json), ...(s.match_json ? { match: JSON.parse(s.match_json) } : {}) });
+      const def = defs.get(s.source_id)!;
+      list.push({ sourceId: s.source_id, priority: def.priority, row: JSON.parse(s.row_json), ...(s.match_json ? { match: JSON.parse(s.match_json) } : {}), ...(def.wins ? { wins: def.wins } : {}) });
       piecesByKey.set(s.key, list);
     }
   }
@@ -163,7 +164,7 @@ export async function applyPage(db: D1Database, src: AnySource, raws: Record<str
     await upsert(db, "code_event", changed.map(([, v]) => v.row));
     result.inserted = changed.length;
   } else {
-    const fresh = new Map(changed.map(([k, v]) => [k, { sourceId: src.sourceId, priority: src.priority, row: v.row, ...(v.match ? { match: v.match } : {}) } as Piece]));
+    const fresh = new Map(changed.map(([k, v]) => [k, { sourceId: src.sourceId, priority: src.priority, row: v.row, ...(v.match ? { match: v.match } : {}), ...(src.wins ? { wins: src.wins } : {}) } as Piece]));
     const r = await reassemble(db, table, changed.map(([k]) => k), fresh, now, snapshotId);
     result = { inserted: r.inserted, updated: r.updated, geopins: [...r.geopins] };
   }

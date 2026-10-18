@@ -62,8 +62,10 @@ describe("registry", () => {
     expect(sourceById("socrata:nope")).toBeUndefined();
   });
   it("every source has a url on data.nola.gov and a license", () => {
+    const fileArchives = new Set(["socrata:rw6e-a9x3", "socrata:fdhh-psg3"]);   // published as zip downloads, not SODA
     for (const s of allSources) {
-      expect(s.url).toBe(`https://data.nola.gov/resource/${s.sourceId.replace("socrata:", "")}.json`);
+      const id = s.sourceId.replace("socrata:", "");
+      expect(s.url).toBe(fileArchives.has(s.sourceId) ? `https://data.nola.gov/download/${id}/application%2Fzip` : `https://data.nola.gov/resource/${id}.json`);
       expect(s.license.length).toBeGreaterThan(0);
     }
   });

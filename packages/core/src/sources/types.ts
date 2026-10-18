@@ -77,6 +77,13 @@ export interface ServiceRequestRow {
   status?: Cell; created_date?: Cell; closed_date?: Cell;
 }
 
+export interface DemolitionRow {
+  demolition_id: string;
+  address_raw?: Cell; block_id?: Cell;
+  program?: Cell; case_id?: Cell; units?: Cell; council_district_filed?: Cell;
+  start_date?: Cell; complete_date?: Cell;
+}
+
 export type RawRow = Record<string, unknown>;
 
 export interface SourceDef<Row extends object = object, Event extends object = never> {
@@ -84,9 +91,13 @@ export interface SourceDef<Row extends object = object, Event extends object = n
   name: string;
   url: string;
   license: string;
-  table: "permit" | "code_case" | "code_event" | "str_license" | "business_license" | "service_request";
+  table: "permit" | "code_case" | "code_event" | "str_license" | "business_license" | "service_request" | "demolition";
   /** Merge order when several sources feed one table: lower numbers win a column, later ones only fill gaps. */
   priority: number;
+  /** Columns this source supplies ahead of higher-priority sources whenever it has a value (see mergeRows). */
+  wins?: readonly string[];
+  /** A historical archive the city no longer updates: loaded once, never pulled by the nightly Workflow. */
+  frozen?: boolean;
   /** Natural key in our table (for code_event, the source_key). */
   key(row: Row): string;
   /** One raw Socrata row -> our row, or null when the row is unusable (no key, deleted upstream). */

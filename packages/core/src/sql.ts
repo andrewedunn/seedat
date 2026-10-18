@@ -27,12 +27,12 @@ export function utf8Length(s: string): number {
 
 export function insertSql(
   table: string, columns: string[], rows: Record<string, unknown>[],
-  opts: { chunk?: number; upsertKey?: string[]; maxBytes?: number } = {},
+  opts: { chunk?: number; upsertKey?: string[]; keepOnConflict?: string[]; maxBytes?: number } = {},
 ): string[] {
   const chunk = opts.chunk ?? 500;
   const maxBytes = opts.maxBytes ?? 90_000; // D1 rejects statements over 100 KB
   const head = `INSERT INTO ${table} (${columns.join(", ")}) VALUES `;
-  const updatable = opts.upsertKey ? columns.filter((c) => !opts.upsertKey!.includes(c)) : [];
+  const updatable = opts.upsertKey ? columns.filter((c) => !opts.upsertKey!.includes(c) && !opts.keepOnConflict?.includes(c)) : [];
   const tail = !opts.upsertKey ? ""
     : updatable.length ? ` ON CONFLICT (${opts.upsertKey.join(", ")}) DO UPDATE SET ${updatable.map((c) => `${c} = excluded.${c}`).join(", ")}`
     : ` ON CONFLICT (${opts.upsertKey.join(", ")}) DO NOTHING`;

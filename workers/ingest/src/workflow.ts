@@ -50,8 +50,9 @@ export class NightlyIngest extends WorkflowEntrypoint<Env, NightlyParams> {
       const upstream = await catalogUpdatedAt();
       const known = new Map((await this.env.DB.prepare("SELECT source_id, upstream_updated_at FROM source").all<{ source_id: string; upstream_updated_at: string | null }>())
         .results.map((r) => [r.source_id, r.upstream_updated_at]));
+      // Frozen archives are never pulled on schedule (two of them are file downloads, not SODA); `only` can still name one.
       return recordSources
-        .filter((s) => !event.payload.only || event.payload.only.includes(s.sourceId))
+        .filter((s) => (event.payload.only ? event.payload.only.includes(s.sourceId) : !s.frozen))
         .map((s) => ({ sourceId: s.sourceId, upstream: upstream.get(datasetId(s.sourceId)) ?? null }))
         .filter((s) => full || !s.upstream || s.upstream !== known.get(s.sourceId));
     });

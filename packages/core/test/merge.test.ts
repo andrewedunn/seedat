@@ -13,6 +13,15 @@ describe("mergeRows", () => {
     expect(merged.sources).toEqual(["blds", "rcm3"]);
   });
 
+  it("lets a source's `wins` columns beat higher-priority sources, but only where it has a value", () => {
+    const merged = mergeRows([
+      { sourceId: "live", priority: 1, row: { id: "1", created_date: "2019-01-02", closed_date: "2014-02-24", status: "Closed" } },
+      { sourceId: "archive", priority: 2, wins: ["created_date", "closed_date"], row: { id: "1", created_date: "2014-02-20T10:00:00", closed_date: null, status: "Open" } },
+    ]);
+    expect(merged.row).toEqual({ id: "1", created_date: "2014-02-20T10:00:00", closed_date: "2014-02-24", status: "Closed" });
+    expect(merged.sources).toEqual(["live", "archive"]);
+  });
+
   it("treats undefined like null", () => {
     expect(mergeRows([
       { sourceId: "a", priority: 1, row: { x: undefined } },

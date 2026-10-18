@@ -1,4 +1,4 @@
-// ABOUTME: Re-runs the current matcher over every matched record (permits, code cases, STR, business licenses) and
+// ABOUTME: Re-runs the current matcher over every matched record (permits, code cases, STR, licenses, demolitions) and
 // ABOUTME: updates only match columns and multi-parcel links in seedat-db. Use after improving the matcher.
 // Usage: npx tsx scripts/rematch.ts [--load]   (writes data/sql/rematch-*.sql; rehearse in local SQLite with
 //   PRAGMA foreign_keys=ON first, since D1 enforces foreign keys)
@@ -12,7 +12,7 @@ import { DATA, buildFullIndex } from "./lib/raw";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 
-const KEY: Record<string, string> = { permit: "permit_num", code_case: "case_id", str_license: "str_id", business_license: "license_id" };
+const KEY: Record<string, string> = { permit: "permit_num", code_case: "case_id", str_license: "str_id", business_license: "license_id", demolition: "demolition_id" };
 const CHUNK = 20_000;
 
 const { index } = buildFullIndex();
@@ -27,7 +27,7 @@ for (const table of Object.keys(KEY)) {
   for (const src of recordSources.filter((s) => s.table === table)) {
     for (const [key, b] of collectSource(src).best) {
       const list = pieces.get(key) ?? [];
-      list.push({ sourceId: src.sourceId, priority: src.priority, row: b.row, ...(b.match ? { match: b.match } : {}) });
+      list.push({ sourceId: src.sourceId, priority: src.priority, row: b.row, ...(b.match ? { match: b.match } : {}), ...(src.wins ? { wins: src.wins } : {}) });
       pieces.set(key, list);
     }
   }

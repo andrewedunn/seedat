@@ -1,0 +1,44 @@
+[
+ {
+  "ticket_id": "101000847991",
+  "issue_type": "Street Light",
+  "ticket_created_date_time": "2018-08-21T14:03:55.000",
+  "ticket_closed_date_time": "2018-08-28T09:38:35.000",
+  "ticket_status": "Closed",
+  "issue_description": "Issue: Outage Or Cycling | Pole number: PB164",
+  "street_address": "5417 Constance St",
+  "neighborhood_district": "WEST RIVERSIDE",
+  "council_district": "A",
+  "city": "NEW ORLEANS",
+  "state": "LA",
+  "zip_code": "70115",
+  "location": {
+   "latitude": "29.9202224971517",
+   "longitude": "-90.1157700850457"
+  },
+  "latitude": "29.9202224971517",
+  "longitude": "-90.1157700850457",
+  "closure_reason": "Case is Invalid",
+  "case_title": "Streetlight - Outage Or Cycling"
+ },
+ {
+  "ticket_id": "101000850908",
+  "issue_type": "Traffic Signal",
+  "ticket_created_date_time": "2018-08-28T12:28:00.000",
+  "ticket_status": "Open",
+  "issue_description": "Type of Traffic Signal: Red, Yellow, or Green Traffic Signal | Request for: Other | How much of intesection is impacted: Entire Intersection",
+  "street_address": "GRAVIER ST & CAMP ST",
+  "neighborhood_district": "CENTRAL BUSINESS DISTRICT",
+  "council_district": "B",
+  "city": "NEW ORLEANS",
+  "state": "LA",
+  "zip_code": "70130",
+  "location": {
+   "latitude": "29.9510401435263",
+   "longitude": "-90.0688490251451"
+  },
+  "latitude": "29.9510401435263",
+  "longitude": "-90.0688490251451",
+  "case_title": "Traffic Signal Other"
+ }
+]

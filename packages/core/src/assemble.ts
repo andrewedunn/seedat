@@ -5,7 +5,7 @@ import { matchRecord, type MatchInput } from "./match";
 import { mergeRows } from "./merge";
 import { rowHash } from "./sources/helpers";
 
-export interface Piece { sourceId: string; priority: number; row: Record<string, unknown>; match?: MatchInput }
+export interface Piece { sourceId: string; priority: number; row: Record<string, unknown>; match?: MatchInput; wins?: readonly string[] }
 
 /** Merge match inputs the same way as rows: first non-empty value by priority wins each field. */
 export function mergeMatchInputs(pieces: Piece[]): MatchInput | null {

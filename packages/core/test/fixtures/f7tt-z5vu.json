@@ -1,0 +1,49 @@
+[
+ {
+  "permitnumber": "B00000007",
+  "applicationdate": "2000-01-04T00:00:00.000",
+  "issuedate": "2000-01-04T00:00:00.000",
+  "housenum": "600",
+  "streetname": "MAZANT",
+  "streetsuffix": "ST",
+  "matchaddress": "600 MAZANT ST, NEW ORLEANS, LA 70150",
+  "applicantname": "MICHAEL GANGI",
+  "parcelowner": "REUTHER SEAFOOD, O INC",
+  "planningdist": "3",
+  "zoning": "LI",
+  "description": "BUILDING DEMOLITION AND DEBRIS REMOVAL VACANT LOT DEMOLISH VACANT COMMERCIAL BUILDING TO GRADE AS PER HDLC C/A #10564. ANY FURTHER USE SHALL REQUIRE A SEPARATE PERMIT.",
+  "propertykey": "39W10560400001",
+  "x": "3691627.45562",
+  "y": "533396.775842"
+ },
+ {
+  "permitnumber": "B00001679",
+  "applicationdate": "2000-03-31T00:00:00.000",
+  "housenum": "1255",
+  "streetdir": "N",
+  "streetname": "VILLERE",
+  "streetsuffix": "ST",
+  "unitnumber": "A",
+  "matchaddress": "1255 N VILLERE ST UNIT A, NEW ORLEANS, LA 70122",
+  "applicantname": "CARLTON I CHARLES",
+  "parcelowner": "CHARLES, CARLTON",
+  "zoning": "HMR1",
+  "description": "CHANGE OF USE BEAUTY SHOP SUPPLEMENT TO CORRECT THE RECORD - CONVERT VACANT RESIDENTIAL BUILDIG TO A BEAUTY SALON PER PLANS AND Z/D 41/99. FEES PAID UNDER B00001663.",
+  "propertykey": "GENERATED01880",
+  "x": "3681634.76858",
+  "y": "536026.826356"
+ },
+ {
+  "permitnumber": "B00000100",
+  "applicationdate": "2000-01-10T00:00:00.000",
+  "housenum": "100",
+  "streetname": "EUTERPE",
+  "streetsuffix": "ST",
+  "matchaddress": "100 EUTERPE ST, NEW ORLEANS, LA 70130",
+  "applicantname": "SEAN SULLIVAN",
+  "parcelowner": "ORLEANS, PORT OF NEW",
+  "zoning": "HI",
+  "description": "BUILDING RENOVATIONS MEETING HALL RENOVATIONS TO VACANT COMMERCIAL BUILD- ING TO CONSIST OF MODIFICATIONS TO MECH SYSTEM, AUTOMATIC SPRINKLER & FIRE ALARM (TO BE USE FOR TERMINAL/HALL)AS PER PLAN",
+  "propertykey": "GENERATED10821"
+ }
+]
