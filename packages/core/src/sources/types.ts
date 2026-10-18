@@ -58,7 +58,7 @@ export interface StrLicenseRow {
   license_number?: Cell; reference_code?: Cell;
   address_raw?: Cell; block_id?: Cell;
   license_type?: Cell; status?: Cell;
-  is_active?: Cell;                  // set only by the active-licences list; other sources leave it absent
+  is_active?: Cell;                  // set only by the active-licenses list; other sources leave it absent
   applied_date?: Cell; issued_date?: Cell; expiration_date?: Cell;
   operator_name?: Cell;
   lat?: Cell; lon?: Cell;

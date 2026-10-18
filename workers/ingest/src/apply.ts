@@ -4,7 +4,7 @@ import { assemble, type Piece } from "@seedat/core/src/assemble";
 import { fieldChanges } from "@seedat/core/src/diff";
 import { preferRow, recordSources, rowHash, type AnySource } from "@seedat/core/src/sources";
 import { insertSql } from "@seedat/core/src/sql";
-import { allChunks, prefetchIndex } from "./prefetch";
+import { allChunks, prefetchIndex } from "@seedat/d1/src/prefetch";
 
 const PK: Record<string, string[]> = {
   permit: ["permit_num"], code_case: ["case_id"], str_license: ["str_id"], business_license: ["license_id"],

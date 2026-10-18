@@ -1,0 +1,14 @@
+// ABOUTME: Wrangler config for seedat-web: server-rendered property pages, search, and the parcel map.
+// ABOUTME: Static CSS/JS in ./public; parcel vector tiles (PMTiles) are served from the seedat-assets bucket.
+{
+  "name": "seedat-web",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "assets": { "directory": "./public", "binding": "ASSETS" },
+  "observability": { "enabled": true },
+  "d1_databases": [{ "binding": "DB", "database_name": "seedat-db", "database_id": "c6aa8f43-0488-48ac-b18a-11dc4308dd7f" }],
+  "r2_buckets": [{ "binding": "ASSETS_BUCKET", "bucket_name": "seedat-assets" }],
+  "vars": { "UMAMI_SRC": "", "UMAMI_WEBSITE_ID": "" }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "@seedat/d1",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "dependencies": { "@seedat/core": "*" }
+}

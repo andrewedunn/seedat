@@ -1,5 +1,5 @@
-// ABOUTME: Adapter for short-term-rental applications and licences (en36-xvxg), 2017 onward; one row per application.
-// ABOUTME: Keyed by reference_code because renewals reuse a licence number; applications never issued have no licence number at all.
+// ABOUTME: Adapter for short-term-rental applications and licenses (en36-xvxg), 2017 onward; one row per application.
+// ABOUTME: Keyed by reference_code because renewals reuse a license number; applications never issued have no license number at all.
 import { socrataUrl, text } from "./helpers";
 import { operatorName, strBase, strMatchInput } from "./str_common";
 import type { SourceDef, StrLicenseRow } from "./types";

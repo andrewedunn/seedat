@@ -1,4 +1,4 @@
-// ABOUTME: Adapter for non-commercial short-term-rental licences (2ei9-wqw2): status, type and operator name per licence.
+// ABOUTME: Adapter for non-commercial short-term-rental licenses (2ei9-wqw2): status, type and operator name per license.
 // ABOUTME: The dataset also names the owner; only the operator name is kept, matching the other STR sources.
 import { cleanDate, socrataUrl, text } from "./helpers";
 import { operatorName, strBase, strMatchInput } from "./str_common";

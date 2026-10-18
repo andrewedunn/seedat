@@ -1,4 +1,4 @@
-// ABOUTME: Adapter for the active short-term-rental licence list (ufdg-ajws); presence in this list sets is_active.
+// ABOUTME: Adapter for the active short-term-rental license list (ufdg-ajws); presence in this list sets is_active.
 // ABOUTME: Shares the application's reference_code key, so the loader merges it onto the en36-xvxg row.
 import { socrataUrl, text } from "./helpers";
 import { operatorName, strBase, strMatchInput } from "./str_common";

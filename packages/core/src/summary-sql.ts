@@ -1,5 +1,6 @@
 // ABOUTME: SQL that (re)computes parcel_summary rows from the activity tables for a JSON array of GEOPINs.
 // ABOUTME: Shared by the backfill (all parcels, in chunks) and the nightly Worker (only parcels that changed).
+import { PERMIT_OPEN_SQL } from "./status";
 
 /** One bound parameter: a JSON array of GEOPINs. `now` is inlined as the computed_at timestamp. */
 export function parcelSummarySql(now: string): string {
@@ -11,7 +12,7 @@ INSERT INTO parcel_summary (geopin, permits_total, permits_open, last_permit_dat
   block_311_12m, block_police_12m, summary_text, computed_at)
 SELECT p.geopin,
   (SELECT count(*) FROM permit WHERE geopin = p.geopin),
-  (SELECT count(*) FROM permit WHERE geopin = p.geopin AND coalesce(is_closed, 0) = 0 AND coalesce(status_mapped, status, '') NOT IN ('Closed', 'Complete', 'Completed', 'Expired', 'Withdrawn', 'Void', 'Cancelled')),
+  (SELECT count(*) FROM permit WHERE geopin = p.geopin AND removed_at IS NULL AND ${PERMIT_OPEN_SQL}),
   (SELECT max(coalesce(applied_date, issued_date)) FROM permit WHERE geopin = p.geopin),
   (SELECT permit_type FROM permit WHERE geopin = p.geopin ORDER BY coalesce(applied_date, issued_date) DESC LIMIT 1),
   (SELECT sum(est_cost) FROM permit WHERE geopin = p.geopin AND coalesce(applied_date, issued_date) >= ${since5y}),

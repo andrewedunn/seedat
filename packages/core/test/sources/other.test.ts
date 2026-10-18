@@ -1,5 +1,5 @@
 // ABOUTME: Tests for the STR, business-license and 311 adapters, including that phones, emails and addresses are dropped.
-// ABOUTME: Real rows; STR keying uses the application reference code because renewals reuse licence numbers.
+// ABOUTME: Real rows; STR keying uses the application reference code because renewals reuse license numbers.
 import { describe, expect, it } from "vitest";
 import strApps from "../fixtures/str_application.json";
 import strActive from "../fixtures/ufdg-ajws.json";
@@ -37,7 +37,7 @@ describe("str_application", () => {
     expect(Object.keys(r).filter((k) => /phone|email/.test(k))).toEqual([]);
   });
 
-  it("handles applications that never got a licence number", () => {
+  it("handles applications that never got a license number", () => {
     const r = appSource.map(b)!;
     expect(r.str_id).toBe("1AUYGY");
     expect(r.license_number).toBeNull();
@@ -66,7 +66,7 @@ describe("str_active", () => {
 });
 
 describe("str_noncommercial", () => {
-  it("maps the non-commercial licence list", () => {
+  it("maps the non-commercial license list", () => {
     const [x] = rows(strNon) as [Raw];
     const r = nonSource.map(x)!;
     expect(r).toMatchObject({
@@ -81,7 +81,7 @@ describe("str_noncommercial", () => {
 
 describe("business_license", () => {
   const [placeholder, ok] = rows(biz) as [Raw, Raw];
-  it("maps a licence and drops owner, phone and mailing details", () => {
+  it("maps a license and drops owner, phone and mailing details", () => {
     const r = bizSource.map(ok)!;
     expect(bizSource.key(r)).toBe("105025335");
     expect(r).toMatchObject({ business_name: "1000 FIGS", business_type: "Special Events-Other (Vendor)", issued_date: "2017-07-15", address_raw: "3141 PONCE DE LEON ST", block_id: "3100 PONCE DE LEON ST" });

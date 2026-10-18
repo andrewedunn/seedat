@@ -7,6 +7,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@seedat/core": "*"
+    "@seedat/core": "*",
+    "@seedat/d1": "*"
   }
 }

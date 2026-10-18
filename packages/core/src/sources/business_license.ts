@@ -1,5 +1,5 @@
-// ABOUTME: Adapter for occupational (business) licences (hjcd-grvu): name, type, start date and address; owner, phone and mailing address are dropped.
-// ABOUTME: Licences with an out-of-town address are kept but not offered to the New Orleans address matcher.
+// ABOUTME: Adapter for occupational (business) licenses (hjcd-grvu): name, type, start date and address; owner, phone and mailing address are dropped.
+// ABOUTME: Licenses with an out-of-town address are kept but not offered to the New Orleans address matcher.
 import { blockIdForText } from "../block";
 import { cleanDate, pointFrom, socrataUrl, text } from "./helpers";
 import type { BusinessLicenseRow, SourceDef } from "./types";

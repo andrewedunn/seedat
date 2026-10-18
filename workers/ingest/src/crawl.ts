@@ -4,7 +4,7 @@ import { blockIdForText } from "@seedat/core/src/block";
 import { matchRecord } from "@seedat/core/src/match";
 import { detailToEvents, parseOneStopDetail } from "@seedat/core/src/onestop";
 import { insertSql, sqlValue } from "@seedat/core/src/sql";
-import { prefetchIndex } from "./prefetch";
+import { prefetchIndex } from "@seedat/d1/src/prefetch";
 import type { Env } from "./workflow";
 
 const UA = "seedat-ingest/0.1 (+https://seedat.dunn.us; seedat@dunn.us)";

@@ -22,7 +22,7 @@ describe("assemble", () => {
     expect(typeof row.row_hash).toBe("string");
   });
 
-  it("marks an STR licence inactive unless the active list says otherwise", () => {
+  it("marks an STR license inactive unless the active list says otherwise", () => {
     const { row } = assemble("str_license", [{ sourceId: "socrata:en36-xvxg", priority: 1, row: { str_id: "Q1" } }], null);
     expect(row.is_active).toBe(0);
   });

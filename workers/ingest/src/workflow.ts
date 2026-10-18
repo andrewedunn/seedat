@@ -5,7 +5,7 @@ import { policeSources, recordSources } from "@seedat/core/src/sources";
 import { insertSql } from "@seedat/core/src/sql";
 import { parcelSummarySql } from "@seedat/core/src/summary-sql";
 import { applyPage, applyRemovals, mapRows } from "./apply";
-import { jsonChunks } from "./prefetch";
+import { jsonChunks } from "@seedat/d1/src/prefetch";
 import { PAGE_SIZE, catalogUpdatedAt, fetchPage } from "./socrata";
 import { NIGHTLY_WINDOW_DAYS, WINDOWS } from "./windows";
 
