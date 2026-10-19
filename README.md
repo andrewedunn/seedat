@@ -48,4 +48,6 @@ Each Worker deploys with `npx wrangler deploy` from its folder. Database changes
 
 ## Data and terms
 
+The code is MIT-licensed (see [LICENSE](LICENSE)). The data belongs to its publishers and keeps their terms:
+
 The city data is CC0 or published without a license on data.nola.gov. NOPD calls for service may not be used commercially or to identify specific addresses, so See Dat shows them only as block-level counts. Phone numbers and email addresses are never republished. See Dat is not an official city record.
