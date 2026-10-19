@@ -9,7 +9,7 @@
   - **Why the history was rewritten first:** research samples and two test fixtures had carried personal contact details from city datasets (4 Gmail addresses of STR/business-license holders, and 12 phone numbers).
   - **How:** `git filter-repo --replace-text` swapped those exact strings for placeholders in every commit. All 24 commits were kept, then `main` was force-pushed with a lease.
   - **Since then:** all commit hashes before 059de6e changed. GitHub may serve the old commits by exact hash until it garbage-collects them.
-  - **Still to decide:** the repo has no LICENSE yet, so by default all rights are reserved.
+  - **License:** MIT (Andrew's choice, 2026-10-19). The data keeps its publishers' terms.
 
 - **2026-10-18** — **Frozen historical archives loaded** (311 2012–2018, permits to 2009, Accela and LAMA 2004–2012, BlightStatus demolitions). See VALIDATION.md for ranges and match rates by era.
   - **Demolitions get their own `demolition` table** (migration 0010), not `permit_event`. The records have no permit number, and `permit_event` rows hang off one. They carry program, units, dates and usually a GEOPIN, and are matched like any record. They are not shown on the address page or through MCP yet.
