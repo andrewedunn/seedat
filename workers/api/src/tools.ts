@@ -82,6 +82,7 @@ function propertyFacts(env: Env, p: Property) {
       permitsTotal: p.totals.permits, permitsOpen,
       lastPermitType: p.permits[0]?.permit_type_desc ?? null, lastPermitDate: p.permits[0]?.applied_date ?? null,
       demolitionDate: p.summary?.demolition_permit_date ?? null,
+      cityDemolition: p.demolitions[0] ? { program: p.demolitions[0].program, startDate: p.demolitions[0].start_date, completeDate: p.demolitions[0].complete_date } : null,
       codeCasesOpen: p.totals.code_cases_open, codeCasesTotal: p.totals.code_cases, lastCodeCaseDate: p.codeCases[0]?.filed_date ?? null,
       strActiveType: p.strs.find((x) => x.is_active)?.license_type ?? null,
       block311: p.block.requests12m.reduce((n, r) => n + r.n, 0), blockPolice: p.block.police12m.reduce((n, r) => n + r.n, 0),
@@ -90,7 +91,7 @@ function propertyFacts(env: Env, p: Property) {
     counts: {
       permits: p.totals.permits, permits_open: permitsOpen, code_cases: p.totals.code_cases,
       code_cases_open: p.totals.code_cases_open, onestop_records: p.onestop.length,
-      str_licenses_active: p.strs.filter((s) => s.is_active).length, units: p.totals.units,
+      str_licenses_active: p.strs.filter((s) => s.is_active).length, demolitions: p.totals.demolitions, units: p.totals.units,
     },
     rules: rulesForParcel({
       zoning: a.zoning, zoning_desc: a.zoning_desc, overlays, local_historic_district: a.local_historic_district,
@@ -101,10 +102,12 @@ function propertyFacts(env: Env, p: Property) {
 
 const PROVENANCE = "City of New Orleans open data (data.nola.gov, maps.nola.gov) and One Stop public record pages, joined to parcels by See Dat. Not an official city record.";
 
+const DEMOLITION_SOURCE = "data.nola.gov BlightStatus demolitions (https://data.nola.gov/d/e3wd-h7q2), frozen 2009–2019.";
+
 export const TOOLS: Tool[] = [
   {
     name: "lookup_address",
-    description: "Look up a New Orleans address and get the property's key facts: parcel ID (geopin), neighborhood, zoning in plain English, historic district and HDLC/VCC review rules, a plain-English summary, and counts of permits, code enforcement cases and short-term rental licenses. Accepts messy input like \"1234 st claude apt b\". Start here for any question about a specific property.",
+    description: "Look up a New Orleans address and get the property's key facts: parcel ID (geopin), neighborhood, zoning in plain English, historic district and HDLC/VCC review rules, a plain-English summary, and counts of permits, code enforcement cases, short-term rental licenses and city demolitions. Accepts messy input like \"1234 st claude apt b\". Start here for any question about a specific property.",
     inputSchema: { type: "object", properties: { address: { type: "string", description: "Street address in New Orleans, e.g. \"3300 Dauphine St\"" } }, required: ["address"] },
     async run(env, a) {
       const geopin = await parcelFrom(env, a);
@@ -115,12 +118,12 @@ export const TOOLS: Tool[] = [
   },
   {
     name: "get_property_records",
-    description: "Every record on file for one property, newest first: permits (with status timeline and inspections where known), code enforcement cases (with inspections, violations and hearings), One Stop records such as HDLC/VCC reviews and special events, and short-term rental licenses. Filter by kind and date.",
+    description: "Every record on file for one property, newest first: permits (with status timeline and inspections where known), code enforcement cases (with inspections, violations and hearings), One Stop records such as HDLC/VCC reviews and special events, short-term rental licenses, and city-program demolitions 2009–2019 (BlightStatus: NORA, IDC, FEMA, SDER, NOSD, with units and start/complete dates). Filter by kind and date.",
     inputSchema: {
       type: "object",
       properties: {
         address: { type: "string" }, geopin: { type: "integer", description: "Parcel ID from lookup_address" },
-        kinds: { type: "array", items: { type: "string", enum: ["permit", "code_case", "onestop", "str"] }, description: "Default: all" },
+        kinds: { type: "array", items: { type: "string", enum: ["permit", "code_case", "onestop", "str", "demolition"] }, description: "Default: all" },
         since: { type: "string", description: "Only records dated on or after this date (YYYY-MM-DD)" },
         include_timeline: { type: "boolean", description: "Include each permit's and case's event timeline (default true)" },
         limit: { type: "integer", description: "Max records per kind (default 50, max 1000)" },
@@ -134,14 +137,14 @@ export const TOOLS: Tool[] = [
       const p = await loadProperty(env.DB, geopin, undefined, { limit, offset });
       if (!p) throw new ToolError(`No parcel ${geopin}.`);
       const since = isoDate(a, "since") ?? "";
-      const kinds = new Set(Array.isArray(a.kinds) && a.kinds.length ? (a.kinds as string[]) : ["permit", "code_case", "onestop", "str"]);
+      const kinds = new Set(Array.isArray(a.kinds) && a.kinds.length ? (a.kinds as string[]) : ["permit", "code_case", "onestop", "str", "demolition"]);
       const timeline = bool(a, "include_timeline") ?? true;
       const after = (d: string | null) => !since || (d ?? "") >= since;
       const permitNums = new Set(p.permits.map((x) => x.permit_num));
-      const more = offset + limit < Math.max(p.totals.permits, p.totals.code_cases, p.totals.strs);
+      const more = offset + limit < Math.max(p.totals.permits, p.totals.code_cases, p.totals.strs, p.totals.demolitions);
       return {
         address: p.addresses.find((x) => !x.unit_id)?.full_address ?? p.parcel.situs, geopin, page_url: pageUrl(env, geopin),
-        totals: { permits: p.totals.permits, code_cases: p.totals.code_cases, str_licenses: p.totals.strs },
+        totals: { permits: p.totals.permits, code_cases: p.totals.code_cases, str_licenses: p.totals.strs, demolitions: p.totals.demolitions },
         offset, next_offset: more ? offset + limit : null,
         note: since ? "The since filter applies within this page of results; page through with offset for older records." : undefined,
         permits: kinds.has("permit") ? p.permits.filter((x) => after(x.applied_date ?? x.issued_date)).slice(0, limit)
@@ -151,6 +154,8 @@ export const TOOLS: Tool[] = [
         onestop_records: kinds.has("onestop") ? p.onestop.filter((x) => after(x.submitted_date) && (!x.permit_num || !permitNums.has(x.permit_num))).slice(0, limit)
           .map(({ detail_json, ...x }) => ({ ...x, ...(timeline ? { detail: parseJson(detail_json) } : {}) })) : undefined,
         str_licenses: kinds.has("str") ? p.strs.filter((x) => after(x.issued_date ?? x.applied_date)).slice(0, limit) : undefined,
+        demolitions: kinds.has("demolition") ? p.demolitions.filter((x) => after(x.complete_date ?? x.start_date)).slice(0, limit) : undefined,
+        demolitions_source: kinds.has("demolition") && p.totals.demolitions ? DEMOLITION_SOURCE : undefined,
         as_of: await asOf(env.DB), provenance: PROVENANCE,
       };
     },

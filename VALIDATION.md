@@ -125,7 +125,6 @@ Two review agents read the code without running it:
 
 - **Permits before 2001 are thin** (about 4,800 for 1995–2000). That is all the city publishes; older records would need a records request.
 - **About 11,500 old 311 tickets** (mostly Taxi Issues and Health Related Questions, numbered `101000…`) are in the live dataset with the 2019-01-01/02 placeholder as their created date, and are not in the 2012–2018 archive. Their true dates are unknown, so they still count toward January 2019.
-- **Demolitions are stored but not yet shown** on the address page or through the MCP server.
 - **One Stop detail** (inspection results, review comments, fees) covers new records and a four-month backfill. Older history needs a public records request or a long crawl.
 - **Owner, assessed value, sales:** not public in bulk. The Assessor's site is bot-protected.
 - **Flood zones:** not loaded (FEMA NFHL).

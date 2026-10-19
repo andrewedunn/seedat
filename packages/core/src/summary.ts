@@ -5,6 +5,8 @@ export interface SummaryFacts {
   address: string; neighborhood: string | null; zoning: string | null; zoningPlain: string | null;
   historicDistrict: string | null; hdlcControl: "Full" | "Partial" | null; vcc: boolean; isLandmark: boolean;
   permitsTotal: number; permitsOpen: number; lastPermitType: string | null; lastPermitDate: string | null; demolitionDate: string | null;
+  /** Latest BlightStatus demolition on the parcel (a city program record, separate from demolition permits). */
+  cityDemolition: { program: string | null; startDate: string | null; completeDate: string | null } | null;
   codeCasesOpen: number; codeCasesTotal: number; lastCodeCaseDate: string | null; strActiveType: string | null;
   block311: number; blockPolice: number; today: string;
 }
@@ -57,6 +59,9 @@ export function summarizeProperty(f: SummaryFacts): string {
     if (f.permitsOpen > 0) out.push(`${f.permitsOpen} ${f.permitsOpen === 1 ? "is" : "are"} still open.`);
   }
   if (f.demolitionDate) out.push(`A demolition permit was filed in ${monthYear(f.demolitionDate)}.`);
+  const d = f.cityDemolition;
+  if (d?.completeDate) out.push(`A building here was demolished${d.program ? ` under the ${d.program} program` : ""}, completed in ${monthYear(d.completeDate)}.`);
+  else if (d?.startDate) out.push(`A demolition${d.program ? ` under the ${d.program} program` : ""} started here in ${monthYear(d.startDate)}; no completion date is published.`);
 
   if (f.codeCasesOpen > 0) out.push(`There ${f.codeCasesOpen === 1 ? "is" : "are"} ${plural(f.codeCasesOpen, "open code enforcement case", "open code enforcement cases")}.`);
   else if (f.codeCasesTotal > 0) {

@@ -6,7 +6,7 @@ import { summarizeProperty, type SummaryFacts } from "../src/summary";
 const base: SummaryFacts = {
   address: "3300 Dauphine St", neighborhood: "BYWATER", zoning: "HMR-3", zoningPlain: "historic marigny/tremé/bywater residential",
   historicDistrict: "Bywater", hdlcControl: "Full", vcc: false, isLandmark: false,
-  permitsTotal: 0, permitsOpen: 0, lastPermitType: null, lastPermitDate: null, demolitionDate: null,
+  permitsTotal: 0, permitsOpen: 0, lastPermitType: null, lastPermitDate: null, demolitionDate: null, cityDemolition: null,
   codeCasesOpen: 0, codeCasesTotal: 0, lastCodeCaseDate: null, strActiveType: null,
   block311: 0, blockPolice: 0, today: "2026-10-17",
 };
@@ -66,6 +66,18 @@ describe("summarizeProperty", () => {
     expect(summarizeProperty({ ...base, strActiveType: "Lodging Exempt from STR Regulation" }))
       .toContain("It has an active short-term rental license (Lodging Exempt from STR Regulation).");
     expect(s).toContain("A demolition permit was filed in November 2025.");
+  });
+
+  it("reports a BlightStatus demolition with its program and completion month", () => {
+    expect(summarizeProperty({ ...base, cityDemolition: { program: "FEMA", startDate: "2015-11-30", completeDate: "2015-11-30" } }))
+      .toContain("A building here was demolished under the FEMA program, completed in November 2015.");
+    expect(summarizeProperty({ ...base, cityDemolition: { program: null, startDate: "2011-03-02", completeDate: "2011-04-10" } }))
+      .toContain("A building here was demolished, completed in April 2011.");
+  });
+
+  it("says a demolition only started when no completion date is published", () => {
+    expect(summarizeProperty({ ...base, cityDemolition: { program: "NOSD", startDate: "2019-06-03", completeDate: null } }))
+      .toContain("A demolition under the NOSD program started here in June 2019; no completion date is published.");
   });
 
   it("closes with block-level activity, never the address itself", () => {

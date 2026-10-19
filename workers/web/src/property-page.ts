@@ -1,9 +1,9 @@
 // ABOUTME: Renders the property page: tiled address, plain-English summary, key facts, one chronological ledger of
-// ABOUTME: permits / code cases / One Stop reviews / STR licenses, plus rules, block activity, units and sources.
+// ABOUTME: permits / code cases / One Stop reviews / STR licenses / demolitions, plus rules, block activity, units and sources.
 import { rulesForParcel, zoningPlainEnglish } from "@seedat/core/src/rules";
 import { isPermitOpen } from "@seedat/core/src/status";
 import { summarizeProperty, titleCase } from "@seedat/core/src/summary";
-import type { CodeCase, OneStopRecord, Permit, Property, StrLicense } from "@seedat/d1/src/property";
+import type { CodeCase, Demolition, OneStopRecord, Permit, Property, StrLicense } from "@seedat/d1/src/property";
 import { type Env, Html, fmtDate, fmtMoney, html, page, raw, slug, tiles } from "./html";
 
 interface Entry { date: string | null; kind: string; kindClass: string; title: string; status: string | null; open: boolean; body: Html; sortKey: string }
@@ -82,6 +82,24 @@ function strEntry(s: StrLicense): Entry {
   };
 }
 
+const DEMOLITION_DATASET = "https://data.nola.gov/d/e3wd-h7q2";
+
+function demolitionEntry(d: Demolition): Entry {
+  const facts: [string, string][] = [
+    ["Program", d.program ?? ""], ["Program case", d.case_id ?? ""], ["Units", d.units === null ? "" : String(d.units)],
+    ["Started", fmtDate(d.start_date)], ["Completed", fmtDate(d.complete_date)],
+  ];
+  const body = html`
+    <dl class="facts">${facts.filter(([, v]) => v).map(([k, v]) => html`<div><dt>${k}</dt><dd>${v}</dd></div>`)}</dl>
+    <p class="src">Source: <a href="${DEMOLITION_DATASET}" rel="noopener">data.nola.gov BlightStatus demolitions</a> (2009–2019, no longer updated)</p>
+    ${d.match_type !== "exact" && d.match_type !== "source_geopin" ? html`<p class="match">Placed here by ${matchLabel(d.match_type)} from “${d.address_raw}”.</p>` : ""}`;
+  return {
+    date: d.complete_date ?? d.start_date, kind: "Demolition", kindClass: "k-demo",
+    title: d.program ? `${d.program} demolition` : "Demolition", status: d.complete_date ? "Completed" : "Started",
+    open: false, body, sortKey: d.demolition_id,
+  };
+}
+
 function matchLabel(t: string): string {
   return ({
     base_address: "the building address", range_member: "an address range", alias: "a known alternate street name",
@@ -97,11 +115,12 @@ function ledger(p: Property): Entry[] {
     ...p.codeCases.map(caseEntry),
     ...p.onestop.filter((r) => !r.permit_num || !permitNums.has(r.permit_num)).map(onestopEntry),
     ...p.strs.map(strEntry),
+    ...p.demolitions.map(demolitionEntry),
   ].sort((a, b) => (b.date ?? "").localeCompare(a.date ?? "") || a.sortKey.localeCompare(b.sortKey));
 }
 
 function sourcesUsed(p: Property) {
-  const ids = ["socrata:72f9-bi28", "socrata:rcm3-fn58", "socrata:aib5-en5t", "socrata:u6yx-v2tw", "socrata:en36-xvxg", "socrata:2jgv-pqrq", "socrata:es9j-6y5d"];
+  const ids = ["socrata:72f9-bi28", "socrata:rcm3-fn58", "socrata:aib5-en5t", "socrata:u6yx-v2tw", "socrata:en36-xvxg", "socrata:2jgv-pqrq", "socrata:es9j-6y5d", "socrata:e3wd-h7q2"];
   return p.freshness.filter((f) => ids.includes(f.source_id));
 }
 
@@ -118,6 +137,7 @@ export function renderProperty(env: Env, p: Property, url: URL): Response {
     permitsOpen: p.totals.permits > p.permits.length ? (s?.permits_open ?? p.permits.filter(isPermitOpen).length) : p.permits.filter(isPermitOpen).length,
     lastPermitType: p.permits[0]?.permit_type_desc ?? p.permits[0]?.permit_type ?? null, lastPermitDate: p.permits[0]?.applied_date ?? null,
     demolitionDate: s?.demolition_permit_date ?? null,
+    cityDemolition: p.demolitions[0] ? { program: p.demolitions[0].program, startDate: p.demolitions[0].start_date, completeDate: p.demolitions[0].complete_date } : null,
     codeCasesOpen: p.totals.code_cases_open, codeCasesTotal: p.totals.code_cases, lastCodeCaseDate: p.codeCases[0]?.filed_date ?? null,
     strActiveType: p.strs.find((x) => x.is_active)?.license_type ?? null,
     block311: p.block.requests12m.reduce((n, r) => n + r.n, 0), blockPolice: p.block.police12m.reduce((n, r) => n + r.n, 0),
@@ -140,6 +160,7 @@ export function renderProperty(env: Env, p: Property, url: URL): Response {
     p.totals.permits > p.permits.length ? `${p.permits.length} of ${p.totals.permits.toLocaleString("en-US")} permits` : null,
     p.totals.code_cases > p.codeCases.length ? `${p.codeCases.length} of ${p.totals.code_cases.toLocaleString("en-US")} code cases` : null,
     p.totals.strs > p.strs.length ? `${p.strs.length} of ${p.totals.strs.toLocaleString("en-US")} rental licenses and applications` : null,
+    p.totals.demolitions > p.demolitions.length ? `${p.demolitions.length} of ${p.totals.demolitions.toLocaleString("en-US")} demolitions` : null,
   ].filter((x): x is string => x !== null);
   const total311 = p.block.requests12m.reduce((n, r) => n + r.n, 0);
   const totalPolice = p.block.police12m.reduce((n, r) => n + r.n, 0);
@@ -161,7 +182,7 @@ export function renderProperty(env: Env, p: Property, url: URL): Response {
       <p>${entries.length} records, newest first${openCount ? html` · <strong class="open-count">${openCount} open</strong>` : ""}</p>
       ${capped.length ? html`<p class="note">Showing the latest ${capped.join(" and the latest ")}.</p>` : ""}
     </div>
-    ${entries.length === 0 ? html`<p class="empty">The city has no permits, code cases, reviews or rental licenses on record for this parcel.</p>` : ""}
+    ${entries.length === 0 ? html`<p class="empty">The city has no permits, code cases, reviews, rental licenses or demolitions on record for this parcel.</p>` : ""}
     <ol class="entries">${entries.map((e) => html`
       <li class="entry ${e.kindClass}${e.open ? " is-open" : ""}">
         <details>

@@ -43,15 +43,21 @@ export interface StrLicense {
   applied_date: string | null; issued_date: string | null; expiration_date: string | null; operator_name: string | null; address_raw: string | null;
 }
 
+/** A BlightStatus demolition (NORA, IDC, FEMA, SDER, NOSD programs, 2009–2019). */
+export interface Demolition {
+  demolition_id: string; address_raw: string | null; program: string | null; case_id: string | null; units: number | null;
+  start_date: string | null; complete_date: string | null; match_type: string;
+}
+
 export interface Freshness { source_id: string; name: string; last_success_at: string | null; upstream_updated_at: string | null; stale_after_hours: number }
 
 export interface Property {
   parcel: Parcel; summary: Summary | null; addresses: { address_id: number; full_address: string; unit_id: string | null; block_id: string }[];
-  permits: Permit[]; codeCases: CodeCase[]; onestop: OneStopRecord[]; strs: StrLicense[];
+  permits: Permit[]; codeCases: CodeCase[]; onestop: OneStopRecord[]; strs: StrLicense[]; demolitions: Demolition[];
   block: { block_id: string | null; requests12m: { request_type: string; n: number }[]; police12m: { category: string; n: number }[] };
   freshness: Freshness[];
   /** True totals; the lists above are capped at SHOWN. */
-  totals: { permits: number; code_cases: number; code_cases_open: number; units: number; strs: number };
+  totals: { permits: number; code_cases: number; code_cases_open: number; units: number; strs: number; demolitions: number };
 }
 
 const PERMIT_COLS = `permit_num, address_raw, permit_type, permit_type_desc, work_class, description, status, status_mapped, status_date,
@@ -77,7 +83,7 @@ export function activityWindow(today: string, months: number): { since: string; 
 }
 
 /** Rows shown per kind; totals come from separate counts so a capped list never reads as the total. */
-export const SHOWN = { permits: 200, codeCases: 100, onestop: 100, strs: 50, units: 60 } as const;
+export const SHOWN = { permits: 200, codeCases: 100, onestop: 100, strs: 50, demolitions: 50, units: 60 } as const;
 
 /**
  * Everything about one parcel. `page` overrides how many rows of each list to return and from where (the MCP tool
@@ -89,7 +95,7 @@ export async function loadProperty(
   const off = Math.max(0, Math.floor(page.offset ?? 0));
   const lim = (dflt: number) => Math.min(Math.max(1, Math.floor(page.limit ?? dflt)), 1000);
   const { since, sinceMonth } = activityWindow(today, 12);
-  const [parcel, summary, addresses, permits, codeCases, onestop, strs, freshness, totals, blockRow] = await db.batch([
+  const [parcel, summary, addresses, permits, codeCases, onestop, strs, demolitions, freshness, totals, blockRow] = await db.batch([
     db.prepare("SELECT * FROM parcel WHERE geopin = ?").bind(geopin),
     db.prepare("SELECT * FROM parcel_summary WHERE geopin = ?").bind(geopin),
     db.prepare(`SELECT address_id, full_address, unit_id, block_id FROM address WHERE geopin = ? ORDER BY unit_id IS NOT NULL, number, unit_id LIMIT ${SHOWN.units}`).bind(geopin),
@@ -100,12 +106,15 @@ export async function loadProperty(
       FROM onestop_record WHERE geopin = ? ORDER BY submitted_date DESC LIMIT ${lim(SHOWN.onestop)} OFFSET ${off}`).bind(geopin),
     db.prepare(`SELECT str_id, license_number, license_type, status, is_active, applied_date, issued_date, expiration_date, operator_name, address_raw
       FROM str_license WHERE (geopin = ?1 OR str_id IN (SELECT entity_id FROM record_parcel WHERE entity = 'str_license' AND geopin = ?1)) AND removed_at IS NULL ORDER BY is_active DESC, coalesce(issued_date, applied_date) DESC LIMIT ${lim(SHOWN.strs)} OFFSET ${off}`).bind(geopin),
+    db.prepare(`SELECT demolition_id, address_raw, program, case_id, units, start_date, complete_date, match_type
+      FROM demolition WHERE (geopin = ?1 OR demolition_id IN (SELECT entity_id FROM record_parcel WHERE entity = 'demolition' AND geopin = ?1)) AND removed_at IS NULL ORDER BY coalesce(complete_date, start_date) DESC LIMIT ${lim(SHOWN.demolitions)} OFFSET ${off}`).bind(geopin),
     db.prepare("SELECT source_id, name, last_success_at, upstream_updated_at, stale_after_hours FROM source ORDER BY source_id"),
     db.prepare(`SELECT (SELECT count(*) FROM permit WHERE (geopin = ?1 OR permit_num IN (SELECT entity_id FROM record_parcel WHERE entity = 'permit' AND geopin = ?1)) AND removed_at IS NULL) permits,
       (SELECT count(*) FROM code_case WHERE (geopin = ?1 OR case_id IN (SELECT CAST(entity_id AS INTEGER) FROM record_parcel WHERE entity = 'code_case' AND geopin = ?1)) AND removed_at IS NULL) code_cases,
       (SELECT count(*) FROM code_case WHERE (geopin = ?1 OR case_id IN (SELECT CAST(entity_id AS INTEGER) FROM record_parcel WHERE entity = 'code_case' AND geopin = ?1)) AND removed_at IS NULL AND +is_open = 1) code_cases_open,
       (SELECT count(*) FROM address WHERE geopin = ?1 AND unit_id IS NOT NULL) units,
-      (SELECT count(*) FROM str_license WHERE (geopin = ?1 OR str_id IN (SELECT entity_id FROM record_parcel WHERE entity = 'str_license' AND geopin = ?1)) AND removed_at IS NULL) strs`).bind(geopin),
+      (SELECT count(*) FROM str_license WHERE (geopin = ?1 OR str_id IN (SELECT entity_id FROM record_parcel WHERE entity = 'str_license' AND geopin = ?1)) AND removed_at IS NULL) strs,
+      (SELECT count(*) FROM demolition WHERE (geopin = ?1 OR demolition_id IN (SELECT entity_id FROM record_parcel WHERE entity = 'demolition' AND geopin = ?1)) AND removed_at IS NULL) demolitions`).bind(geopin),
     db.prepare(BLOCK_FOR_PARCEL_SQL).bind(geopin),
   ]);
   const p = parcel!.results[0] as Parcel | undefined;
@@ -146,6 +155,7 @@ export async function loadProperty(
     codeCases: caseRows.map((r) => ({ ...r, events: evByCase.get(r.case_id) ?? [] })),
     onestop: onestop!.results as OneStopRecord[],
     strs: strs!.results as StrLicense[],
+    demolitions: demolitions!.results as Demolition[],
     block: { block_id: blockId, requests12m: requests!.results as Property["block"]["requests12m"], police12m: police!.results as Property["block"]["police12m"] },
     freshness: freshness!.results as Freshness[],
     totals: totals!.results[0] as Property["totals"],
