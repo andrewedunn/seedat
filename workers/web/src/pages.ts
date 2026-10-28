@@ -2,11 +2,16 @@
 // ABOUTME: records we could not place. The property page lives in property-page.ts.
 import type { Suggestion } from "@seedat/d1/src/search";
 import { titleCase } from "@seedat/core/src/summary";
-import { type Env, fmtDate, html, page, raw, slug, tiles } from "./html";
+import { type Env, SITE, fmtDate, html, page, raw, slug, tiles } from "./html";
 
 export function home(env: Env, stats: { parcels: number; permits: number; updated: string | null }): Response {
   return page(env, {
     title: "See Dat — every public record for a New Orleans property",
+    path: "/",
+    head: html`<script type="application/ld+json">${raw(JSON.stringify({
+      "@context": "https://schema.org", "@type": "WebSite", name: "See Dat", url: `${SITE}/`,
+      potentialAction: { "@type": "SearchAction", target: `${SITE}/search?q={search_term_string}`, "query-input": "required name=search_term_string" },
+    }))}</script>`,
     description: "Look up any New Orleans address: permits, inspections, code enforcement, short-term rental licenses, zoning, historic district rules, and block-level 311 and police activity, in one place.",
     body: html`
 <section class="hero">
@@ -45,6 +50,7 @@ export function searchResults(env: Env, q: string, suggestions: Suggestion[], re
 export function mapPage(env: Env): Response {
   return page(env, {
     title: "Map — See Dat",
+    path: "/map",
     description: "Browse New Orleans parcels by recent permits, open code enforcement cases, demolitions, short-term rentals and historic districts.",
     head: html`<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
 <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js" defer></script>
@@ -73,6 +79,7 @@ export function about(env: Env, sources: { source_id: string; name: string; url:
   };
   return page(env, {
     title: "About the data — See Dat",
+    path: "/about",
     description: "Where See Dat’s data comes from, how often it updates, and how records are matched to parcels.",
     body: html`<section class="narrow prose">
 <h1 class="plain">About the data</h1>
@@ -107,6 +114,7 @@ export function unplaced(env: Env, rows: { entity: string; entity_id: string; ad
   const label: Record<string, string> = { permit: "Permit", code_case: "Code case", str_license: "Rental license" };
   return page(env, {
     title: "Records we couldn’t place — See Dat",
+    path: "/unplaced",
     description: "City records whose address we could not match to a parcel.",
     body: html`<section class="narrow prose">
 <h1 class="plain">Records we couldn’t place</h1>

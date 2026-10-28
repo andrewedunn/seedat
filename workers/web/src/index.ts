@@ -6,6 +6,7 @@ import { resolveAddress, suggest } from "@seedat/d1/src/search";
 import { type Env, slug } from "./html";
 import { about, home, mapPage, notFound, searchResults, unplaced } from "./pages";
 import { renderProperty } from "./property-page";
+import { pagesSitemap, parcelSitemap, sitemapIndex } from "./sitemap";
 
 const HTML_TTL = 600;
 
@@ -63,7 +64,7 @@ async function route(req: Request, env: Env, url: URL): Promise<Response> {
     if (!p) return notFound(env);
     const street = p.addresses.find((x) => !x.unit_id)?.full_address ?? p.parcel.situs ?? "";
     if (street && prop[2] !== slug(street)) return Response.redirect(`${url.origin}/p/${p.parcel.geopin}/${slug(street)}`, 301);
-    return renderProperty(env, p, url);
+    return renderProperty(env, p);
   }
 
   const parcelApi = /^\/api\/parcel\/(\d{8})$/.exec(path);
@@ -82,6 +83,11 @@ async function route(req: Request, env: Env, url: URL): Promise<Response> {
       .all<{ geopin: number; lat: number; lon: number }>();
     return json(rows.results.map((r) => [r.geopin, r.lat, r.lon]), 1800);
   }
+
+  if (path === "/sitemap.xml") return sitemapIndex(env);
+  if (path === "/sitemaps/pages.xml") return pagesSitemap();
+  const parcelMap = /^\/sitemaps\/parcels-([1-9]\d{0,2})\.xml$/.exec(path);
+  if (parcelMap) return (await parcelSitemap(env, Number(parcelMap[1]))) ?? notFound(env);
 
   if (path === "/tiles/parcels.pmtiles") return serveTiles(env, req, "tiles/parcels.pmtiles");
   if (path === "/map") return mapPage(env);

@@ -124,7 +124,7 @@ function sourcesUsed(p: Property) {
   return p.freshness.filter((f) => ids.includes(f.source_id));
 }
 
-export function renderProperty(env: Env, p: Property, url: URL): Response {
+export function renderProperty(env: Env, p: Property): Response {
   const a = p.parcel;
   const street = p.addresses.find((x) => !x.unit_id)?.full_address ?? a.situs ?? `Parcel ${a.geopin}`;
   const s = p.summary;
@@ -213,9 +213,9 @@ export function renderProperty(env: Env, p: Property, url: URL): Response {
   </aside>
 </div>`;
   return page(env, {
-    title: `${street}, New Orleans — See Dat`,
+    title: `${street}, New Orleans: permits and property records | See Dat`,
     description: summary.slice(0, 300),
-    canonical: `${url.origin}/p/${a.geopin}/${slug(street)}`,
+    path: `/p/${a.geopin}/${slug(street)}`,
     body,
   });
 }

@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /search
+
+Sitemap: https://seedat.dunn.us/sitemap.xml

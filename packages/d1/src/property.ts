@@ -98,7 +98,7 @@ export async function loadProperty(
   const [parcel, summary, addresses, permits, codeCases, onestop, strs, demolitions, freshness, totals, blockRow] = await db.batch([
     db.prepare("SELECT * FROM parcel WHERE geopin = ?").bind(geopin),
     db.prepare("SELECT * FROM parcel_summary WHERE geopin = ?").bind(geopin),
-    db.prepare(`SELECT address_id, full_address, unit_id, block_id FROM address WHERE geopin = ? ORDER BY unit_id IS NOT NULL, number, unit_id LIMIT ${SHOWN.units}`).bind(geopin),
+    db.prepare(`SELECT address_id, full_address, unit_id, block_id FROM address WHERE geopin = ? ORDER BY unit_id IS NOT NULL, number, unit_id, address_id LIMIT ${SHOWN.units}`).bind(geopin),
     db.prepare(`SELECT ${PERMIT_COLS} FROM permit WHERE (geopin = ?1 OR permit_num IN (SELECT entity_id FROM record_parcel WHERE entity = 'permit' AND geopin = ?1)) AND removed_at IS NULL ORDER BY coalesce(applied_date, issued_date) DESC LIMIT ${lim(SHOWN.permits)} OFFSET ${off}`).bind(geopin),
     db.prepare(`SELECT case_id, case_no, address_raw, stage, key_status, is_open, filed_date, status_date, next_hearing_date, prev_hearing_result, last_permit_num, match_type
       FROM code_case WHERE (geopin = ?1 OR case_id IN (SELECT CAST(entity_id AS INTEGER) FROM record_parcel WHERE entity = 'code_case' AND geopin = ?1)) AND removed_at IS NULL ORDER BY filed_date DESC LIMIT ${lim(SHOWN.codeCases)} OFFSET ${off}`).bind(geopin),

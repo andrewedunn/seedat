@@ -5,6 +5,10 @@
 
 ## Decisions
 
+- **2026-10-28** — **SEO basics** (from the side-project SEO audit). Every indexable page now has a canonical, og:url, og:title/description and an absolute og:image (`/og.png`, 1200×630), all on `https://seedat.dunn.us` so the workers.dev copy never competes. Search results and the 404 page get `noindex` and no canonical. Address-page titles read "<address>, New Orleans: permits and property records | See Dat".
+  - **Sitemap:** `/sitemap.xml` is an index of `/sitemaps/pages.xml` plus every non-retired parcel's address page in files of 40,000 (`/sitemaps/parcels-N.xml`), cached a day. The street in each URL is picked with the same ordering as the property page (address_id breaks ties), so sitemap URLs never 301. `robots.txt` names the sitemap.
+  - **Still to do (Andrew's accounts):** submit the sitemap in `sc-domain:dunn.us`, add a `https://seedat.dunn.us/` URL-prefix property, and an OpenSEO project linked to it.
+
 - **2026-10-19** — **Repo made public** (`andrewedunn/seedat`, Andrew approved).
   - **Why the history was rewritten first:** research samples and two test fixtures had carried personal contact details from city datasets (4 Gmail addresses of STR/business-license holders, and 12 phone numbers).
   - **How:** `git filter-repo --replace-text` swapped those exact strings for placeholders in every commit. All 24 commits were kept, then `main` was force-pushed with a lease.
