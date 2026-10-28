@@ -25,6 +25,8 @@ export function fmtDate(iso: string | null | undefined): string {
 }
 export const fmtMoney = (n: number | null | undefined) =>
   n === null || n === undefined || !Number.isFinite(n) ? "" : `$${Math.round(n).toLocaleString("en-US")}`;
+/** The public origin. Canonicals, og:url and the sitemap always use it, so the workers.dev copy never competes. */
+export const SITE = "https://seedat.dunn.us";
 export const slug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
 /** The address set as sidewalk street tiles: one glazed tile per letter, words kept together. */
@@ -34,7 +36,9 @@ export function tiles(text: string, size: "lg" | "md" = "lg"): Html {
     html`<span class="tile-word" aria-hidden="true">${[...w].map((c) => html`<span class="tile">${c}</span>`)}</span>`)}</span>`;
 }
 
-export function page(env: Env, opts: { title: string; description: string; body: Html; canonical?: string; head?: Html }): Response {
+/** Page path for the canonical link and og:url; omit it (search results, 404) to emit neither and set noindex. */
+export function page(env: Env, opts: { title: string; description: string; body: Html; path?: string; head?: Html }): Response {
+  const canonical = opts.path === undefined ? null : SITE + opts.path;
   const analytics = env.UMAMI_SRC && env.UMAMI_WEBSITE_ID
     ? html`<script defer src="${env.UMAMI_SRC}" data-website-id="${env.UMAMI_WEBSITE_ID}"></script>` : "";
   const doc = html`<!doctype html>
@@ -44,7 +48,17 @@ export function page(env: Env, opts: { title: string; description: string; body:
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${opts.title}</title>
 <meta name="description" content="${opts.description}">
-${opts.canonical ? html`<link rel="canonical" href="${opts.canonical}">` : ""}
+${canonical ? html`<link rel="canonical" href="${canonical}">` : html`<meta name="robots" content="noindex">`}
+<meta property="og:site_name" content="See Dat">
+<meta property="og:type" content="website">
+<meta property="og:title" content="${opts.title}">
+<meta property="og:description" content="${opts.description}">
+${canonical ? html`<meta property="og:url" content="${canonical}">` : ""}
+<meta property="og:image" content="${SITE}/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="See Dat, set in blue sidewalk street tiles">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@75,800&family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap">
