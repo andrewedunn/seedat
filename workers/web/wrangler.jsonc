@@ -12,5 +12,5 @@
   "observability": { "enabled": true },
   "d1_databases": [{ "binding": "DB", "database_name": "seedat-db", "database_id": "c6aa8f43-0488-48ac-b18a-11dc4308dd7f" }],
   "r2_buckets": [{ "binding": "ASSETS_BUCKET", "bucket_name": "seedat-assets" }],
-  "vars": { "UMAMI_SRC": "", "UMAMI_WEBSITE_ID": "" }
+  "vars": { "UMAMI_SRC": "https://umami.dunn.us/script.js", "UMAMI_WEBSITE_ID": "e9e5c534-2d30-42bc-913c-f48f7603bdf6" }
 }

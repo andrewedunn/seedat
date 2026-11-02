@@ -40,7 +40,7 @@ export function tiles(text: string, size: "lg" | "md" = "lg"): Html {
 export function page(env: Env, opts: { title: string; description: string; body: Html; path?: string; head?: Html }): Response {
   const canonical = opts.path === undefined ? null : SITE + opts.path;
   const analytics = env.UMAMI_SRC && env.UMAMI_WEBSITE_ID
-    ? html`<script defer src="${env.UMAMI_SRC}" data-website-id="${env.UMAMI_WEBSITE_ID}"></script>` : "";
+    ? html`<script defer src="${env.UMAMI_SRC}" data-website-id="${env.UMAMI_WEBSITE_ID}" data-domains="seedat.dunn.us"></script>` : "";
   const doc = html`<!doctype html>
 <html lang="en">
 <head>
