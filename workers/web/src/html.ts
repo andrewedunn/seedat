@@ -78,7 +78,7 @@ ${analytics}
 <main>${opts.body}</main>
 <footer class="site">
   <p>See Dat is a free, non-commercial public resource built from City of New Orleans open data. It is not an official city record; check with the city before relying on it.</p>
-  <p><a href="/about">Sources, methods and known gaps</a> · <a href="/unplaced">Records we couldn’t place</a></p>
+  <p><a href="/about">Sources, methods and known gaps</a> · <a href="/unplaced">Records we couldn’t place</a> · Made by <a href="https://dunn.us">Andrew Dunn</a></p>
 </footer>
 <script src="/app.js" defer></script>
 </body>
